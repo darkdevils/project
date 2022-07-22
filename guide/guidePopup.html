@@ -28,7 +28,6 @@
     </div>
 </div>
 
-<div class="dim"></div>
 <div class="slideLayer">
     <div class="slideLayer__content">
         <p>아래 내용으로 예약신청하시겠습니까?</p>
@@ -52,10 +51,15 @@ $(function(){
     $('h2.guideTitle').each(function(index){
         $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
     });
-
 });
+
+
+const h = $('.slideLayer').outerHeight();
+$('.slideLayer').css({
+    bottom: -h
+})
+
 function slideOpen() {
-    const h = $('.slideLayer').outerHeight();
     $('body').append('<div class="dim"></div>');
     $('.slideLayer').animate({
         bottom: 0
@@ -63,7 +67,6 @@ function slideOpen() {
 }
 
 function slideClose() {
-    const h = $('.slideLayer').outerHeight();
     $('.dim').remove();
     $('.slideLayer').animate({
        bottom: -h
