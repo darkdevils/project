@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button Guide</title>
+    <link rel="stylesheet" href="guideStyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./highlight/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="guideWrap">
+    <h1 class="guideTitle">Layer Popup</h1>
+    <h2 class="guideTitle">Slide Popup</h2>
+    <div class="guideBox">
+        <button type="button" class="btn btn-d">Button 형식</button>
+        <a href="#" class="btn btn-d">a link 형식</a>
+    </div>
+
+</div>
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+    $('h2.guideTitle').each(function(index){
+        $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
+    })
+});
+</script>
+</body>
+</html>

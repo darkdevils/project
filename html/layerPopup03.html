@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용상담 후기작성</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">신용상담 후기작성</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="layerReview">
+            <div class="layerReview__writing">
+                <div class="thumbnail">
+                    <img src="../images/temp/thumbnail_01.png" alt="전미소 상담사">
+                </div>
+                <div class="infoWrap">
+                    <span class="name">전미소 상담사</span>
+                    <div class="ratingResult">
+                        <div class="rating"><span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layerReview__textArea">
+                <textarea name="" id="" cols="30" rows="10" placeholder="상담 후기를 자유롭게 입력해주세요.(1,000자 이내)"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d btnCom"><span>작성완료</span></button>
+    </div>
+</div>
+
+<div class="layerMessage">
+    <div class="layerMessage__text">
+        <p class="text">작성중인 글이 저장되지 않고 사라집니다.<br>그만두시겠어요?</p>
+        <div class="btnWrap btnWrap-col2">
+            <button type="button" class="btn btn-d btnGray w78"><span>취소</span></button>
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+
+<div class="dim"></div>
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+$(function(){
+    function textLevel(value) {
+        switch (value) {
+            case "rating-1" :
+                $('.ratingResult .rating span').text("별로예요");
+                $('.ratingResult .rating').removeClass().addClass('rating rating-1');
+                break;
+            case "rating-2" :
+                $('.ratingResult .rating span').text("그저 그래요");
+                $('.ratingResult .rating').removeClass().addClass('rating rating-2');
+                break;
+            case "rating-3" :
+                $('.ratingResult .rating span').text("보통이예요");
+                $('.ratingResult .rating').removeClass().addClass('rating rating-3');
+                break;
+            case "rating-4" :
+                $('.ratingResult .rating span').text("만족해요");
+                $('.ratingResult .rating').removeClass().addClass('rating rating-4');
+                break;
+            case "rating-5" :
+                $('.ratingResult .rating span').text("최고예요");
+                $('.ratingResult .rating').removeClass().addClass('rating rating-5');
+                break;
+        }
+    }
+    textLevel("rating-5");
+
+    //작성완료 버튼 클릭 시 레이어 팝업호출;
+    function layerMessage() {
+
+    }
+});
+
+</script>
+</body>
+</html>

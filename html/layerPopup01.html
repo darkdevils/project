@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용상담 후기작성</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">신용상담 후기작성</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="layerReview">
+            <div class="layerReview__rating">
+                <div class="thumbnail">
+                    <img src="../images/temp/thumbnail_02.png" alt="전미소 상담사">
+                    <span class="name">전미소 상담사</span>
+                </div>
+                <p class="text">상담은 만족스러우셨나요?</p>
+                <div class="rating"></div>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d" disabled><span>다음</span></button>
+        <button type="button" class="btn btn-d btnGray" disabled style="display: none"><span>작성완료</span></button>
+    </div>
+</div>
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    $(function(){
+        $('.layerReview__rating .rating').starRating({
+            showInfo: true
+        });
+        $('.ratingList').on('click',function(){
+            $('.btnWrap.fixedBtm button').prop('disabled', false);
+        });
+    });
+</script>
+</body>
+</html>

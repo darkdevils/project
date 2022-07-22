@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button Guide</title>
+    <link rel="stylesheet" href="guideStyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./highlight/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="guideWrap">
+    <h1 class="guideTitle">Button</h1>
+
+    <h2 class="guideTitle">기본 버튼</h2>
+    <div class="guideBox">
+        <div class="btnWrap">
+            <button type="button" class="btn btn-d"><span>다음</span></button>
+        </div>
+        <div class="btnWrap">
+            <button type="button" class="btn btn-d btnGray"><span>다음</span></button>
+        </div>
+        <div class="btnWrap">
+            <a href="#" class="btn btn-d"><span>다음</span></a>
+        </div>
+        <div class="btnWrap">
+            <a href="#" class="btn btn-d btnGray"><span>다음</span></a>
+        </div>
+        <!-- tag highlinght 적용 -->
+        <pre>
+<code class="html">&lt;div class=&quot;btnWrap&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xB2E4;&#xC74C;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btnWrap&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnGray&quot;&gt;&lt;span&gt;&#xB2E4;&#xC74C;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btnWrap&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xB2E4;&#xC74C;&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btnWrap&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-d btnGray&quot;&gt;&lt;span&gt;&#xB2E4;&#xC74C;&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+    </div>
+
+    <h2 class="guideTitle">버튼이 2개 나란히 나오는 경우</h2>
+    <div class="guideBox">
+        <div class="btnWrap btnWrap-col2">
+            <button type="button" class="btn btn-d btnGray w78"><span>취소</span></button>
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+        <div class="btnWrap btnWrap-col2">
+            <button type="button" class="btn btn-d btnBlue"><span>내 상담내역</span></button>
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+        <div class="btnWrap btnWrap-col2">
+            <a href="#" class="btn btn-d btnGray w78"><span>취소</span></a>
+            <a href="#" class="btn btn-d"><span>확인</span></a>
+        </div>
+        <div class="btnWrap btnWrap-col2">
+            <a href="#" class="btn btn-d btnBlue"><span>내 상담내역</span></a>
+            <a href="#" class="btn btn-d"><span>확인</span></a>
+        </div>
+        <!-- tag highlinght 적용 -->
+        <pre>
+<code class="html">&lt;div class=&quot;btnWrap btnWrap-col2&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnGray w78&quot;&gt;&lt;span&gt;&#xCDE8;&#xC18C;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xD655;&#xC778;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btnWrap btnWrap-col2&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnBlue&quot;&gt;&lt;span&gt;&#xB0B4; &#xC0C1;&#xB2F4;&#xB0B4;&#xC5ED;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xD655;&#xC778;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btnWrap btnWrap-col2&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-d btnGray w78&quot;&gt;&lt;span&gt;&#xCDE8;&#xC18C;&lt;/span&gt;&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xD655;&#xC778;&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btnWrap btnWrap-col2&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-d btnBlue&quot;&gt;&lt;span&gt;&#xB0B4; &#xC0C1;&#xB2F4;&#xB0B4;&#xC5ED;&lt;/span&gt;&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xD655;&#xC778;&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+    </div>
+
+    <h2 class="guideTitle">List 안에 Button</h2>
+    <div class="guideBox">
+        <button type="button" class="btn btn-s"><span>예약</span></button>
+        <button type="button" class="btn btnGray btn-s"><span>완료</span></button>
+        <a href="#" class="btn btn-s"><span>예약</span></a>
+        <a href="#" class="btn btnGray btn-s"><span>완료</span></a>
+        <!-- tag highlinght 적용 -->
+        <pre>
+<code class="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-s&quot;&gt;&lt;span&gt;&#xC608;&#xC57D;&lt;/span&gt;&lt;/button&gt;
+
+    <!-- //tag highlinght 적용 -->&lt;button type=&quot;button&quot; class=&quot;btn btnGray btn-s&quot;&gt;&lt;span&gt;&#xC644;&#xB8CC;&lt;/span&gt;&lt;/button&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-s&quot;&gt;&lt;span&gt;&#xC608;&#xC57D;&lt;/span&gt;&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btnGray btn-s&quot;&gt;&lt;span&gt;&#xC644;&#xB8CC;&lt;/span&gt;&lt;/a&gt;</code></pre>
+    </div>
+
+</div>
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+    $('h2.guideTitle').each(function(index){
+        $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
+    })
+});
+</script>
+</body>
+</html>

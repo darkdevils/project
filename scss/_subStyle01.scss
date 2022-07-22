@@ -1,0 +1,174 @@
+
+/* 상담사 상세 */
+.consultingImage {
+  /*height: 200px;*/
+  overflow: hidden;
+  text-align: center;
+  img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
+.consultingInfo {
+  position: relative;
+  padding: 24px;
+  .name {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .bookMark {
+    position: absolute;
+    right: 24px;
+    top: 27px;
+    width: 24px;
+    height: 24px;
+    @include imageUrl(common_sprite,png);
+    background-size: 250px;
+    background-position: calc(-164px / 2) calc(-58px / 2);
+    &.on {
+      background-position: calc(-222px / 2) calc(-58px / 2);
+    }
+  }
+  .infoText {
+    span {
+      color: var(--brownishGrey-color);
+    }
+  }
+  .relevant {
+    margin-top: 24px;
+    span {
+      display: inline-block;
+      background-color: var(--paleBlue-color);
+      color: var(--darkSkyBlue-color);
+      padding: 0 8px;
+      font-size: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      + span {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+/* 상담사 상세(상담일정)-주단위 일정 */
+.weeklyBox {
+  margin-top: 15px;
+  padding: 8px 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: var(--paleGrey-color);
+  .dayArea {
+    display: flex;
+    padding: 16px 0;
+    .dayInfo {
+      width: 50%;
+      .day {
+        display: flex;
+        font-size: 12px;
+        line-height: 20px;
+        &.blue {
+          color: #2f84de;
+        }
+        &.red {
+          color: #e53a4c;
+        }
+        em {
+          display: inline-block;
+          height: 20px;
+          line-height: 20px;
+          font-size: 12px;
+          margin-left: 4px;
+          padding: 0 8px;
+          background-color: var(--black-color);
+          color: var(--white-color);
+          border-radius: 6px;
+          overflow: hidden;
+          font-weight: 300;
+        }
+      }
+      .time {
+        display: block;
+        font-size: 14px;
+        color: var(--brownishGrey-color);
+        line-height: 22px;
+        font-family: 'Roboto';
+        margin-top: 4px;
+      }
+    }
+    + .dayArea {
+      border-top: 1px solid #e7e9ee;
+    }
+  }
+}
+
+/* 상담사 상세(상담후기) */
+.reviewAverage {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40px 0;
+  .totalStar {
+    position: relative;
+    width: 100px;
+    padding: 0 0 30px;
+    text-align: center;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: url('../images/bg_star_40x40_off.png') repeat-x;
+      width: 100px;
+      height: 20px;
+      background-size: 20px;
+    }
+    .num {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-size: 24px;
+    }
+  }
+  .reviewGraph {
+    margin-left: 32px;
+    .graph {
+      display: flex;
+      align-items: center;
+      .state {
+        font-size: 12px;
+        font-family: 'Roboto';
+        color: var(--font-color);
+        line-height: 20px;
+        span {
+          font-family: 'Noto Sans KR';
+          font-size: 12px;
+        }
+      }
+      .graphBg {
+        width: 129px;
+        height: 4px;
+        margin: 0 10px;
+        background-color: #ebebeb;
+        border-radius: 4px;
+        overflow: hidden;
+        .graphBar {
+          width: 0;
+          height: 4px;
+          background-color: var(--darkSkyBlue-color);
+          border-radius: 4px;
+        }
+      }
+    }
+    .count {
+      font-family: 'Roboto';
+      font-size: 12px;
+      color: var(--brownishGrey-color);
+    }
+  }
+}
+.reviewList {
+
+}

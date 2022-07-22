@@ -1,0 +1,161 @@
+/* root */
+:root {
+  --blue-color : #3198FF;
+  --red-color : #ff0000;
+  --black-color: #000;
+  --gray-color: #dbdbdb;
+  --silver-color: #dddee4;
+  --font-color: #33333;
+  --warmGrey-color: #757575;
+  --warmGrey-color2: #888;
+  --paleGrey-color: #f9fafb;
+  --paleGrey-color2: #f2f4f6;
+  --brownishGrey-color: #666;
+  --paleBlue-color: #eaf3fe;
+  --darkSkyBlue-color: #4880ee;
+  --white-color: #fff;
+  --coolGrey-color: #8d9695;
+  --beige-color: #f8e4e4;
+  --duskyRose-color: #bd6272;
+  --slateGrey-color: #505866;
+  --veryPaleGreen-color: #e9fce0;
+  --fernGreen-color: #41874c;
+  --duckEggBlue-color: #e0f0fc;
+  --windowsBlue-color: #4f98cd;
+  --pale-color: #fcf2e0;
+  --dullOrange-color: #d0812e;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, span, em {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+fieldset, img {
+  border: 0 none;
+  vertical-align: top;
+}
+dl, ul, ol, menu, li {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+input, select, textarea, button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+
+  /*&:focus,&:active {
+    outline: 2px dashed #000;
+  }*/
+}
+body {
+  -webkit-text-size-adjust: none;
+}
+html, body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body, th, td, input, select, textarea, button, div, li, span, p, select, textarea, input, button {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: 'Noto Sans KR', '돋움', dotum, sans-serif;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  color: #000;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:active, a:hover {
+  text-decoration: none;
+}
+button, input[type='button'], input[type='submit'], input[type='reset'], input[type='file'] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+article, aside, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+textarea {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  font-size: 16px;
+  &::placeholder {
+    color: var(--warmGrey-color);
+  }
+}
+caption {
+  display: none;
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: normal;
+}
+.blind,legend {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden
+}
+
+::placeholder {
+  position: relative;
+  color: var(--warmGrey-color);
+  z-index: 1;
+}
+:-ms-input-placeholder {
+  color: var(--warmGrey-color);
+}
