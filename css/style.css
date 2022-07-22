@@ -652,6 +652,20 @@ h1, h2, h3, h4, h5, h6, strong {
   text-align: center;
 }
 
+/* Slide Layer Popup */
+.slideLayer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 30px 30px 0 0;
+  background-color: #fff;
+  z-index: 100;
+}
+.slideLayer .slideLayer__content {
+  padding: 30px 24px 40px;
+}
+
 /* List Type - 상담사 검색 */
 .justifyWrap {
   display: flex;
@@ -2288,6 +2302,17 @@ h1, h2, h3, h4, h5, h6, strong {
   width: 100px;
   height: 20px;
   background-size: 20px;
+  z-index: 0;
+}
+.reviewAverage .totalStar .bgStar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 20px;
+  background: url("../images/bg_star_40x40_on.png") repeat-x;
+  background-size: 20px;
+  z-index: 1;
 }
 .reviewAverage .totalStar .num {
   font-family: "Roboto";
@@ -2329,6 +2354,133 @@ h1, h2, h3, h4, h5, h6, strong {
   font-family: "Roboto";
   font-size: 12px;
   color: var(--brownishGrey-color);
+}
+
+.reviewList {
+  padding: 40px 24px 0;
+}
+.reviewList .reviewTotal {
+  color: var(--brownishGrey-color);
+}
+.reviewList .reviewTotal .totalNum {
+  margin: 0 3px 0 5px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: var(--darkSkyBlue-color);
+}
+.reviewList .reviewList__item {
+  padding: 20px 24px 15px;
+  background: var(--paleGrey-color);
+  border-radius: 18px;
+}
+.reviewList .reviewList__item .justifyWrap {
+  position: relative;
+  justify-content: flex-start;
+}
+.reviewList .reviewList__item .justifyWrap .btn {
+  position: absolute;
+  right: 4px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -190px -29px;
+  background-size: 250px;
+}
+.reviewList .reviewList__item .rating {
+  position: relative;
+  background: url("../images/bg_star_40x40_off.png") repeat-x;
+  width: 100px;
+  height: 20px;
+  background-size: 20px;
+}
+.reviewList .reviewList__item .rating .bgStar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url("../images/bg_star_40x40_on.png") repeat-x;
+  height: 20px;
+  background-size: 20px;
+  z-index: 0;
+}
+.reviewList .reviewList__item .name {
+  margin: 0 8px 0 16px;
+  font-weight: 500;
+  color: var(--warmGrey-color2);
+}
+.reviewList .reviewList__item .date {
+  position: relative;
+  font-family: "Roboto";
+  color: var(--warmGrey-color2);
+  top: 2px;
+}
+.reviewList .reviewList__item .text {
+  margin-top: 15px;
+  line-height: 22px;
+  color: var(--font-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.reviewList .reviewList__item .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.reviewList .reviewList__item .bottom span {
+  color: var(--warmGrey-color2);
+}
+.reviewList .reviewList__item .bottom span.date {
+  position: relative;
+  top: 0;
+  font-family: "Roboto";
+}
+.reviewList .reviewList__item .bottom .btnLike {
+  position: relative;
+  padding: 0 0 0 24px;
+  color: var(--brownishGrey-color);
+  font-family: Roboto;
+}
+.reviewList .reviewList__item .bottom .btnLike:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -140px -29px;
+  background-size: 250px;
+  width: 20px;
+  height: 20px;
+}
+.reviewList .reviewList__item .bottom .btnLike.on {
+  font-weight: 500;
+  color: var(--black-color);
+}
+.reviewList .reviewList__item .bottom .btnLike.on:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -165px -29px;
+  background-size: 250px;
+  width: 20px;
+  height: 20px;
+}
+.reviewList .reviewList__item + .reviewList__item {
+  margin-top: 14px;
+}
+
+.selectType {
+  border: 0;
+  padding: 0 28px 0 0;
+  color: var(--brownishGrey-color);
+  background: url(../images/bg_arrow.png) no-repeat 95% 50%;
+  background-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,18 +23,52 @@
     <h1 class="guideTitle">Layer Popup</h1>
     <h2 class="guideTitle">Slide Popup</h2>
     <div class="guideBox">
-        <button type="button" class="btn btn-d">Button 형식</button>
-        <a href="#" class="btn btn-d">a link 형식</a>
+        <button type="button" class="guideBtn" onclick="slideOpen()">Slide Layer 버튼</button>
+        <a href="#" class="guideBtn">a link 형식</a>
     </div>
+</div>
 
+<div class="dim"></div>
+<div class="slideLayer">
+    <div class="slideLayer__content">
+        <p>아래 내용으로 예약신청하시겠습니까?</p>
+        <dl>
+            <dt>상담 유형</dt>
+            <dd>채무조정</dd>
+            <dt>담당 상담사</dt>
+            <dd>전미소 상담사</dd>
+            <dt>상담 일시</dt>
+            <dd>2022.09.08 14:00~14:30</dd>
+        </dl>
+        <div class="btnWrap btnWrap-col2">
+            <button type="button" class="btn btn-d btnGray w78" onclick="slideClose(this);"><span>취소</span></button>
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+    </div>
 </div>
 <script src="../js/lib/jquery-3.6.0.min.js"></script>
 <script>
 $(function(){
     $('h2.guideTitle').each(function(index){
         $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
-    })
+    });
+
 });
+function slideOpen() {
+    const h = $('.slideLayer').outerHeight();
+    $('body').append('<div class="dim"></div>');
+    $('.slideLayer').animate({
+        bottom: 0
+    });
+}
+
+function slideClose() {
+    const h = $('.slideLayer').outerHeight();
+    $('.dim').remove();
+    $('.slideLayer').animate({
+       bottom: -h
+    });
+}
 </script>
 </body>
 </html>

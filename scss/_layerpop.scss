@@ -228,3 +228,17 @@
     }
   }
 }
+
+/* Slide Layer Popup */
+.slideLayer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 30px 30px 0 0;
+  background-color: #fff;
+  z-index: 100;
+  .slideLayer__content {
+    padding: 30px 24px 40px;
+  }
+}

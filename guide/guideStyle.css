@@ -10,3 +10,4 @@ h2.guideTitle {font-size: 18px;margin: 10px 0;}
 .guideBox .btnWrap + .btnWrap {margin-top: 10px;}
 .guideNum {font-size: 18px;font-weight: 800;margin-right: 5px;}
 .guideBox .header {position: relative;}
+.guideBtn {background-color: #0aaeb3;padding:5px;display: inline-block;vertical-align: top;}

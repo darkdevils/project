@@ -125,6 +125,17 @@
       width: 100px;
       height: 20px;
       background-size: 20px;
+      z-index: 0;
+    }
+    .bgStar {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 20px;
+      background: url('../images/bg_star_40x40_on.png') repeat-x;
+      background-size: 20px;
+      z-index: 1;
     }
     .num {
       font-family: 'Roboto';
@@ -170,5 +181,116 @@
   }
 }
 .reviewList {
+  padding: 40px 24px 0;
+  .reviewTotal {
+    color: var(--brownishGrey-color);
+    .totalNum {
+      margin: 0 3px 0 5px;
+      font-family: 'Roboto';
+      font-weight: 500;
+      color: var(--darkSkyBlue-color);
+    }
+  }
+  .reviewList__item {
+    padding: 20px 24px 15px;
+    background: var(--paleGrey-color);
+    border-radius: 18px;
+    .justifyWrap {
+      position: relative;
+      justify-content: flex-start;
+      .btn {
+        position: absolute;
+        right: 4px;
+        top: 3px;
+        width: 20px;
+        height: 20px;
+        @include imageUrl(common_sprite,png);
+        background-position: -190px -29px;
+        background-size: 250px;
+      }
+    }
+    .rating {
+      position: relative;
+      background: url('../images/bg_star_40x40_off.png') repeat-x;
+      width: 100px;
+      height: 20px;
+      background-size: 20px;
+      .bgStar {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: url('../images/bg_star_40x40_on.png') repeat-x;
+          height: 20px;
+          background-size: 20px;
+          z-index: 0;
+      }
+    }
+    .name {
+      margin: 0 8px 0 16px;
+      font-weight: 500;
+      color: var(--warmGrey-color2);
+    }
+    .date {
+      position: relative;
+      font-family: 'Roboto';
+      color: var(--warmGrey-color2);
+      top: 2px;
+    }
+    .text {
+      margin-top: 15px;
+      line-height: 22px;
+      color: var(--font-color);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      span {
+        color: var(--warmGrey-color2);
+        &.date {
+          position: relative;
+          top: 0;
+          font-family: 'Roboto';
+        }
+      }
+      .btnLike {
+        position: relative;
+        padding: 0 0 0 24px;
+        color: var(--brownishGrey-color);
+        font-family: Roboto;
+        @include bgImage(0,2px,common_sprite) {
+          background-position: -140px -29px;
+          background-size: 250px;
+          width: 20px;
+          height: 20px;
+        }
+        &.on {
+          font-weight: 500;
+          color: var(--black-color);
+          @include bgImage(0,2px,common_sprite) {
+            background-position: -165px -29px;
+            background-size: 250px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
 
+    + .reviewList__item {
+      margin-top: 14px;
+    }
+  }
+}
+.selectType {
+  border: 0;
+  padding: 0 28px 0 0;
+  color: var(--brownishGrey-color);
+  background: url(../images/bg_arrow.png) no-repeat 95% 50%;
+  background-size: 20px;
 }
