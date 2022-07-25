@@ -77,7 +77,8 @@
     });
     $(function(){
         function loop(){
-            $('.subSwiper .swiper-slide').animate({'bottom':  140 + 'px)'},300).animate({'bottom':  0 + 'px)'},300, loop);
+            $('.subSwiper .swiper-slide:nth-child(2n-1)').animate({'top':  14 + 'px'},800).animate({'top':  0 + 'px'},800, loop);
+            $('.subSwiper .swiper-slide:nth-child(2n)').animate({'top':  0 + 'px'},800).animate({'top':  14 + 'px'},800, loop);
         }
         // call this wherever you want
         loop();
