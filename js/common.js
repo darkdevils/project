@@ -1,7 +1,16 @@
+
+const h = $('.slideLayer').outerHeight();
+$('.slideLayer').css({
+    bottom: -h
+});
+
 const common = {
     init: function() {
+        this.selectColor();
         //this.btnToggle();
     },
+
+    // Tab
     tabType: function(e,num) {
         num = num || 0;
         const menu = $(e).children();
@@ -27,9 +36,35 @@ const common = {
             return false;
         });
     },
+
+    // Toggle Button
     btnToggle: function(el) {
         $(el).toggleClass('on');
     },
+
+    // Slide Layer
+    slideLayer: {
+
+        slideOpen: function() {
+            $('body').append('<div class="dim"></div>');
+            $('.slideLayer').animate({
+                bottom: 0
+            });
+        },
+        slideClose: function() {
+            $('.dim').remove();
+            $('.slideLayer').animate({
+                bottom: -h
+            });
+        }
+    },
+
+    // Select Color
+    selectColor: function(){
+        $('.selectBox select').change(function() {
+            $('.selectBox select').css({'color' : '#000'});
+        });
+    }
 }
 
 $(function(){

@@ -23,15 +23,36 @@
     <h1 class="guideTitle">Layer Popup</h1>
     <h2 class="guideTitle">Slide Popup</h2>
     <div class="guideBox">
-        <button type="button" class="guideBtn" onclick="slideOpen()">Slide Layer 버튼</button>
-        <a href="#" class="guideBtn">a link 형식</a>
+        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen()">Slide Layer 버튼</button>
+        <p class="guidePoint">※ "버튼"클릭시 Slide Layer 활성화</p>
+        <!-- tag highlinght 적용 -->
+        <pre>
+<code class="html">&lt;div class=&quot;slideLayer&quot;&gt;
+    &lt;div class=&quot;slideLayer__content&quot;&gt;
+        &lt;p class=&quot;txtCenter&quot;&gt;&#xC544;&#xB798; &#xB0B4;&#xC6A9;&#xC73C;&#xB85C; &#xC608;&#xC57D;&#xC2E0;&#xCCAD;&#xD558;&#xC2DC;&#xACA0;&#xC2B5;&#xB2C8;&#xAE4C;?&lt;/p&gt;
+        &lt;dl class=&quot;reservationTxt&quot;&gt;
+            &lt;dt&gt;&#xC0C1;&#xB2F4; &#xC720;&#xD615;&lt;/dt&gt;
+            &lt;dd&gt;&#xCC44;&#xBB34;&#xC870;&#xC815;&lt;/dd&gt;
+            &lt;dt&gt;&#xB2F4;&#xB2F9; &#xC0C1;&#xB2F4;&#xC0AC;&lt;/dt&gt;
+            &lt;dd&gt;&#xC804;&#xBBF8;&#xC18C; &#xC0C1;&#xB2F4;&#xC0AC;&lt;/dd&gt;
+            &lt;dt&gt;&#xC0C1;&#xB2F4; &#xC77C;&#xC2DC;&lt;/dt&gt;
+            &lt;dd&gt;2022.09.08 14:00~14:30&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;btnWrap btnWrap-col2&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnGray w78&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span&gt;&#xCDE8;&#xC18C;&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xD655;&#xC778;&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <!-- //tag highlinght 적용 -->
     </div>
 </div>
 
 <div class="slideLayer">
     <div class="slideLayer__content">
-        <p>아래 내용으로 예약신청하시겠습니까?</p>
-        <dl>
+        <p class="txtCenter">아래 내용으로 예약신청하시겠습니까?</p>
+        <dl class="reservationTxt">
             <dt>상담 유형</dt>
             <dd>채무조정</dd>
             <dt>담당 상담사</dt>
@@ -40,12 +61,14 @@
             <dd>2022.09.08 14:00~14:30</dd>
         </dl>
         <div class="btnWrap btnWrap-col2">
-            <button type="button" class="btn btn-d btnGray w78" onclick="slideClose(this);"><span>취소</span></button>
+            <button type="button" class="btn btn-d btnGray w78" onclick="common.slideLayer.slideClose();"><span>취소</span></button>
             <button type="button" class="btn btn-d"><span>확인</span></button>
         </div>
     </div>
 </div>
+
 <script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../js/common.js"></script>
 <script>
 $(function(){
     $('h2.guideTitle').each(function(index){
@@ -53,25 +76,6 @@ $(function(){
     });
 });
 
-
-const h = $('.slideLayer').outerHeight();
-$('.slideLayer').css({
-    bottom: -h
-})
-
-function slideOpen() {
-    $('body').append('<div class="dim"></div>');
-    $('.slideLayer').animate({
-        bottom: 0
-    });
-}
-
-function slideClose() {
-    $('.dim').remove();
-    $('.slideLayer').animate({
-       bottom: -h
-    });
-}
 </script>
 </body>
 </html>

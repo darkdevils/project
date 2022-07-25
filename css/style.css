@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6, strong {
 /* Input Type - Search */
 .searchArea {
   position: relative;
-  width: 87.2%;
+  width: 100%;
   height: 60px;
   border: 1px solid var(--silver-color);
   border-radius: 200px;
@@ -411,7 +411,7 @@ h1, h2, h3, h4, h5, h6, strong {
   background-size: 250px;
 }
 .searchArea input[type=text] {
-  width: 100%;
+  width: calc(100% - 56px);
   height: 60px;
   border: 0;
   font-size: 16px;
@@ -664,6 +664,32 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 .slideLayer .slideLayer__content {
   padding: 30px 24px 40px;
+}
+.slideLayer .slideLayer__content .txtCenter {
+  margin-bottom: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+.slideLayer .slideLayer__content .reservationTxt {
+  border-top: 1px solid #e7e9ee;
+  border-bottom: 1px solid #e7e9ee;
+  padding: 24px 0 16px;
+}
+.slideLayer .slideLayer__content .reservationTxt dt {
+  float: left;
+  margin-bottom: 8px;
+  width: 30%;
+  font-size: 16px;
+  color: var(--brownishGrey-color);
+}
+.slideLayer .slideLayer__content .reservationTxt dd {
+  padding-left: 30%;
+  margin-bottom: 8px;
+  text-align: right;
+  font-size: 16px;
+}
+.slideLayer .slideLayer__content .btnWrap {
+  margin-top: 32px;
 }
 
 /* List Type - 상담사 검색 */
@@ -2163,6 +2189,105 @@ h1, h2, h3, h4, h5, h6, strong {
   background-color: #999;
 }
 
+/* Select Type */
+.selectWrap .selectBox {
+  position: relative;
+  height: 60px;
+  border: 1px solid var(--silver-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.selectWrap .selectBox:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 50%;
+  background: url("../images/bg_arrow.png") no-repeat;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background-size: 20px;
+}
+.selectWrap .selectBox select {
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  padding: 0 52px 0 16px;
+  border: none;
+  color: var(--warmGrey-color);
+}
+.selectWrap .selectBox select option {
+  color: var(--black-color);
+}
+.selectWrap .selectBox select option[value=""][disabled] {
+  display: none;
+}
+.selectWrap .selectBox + .selectBox {
+  margin-top: 16px;
+}
+
+/* Dl - Symbol */
+.dl_symbol dt {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.dl_symbol dd {
+  position: relative;
+  color: var(--brownishGrey-color);
+  line-height: 22px;
+  padding: 0 0 0 16px;
+}
+.dl_symbol dd + dd {
+  margin-top: 4px;
+}
+.dl_symbol dd:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #999;
+}
+
+/* Banner Type */
+.banner {
+  position: relative;
+  border: 1px solid #ededf0;
+  padding: 24px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.banner span {
+  display: block;
+  color: #949ba6;
+}
+.banner strong {
+  display: block;
+  font-weight: 500;
+  color: var(--slateGrey-color);
+}
+.banner.banner-type01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 50%;
+  background: url("../images/common_sprite.png") no-repeat;
+  right: 24px;
+  width: 42px;
+  height: 46px;
+  background-size: 250px;
+  background-position: -57px -70px;
+  margin-top: -21px;
+}
+
 /* Dim 화면 */
 .dim {
   position: fixed;
@@ -2175,6 +2300,128 @@ h1, h2, h3, h4, h5, h6, strong {
   z-index: 99;
 }
 
+/* 신용상담 서비스 메인 */
+.subMain01 .subSwiper {
+  padding: 0 0 30px;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide {
+  position: relative;
+  width: 280px;
+  height: 320px;
+  flex-grow: 0;
+  padding: 4px 24px 24px;
+  border-radius: 32px;
+  box-shadow: 0 14px 12px 0 rgba(177, 209, 255, 0.3);
+  background-color: #fff;
+  top: 0;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  background: url("../images/bg_sub_swiper.png") no-repeat;
+  background-size: 669px 144px;
+  height: 144px;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide .title {
+  position: absolute;
+  left: 24px;
+  bottom: 80px;
+  font-weight: 300;
+  color: #5978ae;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide p {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black-color);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(1):after {
+  width: 109px;
+  height: 144px;
+  margin-left: -54.5px;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(2) {
+  background-color: #454896;
+  transform: translateY(14px);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(2):after {
+  background-position: -114px 0;
+  width: 150px;
+  margin-left: -75px;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(2) .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(2) p {
+  color: var(--white-color);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(3) {
+  background-color: #5bc1c8;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(3):after {
+  background-position: -269px 0;
+  width: 131px;
+  margin-left: -65.5px;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(3) .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(3) p {
+  color: var(--white-color);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(4) {
+  background-color: #e0af4f;
+  transform: translateY(14px);
+  box-shadow: 0 14px 12px 0 rgba(219, 180, 134, 0.3);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(4):after {
+  background-position: -405px 0;
+  width: 140px;
+  margin-left: -70px;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(4) .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(4) p {
+  color: var(--white-color);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(5) {
+  background-color: #864fe0;
+  box-shadow: 0 14px 12px 0 rgba(197, 134, 219, 0.3);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(5):after {
+  background-position: -550px 0;
+  width: 144px;
+  margin-left: -72px;
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(5) .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+.subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(5) p {
+  color: var(--white-color);
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveUpDown2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(14px);
+  }
+}
 /* 상담사 상세 */
 .consultingImage {
   /*height: 200px;*/
@@ -2481,6 +2728,37 @@ h1, h2, h3, h4, h5, h6, strong {
   color: var(--brownishGrey-color);
   background: url(../images/bg_arrow.png) no-repeat 95% 50%;
   background-size: 20px;
+}
+
+/* 상담 예약완료 */
+.completionWrap {
+  position: relative;
+  padding: 82px 0 0;
+  text-align: center;
+}
+.completionWrap:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  background: url("../images/common_sprite.png") no-repeat;
+  width: 52px;
+  height: 52px;
+  background-size: 250px;
+  background-position: 0 -70px;
+  margin-left: -26px;
+}
+.completionWrap strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+}
+.completionWrap p {
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--brownishGrey-color);
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용상담 서비스</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+<div class="wrap subMain01">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">신용상담 서비스</h1>
+        <button type="button" class="btnSearch"><span class="blind">검색</span></button>
+    </div>
+    <div class="container">
+        <div class="">
+            <span class="txtSmaill">신용문제로 고민중이세요?</span>
+            <span class="txtBig">신용 전문 상담사의<br>도움을 받아보세요</span>
+        </div>
+        <div class="swiper subSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <span class="title">채무조정</span>
+                    <p>채무감면, 상환기간 연장을<br>통해 안정적인 채무상환!</p>
+                </div>
+                <div class="swiper-slide">
+                    <span class="title">소액 신용대출</span>
+                    <p>어려울 때 가까운 곳에서<br>힘이 되어 드릴게요</p>
+                </div>
+                <div class="swiper-slide">
+                    <span class="title">성실상환</span>
+                    <p>성실하게 상환하시면<br>전세자금 보증해드려요</p>
+                </div>
+                <div class="swiper-slide">
+                    <span class="title">코로나19 팬데믹</span>
+                    <p>소상공인의 신속한<br>경제활동 복귀를 지원할게요</p>
+                </div>
+                <div class="swiper-slide">
+                    <span class="title">신용상담서비스</span>
+                    <p>언제 어디서든 구애받지 않고<br>날짜와 시간만 선택하세요</p>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li>날짜, 시간만 선택하면 연락드릴게요</li>
+            <li>모든 신용채무를 통합하여 조정해 드려요</li>
+            <li>신청비 외 별도의 비용이 들지않아요</li>
+        </ul>
+
+        <div class="banner banner-type01">
+            <span>신용플러스앱 알람 설정하면</span>
+            <strong>스타벅스 아메리카노 1잔이 공짜</strong>
+        </div>
+
+        <dl class="dl_symbol">
+            <dt>이용안내</dt>
+            <dd>개인채무조정절차에 소요되는 기간은 신청일로부터 약 2~3개월이며, 금융회사와의 협의 과정에 따라 달라질 수 있습니다.</dd>
+            <dd>신청일 이후부터 특별한 경우를 제외하고는 개별금융회사 채무상환을 중단하여야 합니다.</dd>
+            <dd>개인채무조정기간 중 위원회로부터 안내 받은 예납금을 납입하여야 합니다.</dd>
+            <dd>개인채무조정기간 중 위원회로부터 안내 받은 예납금을 `납입하여야 합니다.</dd>
+        </dl>
+    </div>
+</div>
+
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    // swiper
+    var swiper = new Swiper(".subSwiper", {
+        slidesPerView: 1.3,
+        spaceBetween: 30,
+        centeredSlides: true,
+    });
+    $(function(){
+        function loop(){
+            $('.subSwiper .swiper-slide').animate({'bottom':  140 + 'px)'},300).animate({'bottom':  0 + 'px)'},300, loop);
+        }
+        // call this wherever you want
+        loop();
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,4 +1,6 @@
 
+$slider-btn-margin: 32px;
+
 /* Layer Popup - 전체팝업 */
 .layerPopup {
   height: 100vh;
@@ -240,5 +242,31 @@
   z-index: 100;
   .slideLayer__content {
     padding: 30px 24px 40px;
+    .txtCenter {
+      margin-bottom: 30px;
+      font-size: 18px;
+      text-align: center;
+    }
+    .reservationTxt {
+      border-top: 1px solid #e7e9ee;
+      border-bottom: 1px solid #e7e9ee;
+      padding: 24px 0 16px;
+      dt {
+        float: left;
+        margin-bottom: 8px;
+        width: 30%;
+        font-size: 16px;
+        color: var(--brownishGrey-color);
+      }
+      dd {
+        padding-left: 30%;
+        margin-bottom: 8px;
+        text-align: right;
+        font-size: 16px;
+      }
+    }
+    .btnWrap {
+      margin-top: $slider-btn-margin;
+    }
   }
 }

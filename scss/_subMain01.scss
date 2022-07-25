@@ -1,0 +1,127 @@
+
+/* 신용상담 서비스 메인 */
+.subMain01 {
+  .subSwiper {
+    padding: 0 0 30px;
+    .swiper-wrapper {
+      .swiper-slide {
+        position: relative;
+        width: 280px;
+        height: 320px;
+        flex-grow: 0;
+        padding: 4px 24px 24px;
+        border-radius: 32px;
+        box-shadow: 0 14px 12px 0 rgba(177, 209, 255, 0.3);
+        background-color: #fff;
+        top: 0;
+        @include bgImage(50%,40px, bg_sub_swiper) {
+          background-size: 669px 144px;
+          height: 144px;
+        }
+        //animation: moveUpDown 1s alternate infinite;
+
+        .title {
+          position: absolute;
+          left: 24px;
+          bottom: 80px;
+          font-weight: 300;
+          color: #5978ae;
+        }
+        p {
+          position: absolute;
+          left: 24px;
+          bottom: 24px;
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--black-color);
+        }
+        &:nth-child(1) {
+          &:after {
+            width: 109px;
+            height: 144px;
+            margin-left: calc(-109px / 2);
+          }
+        }
+        &:nth-child(2) {
+          //animation: moveUpDown2 1.5s alternate infinite;
+          background-color: #454896;
+          transform: translateY(14px);
+          &:after {
+            background-position: -114px 0;
+            width: 150px;
+            margin-left: calc(-150px / 2);
+          }
+          .title {
+            color: rgba(255, 255, 255, 0.7);
+          }
+          p {
+            color: var(--white-color);
+          }
+        }
+        &:nth-child(3) {
+          background-color: #5bc1c8;
+          &:after {
+            background-position: -269px 0;
+            width: 131px;
+            margin-left: calc(-131px / 2);
+          }
+          .title {
+            color: rgba(255, 255, 255, 0.7);
+          }
+          p {
+            color: var(--white-color);
+          }
+        }
+        &:nth-child(4) {
+          //animation: moveUpDown2 1.5s alternate infinite;
+          background-color: #e0af4f;
+          transform: translateY(14px);
+          box-shadow: 0 14px 12px 0 rgba(219, 180, 134, 0.3);
+          &:after {
+            background-position: -405px 0;
+            width: 140px;
+            margin-left: calc(-140px / 2);
+          }
+          .title {
+            color: rgba(255, 255, 255, 0.7);
+          }
+          p {
+            color: var(--white-color);
+          }
+        }
+        &:nth-child(5) {
+          background-color: #864fe0;
+          box-shadow: 0 14px 12px 0 rgba(197, 134, 219, 0.3);
+          &:after {
+            background-position: -550px 0;
+            width: 144px;
+            margin-left: calc(-144px / 2);
+          }
+          .title {
+            color: rgba(255, 255, 255, 0.7);
+          }
+          p {
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveUpDown2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(14px);
+  }
+}

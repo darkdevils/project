@@ -294,3 +294,28 @@
   background: url(../images/bg_arrow.png) no-repeat 95% 50%;
   background-size: 20px;
 }
+
+/* 상담 예약완료 */
+.completionWrap {
+  position: relative;
+  padding: 82px 0 0;
+  text-align: center;
+  @include bgImage(50%,10px, common_sprite) {
+    width: 52px;
+    height: 52px;
+    background-size: 250px;
+    background-position: 0 -70px;
+    margin-left: -26px;
+  }
+  strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  p {
+    margin-top: 4px;
+    font-size: 16px;
+    color: var(--brownishGrey-color);
+    font-weight: 300;
+  }
+}
