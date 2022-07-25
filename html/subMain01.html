@@ -80,8 +80,19 @@
             $('.subSwiper .swiper-slide:nth-child(2n-1)').animate({'top':  14 + 'px'},800).animate({'top':  0 + 'px'},800, loop);
             $('.subSwiper .swiper-slide:nth-child(2n)').animate({'top':  0 + 'px'},800).animate({'top':  14 + 'px'},800, loop);
         }
-        // call this wherever you want
         loop();
+        function stop() {
+            $("body").on("touchstart", function(e){
+                console.log('touchstart');
+            });
+            $("body").on("touchmove", function(e){
+                console.log('touchmove');
+            });
+            $("body").on("touchend", function(e){
+                console.log('touchend~~~~~~');
+            });
+        }
+        stop();
     });
 
 
