@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* NotoSansKr */
-/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@500&display=swap');*/
 /*@font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
@@ -300,6 +300,166 @@ h1, h2, h3, h4, h5, h6, strong {
 
 :-ms-input-placeholder {
   color: var(--warmGrey-color);
+}
+
+div.hasDatepicker {
+  display: block;
+  padding: 0;
+  overflow: visible;
+  margin: 8px 0;
+  max-width: 340px;
+}
+
+.ui-datepicker {
+  overflow: visible;
+  margin: 0;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: 0.6em 0;
+  border-bottom: 0;
+  font-weight: bold;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  padding: 1px 0 1px 2px;
+  position: absolute;
+  top: 0.6em;
+  margin-top: 0;
+  text-indent: -9999px;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  vertical-align: middle;
+  margin-right: 0.625em;
+  width: 1.75em;
+  height: 1.75em;
+  white-space: nowrap !important;
+}
+
+.ui-datepicker .ui-datepicker-prev:after,
+.ui-datepicker .ui-datepicker-next:after {
+  left: 50%;
+  margin-left: -11px;
+  top: 50%;
+  margin-top: -11px;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+}
+
+.ui-datepicker .ui-datepicker-next:after {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%20style%3D%22enable-background%3Anew%200%200%2014%2014%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20fill%3D%22%23FFF%22%20points%3D%2214%2C7%207%2C0%207%2C5%200%2C5%200%2C9%207%2C9%207%2C14%20%22%2F%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.ui-datepicker .ui-datepicker-prev:after {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%20style%3D%22enable-background%3Anew%200%200%2014%2014%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20fill%3D%22%23FFF%22%20points%3D%227%2C5%207%2C0%200%2C7%207%2C14%207%2C9%2014%2C9%2014%2C5%20%22%2F%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  left: 9px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+  right: 2px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0;
+}
+
+.ui-datepicker select.ui-datepicker-month-year {
+  width: 100%;
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 49%;
+}
+
+.ui-datepicker table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.ui-datepicker td {
+  border-width: 1px;
+  padding: 0;
+  border-style: solid;
+  text-align: center;
+  min-width: 41px;
+}
+
+.ui-datepicker td span,
+.ui-datepicker a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  /* from .ui-btn class */
+  font-size: 16px;
+  position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none !important;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.ui-datepicker td a {
+  padding: 0.2em 0;
+  font-weight: bold;
+  margin: 0;
+  border-width: 0;
+}
+
+.ui-datepicker-calendar th {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.ui-datepicker-calendar th span,
+.ui-datepicker-calendar span.ui-state-default {
+  opacity: 0.7;
+}
+
+.ui-datepicker-calendar td a,
+.ui-datepicker-calendar td span {
+  padding: 0.6em 0.5em;
+}
+
+.ui-datepicker .ui-state-disabled {
+  opacity: 1;
+}
+
+.ui-datepicker.ui-corner-all,
+.ui-datepicker .ui-datepicker-header.ui-corner-all {
+  border-radius: 0;
+  -webkit-border-radius: 0;
 }
 
 /* Button */
@@ -2271,6 +2431,7 @@ h1, h2, h3, h4, h5, h6, strong {
 .banner strong {
   display: block;
   font-weight: 500;
+  font-size: 16px;
   color: var(--slateGrey-color);
 }
 .banner.banner-type01:after {
@@ -2301,19 +2462,45 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 /* 신용상담 서비스 메인 */
+.subMain01 {
+  background-color: #e5f0ff;
+}
+.subMain01 .container {
+  padding: 60px 0 0;
+}
+.subMain01 .header {
+  background-color: #e5f0ff;
+}
+.subMain01 .subCopy {
+  position: relative;
+  margin: 24px 0 40px;
+  text-align: center;
+}
+.subMain01 .subCopy .txtSmall {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--slateGrey-color);
+  font-size: 16px;
+}
+.subMain01 .subCopy .txtBig {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+}
 .subMain01 .subSwiper {
-  padding: 0 0 30px;
+  padding: 0 0 55px 47px;
 }
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide {
   position: relative;
   width: 280px;
   height: 320px;
-  flex-grow: 0;
-  padding: 4px 24px 24px;
+  /*padding: 4px 24px 24px;*/
   border-radius: 32px;
   box-shadow: 0 14px 12px 0 rgba(177, 209, 255, 0.3);
   background-color: #fff;
   top: 0;
+  animation: moveUpDown 1.5s ease-in-out alternate infinite;
 }
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide:after {
   content: "";
@@ -2328,7 +2515,7 @@ h1, h2, h3, h4, h5, h6, strong {
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide .title {
   position: absolute;
   left: 24px;
-  bottom: 80px;
+  bottom: 74px;
   font-weight: 300;
   color: #5978ae;
 }
@@ -2346,8 +2533,10 @@ h1, h2, h3, h4, h5, h6, strong {
   margin-left: -54.5px;
 }
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(2) {
+  animation: moveUpDown2 1.5s ease-in-out alternate infinite;
   background-color: #454896;
-  transform: translateY(14px);
+  top: 14px;
+  transition: 0.7s ease;
 }
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(2):after {
   background-position: -114px 0;
@@ -2375,8 +2564,9 @@ h1, h2, h3, h4, h5, h6, strong {
   color: var(--white-color);
 }
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(4) {
+  animation: moveUpDown2 1.5s ease-in-out alternate infinite;
   background-color: #e0af4f;
-  transform: translateY(14px);
+  top: 14px;
   box-shadow: 0 14px 12px 0 rgba(219, 180, 134, 0.3);
 }
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(4):after {
@@ -2405,21 +2595,62 @@ h1, h2, h3, h4, h5, h6, strong {
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide:nth-child(5) p {
   color: var(--white-color);
 }
+.subMain01 .textContent {
+  padding: 24px;
+  background-color: var(--white-color);
+}
+.subMain01 .textContent .list {
+  margin-bottom: 24px;
+}
+.subMain01 .textContent .list li {
+  position: relative;
+  height: 56px;
+  padding: 16px 0 0 40px;
+  font-size: 16px;
+  color: var(--font-color);
+  font-weight: 300;
+}
+.subMain01 .textContent .list li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  background: url("../images/common_sprite.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  background-size: 250px;
+}
+.subMain01 .textContent .list li:nth-child(1):after {
+  background-position: -216px 0;
+}
+.subMain01 .textContent .list li:nth-child(2):after {
+  background-position: -216px -29px;
+}
+.subMain01 .textContent .list li:nth-child(3):after {
+  background-position: -216px -58px;
+}
+.subMain01 .textContent .list li + li {
+  border-top: 1px solid #e7e9ee;
+}
+.subMain01 .textContent .banner {
+  margin-bottom: 40px;
+}
 
 @keyframes moveUpDown {
   0% {
-    transform: translateY(14px);
+    top: 14px;
   }
   100% {
-    transform: translateY(0);
+    top: 0;
   }
 }
 @keyframes moveUpDown2 {
   0% {
-    transform: translateY(0);
+    top: 0;
   }
   100% {
-    transform: translateY(14px);
+    top: 14px;
   }
 }
 /* 상담사 상세 */

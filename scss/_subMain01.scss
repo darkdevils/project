@@ -1,15 +1,39 @@
 
 /* 신용상담 서비스 메인 */
 .subMain01 {
+  .container {
+    padding: 60px 0 0;
+  }
+  background-color: $subMain-color;
+  .header {
+    background-color: $subMain-color;
+  }
+  .subCopy {
+    position: relative;
+    margin: 24px 0 40px;
+    text-align: center;
+    .txtSmall {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--slateGrey-color);
+      font-size: 16px;
+    }
+    .txtBig {
+      display: block;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 38px;
+    }
+  }
+
   .subSwiper {
-    padding: 0 0 30px;
+    padding: 0 0 55px 47px;
     .swiper-wrapper {
       .swiper-slide {
         position: relative;
         width: 280px;
         height: 320px;
-        flex-grow: 0;
-        padding: 4px 24px 24px;
+        /*padding: 4px 24px 24px;*/
         border-radius: 32px;
         box-shadow: 0 14px 12px 0 rgba(177, 209, 255, 0.3);
         background-color: #fff;
@@ -18,12 +42,12 @@
           background-size: 669px 144px;
           height: 144px;
         }
-        //animation: moveUpDown 1s alternate infinite;
+        animation: moveUpDown 1.5s ease-in-out alternate infinite;
 
         .title {
           position: absolute;
           left: 24px;
-          bottom: 80px;
+          bottom: 74px;
           font-weight: 300;
           color: #5978ae;
         }
@@ -43,9 +67,11 @@
           }
         }
         &:nth-child(2) {
-          //animation: moveUpDown2 1.5s alternate infinite;
+          animation: moveUpDown2 1.5s ease-in-out alternate infinite;
           background-color: #454896;
-          transform: translateY(14px);
+          //transform: translateY(14px);
+          top: 14px;
+          transition: 0.7s ease;
           &:after {
             background-position: -114px 0;
             width: 150px;
@@ -73,9 +99,10 @@
           }
         }
         &:nth-child(4) {
-          //animation: moveUpDown2 1.5s alternate infinite;
+          animation: moveUpDown2 1.5s ease-in-out alternate infinite;
           background-color: #e0af4f;
-          transform: translateY(14px);
+          //transform: translateY(14px);
+          top: 14px;
           box-shadow: 0 14px 12px 0 rgba(219, 180, 134, 0.3);
           &:after {
             background-position: -405px 0;
@@ -107,21 +134,66 @@
       }
     }
   }
+  .textContent {
+    padding: 24px;
+    background-color: var(--white-color);
+    .list {
+      margin-bottom: 24px;
+      li {
+        position: relative;
+        height: 56px;
+        padding: 16px 0 0 40px;
+        font-size: 16px;
+        color: var(--font-color);
+        font-weight: 300;
+        @include bgImage(0,16px, common_sprite) {
+          width: 24px;
+          height: 24px;
+          background-size: 250px;
+        }
+        &:nth-child(1) {
+          &:after {
+            background-position: calc(-432px / 2) 0;
+          }
+        }
+        &:nth-child(2) {
+          &:after {
+            background-position: calc(-432px / 2) calc(-58px / 2);
+          }
+        }
+        &:nth-child(3) {
+          &:after {
+            background-position: calc(-432px / 2) calc(-116px / 2);
+          }
+        }
+        + li {
+          border-top: 1px solid #e7e9ee;
+        }
+      }
+    }
+    .banner {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 @keyframes moveUpDown {
   0% {
-    transform: translateY(14px);
+    //transform: translateY(14px);
+    top: 14px;
   }
   100% {
-    transform: translateY(0);
+    //transform: translateY(0);
+    top: 0;
   }
 }
 @keyframes moveUpDown2 {
   0% {
-    transform: translateY(0);
+    //transform: translateY(0);
+    top: 0;
   }
   100% {
-    transform: translateY(14px);
+    //transform: translateY(14px);
+    top: 14px;
   }
 }
