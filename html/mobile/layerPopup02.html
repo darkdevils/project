@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>신용상담 후기작성</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 <div class="layerPopup">
@@ -17,7 +17,7 @@
         <div class="layerReview">
             <div class="layerReview__writing">
                 <div class="thumbnail">
-                    <img src="../images/temp/thumbnail_01.png" alt="전미소 상담사">
+                    <img src="../../images/temp/thumbnail_01.png" alt="전미소 상담사">
                 </div>
                 <div class="infoWrap">
                     <span class="name">전미소 상담사</span>
@@ -32,23 +32,11 @@
         </div>
     </div>
     <div class="btnWrap fixedBtm">
-        <button type="button" class="btn btn-d btnCom"><span>작성완료</span></button>
+        <button type="button" class="btn btn-d btnGray" disabled><span>작성완료</span></button>
     </div>
 </div>
-
-<div class="layerMessage">
-    <div class="layerMessage__text">
-        <p class="text">작성중인 글이 저장되지 않고 사라집니다.<br>그만두시겠어요?</p>
-        <div class="btnWrap btnWrap-col2">
-            <button type="button" class="btn btn-d btnGray w78"><span>취소</span></button>
-            <button type="button" class="btn btn-d"><span>확인</span></button>
-        </div>
-    </div>
-</div>
-
-<div class="dim"></div>
-<script src="../js/lib/jquery-3.6.0.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
 <script>
 $(function(){
     function textLevel(value) {
@@ -76,12 +64,7 @@ $(function(){
         }
     }
     textLevel("rating-5");
-
-    //작성완료 버튼 클릭 시 레이어 팝업호출;
-    function layerMessage() {
-
-    }
-});
+})
 
 </script>
 </body>
