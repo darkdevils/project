@@ -236,3 +236,8 @@
     @content;
   }
 }
+
+@mixin numberText {
+  font-family: 'Roboto',sans-serif;
+  letter-spacing: 0;
+}

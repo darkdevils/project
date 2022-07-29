@@ -11,7 +11,7 @@
     span {
       font-size: 16px;
       font-weight: 500;
-      font-family: 'Roboto',sans-serif;
+      @include numberText;
     }
   }
   .ui-datepicker-prev {
@@ -51,7 +51,7 @@
         height: 28px;
         border: 0;
         font-size: 14px;
-        font-family: 'Roboto',sans-serif;
+        @include numberText;
         font-weight: 300;
         line-height: 28px;
         margin: 6px auto;
@@ -62,7 +62,7 @@
         height: 28px;
         border-radius: 28px;
         font-size: 14px;
-        font-family: 'Roboto',sans-serif;
+        @include numberText;
         font-weight: 300;
         line-height: 28px;
         margin: 6px auto;

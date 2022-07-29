@@ -1,4 +1,3 @@
-
 'use strict';
 
 const h = $('.slideLayer').outerHeight();
@@ -101,19 +100,25 @@ const common = {
     // Scroll Down시 Header line 추가
     headerLine: function(){
         $(window).scroll(function(){
-            const scrollTop = $(this).scrollTop();
+            scrollDown()
+        });
+        scrollDown();
+        function scrollDown() {
+            const _window = $(window);
+            const scrollTop = _window.scrollTop();
             if(scrollTop > 0) {
                 $('.header').addClass('borBtm');
             } else {
                 $('.header').removeClass('borBtm');
             }
-        })
-    }
+        }
+    },
 }
 
 $(function(){
     common.init();
 });
+
 
 (function ($) {
     $.fn.starRating = function (setup) {

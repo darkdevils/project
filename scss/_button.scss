@@ -101,22 +101,26 @@
 .btnLike {
   position: relative;
   padding: 0 0 0 24px;
-  color: var(--brownishGrey-color);
-  font-family: Roboto;
+  @include numberText;
   @include bgImage(0,2px,common_sprite) {
     background-position: -140px -29px;
     background-size: 250px;
     width: 20px;
     height: 20px;
+    span {
+      color: var(--brownishGrey-color);
+    }
   }
   &.on {
-    font-weight: 500;
-    color: var(--black-color);
     @include bgImage(0,2px,common_sprite) {
       background-position: -165px -29px;
       background-size: 250px;
       width: 20px;
       height: 20px;
+    }
+    span {
+      font-weight: 500;
+      color: var(--black-color);
     }
   }
 }

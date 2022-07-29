@@ -94,7 +94,7 @@
         font-size: 14px;
         color: var(--brownishGrey-color);
         line-height: 22px;
-        font-family: 'Roboto';
+        @include numberText;
         margin-top: 4px;
       }
     }
@@ -137,7 +137,7 @@
       z-index: 1;
     }
     .num {
-      font-family: 'Roboto';
+      @include numberText;
       font-weight: 500;
       font-size: 24px;
     }
@@ -149,7 +149,7 @@
       align-items: center;
       .state {
         font-size: 12px;
-        font-family: 'Roboto';
+        @include numberText;
         color: var(--font-color);
         line-height: 20px;
         span {
@@ -173,7 +173,7 @@
       }
     }
     .count {
-      font-family: 'Roboto';
+      @include numberText;
       font-size: 12px;
       color: var(--brownishGrey-color);
     }
@@ -185,7 +185,7 @@
     color: var(--brownishGrey-color);
     .totalNum {
       margin: 0 3px 0 5px;
-      font-family: 'Roboto';
+      @include numberText;
       font-weight: 500;
       color: var(--darkSkyBlue-color);
     }
@@ -231,7 +231,7 @@
     }
     .date {
       position: relative;
-      font-family: 'Roboto';
+      @include numberText;
       color: var(--warmGrey-color2);
       top: 2px;
     }
@@ -266,7 +266,7 @@
         &.date {
           position: relative;
           top: 0;
-          font-family: 'Roboto';
+          @include numberText;
         }
       }
     }
@@ -331,12 +331,12 @@
           }
           .name {
             margin-right: 25px;
-            font-family: 'Roboto',sans-serif;
+            @include numberText;
           }
           .time {
             position: relative;
             em {
-              font-family: 'Roboto',sans-serif;
+              @include numberText;
             }
             &:after {
               content: "";
@@ -402,6 +402,88 @@
         }
 
       }
+    }
+  }
+}
+
+/* 게시판상세 */
+.boardView {
+  .boardView__header {
+    position: relative;
+    padding: 28px 24px 24px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 24px;
+      bottom: 0;
+      width: calc(100% - 48px);
+      height: 1px;
+      background-color: #e7e9ee;
+    }
+    .title {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    .infoArea {
+      span {
+        position: relative;
+        color: var(--warmGrey-color2);
+        + span {
+          margin-left: 25px;
+          &:after {
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 5px;
+            width: 1px;
+            height: 12px;
+            background-color: $Grey150;
+          }
+        }
+      }
+    }
+  }
+  .boardView__content {
+    .img {
+      overflow: hidden;
+      text-align: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .text {
+      padding: 16px 24px 24px;
+      font-size: 16px;
+      color: var(--brownishGrey-color);
+    }
+    .numArea {
+      padding: 0 24px;
+    }
+  }
+}
+.reviewInput {
+  padding: 16px 24px;
+  .reviewInput__textarea {
+    display: flex;
+    position: relative;
+    padding: 9px 16px;
+    background-color: #efeff2;
+    border-radius: 100px;
+    overflow: hidden;
+    textarea {
+      width: calc(100% - 58px);
+      height: 22px;
+      padding: 0;
+      background-color: #efeff2;
+      line-height: 22px;
+    }
+    .btnRegister {
+      width: 58px;
+      color: var(--warmGrey-color2);
     }
   }
 }
