@@ -36,3 +36,113 @@
     background-position: calc(-116px / 2) 0;
   }
 }
+
+/* Checkbox, RadioButton */
+.radioStyle {
+  padding: 0 0 7px;
+  li {
+    padding: 11px 0;
+  }
+  input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+    + label {
+      display: block;
+      position: relative;
+      //padding-left: 30px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      font-size: 16px;
+      color: var(--font-color);
+    }
+    &:checked {
+      + label {
+        color: #3971de;
+        font-weight: 500;
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 24px;
+          height: 24px;
+          @include imageUrl(common_sprite,png);
+          background-size: 250px;
+          background-position: calc(-299px / 2) -70px;
+        }
+      }
+    }
+  }
+}
+.radioType {
+  margin-top: 22px;
+  li {
+    padding: 10px 0;
+    .textArea {
+      margin-top: 13px;
+      border: 1px solid var(--silver-color);
+      border-radius: 10px;
+      overflow: hidden;
+      textarea {
+        height: 120px;
+        outline-color: #3971de;
+      }
+    }
+  }
+  input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+    + label {
+      display: block;
+      position: relative;
+      padding-left: 34px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      font-size: 16px;
+      color: var(--black-color);
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 28px;
+        text-align: center;
+        @include imageUrl(common_sprite,png);
+        background-size: 250px;
+        background-position: 0 calc(-254px / 2);
+      }
+    }
+
+    &:checked {
+      + label {
+        &:active {
+          &:before {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 1px 3px rgba(0,0,0,0.1);
+          }
+        }
+        &:before {
+          background-position: -33px calc(-254px / 2);
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
 pre code.hljs {margin-top: 10px;}
 .guideWrap {padding: 15px;}
 .guideTitle {font-weight: 800;}
-h1.guideTitle {font-size: 22px;}
+h1.guideTitle {font-size: 22px;margin-bottom: 10px;}
 h2.guideTitle {font-size: 18px;margin: 10px 0;}
 h3.guideTitle {font-size: 16px;font-weight: 400;margin: 5px 0 10px;}
 .guideBox {margin-bottom: 20px;border: 2px dashed #333;padding: 5px;}

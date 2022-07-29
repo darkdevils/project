@@ -7,7 +7,6 @@
   img {
     max-width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
   }
 }
 .consultingInfo {
@@ -192,7 +191,7 @@
     }
   }
   .reviewList__item {
-    padding: 20px 24px 15px;
+    padding: 22px 24px 21px;
     background: var(--paleGrey-color);
     border-radius: 18px;
     .justifyWrap {
@@ -200,7 +199,7 @@
       justify-content: flex-start;
       .btn {
         position: absolute;
-        right: 4px;
+        right: 0;
         top: 3px;
         width: 20px;
         height: 20px;
@@ -237,14 +236,26 @@
       top: 2px;
     }
     .text {
+      position: relative;
       margin-top: 15px;
       line-height: 22px;
       color: var(--font-color);
       overflow: hidden;
-      text-overflow: ellipsis;
+      max-height: 88px;
+      /*text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: vertical;*/
+      word-break: break-all;
+      .btnMore {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: #888;
+        background: var(--paleGrey-color);
+        line-height: 22px;
+        padding: 0 0 0 10px
+      }
     }
     .bottom {
       display: flex;
@@ -256,28 +267,6 @@
           position: relative;
           top: 0;
           font-family: 'Roboto';
-        }
-      }
-      .btnLike {
-        position: relative;
-        padding: 0 0 0 24px;
-        color: var(--brownishGrey-color);
-        font-family: Roboto;
-        @include bgImage(0,2px,common_sprite) {
-          background-position: -140px -29px;
-          background-size: 250px;
-          width: 20px;
-          height: 20px;
-        }
-        &.on {
-          font-weight: 500;
-          color: var(--black-color);
-          @include bgImage(0,2px,common_sprite) {
-            background-position: -165px -29px;
-            background-size: 250px;
-            width: 20px;
-            height: 20px;
-          }
         }
       }
     }
@@ -317,5 +306,102 @@
     font-size: 16px;
     color: var(--brownishGrey-color);
     font-weight: 300;
+  }
+}
+
+/* 게시판목록 */
+.boardWrap {
+  padding: 78px 24px 0;
+  .searchArea {
+    margin-bottom: 32px;
+  }
+  .justifyWrap {
+    margin-bottom: 12px;
+  }
+  .boardWrap__list {
+    li {
+      border-top: 1px solid #e7e9ee;
+      padding: 24px 0;
+      .justifyWrap {
+        margin-bottom: 16px;
+        .leftArea {
+          span,em {
+            color: var(--warmGrey-color2);
+            line-height: 20px;
+          }
+          .name {
+            margin-right: 25px;
+            font-family: 'Roboto',sans-serif;
+          }
+          .time {
+            position: relative;
+            em {
+              font-family: 'Roboto',sans-serif;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              left: -13px;
+              top: 4px;
+              width: 1px;
+              height: 12px;
+              background-color: #d9d9d9;
+            }
+          }
+        }
+        .rightArea {
+          position: relative;
+          .btn {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            @include imageUrl(common_sprite,png);
+            background-position: -190px -29px;
+            background-size: 250px;
+          }
+        }
+      }
+      .textCotent {
+        display: flex;
+        margin-bottom: 16px;
+        .textArea {
+          .title {
+            display: -webkit-box;
+            margin-bottom: 8px;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+          .text {
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            color: $Grey600;
+            line-height: 22px;
+          }
+          + .thumbnail {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin-left: 24px;
+            padding-left: 100px;
+            overflow: hidden;
+            img {
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: 100%;
+              border-radius: 18px;
+              overflow: hidden;
+            }
+          }
+        }
+
+      }
+    }
   }
 }

@@ -37,6 +37,7 @@
     width: 100%;
     bottom: 0;
     padding: 0 24px 40px;
+    z-index: 1;
     &:after {
       content: "";
       position: absolute;
@@ -47,6 +48,14 @@
       background: linear-gradient(0deg, rgba(250,250,252,1) 0%, rgba(250,250,252,0) 70%);
       z-index: 0;
     }
+  }
+  .btnMore {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #dcdde2;
+    color: $Grey600;
+    line-height: 39px;
   }
 }
 .btn {
@@ -84,6 +93,30 @@
     background-color: var(--gray-color);
     span {
       color: var(--warmGrey-color2);
+    }
+  }
+}
+
+/* 좋아요 버튼 */
+.btnLike {
+  position: relative;
+  padding: 0 0 0 24px;
+  color: var(--brownishGrey-color);
+  font-family: Roboto;
+  @include bgImage(0,2px,common_sprite) {
+    background-position: -140px -29px;
+    background-size: 250px;
+    width: 20px;
+    height: 20px;
+  }
+  &.on {
+    font-weight: 500;
+    color: var(--black-color);
+    @include bgImage(0,2px,common_sprite) {
+      background-position: -165px -29px;
+      background-size: 250px;
+      width: 20px;
+      height: 20px;
     }
   }
 }

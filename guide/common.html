@@ -29,6 +29,28 @@
             <h1 class="headerTitle">상담사 상세</h1>
             <button type="button" class="btnSearch"><span class="blind">검색</span></button>
         </div>
+        <!-- tag highlinght 적용 -->
+        <pre><code class="html">&lt;div class=&quot;header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btnBack&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xC774;&#xC804;&lt;/span&gt;&lt;/button&gt;
+    &lt;h1 class=&quot;headerTitle&quot;&gt;&#xC0C1;&#xB2F4;&#xC0AC; &#xC0C1;&#xC138;&lt;/h1&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btnSearch&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xAC80;&#xC0C9;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+    </div>
+
+    <div class="guideBox">
+        <div class="header">
+            <button type="button" class="btnBack"><span class="blind">이전</span></button>
+            <h1 class="headerTitle">게시판</h1>
+            <button type="button" class="btnWriting"><span>글쓰기</span></button>
+        </div>
+        <!-- tag highlinght 적용 -->
+        <pre><code class="html">&lt;div class=&quot;header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btnBack&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xC774;&#xC804;&lt;/span&gt;&lt;/button&gt;
+    &lt;h1 class=&quot;headerTitle&quot;&gt;&#xAC8C;&#xC2DC;&#xD310;&lt;/h1&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btnWriting&quot;&gt;&lt;span&gt;&#xAE00;&#xC4F0;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
     </div>
 
     <h2 class="guideTitle">Layer Title</h2>
@@ -61,9 +83,9 @@
 <code class="html">&lt;div class=&quot;searchArea&quot;&gt;
     &lt;fieldset&gt;
         &lt;legend&gt;&#xC2E0;&#xC6A9;&#xC0C1;&#xB2F4; &#xC11C;&#xBE44;&#xC2A4; &#xAC80;&#xC0C9;&lt;/legend&gt;
-        &lt;label for=&quot;search&quot;&gt;&#xC0C1;&#xB2F4;&#xC0AC;&#xBA85;, &#xC5C5;&#xCCB4;&#xBA85; &#xAC80;&#xC0C9;&#xC5B4;&lt;/label&gt;
+        &lt;label for=&quot;search&quot; class=&quot;blind&quot;&gt;&#xC0C1;&#xB2F4;&#xC0AC;&#xBA85;, &#xC5C5;&#xCCB4;&#xBA85; &#xAC80;&#xC0C9;&#xC5B4;&lt;/label&gt;
         &lt;input type=&quot;text&quot; id=&quot;search&quot; placeholder=&quot;&#xC0C1;&#xB2F4;&#xC0AC;&#xBA85;, &#xC5C5;&#xCCB4;&#xBA85;&#xC744; &#xAC80;&#xC0C9;&quot;&gt;
-        &lt;button type=&quot;button&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xAC80;&#xC0C9;&#xC5B4; &#xC0AD;&#xC81C;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnSearchClose&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xAC80;&#xC0C9;&#xC5B4; &#xC0AD;&#xC81C;&lt;/span&gt;&lt;/button&gt;
     &lt;/fieldset&gt;
 &lt;/div&gt;</code></pre>
         <!-- //tag highlinght 적용 -->
@@ -168,26 +190,51 @@
     <h2 class="guideTitle">Tab Type</h2>
     <div class="guideBox">
         <div class="tabWrap">
-            <ul id="tabs" class="tabType">
+            <ul id="tabs1-1" class="tabType">
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">신용솔루션</a></li>
+            </ul>
+        </div>
+        <div id="tabs1-1__con">
+            <div class="tabItem">자유게시판 내용</div>
+            <div class="tabItem">신용솔루션 내용</div>
+        </div>
+        <!-- tag highlinght 적용 -->
+        <pre><code class="html">&lt;div class=&quot;tabWrap&quot;&gt;
+    &lt;ul id=&quot;tabs1-1&quot; class=&quot;tabType&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&#xC790;&#xC720;&#xAC8C;&#xC2DC;&#xD310;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&#xC2E0;&#xC6A9;&#xC194;&#xB8E8;&#xC158;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&quot;tabs1-1__con&quot;&gt;
+    &lt;div class=&quot;tabItem&quot;&gt;&#xC790;&#xC720;&#xAC8C;&#xC2DC;&#xD310; &#xB0B4;&#xC6A9;&lt;/div&gt;
+    &lt;div class=&quot;tabItem&quot;&gt;&#xC2E0;&#xC6A9;&#xC194;&#xB8E8;&#xC158; &#xB0B4;&#xC6A9;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+    </div>
+
+    <div class="guideBox">
+        <div class="tabWrap">
+            <ul id="tabs1-2" class="tabType">
                 <li><a href="#">프로필</a></li>
                 <li><a href="#">상담일정</a></li>
                 <li><a href="#">상담후기</a></li>
             </ul>
         </div>
-        <div id="tabs__con">
+        <div id="tabs1-2__con">
             <div class="tabItem">프로필 내용</div>
             <div class="tabItem">상담일정 내용</div>
             <div class="tabItem">상담후기 내용</div>
         </div>
         <!-- tag highlinght 적용 -->
         <pre><code class="html">&lt;div class=&quot;tabWrap&quot;&gt;
-    &lt;ul id=&quot;tabs&quot; class=&quot;tabType&quot;&gt;
+    &lt;ul id=&quot;tabs1-2&quot; class=&quot;tabType&quot;&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&#xD504;&#xB85C;&#xD544;&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&#xC0C1;&#xB2F4;&#xC77C;&#xC815;&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&#xC0C1;&#xB2F4;&#xD6C4;&#xAE30;&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&quot;tabs__con&quot;&gt;
+&lt;div id=&quot;tabs1-2__con&quot;&gt;
     &lt;div class=&quot;tabItem&quot;&gt;&#xD504;&#xB85C;&#xD544; &#xB0B4;&#xC6A9;&lt;/div&gt;
     &lt;div class=&quot;tabItem&quot;&gt;&#xC0C1;&#xB2F4;&#xC77C;&#xC815; &#xB0B4;&#xC6A9;&lt;/div&gt;
     &lt;div class=&quot;tabItem&quot;&gt;&#xC0C1;&#xB2F4;&#xD6C4;&#xAE30; &#xB0B4;&#xC6A9;&lt;/div&gt;
@@ -272,23 +319,12 @@
 <script src="../js/common.js"></script>
 <script>
 $(function(){
-    $("#search").keyup(function(){
-       const text = $(this).val();
-       if(text.length > 0) {
-           $('.searchArea .btnSearchClose').fadeIn();
-       } else {
-           $('.searchArea .btnSearchClose').fadeOut();
-       }
-    });
-    $('.searchArea .btnSearchClose').on('click',function(){
-        $("#search").val('');
-        $(this).fadeOut();
-    });
 
     $('h2.guideTitle').each(function(index){
         $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
     });
-    common.tabType("#tabs",0);
+    common.tabType("#tabs1-1",0);
+    common.tabType("#tabs1-2",0);
 });
 
 </script>

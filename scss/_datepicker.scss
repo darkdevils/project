@@ -1,0 +1,144 @@
+
+/* Datepicker */
+.hasDatepicker {
+  max-width: 100% !important;
+}
+.ui-datepicker {
+  width: 100%;
+  .ui-datepicker-title {
+    font-size: 16px;
+    font-weight: 500;
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: 'Roboto',sans-serif;
+    }
+  }
+  .ui-datepicker-prev {
+    left: 2px;
+
+  }
+  .ui-datepicker-next {
+    margin-right: 0;
+  }
+  td {
+    border: 0;
+  }
+  .ui-datepicker-calendar {
+    th {
+      border: 0;
+      span {
+        font-family: 'Noto Sans KR',sans-serif;
+        font-size: 12px;
+        opacity: 1;
+      }
+      &.ui-datepicker-week-end {
+        &:first-child {
+          span {
+            color: #e53a4c;
+          }
+        }
+        &:last-child {
+          span {
+            color: #2f84de;
+          }
+        }
+      }
+    }
+    td {
+      span {
+        width: 28px;
+        height: 28px;
+        border: 0;
+        font-size: 14px;
+        font-family: 'Roboto',sans-serif;
+        font-weight: 300;
+        line-height: 28px;
+        margin: 6px auto;
+        padding: 0;
+      }
+      a {
+        width: 28px;
+        height: 28px;
+        border-radius: 28px;
+        font-size: 14px;
+        font-family: 'Roboto',sans-serif;
+        font-weight: 300;
+        line-height: 28px;
+        margin: 6px auto;
+        padding: 0;
+      }
+
+      &.ui-state-disabled {
+        a,.ui-state-default {
+          color: #d9d9d9 !important;
+        }
+      }
+      &.ui-datepicker-current-day {
+        a {
+          width: 28px;
+          height: 28px;
+          border-radius: 28px;
+          background-color: #4880ee;
+          color: var(--white-color);
+          line-height: 28px;
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+      &.ui-datepicker-today {
+        a {
+          width: 28px;
+          height: 28px;
+          border-radius: 28px;
+          background-color: #dddee4;
+          color: var(--black-color);
+          line-height: 28px;
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+    }
+    > tbody {
+      td.ui-datepicker-week-end {
+        &:first-child {
+          a {
+            color: #e53a4c;
+            margin: 6px auto;
+          }
+          &.ui-datepicker-current-day {
+            a {
+              color: var(--white-color);
+            }
+          }
+        }
+        &:last-child {
+          a {
+            color: #2f84de;
+          }
+          &.ui-datepicker-current-day {
+            a {
+              color: var(--white-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    border: 0;
+    &:after {
+      @include imageUrl(common_sprite,png);
+      width: 20px;
+      height: 20px;
+      background-size: 250px;
+      background-position: -104px -70px;
+    }
+  }
+  .ui-datepicker-next {
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+}

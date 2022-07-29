@@ -1,13 +1,33 @@
 
+'use strict';
+
 const h = $('.slideLayer').outerHeight();
-$('.slideLayer').css({
-    bottom: -h
-});
+const toastHeigh = $('.toastLayer').outerHeight();
+$('.slideLayer').css({bottom: -h});
+$('.toastLayer').css({bottom: -toastHeigh});
 
 const common = {
     init: function() {
+        this.btnSearchClose();
         this.selectColor();
+        this.headerLine();
         //this.btnToggle();
+    },
+
+    // search close button
+    btnSearchClose: function(){
+        $("#search").keyup(function(){
+            const text = $(this).val();
+            if(text.length > 0) {
+                $('.searchArea .btnSearchClose').fadeIn();
+            } else {
+                $('.searchArea .btnSearchClose').fadeOut();
+            }
+        });
+        $('.searchArea .btnSearchClose').on('click',function(){
+            $("#search").val('');
+            $(this).fadeOut();
+        });
     },
 
     // Tab
@@ -44,10 +64,10 @@ const common = {
 
     // Slide Layer
     slideLayer: {
-
-        slideOpen: function() {
+        slideOpen: function(el) {
+            const layerId = $("#" + el );
             $('body').append('<div class="dim"></div>');
-            $('.slideLayer').animate({
+            layerId.animate({
                 bottom: 0
             });
         },
@@ -59,11 +79,35 @@ const common = {
         }
     },
 
+    //Toast Layer
+    toastLayer: function(el) {
+        const toastId = $("#"+el);
+        toastId.animate({
+            bottom: 60 + "px"
+        });
+        setTimeout(function(){
+            toastId.animate({
+                bottom: -toastHeigh
+            });
+        },3000);
+    },
     // Select Color
     selectColor: function(){
         $('.selectBox select').change(function() {
             $('.selectBox select').css({'color' : '#000'});
         });
+    },
+
+    // Scroll Down시 Header line 추가
+    headerLine: function(){
+        $(window).scroll(function(){
+            const scrollTop = $(this).scrollTop();
+            if(scrollTop > 0) {
+                $('.header').addClass('borBtm');
+            } else {
+                $('.header').removeClass('borBtm');
+            }
+        })
     }
 }
 

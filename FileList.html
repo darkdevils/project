@@ -2,28 +2,695 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>신용회복플랫폼 파일리스트</title>
+    <style>
+        * {margin: 0;}
+        table {border-collapse: collapse;width: 100%;}
+        table th {background-color: #797979;border: 1px solid #9E9D9D;color: #fff;font-size: 14px;padding: 5px;position: sticky;top: 69px;}
+        td {border: 1px solid #9E9D9D;padding: 5px;font-size: 12px;}
+        caption {display: none;}
+        th,td {border: 1px solid #aaa;padding: 5px 10px}
+        tbody tr td:first-child {text-align: center;}
+        .bor_t td {border-top: 2px solid #aaa;}
+        .sign {position: relative;right: 25px;}
+        .sign > span {position: relative;margin: 0 0 0 3px;padding: 0 0 0 15px;font-size: 12px;}
+        .sign > span:after {content:"";position: absolute;left:0;top:4px;width: 9px;height: 9px;border: 1px solid #ccc;}
+        .sign .m:after {background: #f9b3b3}
+        .sign .c:after {background: #b3f9d0;}
+        tbody tr:hover td {background:#f9ffcc;}
+        .m td {background: #f9b3b3;} /* 수정표시 */
+        .c td {background: #b3f9d0;} /* 완료표시 */
+        .del td {text-decoration: line-through;background: #ff9245;}
+        .add td,.new td {background:#ffdc00;} /* 추가 및 새로운페이지 */
+        .i td {background: #b3ccf9;}/* 미완료 */
+        body {min-width:800px;}
+        /*.bor_t.c td {background: #007ae1;color:#fff;}*/
+        .t-c {text-align: center;}
+        .t-c {text-align: center;}
+        .table_type {padding: 70px 10px 20px;}
+        h1 {margin-bottom: 20px;font-size: 20px;font-weight: bold;}
+        .fixedTop {display: flex;justify-content: space-between; position: fixed;left: 0;top: 0;width: 100%;height: 30px;background-color: #fff;padding: 20px 0 20px 10px;}
+    </style>
 </head>
 <body>
-<table>
-    <caption>신용회복플래폼 파일리스트</caption>
-    <thead>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    </tbody>
-</table>
+<div class="table_type">
+    <div class="fixedTop">
+        <h1>신용회복플랫폼 파일리스트 - 모바일</h1>
+        <div class="sign">
+            <span class="i">진행 : <span class="num"></span></span>
+            <span class="m">수정 <span class="num"></span></span>
+            <span class="c">완료 : <span class="num"></span> </span>
+        </div>
+    </div>
+    <table>
+        <caption>신용회복플래폼 파일리스트 - 모바일</caption>
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>메뉴명</th>
+            <th>1depth</th>
+            <th>2depth</th>
+            <th>3depth</th>
+            <th>완료</th>
+            <th>Url</th>
+            <th>기타</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>홈</td>
+            <td>메인화면</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Index.html</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>전체메뉴</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>totalMenu.html</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>스플래시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>splash.html</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>튜토리얼</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>앱 초기 접근권한 설정</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>AppSetting.html</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>공통</td>
+            <td>설정</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>setting.html</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>서비스이용 약관</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>휴면계정 안내 팝업</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>점검공지 안내 팝업</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>오류화면</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>회원가입</td>
+            <td>시작화면</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>약관동의</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>가입완료</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>회원탈퇴</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>회원탈퇴 안내 팝업</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>신용진단</td>
+            <td>안내</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>관리 메인</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>변동조회(점수내역)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>변동조회(조회내역)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>변동조회(변동내역)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신용내역</td>
+            <td>카드</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>대출</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>연체</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>보증</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신용점수 올리기</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신용분석 리포트</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신용비교 리포트</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신쏙진단</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Step1. 주소 입력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Step2. 월소득 입력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Step3. 부양가족수 입력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Step4. 월지출액 입력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Step5. 월채무상환액 입력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Step6. 총재산 입력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Step7. 기타 채무액 입력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신쏙진단 결과</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신용점수 변동조회</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>원리금분할상환</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>원금분할상환</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>만기일시상환</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신용상담 서비스 안내</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상담분야 선택</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상담날짜 선택</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>상담업체</td>
+            <td>목록</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>프로필</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상담일정</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상담후기</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>신용상담</td>
+            <td>예약</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>예약 완료</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>변경</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>변경 완료</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>후기 쓰기</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>자유게시판</td>
+            <td>목록</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>신용솔루션</td>
+            <td>목록</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>온라인 신용교육</td>
+            <td>목록</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>신용뉴스</td>
+            <td>목록</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>My 메인</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>상담예약 내역</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Q&amp;A 문의내역</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>My 활동 이력</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>My 관심목록</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>차단내역</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>신고내역</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>알림내역</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="./js/lib/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $("table tbody tr").each(function(){
+            let num = $(this).index() + 1;
+            $(this).prepend("<td>" + num +"</td>")
+        });
+        $("table tbody tr td:nth-child(7)").each(function(){
+            let linkText = $(this).text();
+            $(this).contents().wrap('<a href="./mobile/'+ linkText + '"></a>')
+            //console.log(linkText);
+        });
+        //var cm = $('tr.c').length;
+        $('.sign .i .num').text($('.table_type tbody tr').length - $('tr.c').length);
+        $('.sign .m .num').text($('tr.m').length);
+        $('.sign .c .num').text($('tr.c').length + $('tr.m').length + $('tr.new').length  + $('tr.i').length);
+    })
+</script>
 </body>
 </html>

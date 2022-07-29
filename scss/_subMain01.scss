@@ -6,7 +6,9 @@
   }
   background-color: $subMain-color;
   .header {
-    background-color: $subMain-color;
+    .headerTitle {
+      background-color: $subMain-color;
+    }
   }
   .subCopy {
     position: relative;

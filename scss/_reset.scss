@@ -5,7 +5,7 @@
   --black-color: #000;
   --gray-color: #dbdbdb;
   --silver-color: #dddee4;
-  --font-color: #33333;
+  --font-color: #333;
   --warmGrey-color: #757575;
   --warmGrey-color2: #888;
   --paleGrey-color: #f9fafb;
@@ -26,6 +26,49 @@
   --dullOrange-color: #d0812e;
 }
 
+/* Grey color */
+$Grey950: #0D0D0D;
+$Grey900: #1A1A1A;
+$Grey850: #262626;
+$Grey800: #333333;
+$Grey750: #404040;
+$Grey700: #4D4D4D;
+$Grey650: #595959;
+$Grey600: #666666;
+$Grey550: #737373;
+$Grey500: #808080;
+$Grey450: #8C8C8C;
+$Grey400: #999999;
+$Grey350: #A6A6A6;
+$Grey300: #B3B3B3;
+$Grey250: #BFBFBF;
+$Grey200: #CCCCCC;
+$Grey150: #D9D9D9;
+$Grey100: #E6E6E6;
+$Grey50: #F2F2F2;
+
+/* Blue Grey color */
+$BlueGrey950: #0C0D0D;
+$BlueGrey900: #19191A;
+$BlueGrey850: #252626;
+$BlueGrey800: #323233;
+$BlueGrey750: #3E3F40;
+$BlueGrey700: #4B4C4D;
+$BlueGrey650: #575859;
+$BlueGrey600: #636566;
+$BlueGrey550: #707173;
+$BlueGrey500: #7C7E80;
+$BlueGrey450: #898A8C;
+$BlueGrey400: #97999B;
+$BlueGrey350: #A1A4A6;
+$BlueGrey300: #AEB0B3;
+$BlueGrey250: #BABDBF;
+$BlueGrey200: #C7C9CC;
+$BlueGrey150: #D3D6D9;
+$BlueGrey100: #E0E3E6;
+$BlueGrey50: #ECEFF2;
+
+/* 신용상담 서비스 Sub Main color */
 $subMain-color: #e5f0ff;
 
 /* reset */
@@ -39,7 +82,7 @@ html {
   -ms-text-size-adjust: 100%
 }
 html * {
-  outline: 0;
+  //outline: 0;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
@@ -127,6 +170,9 @@ textarea {
   border: 0;
   padding: 0;
   font-size: 16px;
+  padding: 16px;
+  resize: none;
+  border-radius: 10px;
   &::placeholder {
     color: var(--warmGrey-color);
   }

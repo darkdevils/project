@@ -240,6 +240,25 @@ $slider-btn-margin: 32px;
   border-radius: 30px 30px 0 0;
   background-color: #fff;
   z-index: 100;
+  .slideLayer__header {
+    position: relative;
+    padding: 32px 0 0;
+    h2.title {
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+    }
+    .btnLayerClose {
+      position: absolute;
+      top: 33px;
+      right: 24px;
+      @include imageUrl(common_sprite,png);
+      background-position: -29px 0;
+      background-size: 250px;
+      width: 24px;
+      height: 24px;
+    }
+  }
   .slideLayer__content {
     padding: 30px 24px 40px;
     .txtCenter {
@@ -268,5 +287,53 @@ $slider-btn-margin: 32px;
     .btnWrap {
       margin-top: $slider-btn-margin;
     }
+    .linkArea {
+      a {
+        display: block;
+        padding: 12px 0;
+        color: var(--font-color);
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* 자유게시판 - 시곤하기 */
+.reportWrap {
+  .reportWrap__title {
+    display: block;
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  .reportWrap__text {
+    margin-top: 8px;
+    font-size: 16px;
+    color: var(--brownishGrey-color);
+  }
+}
+
+/* Toast LayerPopup */
+.toastLayer {
+  position: fixed;
+  left: 24px;
+  bottom: 0;
+  width: calc(100% - 48px);
+  min-height: 64px;
+  padding: 20px 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  color: var(--white-color);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0,0,0,0.6);
+    width: 100%;
+    z-index: -1;
   }
 }

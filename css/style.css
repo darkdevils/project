@@ -125,7 +125,7 @@
   --black-color: #000;
   --gray-color: #dbdbdb;
   --silver-color: #dddee4;
-  --font-color: #33333;
+  --font-color: #333;
   --warmGrey-color: #757575;
   --warmGrey-color2: #888;
   --paleGrey-color: #f9fafb;
@@ -146,6 +146,9 @@
   --dullOrange-color: #d0812e;
 }
 
+/* Grey color */
+/* Blue Grey color */
+/* 신용상담 서비스 Sub Main color */
 /* reset */
 * {
   margin: 0;
@@ -159,7 +162,6 @@ html {
 }
 
 html * {
-  outline: 0;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -264,6 +266,9 @@ textarea {
   border: 0;
   padding: 0;
   font-size: 16px;
+  padding: 16px;
+  resize: none;
+  border-radius: 10px;
 }
 textarea::placeholder {
   color: var(--warmGrey-color);
@@ -497,6 +502,7 @@ div.hasDatepicker {
   width: 100%;
   bottom: 0;
   padding: 0 24px 40px;
+  z-index: 1;
 }
 .btnWrap.fixedBtm:after {
   content: "";
@@ -507,6 +513,14 @@ div.hasDatepicker {
   height: 120px;
   background: linear-gradient(0deg, rgb(250, 250, 252) 0%, rgba(250, 250, 252, 0) 70%);
   z-index: 0;
+}
+.btnWrap .btnMore {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #dcdde2;
+  color: #666666;
+  line-height: 39px;
 }
 
 .btn {
@@ -545,6 +559,42 @@ div.hasDatepicker {
 }
 .btn.btnGray span, .btn:disabled span {
   color: var(--warmGrey-color2);
+}
+
+/* 좋아요 버튼 */
+.btnLike {
+  position: relative;
+  padding: 0 0 0 24px;
+  color: var(--brownishGrey-color);
+  font-family: Roboto;
+}
+.btnLike:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -140px -29px;
+  background-size: 250px;
+  width: 20px;
+  height: 20px;
+}
+.btnLike.on {
+  font-weight: 500;
+  color: var(--black-color);
+}
+.btnLike.on:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -165px -29px;
+  background-size: 250px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Input Type - Search */
@@ -589,6 +639,219 @@ div.hasDatepicker {
   background: url("../images/common_sprite.png") no-repeat;
   background-size: 250px;
   background-position: -58px 0;
+}
+
+/* Checkbox, RadioButton */
+.radioStyle {
+  padding: 0 0 7px;
+}
+.radioStyle li {
+  padding: 11px 0;
+}
+.radioStyle input[type=radio] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.radioStyle input[type=radio] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 16px;
+  color: var(--font-color);
+}
+.radioStyle input[type=radio]:checked + label {
+  color: #3971de;
+  font-weight: 500;
+}
+.radioStyle input[type=radio]:checked + label:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-size: 250px;
+  background-position: -149.5px -70px;
+}
+
+.radioType {
+  margin-top: 22px;
+}
+.radioType li {
+  padding: 10px 0;
+}
+.radioType li .textArea {
+  margin-top: 13px;
+  border: 1px solid var(--silver-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.radioType li .textArea textarea {
+  height: 120px;
+  outline-color: #3971de;
+}
+.radioType input[type=radio] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.radioType input[type=radio] + label {
+  display: block;
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 16px;
+  color: var(--black-color);
+}
+.radioType input[type=radio] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-size: 250px;
+  background-position: 0 -127px;
+}
+.radioType input[type=radio]:checked + label:active:before {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.radioType input[type=radio]:checked + label:before {
+  background-position: -33px -127px;
+}
+
+/* Datepicker */
+.hasDatepicker {
+  max-width: 100% !important;
+}
+
+.ui-datepicker {
+  width: 100%;
+}
+.ui-datepicker .ui-datepicker-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.ui-datepicker .ui-datepicker-title span {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+  margin-right: 0;
+}
+.ui-datepicker td {
+  border: 0;
+}
+.ui-datepicker .ui-datepicker-calendar th {
+  border: 0;
+}
+.ui-datepicker .ui-datepicker-calendar th span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  opacity: 1;
+}
+.ui-datepicker .ui-datepicker-calendar th.ui-datepicker-week-end:first-child span {
+  color: #e53a4c;
+}
+.ui-datepicker .ui-datepicker-calendar th.ui-datepicker-week-end:last-child span {
+  color: #2f84de;
+}
+.ui-datepicker .ui-datepicker-calendar td span {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 6px auto;
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-calendar td a {
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 6px auto;
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-calendar td.ui-state-disabled a, .ui-datepicker .ui-datepicker-calendar td.ui-state-disabled .ui-state-default {
+  color: #d9d9d9 !important;
+}
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-current-day a {
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  background-color: #4880ee;
+  color: var(--white-color);
+  line-height: 28px;
+  margin: 0 auto;
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a {
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  background-color: #dddee4;
+  color: var(--black-color);
+  line-height: 28px;
+  margin: 0 auto;
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a {
+  color: #e53a4c;
+  margin: 6px auto;
+}
+.ui-datepicker .ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child.ui-datepicker-current-day a {
+  color: var(--white-color);
+}
+.ui-datepicker .ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a {
+  color: #2f84de;
+}
+.ui-datepicker .ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child.ui-datepicker-current-day a {
+  color: var(--white-color);
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  border: 0;
+}
+.ui-datepicker .ui-datepicker-prev:after,
+.ui-datepicker .ui-datepicker-next:after {
+  background: url("../images/common_sprite.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 250px;
+  background-position: -104px -70px;
+}
+.ui-datepicker .ui-datepicker-next:after {
+  transform: rotate(180deg);
 }
 
 /* Layer Popup - 전체팝업 */
@@ -822,6 +1085,25 @@ div.hasDatepicker {
   background-color: #fff;
   z-index: 100;
 }
+.slideLayer .slideLayer__header {
+  position: relative;
+  padding: 32px 0 0;
+}
+.slideLayer .slideLayer__header h2.title {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+.slideLayer .slideLayer__header .btnLayerClose {
+  position: absolute;
+  top: 33px;
+  right: 24px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -29px 0;
+  background-size: 250px;
+  width: 24px;
+  height: 24px;
+}
 .slideLayer .slideLayer__content {
   padding: 30px 24px 40px;
 }
@@ -850,6 +1132,50 @@ div.hasDatepicker {
 }
 .slideLayer .slideLayer__content .btnWrap {
   margin-top: 32px;
+}
+.slideLayer .slideLayer__content .linkArea a {
+  display: block;
+  padding: 12px 0;
+  color: var(--font-color);
+  font-size: 16px;
+}
+
+/* 자유게시판 - 시곤하기 */
+.reportWrap .reportWrap__title {
+  display: block;
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.reportWrap .reportWrap__text {
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--brownishGrey-color);
+}
+
+/* Toast LayerPopup */
+.toastLayer {
+  position: fixed;
+  left: 24px;
+  bottom: 0;
+  width: calc(100% - 48px);
+  min-height: 64px;
+  padding: 20px 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  color: var(--white-color);
+}
+.toastLayer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  z-index: -1;
 }
 
 /* List Type - 상담사 검색 */
@@ -2202,6 +2528,8 @@ div.hasDatepicker {
   width: 100%;
   height: 60px;
   z-index: 9;
+  /* 게시판 글쓰기 버튼 */
+  /* Scroll 시 border Line 생성 */
 }
 .header .btnBack {
   position: absolute;
@@ -2226,6 +2554,7 @@ div.hasDatepicker {
   font-size: 18px;
   text-align: center;
   line-height: 60px;
+  background: var(--white-color);
 }
 .header .btnSearch {
   position: absolute;
@@ -2246,6 +2575,32 @@ div.hasDatepicker {
   height: 24px;
   background-size: 250px;
   background-position: -187px 0;
+}
+.header .btnWriting {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 60px;
+  height: 60px;
+}
+.header .btnWriting span {
+  display: block;
+  padding: 2px 12px;
+  border-radius: 100px;
+  background-color: #717589;
+  font-size: 12px;
+  color: var(--white-color);
+  line-height: 20px;
+  vertical-align: top;
+}
+.header.borBtm:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 60px;
+  left: 0;
+  background-color: #e7e9ed;
 }
 
 .container {
@@ -2329,7 +2684,27 @@ div.hasDatepicker {
   margin: 0;
 }
 .tabsContent .tabItem .justifyWrap .date {
+  position: relative;
+  top: 2px;
   color: var(--brownishGrey-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.justifyWrap .leftTotal {
+  color: var(--brownishGrey-color);
+}
+.justifyWrap .leftTotal .totalNum {
+  margin: 0 3px 0 5px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: var(--darkSkyBlue-color);
+}
+.justifyWrap .btnSelect {
+  border: 0;
+  padding: 0 28px 0 0;
+  color: var(--brownishGrey-color);
+  background: url(../images/bg_arrow.png) no-repeat 95% 50%;
+  background-size: 20px;
 }
 
 .blType li {
@@ -2449,6 +2824,56 @@ div.hasDatepicker {
   margin-top: -21px;
 }
 
+/* 댓글 수 */
+.comments {
+  position: relative;
+  padding: 0 0 0 24px;
+  line-height: 20px;
+  color: #666666;
+}
+.comments:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/common_sprite.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 250px;
+  background-position: -124.5px -70px;
+}
+
+.tabFixed {
+  position: fixed;
+  width: 100%;
+  background-color: var(--white-color);
+  z-index: 2;
+}
+
+/* 글자수 */
+.textCount {
+  padding: 8px 0 0;
+  text-align: right;
+}
+.textCount span {
+  position: relative;
+  font-size: 12px;
+  color: var(--warmGrey-color);
+  line-height: 20px;
+}
+.textCount span.totalNum {
+  margin-left: 7px;
+}
+.textCount span.totalNum:after {
+  content: "/";
+  position: absolute;
+  left: -5px;
+  top: 0;
+  color: var(--warmGrey-color);
+  font-size: 12px;
+}
+
 /* Dim 화면 */
 .dim {
   position: fixed;
@@ -2468,7 +2893,7 @@ div.hasDatepicker {
 .subMain01 .container {
   padding: 60px 0 0;
 }
-.subMain01 .header {
+.subMain01 .header .headerTitle {
   background-color: #e5f0ff;
 }
 .subMain01 .subCopy {
@@ -2662,7 +3087,6 @@ div.hasDatepicker {
 .consultingImage img {
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
 }
 
 .consultingInfo {
@@ -2847,7 +3271,7 @@ div.hasDatepicker {
   color: var(--darkSkyBlue-color);
 }
 .reviewList .reviewList__item {
-  padding: 20px 24px 15px;
+  padding: 22px 24px 21px;
   background: var(--paleGrey-color);
   border-radius: 18px;
 }
@@ -2857,7 +3281,7 @@ div.hasDatepicker {
 }
 .reviewList .reviewList__item .justifyWrap .btn {
   position: absolute;
-  right: 4px;
+  right: 0;
   top: 3px;
   width: 20px;
   height: 20px;
@@ -2893,14 +3317,26 @@ div.hasDatepicker {
   top: 2px;
 }
 .reviewList .reviewList__item .text {
+  position: relative;
   margin-top: 15px;
   line-height: 22px;
   color: var(--font-color);
   overflow: hidden;
-  text-overflow: ellipsis;
+  max-height: 88px;
+  /*text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;*/
+  word-break: break-all;
+}
+.reviewList .reviewList__item .text .btnMore {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #888;
+  background: var(--paleGrey-color);
+  line-height: 22px;
+  padding: 0 0 0 10px;
 }
 .reviewList .reviewList__item .bottom {
   display: flex;
@@ -2914,40 +3350,6 @@ div.hasDatepicker {
   position: relative;
   top: 0;
   font-family: "Roboto";
-}
-.reviewList .reviewList__item .bottom .btnLike {
-  position: relative;
-  padding: 0 0 0 24px;
-  color: var(--brownishGrey-color);
-  font-family: Roboto;
-}
-.reviewList .reviewList__item .bottom .btnLike:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 2px;
-  background: url("../images/common_sprite.png") no-repeat;
-  background-position: -140px -29px;
-  background-size: 250px;
-  width: 20px;
-  height: 20px;
-}
-.reviewList .reviewList__item .bottom .btnLike.on {
-  font-weight: 500;
-  color: var(--black-color);
-}
-.reviewList .reviewList__item .bottom .btnLike.on:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 2px;
-  background: url("../images/common_sprite.png") no-repeat;
-  background-position: -165px -29px;
-  background-size: 250px;
-  width: 20px;
-  height: 20px;
 }
 .reviewList .reviewList__item + .reviewList__item {
   margin-top: 14px;
@@ -2990,6 +3392,96 @@ div.hasDatepicker {
   font-size: 16px;
   color: var(--brownishGrey-color);
   font-weight: 300;
+}
+
+/* 게시판목록 */
+.boardWrap {
+  padding: 78px 24px 0;
+}
+.boardWrap .searchArea {
+  margin-bottom: 32px;
+}
+.boardWrap .justifyWrap {
+  margin-bottom: 12px;
+}
+.boardWrap .boardWrap__list li {
+  border-top: 1px solid #e7e9ee;
+  padding: 24px 0;
+}
+.boardWrap .boardWrap__list li .justifyWrap {
+  margin-bottom: 16px;
+}
+.boardWrap .boardWrap__list li .justifyWrap .leftArea span, .boardWrap .boardWrap__list li .justifyWrap .leftArea em {
+  color: var(--warmGrey-color2);
+  line-height: 20px;
+}
+.boardWrap .boardWrap__list li .justifyWrap .leftArea .name {
+  margin-right: 25px;
+  font-family: "Roboto", sans-serif;
+}
+.boardWrap .boardWrap__list li .justifyWrap .leftArea .time {
+  position: relative;
+}
+.boardWrap .boardWrap__list li .justifyWrap .leftArea .time em {
+  font-family: "Roboto", sans-serif;
+}
+.boardWrap .boardWrap__list li .justifyWrap .leftArea .time:after {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 4px;
+  width: 1px;
+  height: 12px;
+  background-color: #d9d9d9;
+}
+.boardWrap .boardWrap__list li .justifyWrap .rightArea {
+  position: relative;
+}
+.boardWrap .boardWrap__list li .justifyWrap .rightArea .btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -190px -29px;
+  background-size: 250px;
+}
+.boardWrap .boardWrap__list li .textCotent {
+  display: flex;
+  margin-bottom: 16px;
+}
+.boardWrap .boardWrap__list li .textCotent .textArea .title {
+  display: -webkit-box;
+  margin-bottom: 8px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.boardWrap .boardWrap__list li .textCotent .textArea .text {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #666666;
+  line-height: 22px;
+}
+.boardWrap .boardWrap__list li .textCotent .textArea + .thumbnail {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-left: 24px;
+  padding-left: 100px;
+  overflow: hidden;
+}
+.boardWrap .boardWrap__list li .textCotent .textArea + .thumbnail img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,7 +23,7 @@
     <h1 class="guideTitle">Layer Popup</h1>
     <h2 class="guideTitle">Slide Popup</h2>
     <div class="guideBox">
-        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen()">Slide Layer 버튼</button>
+        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer01')">Slide Layer 버튼</button>
         <p class="guidePoint">※ "버튼"클릭시 Slide Layer 활성화</p>
         <!-- tag highlinght 적용 -->
         <pre>
@@ -47,9 +47,65 @@
 </code></pre>
         <!-- //tag highlinght 적용 -->
     </div>
+
+    <div class="guideBox">
+        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer02')">정렬옵션</button>
+        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer03')">내가 쓴 게시글</button>
+        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer04')">사용자가 쓴 게시글</button>
+        <p class="guidePoint">※ "아이디"값은 onclick과 동일하게 작성해주셔야 합니다.</p>
+        <h3 class="guideTitle">1.정렬옵션 레이어팝업</h3>
+        <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer02&quot;&gt;
+    &lt;div class=&quot;slideLayer__header&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;&#xC815;&#xB82C;&#xC635;&#xC158;&lt;/h2&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slideLayer__content&quot;&gt;
+        &lt;ul class=&quot;radioStyle&quot;&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio&quot; id=&quot;radio1-1&quot; checked&gt;&lt;label for=&quot;radio1-1&quot;&gt;&#xCD5C;&#xC2E0;&#xC21C;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio&quot; id=&quot;radio1-2&quot;&gt;&lt;label for=&quot;radio1-2&quot;&gt;&#xC870;&#xD68C;&#xC21C;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio&quot; id=&quot;radio1-3&quot;&gt;&lt;label for=&quot;radio1-3&quot;&gt;&#xC88B;&#xC544;&#xC694;&#xC21C;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio&quot; id=&quot;radio1-4&quot;&gt;&lt;label for=&quot;radio1-4&quot;&gt;&#xAD00;&#xB9AC;&#xC790;&#xCD94;&#xCC9C;&#xC21C;&lt;/label&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3 class="guideTitle mgTop20">2.내가 쓴 게시글 레이어팝업</h3>
+        <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer03&quot;&gt;
+    &lt;div class=&quot;slideLayer__header&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;&#xB0B4;&#xAC00; &#xC4F4; &#xAC8C;&#xC2DC;&#xAE00;&lt;/h2&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slideLayer__content&quot;&gt;
+        &lt;div class=&quot;linkArea&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&#xC218;&#xC815;&#xD558;&#xAE30;&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;&#xC0AD;&#xC81C;&#xD558;&#xAE30;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3 class="guideTitle mgTop20">3.사용자가 쓴 게시글 레이어팝업</h3>
+        <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer04&quot;&gt;
+    &lt;div class=&quot;slideLayer__header&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC4F4; &#xAC8C;&#xC2DC;&#xAE00;&lt;/h2&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slideLayer__content&quot;&gt;
+        &lt;div class=&quot;linkArea&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&#xC2E0;&#xACE0;&#xD558;&#xAE30;&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;&#xC791;&#xC131;&#xC790; &#xCC28;&#xB2E8;&#xD558;&#xAE30;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h2 class="guideTitle">Toast Popup</h2>
+    <div class="guideBox">
+        <butto type="button" class="guideBtn" onclick="common.toastLayer('toastLayer01')">토스트팝업(두줄일경우)</butto>
+        <butto type="button" class="guideBtn" onclick="common.toastLayer('toastLayer02')">토스트팝업(한줄일경우)</butto>
+    </div>
 </div>
 
-<div class="slideLayer">
+<div class="slideLayer" id="slideLayer01">
     <div class="slideLayer__content">
         <p class="txtCenter">아래 내용으로 예약신청하시겠습니까?</p>
         <dl class="reservationTxt">
@@ -66,6 +122,66 @@
         </div>
     </div>
 </div>
+
+<!-- 정렬옵션 레이어팝업 -->
+<div class="slideLayer" id="slideLayer02">
+    <div class="slideLayer__header">
+        <h2 class="title">정렬옵션</h2>
+        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle">
+            <li><input type="radio" name="sortRadio" id="radio1-1" checked><label for="radio1-1">최신순</label></li>
+            <li><input type="radio" name="sortRadio" id="radio1-2"><label for="radio1-2">조회순</label></li>
+            <li><input type="radio" name="sortRadio" id="radio1-3"><label for="radio1-3">좋아요순</label></li>
+            <li><input type="radio" name="sortRadio" id="radio1-4"><label for="radio1-4">관리자추천순</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //정렬옵션 레이어팝업 -->
+
+<!-- 내가 쓴 게시글 레이어팝업 -->
+<div class="slideLayer" id="slideLayer03">
+    <div class="slideLayer__header">
+        <h2 class="title">내가 쓴 게시글</h2>
+        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <div class="linkArea">
+            <a href="#">수정하기</a>
+            <a href="#">삭제하기</a>
+        </div>
+    </div>
+</div>
+<!-- //내가 쓴 게시글 레이어팝업 -->
+
+<!-- 사용자가 쓴 게시글 레이어팝업 -->
+<div class="slideLayer" id="slideLayer04">
+    <div class="slideLayer__header">
+        <h2 class="title">사용자가 쓴 게시글</h2>
+        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <div class="linkArea">
+            <a href="#">신고하기</a>
+            <a href="#">작성자 차단하기</a>
+        </div>
+    </div>
+</div>
+<!-- //사용자가 쓴 게시글 레이어팝업 -->
+
+<!-- 토스트팝업 두줄일경우 -->
+<div class="toastLayer" id="toastLayer01">
+    김*환님이 차단되었습니다.<br>
+    피차단자의 게시글은 조회되지 않습니다.
+</div>
+<!-- //토스트팝업 두줄일경우 -->
+
+<!-- 토스트팝업 한줄일경우 -->
+<div class="toastLayer" id="toastLayer02">
+    게시글이 삭제되었습니다.
+</div>
+<!-- //토스트팝업 한줄일경우 -->
 
 <script src="../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../js/common.js"></script>
