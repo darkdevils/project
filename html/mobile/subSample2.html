@@ -34,7 +34,7 @@
                     </div>
                     <div class="justifyWrap">
                         <div class="leftTotal">총<span class="totalNum">55</span>건</div>
-                        <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen();">최신순</button>
+                        <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen('slideLayer01');">최신순</button>
                     </div>
                     <ul class="boardWrap__list">
                         <li>
@@ -116,7 +116,7 @@
 </div>
 
 <!-- 정렬옵션 레이어 팝업 -->
-<div class="slideLayer">
+<div id="slideLayer01" class="slideLayer">
     <div class="slideLayer__header">
         <h2 class="title">정렬옵션</h2>
         <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
