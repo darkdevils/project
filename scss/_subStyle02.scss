@@ -13,6 +13,8 @@
   height:20px;
   margin-top:8px;
   margin-bottom:60px;
+  font-family:"Roboto";
+  font-weight:400;
   font-size:12px;
   align:left;
   line-height:20px;
@@ -69,38 +71,47 @@
 }
 .file_each_01 h6{
   position:absolute;
-  top:31px;
-  width:100%;
+  top:34px;
+  left:50%;
+  margin-left:-12px;
+  width:20px;
   height:20px;
   line-height:20px;
-  font-family:"Roboto", sans-serif;
-  font-weight:400;
-  font-size:12px;
-  color:#000000;
-}
 
-.file_each_01 h6 span.s_color{
-  color:#757575;
-  font-weight: 300;
+
+  span {
+    display:inline-block;
+    font-family:"Roboto", sans-serif;
+    font-size:12px;
+    font-weight:400;
+    color:#000;
+    letter-spacing:-3px;
+    text-align:center;
+  }
+  span.s_color{
+    color:#757575;
+    font-weight: 300;
+  }
 }
 
 .file_each_02{
   position:relative;
   border:1px solid #dddee4;
+  button{
+    text-indent:-999px;
+    &:after {
+      content: "";
+      position: absolute;
+      right:4px ;
+      top: 4px;
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      background: url(../images/common_sprite2.png) no-repeat -29px 0;
+      background-size: 250px;
+    }
 }
-.file_each_02 button{
-  text-indent:-999px;
-  &:after {
-    content: "";
-    position: absolute;
-    right:4px ;
-    top: 4px;
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    background: url(../images/common_sprite2.png) no-repeat -29px 0;
-    background-size: 250px;
-  }
+
 }
 .file_each_02 img{
   position:absolute;
