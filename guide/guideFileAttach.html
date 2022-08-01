@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guide File Attach</title>
+    <link rel="stylesheet" href="guideStyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./highlight/styles/atom-one-dark.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="guideWrap">
+    <h1 class="guideTitle">글쓰기. 파일 첨부</h1>
+
+    <h2 class="guideTitle">이미지 첨부 5/5</h2>
+    <div class="guideBox">
+        <div class="attch">
+            <ul class="fileatt">
+                <li class="file_each file_each_01">
+                    <h6>
+                        <span>5</span>
+                        <span class="s_color">/</span>
+                        <span class="s_color">5</span>
+                    </h6>
+                </li>
+                <li class="file_each file_each_02">
+                    <img src="../images/temp/thumbnail_01.png" alt="">
+                    <button>삭제
+                    </button>
+                </li>
+                <li class="file_each file_each_02">
+                    <img src="../images/temp/thumbnail_03.png" alt="">
+                    <button>삭제
+                    </button>
+                </li>
+                <li class="file_each file_each_02">
+                    <img src="../images/temp/thumbnail_01.png" alt="">
+                    <button>삭제
+                    </button>
+                </li>
+                <li class="file_each file_each_02">
+                    <img src="../images/temp/thumbnail_01.png" alt="">
+                    <button>삭제
+                    </button>
+                </li>
+                <li class="file_each file_each_02">
+                    <img src="../images/temp/thumbnail_01.png" alt="">
+                    <button>삭제
+                    </button>
+                </li>
+            </ul>
+            <h6>2MB이하 JPEG, JPG, PNG 사진 최대 5개까지 등록 가능(선택)</h6>
+        </div>
+
+        <!-- tag highlinght 적용 -->
+        <pre><code class="html">&lt;div class=&quot;attch&quot;&gt;
+            &lt;ul class=&quot;fileatt&quot;&gt;
+                &lt;li class=&quot;file_each file_each_01&quot;&gt;
+                    &lt;h6&gt;
+                        &lt;span&gt;5&lt;/span&gt;
+                        &lt;span class=&quot;s_color&quot;&gt;/&lt;/span&gt;
+                        &lt;span class=&quot;s_color&quot;&gt;5&lt;/span&gt;
+                    &lt;/h6&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;file_each file_each_02&quot;&gt;
+                    &lt;img src=&quot;../images/temp/thumbnail_01.png&quot; alt=&quot;&quot;&gt;
+                    &lt;button&gt;&#xC0AD;&#xC81C;
+                    &lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;file_each file_each_02&quot;&gt;
+                    &lt;img src=&quot;../images/temp/thumbnail_03.png&quot; alt=&quot;&quot;&gt;
+                    &lt;button&gt;&#xC0AD;&#xC81C;
+                    &lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;file_each file_each_02&quot;&gt;
+                    &lt;img src=&quot;../images/temp/thumbnail_01.png&quot; alt=&quot;&quot;&gt;
+                    &lt;button&gt;&#xC0AD;&#xC81C;
+                    &lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;file_each file_each_02&quot;&gt;
+                    &lt;img src=&quot;../images/temp/thumbnail_01.png&quot; alt=&quot;&quot;&gt;
+                    &lt;button&gt;&#xC0AD;&#xC81C;
+                    &lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;file_each file_each_02&quot;&gt;
+                    &lt;img src=&quot;../images/temp/thumbnail_01.png&quot; alt=&quot;&quot;&gt;
+                    &lt;button&gt;&#xC0AD;&#xC81C;
+                    &lt;/button&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h6&gt;2MB&#xC774;&#xD558; JPEG, JPG, PNG &#xC0AC;&#xC9C4; &#xCD5C;&#xB300; 5&#xAC1C;&#xAE4C;&#xC9C0; &#xB4F1;&#xB85D; &#xAC00;&#xB2A5;(&#xC120;&#xD0DD;)&lt;/h6&gt;
+        &lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+    </div>
+
+
+
+
+
+</div>
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    $(function(){
+
+        $('h2.guideTitle').each(function(index){
+            $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
+        });
+        common.tabType("#tabs1-1",0);
+        common.tabType("#tabs1-2",0);
+    });
+
+</script>
+</body>
+</html>
