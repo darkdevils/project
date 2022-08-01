@@ -125,3 +125,18 @@
     background-size: 250px;
   }
 }
+
+.noSentence {
+  position: relative;
+  padding: 104px 0 0;
+  color: var(--brownishGrey-color);
+  font-size: 16px;
+  text-align: center;
+  @include bgImage(50%,50%, common_sprite2) {
+    width: calc(160px / 2);
+    height: calc(132px / 2);
+    margin: -55px 0 0 calc(-160px / 4);
+    background-position: -54px 0;
+    background-size: 250px;
+  }
+}
