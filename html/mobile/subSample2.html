@@ -22,6 +22,7 @@
             </ul>
         </div>
         <div id="tabs1-1__con">
+            <!-- 자유게시판 -->
             <div class="tabItem">
                 <div class="boardWrap">
                     <div class="searchArea">
@@ -34,7 +35,9 @@
                     </div>
                     <div class="justifyWrap">
                         <div class="leftTotal">총<span class="totalNum">55</span>건</div>
-                        <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen('slideLayer01');">최신순</button>
+                        <div class="rightArea">
+                            <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen('slideLayer01');">최신순</button>
+                        </div>
                     </div>
                     <ul class="boardWrap__list">
                         <li>
@@ -110,7 +113,134 @@
                     </div>
                 </div>
             </div>
-            <div class="tabItem">신용솔루션 내용</div>
+            <!-- //자유게시판 -->
+            <!-- 신용솔루션 -->
+            <div class="tabItem">
+                <div class="boardWrap">
+                    <div class="searchArea">
+                        <fieldset>
+                            <legend>자유게시판 검색</legend>
+                            <label for="search2" class="blind">자유게시판 검색어</label>
+                            <input type="text" id="search2" placeholder="검색어를 입력해주세요.">
+                            <button type="button" class="btnSearchClose"><span class="blind">검색어 삭제</span></button>
+                        </fieldset>
+                    </div>
+                    <div class="justifyWrap">
+                        <div class="leftTotal">총<span class="totalNum">55</span>건</div>
+                        <div class="rightArea">
+                            <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen('slideLayer01');">카테고리 선택</button>
+                            <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen('slideLayer01');">최신순</button>
+                        </div>
+                    </div>
+                    <ul class="boardWrap__list boardWrap__list--solutions">
+                        <li>
+                            <div class="justifyWrap">
+                                <div class="leftArea">
+                                    <span class="category category--style1">신용회복</span>
+                                </div>
+                                <div class="rightArea">
+                                    <button type="button" class="btn"><span class="blind">수정/삭제</span></button>
+                                    <button type="button" style="display: none"><span class="blind">신고/차단</span></button>
+                                </div>
+                            </div>
+                            <div class="textCotent">
+                                <div class="textArea">
+                                    <strong class="title">신용교육 들었는데 진도확인 안되고, 합격증 출력도 안됩니다.신용교육 들었는데 진도확인 안되고, 합격증 출력도 안됩니다</strong>
+                                </div>
+                                <div class="thumbnail"><img src="../../images/temp/thumbnail_04.png" alt="펭수"></div>
+                            </div>
+                            <div class="numArea">
+                                <span class="comments mgRight30"><span class="blind">댓글 합계</span>56</span>
+                                <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">10</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="justifyWrap">
+                                <div class="leftArea">
+                                    <span class="category category--style2">개인회생·파산</span>
+                                </div>
+                                <div class="rightArea">
+                                    <button type="button" class="btn"><span class="blind">수정/삭제</span></button>
+                                    <button type="button" style="display: none"><span class="blind">신고/차단</span></button>
+                                </div>
+                            </div>
+                            <div class="textCotent">
+                                <div class="textArea">
+                                    <strong class="title">시험자료 공유부탁드립니다.</strong>
+                                </div>
+                            </div>
+                            <div class="numArea">
+                                <span class="comments mgRight30"><span class="blind">댓글 합계</span>56</span>
+                                <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">10</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="justifyWrap">
+                                <div class="leftArea">
+                                    <span class="category category--style3">신용·재무관리</span>
+                                </div>
+                                <div class="rightArea">
+                                    <button type="button" class="btn"><span class="blind">수정/삭제</span></button>
+                                    <button type="button" style="display: none"><span class="blind">신고/차단</span></button>
+                                </div>
+                            </div>
+                            <div class="textCotent">
+                                <div class="textArea">
+                                    <strong class="title">합격자 조회는 언제쯤 가능한가요???</strong>
+                                </div>
+                            </div>
+                            <div class="numArea">
+                                <span class="comments mgRight30"><span class="blind">댓글 합계</span>56</span>
+                                <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">10</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="justifyWrap">
+                                <div class="leftArea">
+                                    <span class="category category--style4">채무 관련 법률상담</span>
+                                </div>
+                                <div class="rightArea">
+                                    <button type="button" class="btn"><span class="blind">수정/삭제</span></button>
+                                    <button type="button" style="display: none"><span class="blind">신고/차단</span></button>
+                                </div>
+                            </div>
+                            <div class="textCotent">
+                                <div class="textArea">
+                                    <strong class="title">합격자 조회는 언제쯤 가능한가요???</strong>
+                                </div>
+                            </div>
+                            <div class="numArea">
+                                <span class="comments mgRight30"><span class="blind">댓글 합계</span>56</span>
+                                <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">10</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="justifyWrap">
+                                <div class="leftArea">
+                                    <span class="category category--style4">서민금융·복지</span>
+                                </div>
+                                <div class="rightArea">
+                                    <button type="button" class="btn"><span class="blind">수정/삭제</span></button>
+                                    <button type="button" style="display: none"><span class="blind">신고/차단</span></button>
+                                </div>
+                            </div>
+                            <div class="textCotent">
+                                <div class="textArea">
+                                    <strong class="title">신용교육 들었는데 진도확인 안되고, 합격증 출력도 안되서 문의드립니다 .</strong>
+                                </div>
+                            </div>
+                            <div class="numArea">
+                                <span class="comments mgRight30"><span class="blind">댓글 합계</span>56</span>
+                                <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">10</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btnWrap">
+                        <button type="button" class="btnMore">더보기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //신용솔루션 -->
         </div>
     </div>
 </div>

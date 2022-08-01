@@ -1,9 +1,14 @@
 'use strict';
 
-const h = $('.slideLayer').outerHeight();
+//const h = $('.slideLayer').outerHeight();
 const toastHeigh = $('.toastLayer').outerHeight();
-$('.slideLayer').css({bottom: -h});
+let h = 0;
 $('.toastLayer').css({bottom: -toastHeigh});
+$('.slideLayer').each(function(){
+    h = $(this).outerHeight();
+    $(this).css({bottom: -h});
+});
+console.log(h);
 
 const common = {
     init: function() {
