@@ -3654,11 +3654,16 @@ div.hasDatepicker {
   height: 20px;
   background: url("../images/bg_arrow.png") no-repeat;
   background-size: 20px;
+  transition: 0.7s ease;
+}
+.boardView .listType .numArea .comments.on:before {
+  transform: rotate(-180deg);
 }
 .boardView .listType .btnReply {
   color: #666666;
 }
 .boardView .listType .listType {
+  display: none;
   position: relative;
   padding: 0 0 1px;
 }
@@ -3766,17 +3771,6 @@ div.hasDatepicker {
   margin-right: 8px;
   text-align: center;
   box-sizing: border-box;
-  /*&:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 24px;
-    height: 24px;
-    margin: -12px 0 0 -12px;
-    background: url(../images/common_sprite2.png) no-repeat 0 0;
-    background-size: 250px;
-  }*/
 }
 
 .file_each_01 {
