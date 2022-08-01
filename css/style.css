@@ -1330,6 +1330,27 @@ div.hasDatepicker {
   background-size: 250px;
 }
 
+.noSentence {
+  position: relative;
+  padding: 104px 0 0;
+  color: var(--brownishGrey-color);
+  font-size: 16px;
+  text-align: center;
+}
+.noSentence:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("../images/common_sprite2.png") no-repeat;
+  width: 80px;
+  height: 66px;
+  margin: -55px 0 0 -40px;
+  background-position: -54px 0;
+  background-size: 250px;
+}
+
 /* margin,padding */
 .mgTop0 {
   margin-top: 0px !important;
@@ -3723,7 +3744,6 @@ div.hasDatepicker {
   line-height: 80px;
   padding-left: 24px;
   padding-right: 8px;
-  margin-top: 40px;
   margin-bottom: 8px;
 }
 
@@ -3731,11 +3751,10 @@ div.hasDatepicker {
   width: fit-content;
   height: 20px;
   margin-top: 8px;
-  margin-bottom: 60px;
   font-family: "Roboto";
   font-weight: 400;
   font-size: 12px;
-  align: left;
+  text-align: left;
   line-height: 20px;
   color: #666666;
   letter-spacing: -0.5px;
