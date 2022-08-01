@@ -126,7 +126,7 @@
                     </div>
                     <div class="justifyWrap">
                         <div class="numArea">
-                            <button class="comments mgRight30">56</button>
+                            <button class="comments mgRight30" onclick="slideToggle(this);">56</button>
                             <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="number">10</span></button>
                         </div>
                         <button type="button" class="btnReply">답글 쓰기</button>
@@ -151,7 +151,6 @@
                             </div>
                             <div class="justifyWrap">
                                 <div class="numArea">
-                                    <button class="comments mgRight30">56</button>
                                     <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="number">10</span></button>
                                 </div>
                                 <button type="button" class="btnReply">답글 쓰기</button>
@@ -176,7 +175,6 @@
                             </div>
                             <div class="justifyWrap">
                                 <div class="numArea">
-                                    <button class="comments mgRight30">56</button>
                                     <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="number">10</span></button>
                                 </div>
                                 <button type="button" class="btnReply">답글 쓰기</button>
@@ -203,12 +201,15 @@
                 $(this).find('.number').text(number - 1);
             }
         });
+    });
 
-       /* $('textarea').on('keydown keyup', function () {
-            $(this).height(1).height( $(this).prop('scrollHeight') +  12);
-        });*/
-
-    })
+    // 댓글 slide Toggle
+    function slideToggle (el) {
+        const _this = $(el);
+        _this.toggleClass('on');
+        _this.closest('li').find('> .listType').slideToggle();
+    }
+    // 댓글 Textarea 높이값 auto
     function resize(obj) {
         obj.style.height = '1px';
         obj.style.height = (obj.scrollHeight) + 'px';

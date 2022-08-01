@@ -545,6 +545,12 @@
           height: 20px;
           @include imageUrl(bg_arrow,png);
           background-size: 20px;
+          transition: 0.7s ease;
+        }
+        &.on {
+          &:before {
+            transform: rotate(-180deg);
+          }
         }
       }
     }
@@ -552,6 +558,7 @@
       color: $Grey600;
     }
     .listType {
+      display: none;
       position: relative;
       padding: 0 0 1px;
 
