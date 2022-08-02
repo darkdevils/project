@@ -608,6 +608,29 @@ div.hasDatepicker {
   color: var(--black-color);
 }
 
+.inputArea .selectWrap {
+  margin-bottom: 16px;
+}
+.inputArea .inputWrap {
+  margin-bottom: 16px;
+}
+
+/* Input[type="text"] */
+.inputWrap {
+  padding: 0 16px;
+  border: 1px solid #dddee4;
+  height: 60px;
+  border-radius: 8px;
+}
+.inputWrap input[type=text] {
+  width: 100%;
+  height: 58px;
+  border: 0;
+  line-height: 60px;
+  font-size: 16px;
+  color: var(--black-color);
+}
+
 /* Input Type - Search */
 .searchArea {
   position: relative;
@@ -652,6 +675,13 @@ div.hasDatepicker {
   background-position: -58px 0;
 }
 
+/* TextArea */
+.textArea {
+  margin-top: 13px;
+  border: 1px solid var(--silver-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
 /* Checkbox, RadioButton */
 .radioStyle {
   padding: 0 0 7px;
@@ -697,12 +727,6 @@ div.hasDatepicker {
 
 .radioType li {
   padding: 10px 0;
-}
-.radioType li .textArea {
-  margin-top: 13px;
-  border: 1px solid var(--silver-color);
-  border-radius: 10px;
-  overflow: hidden;
 }
 .radioType li .textArea textarea {
   height: 120px;
@@ -757,19 +781,67 @@ div.hasDatepicker {
 }
 
 /* Input File */
-.fileBox {
+.fileWrap {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.fileWrap .fileBox {
+  position: relative;
   width: 80px;
   height: 80px;
+  margin-right: 8px;
   border: 1px dashed var(--silver-color);
   border-radius: 10px;
   cursor: pointer;
 }
-.fileBox label {
+.fileWrap .fileBox label {
+  position: relative;
   display: block;
   width: 80px;
   height: 80px;
 }
-.fileBox input[type=file] {
+.fileWrap .fileBox label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  background: url("../images/common_sprite2.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  background-size: 250px;
+  margin: -12px 0 0 -12px;
+}
+.fileWrap .fileBox .counting {
+  position: absolute;
+  top: 38px;
+  width: 80px;
+  text-align: center;
+}
+.fileWrap .fileBox .counting span {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+.fileWrap .fileBox .counting span.count {
+  margin-right: 1px;
+  color: var(--black-color);
+}
+.fileWrap .fileBox .counting span.total {
+  position: relative;
+  font-weight: 300;
+  color: var(--warmGrey-color);
+  margin-left: 1px;
+}
+.fileWrap .fileBox .counting span.total:before {
+  content: "/";
+  position: relative;
+  left: -1px;
+  display: inline-block;
+  font-size: 12px;
+  color: var(--warmGrey-color);
+}
+.fileWrap .fileBox input[type=file] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -778,6 +850,64 @@ div.hasDatepicker {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+.fileWrap .fileList {
+  display: flex;
+}
+.fileWrap .fileList .item {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.fileWrap .fileList .item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 78px;
+  height: 78px;
+  border: 1px solid #dddee4;
+  border-radius: 10px;
+  z-index: 1;
+}
+.fileWrap .fileList .item .btnDel {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+}
+.fileWrap .fileList .item .btnDel:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/common_sprite2.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 250px;
+  background-position: -29px 0;
+}
+.fileWrap .fileList .item img {
+  width: 100%;
+}
+.fileWrap .fileList .item + .item {
+  margin-left: 8px;
+}
+
+.fileText {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--brownishGrey-color);
+  line-height: 20px;
+}
+.fileText .number {
+  font-size: 12px;
+  color: var(--brownishGrey-color);
+  line-height: 20px;
 }
 
 /* Datepicker */
@@ -2821,6 +2951,7 @@ div.hasDatepicker {
   line-height: 58px;
   padding: 0 52px 0 16px;
   border: none;
+  font-size: 16px;
   color: var(--warmGrey-color);
 }
 .selectWrap .selectBox select option {
@@ -2828,6 +2959,9 @@ div.hasDatepicker {
 }
 .selectWrap .selectBox select option[value=""][disabled] {
   display: none;
+}
+.selectWrap .selectBox select:focus {
+  border-radius: 8px;
 }
 .selectWrap .selectBox + .selectBox {
   margin-top: 16px;
@@ -2926,6 +3060,7 @@ div.hasDatepicker {
 /* 글자수 */
 .textCount {
   padding: 8px 0 0;
+  line-height: 20px;
   text-align: right;
 }
 .textCount span {
@@ -3772,6 +3907,7 @@ div.hasDatepicker {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* 파일 첨부 */
 .attch {
   width: 100%;
   height: auto;
@@ -3842,7 +3978,7 @@ div.hasDatepicker {
   position: absolute;
   top: 34px;
   left: 50%;
-  margin-left: -12px;
+  margin-left: -9px;
   width: 20px;
   height: 20px;
   line-height: 20px;

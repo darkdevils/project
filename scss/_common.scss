@@ -286,12 +286,16 @@ $border-line: #ededf0;
       line-height: 58px;
       padding: 0 52px 0 16px;
       border: none;
+      font-size: 16px;
       color: var(--warmGrey-color);
       option {
         color: var(--black-color);
       }
       option[value=""][disabled] {
         display: none;
+      }
+      &:focus {
+        border-radius: 8px;
       }
     }
     + .selectBox {
@@ -384,6 +388,7 @@ $border-line: #ededf0;
 /* 글자수 */
 .textCount {
   padding: 8px 0 0;
+  line-height: 20px;
   text-align: right;
   span {
     position: relative;
