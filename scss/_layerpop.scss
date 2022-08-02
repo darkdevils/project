@@ -6,10 +6,15 @@ $slider-btn-margin: 32px;
   height: 100vh;
 }
 .layerHead {
+  position: fixed;
+  left: 0;
+  top: 0;
   display: flex;
-  position: relative;
+  width: 100%;
   height: 60px;
   align-items: center;
+  background-color: var(--white-color);
+  z-index: 2;
   h2.title {
     width: 100%;
     font-size: 18px;
@@ -31,7 +36,7 @@ $slider-btn-margin: 32px;
 
 .layerContent {
   position: relative;
-  padding: 0 24px;
+  padding: 84px 24px 0;
 }
 
 /* 신용상담 후기작성 */
@@ -336,4 +341,11 @@ $slider-btn-margin: 32px;
     width: 100%;
     z-index: -1;
   }
+}
+
+/* 신용솔루션 Slide Popup */
+.slideLayer__solutions {
+  border-radius: 30px 30px 0 0;
+  height: 313px;
+  background-image: linear-gradient(130deg, #010617, #192248 45%, #192248 57%, #010617 103%);
 }

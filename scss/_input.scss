@@ -1,5 +1,6 @@
 
 .inputArea {
+  padding: 0 0 160px;
   .selectWrap {
     margin-bottom: 16px;
   }
@@ -193,6 +194,7 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: auto;
+
   .fileBox {
     position: relative;
     width: 80px;

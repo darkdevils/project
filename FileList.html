@@ -484,6 +484,24 @@
         </tr>
         <tr>
             <td>신용상담</td>
+            <td>서브메인</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>subMain01.html</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>신용상담서비스</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>subMain01.html</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
             <td>예약</td>
             <td></td>
             <td></td>
@@ -683,7 +701,7 @@
         });
         $("table tbody tr td:nth-child(7)").each(function(){
             let linkText = $(this).text();
-            $(this).contents().wrap('<a href="./mobile/'+ linkText + '"></a>')
+            $(this).contents().wrap('<a href="./html/mobile/'+ linkText + '" + target="_blank"></a>')
             //console.log(linkText);
         });
         //var cm = $('tr.c').length;
