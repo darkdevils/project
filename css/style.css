@@ -3907,6 +3907,7 @@ div.hasDatepicker {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* 파일 첨부 */
 .attch {
   width: 100%;
   height: auto;
