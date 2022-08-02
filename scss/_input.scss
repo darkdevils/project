@@ -83,8 +83,8 @@
     }
   }
 }
+
 .radioType {
-  margin-top: 22px;
   li {
     padding: 10px 0;
     .textArea {
@@ -144,5 +144,38 @@
         }
       }
     }
+  }
+}
+/* Horizontal Radio Button */
+.radioHorizontal {
+  display: flex;
+  .radioType {
+    + .radioType {
+      margin-left: 10px;
+    }
+  }
+}
+
+/* Input File */
+.fileBox {
+  width: 80px;
+  height: 80px;
+  border: 1px dashed var(--silver-color);
+  border-radius: 10px;
+  cursor: pointer;
+  label {
+    display: block;
+    width: 80px;
+    height: 80px
+  }
+  input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
   }
 }

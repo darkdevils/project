@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input Type Guide</title>
+    <link rel="stylesheet" href="guideStyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./highlight/styles/atom-one-dark.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="guideWrap">
+    <h1 class="guideTitle">Input Type</h1>
+    <h2 class="guideTitle">Radio Button</h2>
+    <div class="guideBox">
+        <h3 class="guideTitle">1. Vertical Radio Button</h3>
+        <div class="radioType">
+            <input type="radio" name="ck" id="radio01-1" checked><label for="radio01-1">Radio Button1</label>
+        </div>
+        <div class="radioType mgTop10">
+            <input type="radio" name="ck" id="radio01-2"><label for="radio01-2">Radio Button2</label>
+        </div>
+        <!-- tag highlinght 적용 -->
+        <pre><code class="html">&lt;div class=&quot;radioType&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;ck&quot; id=&quot;radio01-1&quot; checked&gt;&lt;label for=&quot;radio01-1&quot;&gt;Radio Button1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radioType mgTop10&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;ck&quot; id=&quot;radio01-2&quot;&gt;&lt;label for=&quot;radio01-2&quot;&gt;Radio Button2&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+
+        <h3 class="guideTitle mgTop20">2. Horizontal Radio Button</h3>
+        <div class="radioHorizontal">
+            <div class="radioType">
+                <input type="radio" name="ck1" id="radio01-3" checked><label for="radio01-3">Radio Button1-3</label>
+            </div>
+            <div class="radioType">
+                <input type="radio" name="ck1" id="radio01-4"><label for="radio01-4">Radio Button1-4</label>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class=&quot;radioHorizontal&quot;&gt;
+    &lt;div class=&quot;radioType&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;ck1&quot; id=&quot;radio01-3&quot; checked&gt;&lt;label for=&quot;radio01-3&quot;&gt;Radio Button1-3&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;radioType&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;ck1&quot; id=&quot;radio01-4&quot;&gt;&lt;label for=&quot;radio01-4&quot;&gt;Radio Button1-4&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+
+    <h2 class="guideTitle">Input File</h2>
+    <div class="guideBox">
+        <div class="fileBox">
+            <label for="fileEx">파일첨부</label>
+            <input type="file" id="fileEx">
+        </div>
+    </div>
+</div>
+
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../js/lib/datepicker.js"></script>
+<script src="../js/common.js"></script>
+<script>
+$(function(){
+    $('h2.guideTitle').each(function(index){
+        $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
+    });
+
+    $.datepicker.setDefaults({
+        dateFormat: 'yymmdd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년'
+    });
+
+    $( "#datepicker").datepicker({
+        minDate: 0
+    });
+});
+
+</script>
+</body>
+</html>
