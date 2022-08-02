@@ -8,7 +8,7 @@ $('.slideLayer').each(function(){
     h = $(this).outerHeight();
     $(this).css({bottom: -h});
 });
-console.log(h);
+
 
 const common = {
     init: function() {
