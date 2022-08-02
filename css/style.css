@@ -695,9 +695,6 @@ div.hasDatepicker {
   background-position: -149.5px -70px;
 }
 
-.radioType {
-  margin-top: 22px;
-}
 .radioType li {
   padding: 10px 0;
 }
@@ -749,6 +746,38 @@ div.hasDatepicker {
 }
 .radioType input[type=radio]:checked + label:before {
   background-position: -33px -127px;
+}
+
+/* Horizontal Radio Button */
+.radioHorizontal {
+  display: flex;
+}
+.radioHorizontal .radioType + .radioType {
+  margin-left: 10px;
+}
+
+/* Input File */
+.fileBox {
+  width: 80px;
+  height: 80px;
+  border: 1px dashed var(--silver-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.fileBox label {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+.fileBox input[type=file] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Datepicker */
@@ -1163,7 +1192,7 @@ div.hasDatepicker {
   line-height: 30px;
 }
 .reportWrap .reportWrap__text {
-  margin-top: 8px;
+  margin: 8px 0 22px;
   font-size: 16px;
   color: var(--brownishGrey-color);
 }
