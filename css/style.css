@@ -732,7 +732,7 @@ div.hasDatepicker {
 .radioType li {
   padding: 10px 0;
 }
-.radioType li .textArea textarea {
+.radioType li .textStyle textarea {
   height: 120px;
   outline-color: #3971de;
 }
