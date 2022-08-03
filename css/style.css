@@ -679,12 +679,13 @@ div.hasDatepicker {
 }
 
 /* TextArea */
-.textArea {
+.textStyle {
   margin-top: 13px;
   border: 1px solid var(--silver-color);
   border-radius: 10px;
   overflow: hidden;
 }
+
 /* Checkbox, RadioButton */
 .radioStyle {
   padding: 0 0 7px;

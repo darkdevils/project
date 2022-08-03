@@ -103,6 +103,16 @@
     <div class="guideBox">
         <butto type="button" class="guideBtn" onclick="common.toastLayer('toastLayer01')">토스트팝업(두줄일경우)</butto>
         <butto type="button" class="guideBtn" onclick="common.toastLayer('toastLayer02')">토스트팝업(한줄일경우)</butto>
+        <pre><code class="html">/* 토스트 팝업 두 줄일 경우*/
+&lt;div class=&quot;toastLayer&quot; id=&quot;toastLayer01&quot;&gt;
+    &#xAE40;*&#xD658;&#xB2D8;&#xC774; &#xCC28;&#xB2E8;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.&lt;br&gt;
+    &#xD53C;&#xCC28;&#xB2E8;&#xC790;&#xC758; &#xAC8C;&#xC2DC;&#xAE00;&#xC740; &#xC870;&#xD68C;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+&lt;/div&gt;
+
+/* 토스트 팝업 한 줄일 경우*/
+&lt;div class=&quot;toastLayer&quot; id=&quot;toastLayer02&quot;&gt;
+    &#xAC8C;&#xC2DC;&#xAE00;&#xC774; &#xC0AD;&#xC81C;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.
+&lt;/div&gt;</code></pre>
     </div>
 </div>
 
@@ -212,6 +222,7 @@ $(function(){
         $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
     });
 });
+
 
 </script>
 </body>
