@@ -10,6 +10,7 @@
   --warmGrey-color2: #888;
   --paleGrey-color: #f9fafb;
   --paleGrey-color2: #f2f4f6;
+  --paleGrey-color3: #eaf5f6;
   --brownishGrey-color: #666;
   --paleBlue-color: #eaf3fe;
   --darkSkyBlue-color: #4880ee;
@@ -17,6 +18,7 @@
   --coolGrey-color: #8d9695;
   --beige-color: #f8e4e4;
   --duskyRose-color: #bd6272;
+  --duskyRose-color2: #be5d6e;
   --slateGrey-color: #505866;
   --veryPaleGreen-color: #e9fce0;
   --fernGreen-color: #41874c;
@@ -24,6 +26,10 @@
   --windowsBlue-color: #4f98cd;
   --pale-color: #fcf2e0;
   --dullOrange-color: #d0812e;
+  --veryLightpink-color: #fff4f4;
+  --sea-color: #3b8384;
+  --primary-color: #3971de;
+  --goldenBrown-color: #bf7f02;
 }
 
 /* Grey color */
@@ -131,7 +137,7 @@ html, body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body, th, td, input, select, textarea, button, div, li, span, p, select, textarea, input, button {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   font-family: 'Noto Sans KR', '돋움', dotum, sans-serif;
   letter-spacing: -0.5px;
@@ -174,6 +180,9 @@ textarea {
   resize: none;
   border-radius: 10px;
   &::placeholder {
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: -0.5;
     color: var(--warmGrey-color);
   }
 }

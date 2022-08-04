@@ -267,6 +267,14 @@
 <script>
     // TabType 호출
     common.tabType("#tabs1-1",0);
+
+    $(function(){
+        // 정렬기준 선택
+        $('.radioStyle li input[type="radio"]').on('click',function(){
+           const selectText = $(this).next().text();
+           $('.btnSelect').text(selectText);
+        });
+    })
 </script>
 </body>
 </html>

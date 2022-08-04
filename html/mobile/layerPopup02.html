@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>신용상담 후기작성</title>
+    <title>상담후기</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 <div class="layerPopup">
     <div class="layerHead">
-        <h2 class="title">신용상담 후기작성</h2>
+        <h2 class="title">상담후기</h2>
         <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="layerContent">
         <div class="layerReview">
             <div class="layerReview__writing">
                 <div class="thumbnail">
-                    <img src="../../images/temp/thumbnail_01.png" alt="전미소 상담사">
+                    <img src="../../images/temp/thumbnail_02.png" alt="신용회복위원회 서울중앙지부">
                 </div>
                 <div class="infoWrap">
-                    <span class="name">전미소 상담사</span>
+                    <span class="name">신용회복위원회 서울중앙지부신용회복위원회 서울중앙지부</span>
                     <div class="ratingResult">
                         <div class="rating"><span></span></div>
                     </div>
                 </div>
             </div>
             <div class="layerReview__textArea">
-                <textarea name="" id="" cols="30" rows="10" placeholder="상담 후기를 자유롭게 입력해주세요.(1,000자 이내)"></textarea>
+                <textarea name="" id="textarea01" cols="30" rows="10" placeholder="상담 후기를 자유롭게 입력해 주세요.&#13;&#10;(최소 20자 이상 1,000자까지 입력 가능합니다)"></textarea>
             </div>
+            <div class="textCount"><span class="num">0</span><span class="totalNum">1,000<em>자</em></span></div>
         </div>
     </div>
-    <div class="btnWrap fixedBtm">
-        <button type="button" class="btn btn-d btnGray" disabled><span>작성완료</span></button>
+    <div class="btnWrap fixedBtm fixedBtm-layer">
+        <button type="button" class="btn btn-d btnGray" disabled><span>다음</span></button>
     </div>
 </div>
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
@@ -64,6 +65,11 @@ $(function(){
         }
     }
     textLevel("rating-5");
+
+    /* 퍼블에서만 사용하는 스크립트입니다. */
+    $("#textarea01").keyup(function(){
+        $(".num").text($(this).val().length).css({"color" : "#000"});
+    });
 })
 
 </script>

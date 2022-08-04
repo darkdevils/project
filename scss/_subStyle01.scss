@@ -1,9 +1,13 @@
 
-/* 상담사 상세 */
+/***** 상담업체정보 *****/
+.consulting {
+  padding: 0 0 80px;
+}
 .consultingImage {
   /*height: 200px;*/
   overflow: hidden;
   text-align: center;
+  background-color: var(--black-color);
   img {
     max-width: 100%;
     height: auto;
@@ -12,16 +16,18 @@
 .consultingInfo {
   position: relative;
   padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .name {
     display: block;
+    width: calc(100% - 30px);
     font-size: 20px;
+    line-height: 30px;
     font-weight: 500;
-    margin-bottom: 5px;
   }
   .bookMark {
-    position: absolute;
-    right: 24px;
-    top: 27px;
+    position: relative;
     width: 24px;
     height: 24px;
     @include imageUrl(common_sprite,png);
@@ -31,75 +37,105 @@
       background-position: calc(-222px / 2) calc(-58px / 2);
     }
   }
-  .infoText {
-    span {
-      color: var(--brownishGrey-color);
+}
+.lableList {
+  padding: 0 24px 16px;
+  margin-left: -8px;
+  span {
+    display: inline-block;
+    height: 24px;
+    border-radius: 6px;
+    line-height: 22px;
+    margin: 0 0 8px 8px;
+    padding: 0 8px;
+    overflow: hidden;
+    font-size: 12px;
+    border: 1px solid #be5d6e;
+    vertical-align: top;
+    background-color: var(--white-color);
+    &.roseColor {
+      color: #be5d6e;
     }
-  }
-  .relevant {
-    margin-top: 24px;
-    span {
-      display: inline-block;
-      background-color: var(--paleBlue-color);
-      color: var(--darkSkyBlue-color);
-      padding: 0 8px;
-      font-size: 12px;
-      border-radius: 6px;
-      overflow: hidden;
-      + span {
-        margin-left: 8px;
-      }
+    &.greyColor {
+      border-color: #505866;
+      color: #505866;
+    }
+    &.seaColor {
+      border-color: #3b8384;
+      color: #3b8384;
+    }
+    &.primaryColor {
+      border-color: #3971de;
+      color: #3971de;
+    }
+    &.goldenColor {
+      border-color: #bf7f02;
+      color: #bf7f02;
     }
   }
 }
 
-/* 상담사 상세(상담일정)-주단위 일정 */
+
+/***** 상담사 상세(상담일정)-금주 상담일정 *****/
+.scheduleTitle {
+  .date {
+    color: var(--brownishGrey-color);
+    @include numberText;
+    span {
+      color: var(--brownishGrey-color);
+      font-family: "Noto Sans KR",sans-serif;
+    }
+  }
+}
 .weeklyBox {
   margin-top: 15px;
-  padding: 8px 24px;
-  border-radius: 18px;
   overflow: hidden;
-  background-color: var(--paleGrey-color);
-  .dayArea {
-    display: flex;
-    padding: 16px 0;
-    .dayInfo {
-      width: 50%;
-      .day {
+  ul {
+    border-top: 1px solid $Grey300;
+    li {
+      display: flex;
+      align-items: center;
+      height: 46px;
+      border-bottom: 1px solid #f1f2f5;
+      .schedule {
         display: flex;
-        font-size: 12px;
-        line-height: 20px;
-        &.blue {
-          color: #2f84de;
-        }
-        &.red {
-          color: #e53a4c;
-        }
-        em {
-          display: inline-block;
-          height: 20px;
-          line-height: 20px;
-          font-size: 12px;
-          margin-left: 4px;
-          padding: 0 8px;
-          background-color: var(--black-color);
-          color: var(--white-color);
-          border-radius: 6px;
-          overflow: hidden;
-          font-weight: 300;
-        }
-      }
-      .time {
-        display: block;
+        align-items: center;
+        width: 125px;
+        height: 46px;
         font-size: 14px;
-        color: var(--brownishGrey-color);
         line-height: 22px;
+        background-color: #f9f9fb;
+        padding: 0 0 0 16px;
         @include numberText;
-        margin-top: 4px;
+        span {
+          display: inline-block;
+          position: relative;
+          top: -2px;
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
-    }
-    + .dayArea {
-      border-top: 1px solid #e7e9ee;
+      .timeLabel {
+        display: flex;
+        width: calc(100% - 125px);
+        padding: 0 16px;
+        justify-content: space-between;
+        span {
+          width: 38px;
+          height: 20px;
+          line-height: 18px;
+          border: 1px solid var(--gray-color);
+          border-radius: 100px;
+          color: var(--gray-color);
+          font-size: 12px;
+          text-align: center;
+          &.active {
+            border-color: #717589;
+            background-color: #717589;
+            color: var(--white-color);
+          }
+        }
+      }
     }
   }
 }
@@ -191,21 +227,39 @@
     }
   }
   .reviewList__item {
-    padding: 22px 24px 21px;
+    padding: 24px;
     background: var(--paleGrey-color);
     border-radius: 18px;
     .justifyWrap {
       position: relative;
-      justify-content: flex-start;
-      .btn {
-        position: absolute;
-        right: 0;
-        top: 3px;
-        width: 20px;
-        height: 20px;
-        @include imageUrl(common_sprite,png);
-        background-position: -190px -29px;
-        background-size: 250px;
+      .label {
+        display: inline-block;
+        height: 24px;
+        border: 1px solid #be5d6e;
+        border-radius: 6px;
+        line-height: 22px;
+        font-size: 12px;
+        padding:  0 8px;
+        background-color: var(--white-color);
+        &.roseColor {
+          color: #be5d6e;
+        }
+        &.greyColor {
+          border-color: #505866;
+          color: #505866;
+        }
+        &.seaColor {
+          border-color: #3b8384;
+          color: #3b8384;
+        }
+        &.primaryColor {
+          border-color: #3971de;
+          color: #3971de;
+        }
+        &.goldenColor {
+          border-color: #bf7f02;
+          color: #bf7f02;
+        }
       }
     }
     .rating {
@@ -238,10 +292,8 @@
     .text {
       position: relative;
       margin-top: 15px;
-      line-height: 22px;
       color: var(--font-color);
       overflow: hidden;
-      max-height: 88px;
       /*text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 4;
@@ -257,16 +309,26 @@
         padding: 0 0 0 10px
       }
     }
-    .bottom {
-      display: flex;
-      justify-content: space-between;
+    .info {
+      text-align: right;
       margin-top: 15px;
       span {
+        font-size: 14px;
         color: var(--warmGrey-color2);
         &.date {
           position: relative;
           top: 0;
+          margin-left: 25px;
           @include numberText;
+          &:after {
+            content: "";
+            position: absolute;
+            left: -13px;
+            top: 3px;
+            width: 1px;
+            height: 12px;
+            background-color: #d9d9d9;
+          }
         }
       }
     }

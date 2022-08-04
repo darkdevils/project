@@ -48,6 +48,12 @@
       background: linear-gradient(0deg, rgba(250,250,252,1) 0%, rgba(250,250,252,0) 70%);
       z-index: 0;
     }
+    &.fixedBtm-layer {
+      &:after {
+        height: 172px;
+        background:  linear-gradient(0deg, rgba(255,255,255,1) 17%, rgba(255,255,255,0.8) 90%, rgba(255,255,255,0) 100%);
+      }
+    }
   }
   .btnMore {
     width: 100%;

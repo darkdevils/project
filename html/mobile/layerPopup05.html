@@ -83,6 +83,11 @@
         $('.ratingList').on('click',function(){
             $('.btnWrap.fixedBtm button').prop('disabled', false);
         });
+
+        /* 퍼블에서만 사용하는 스크립트입니다. */
+        $("#textarea01").keyup(function(){
+            $(".num").text($(this).val().length).css({"color" : "#000"});
+        });
     });
 </script>
 </body>

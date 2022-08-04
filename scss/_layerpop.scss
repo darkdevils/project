@@ -36,11 +36,12 @@ $slider-btn-margin: 32px;
 
 .layerContent {
   position: relative;
-  padding: 84px 24px 0;
+  padding: 60px 0 0;
 }
 
 /* 신용상담 후기작성 */
 .layerReview {
+  padding: 0 24px;
   .layerReview__rating {
     padding-top: 120px;
     .thumbnail {
@@ -53,13 +54,14 @@ $slider-btn-margin: 32px;
       }
       .name {
         display: block;
-        margin-top: 10px;
+        margin-top: 12px;
         font-weight: 500;
         font-size: 16px;
+        color: var(--font-color);
       }
     }
     .text {
-      margin: 40px 0 20px;
+      margin: 40px 0 16px;
       font-size: 20px;
       font-weight: 500;
       text-align: center;
@@ -75,46 +77,49 @@ $slider-btn-margin: 32px;
       font-size: 12px;
       border-radius: 6px;
       &.index1 {
-        background-color: var(--beige-color);
-        color: var(--duskyRose-color);
+        background-color: var(--veryLightpink-color);
+        color: var(--duskyRose-color2);
       }
       &.index2 {
-        background-color: var(--paleGrey-color2);
+        background-color: #e9e9e9;
         color: var(--slateGrey-color);
       }
       &.index3 {
-        background-color: var(--veryPaleGreen-color);
-        color: var(--fernGreen-color);
+        background-color: var(--paleGrey-color3);
+        color: var(--sea-color);
       }
       &.index4 {
-        background-color: var(--duckEggBlue-color);
-        color: var(--windowsBlue-color);
+        background-color: var(--paleBlue-color);
+        color: var(--primary-color);
       }
       &.index5 {
         background-color: var(--pale-color);
-        color: var(--dullOrange-color);
+        color: var(--goldenBrown-color);
       }
     }
   }
   .layerReview__writing {
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     padding: 24px 0 0;
     .thumbnail {
       width: 64px;
       height: 64px;
-      border-radius: 18px;
-      margin-right: 15px;
+      border-radius: 12px;
+      margin-right: 16px;
       overflow: hidden;
       img {
         width: 100%;
       }
     }
     .infoWrap {
+      width: calc(100% - 79px);
       .name {
+        display: block;
         font-size: 16px;
         font-weight: 500;
+        margin-bottom: 4px;
       }
       .ratingResult {
         .rating {
@@ -157,8 +162,8 @@ $slider-btn-margin: 32px;
               width: 20px;
             }
             span {
-              background-color: var(--beige-color);
-              color: var(--duskyRose-color);
+              background-color: var(--veryLightpink-color);
+              color: var(--duskyRose-color2);
             }
           }
           &.rating-2 {
@@ -166,7 +171,7 @@ $slider-btn-margin: 32px;
               width: 40px;
             }
             span {
-              background-color: var(--paleGrey-color2);
+              background-color: #e9e9e9;
               color: var(--slateGrey-color);
             }
           }
@@ -175,8 +180,8 @@ $slider-btn-margin: 32px;
               width: 60px;
             }
             span {
-              background-color: var(--veryPaleGreen-color);
-              color: var(--fernGreen-color);
+              background-color: var(--paleGrey-color3);
+              color: var(--sea-color);
             }
           }
           &.rating-4 {
@@ -184,8 +189,8 @@ $slider-btn-margin: 32px;
               width: 80px;
             }
             span {
-              background-color: var(--duckEggBlue-color);
-              color: var(--windowsBlue-color);
+              background-color: var(--paleBlue-color);
+              color: var(--primary-color);
             }
           }
           &.rating-5 {
@@ -194,7 +199,7 @@ $slider-btn-margin: 32px;
             }
             span {
               background-color: var(--pale-color);
-              color: var(--dullOrange-color);
+              color: var(--goldenBrown-color);
             }
           }
         }
@@ -203,11 +208,16 @@ $slider-btn-margin: 32px;
   }
   .layerReview__textArea {
     border-top: 1px solid #e7e9ee;
-    padding: 24px 0;
-    height: calc(100vh - 292px);
+    padding: 24px 0 0;
+    height: calc(100vh - 335px);
     textarea {
       width: 100%;
       height: 100%;
+      padding: 0;
+      border-radius: 0;
+    }
+    + .textCount {
+      padding: 17px 0 0;
     }
   }
 }
