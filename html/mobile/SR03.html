@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담예약 - Step01</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">상담예약</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="reservationArea">
+            <div class="stepArea">
+                <h2 class="stepArea__title">상담분야 선택</h2>
+                <div class="stepArea__list">
+                    <ol>
+                        <li><span class="active"><em class="blind">현재선택</em>01</span></li>
+                        <li><span>02</span></li>
+                        <li><span>03</span></li>
+                        <li><span>04</span></li>
+                    </ol>
+                </div>
+            </div>
+            <ul class="radioType radioType--box">
+                <li>
+                    <input type="radio" name="ra" id="reservation01">
+                    <label for="reservation01">
+                        <strong>신용회복</strong>
+                        <span>신용회복위원회 개인채무조정 제도</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="ra" id="reservation02">
+                    <label for="reservation02">
+                        <strong>개인회생·파산</strong>
+                        <span>법무 채무자 구제제도</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="ra" id="reservation03">
+                    <label for="reservation03">
+                        <strong>신용·재무관리</strong>
+                        <span>신용관리 방법, 가계 재무관리</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="ra" id="reservation04">
+                    <label for="reservation04">
+                        <strong>채무 관련 법률상담</strong>
+                        <span>강제집행 절차와 대응법, 불법 금융피해 등</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="ra" id="reservation05">
+                    <label for="reservation05">
+                        <strong>서민금융·복지</strong>
+                        <span>취약계층을 위한 서민금융상품과 사회복지제도</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="btnWrap btnWrap-col2 fixedBtm">
+        <button type="button" class="btn btn-d btnGray w78"><span>이전</span></button>
+        <button type="button" class="btn btn-d"><span>다음</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $.datepicker.setDefaults({
+        dateFormat: 'yymmdd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년'
+    });
+
+    $( "#datepicker").datepicker({
+        minDate: 1
+    });
+
+    $('.timeArea button').on('click',function(){
+        $('.timeArea button').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
+</body>
+</html>

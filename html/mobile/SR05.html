@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담예약 - Step03</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">상담예약</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="reservationArea">
+            <div class="stepArea">
+                <h2 class="stepArea__title">상담일시 선택</h2>
+                <div class="stepArea__list">
+                    <ol>
+                        <li><span>01</span></li>
+                        <li><span>02</span></li>
+                        <li><span class="active"><em class="blind">현재선택</em>03</span></li>
+                        <li><span>04</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div id="datepicker"></div>
+            <div class="timeArea">
+                <dl>
+                    <dt>오전</dt>
+                    <dd>
+                        <button type="button">9:00</button><button type="button">9:30</button><button type="button" disabled>10:00</button><button type="button" disabled>10:30</button><button type="button" disabled>11:00</button><button type="button">11:30</button>
+                    </dd>
+                    <dt>오후</dt>
+                    <dd>
+                        <button type="button">13:00</button><button type="button">13:30</button><button type="button" disabled>14:00</button><button type="button" disabled>14:30</button><button type="button">15:00</button><button type="button">15:30</button><button type="button" disabled>16:00</button><button type="button">16:30</button><button type="button">17:00</button><button type="button">17:30</button>
+                    </dd>
+                    <dt>야간</dt>
+                    <dd>
+                        <button type="button">18:00</button><button type="button" disabled>18:30</button><button type="button">19:00</button><button type="button">19:30</button><button type="button">20:00</button><button type="button">20:30</button>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap btnWrap-col2 fixedBtm">
+        <button type="button" class="btn btn-d btnGray w78"><span>이전</span></button>
+        <button type="button" class="btn btn-d"><span>다음</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $.datepicker.setDefaults({
+        dateFormat: 'yymmdd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년'
+    });
+
+    $( "#datepicker").datepicker({
+        minDate: 1
+    });
+
+    $('.timeArea button').on('click',function(){
+        $('.timeArea button').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
+</body>
+</html>

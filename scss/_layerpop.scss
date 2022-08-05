@@ -37,11 +37,16 @@ $slider-btn-margin: 32px;
 .layerContent {
   position: relative;
   padding: 60px 0 0;
+  > div {
+    padding: 0 24px;
+  }
+  .inputArea {
+    padding: 24px 24px 0;
+  }
 }
 
 /* 신용상담 후기작성 */
 .layerReview {
-  padding: 0 24px;
   .layerReview__rating {
     padding-top: 120px;
     .thumbnail {

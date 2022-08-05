@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담예약 - Step02</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">상담예약</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="reservationArea">
+            <div class="stepArea">
+                <h2 class="stepArea__title">상담업체 선택</h2>
+                <div class="stepArea__list">
+                    <ol>
+                        <li><span>01</span></li>
+                        <li><span class="active"><em class="blind">현재선택</em>02</span></li>
+                        <li><span>03</span></li>
+                        <li><span>04</span></li>
+                    </ol>
+                </div>
+            </div>
+            <button type="button" class="hopeSelect mgTop40"><span>상담 희망일자 선택</span></button>
+            <div class="justifyWrap mgTop40">
+                <div class="leftTotal">총<span class="totalNum">55</span>건</div>
+                <div class="rightArea">
+                    <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen('slideLayer01');">정렬기준</button>
+                </div>
+            </div>
+            <div class="companyList">
+                <ul>
+                    <li class="item">
+                        <div class="textContent">
+                            <div class="thumbnail"><img src="../../images/temp/thumbnail_02.png" alt="신용회복위원회 서울중앙지부"></div>
+                            <strong class="title">신용회복위원회 서울중앙지부</strong>
+                        </div>
+                        <div class="text">신용회복위원회는 깊은 공감능력, 상담에 대한 열정과 책임감을 가지고 내담자에게 효과적인 도움을</div>
+                        <div class="justifyWrap">
+                            <div class="starRating">
+                                <span class="num">4.8</span><span class="totalNum">5</span>
+                            </div>
+                            <div class="button">
+                                <button type="button" class="btn btnGray btn-s">상세보기</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="textContent">
+                            <div class="thumbnail"><img src="../../images/temp/thumbnail_12.png" alt="의정부지부 (의정부서민금융 통합지원센터)"></div>
+                            <strong class="title">의정부지부 (의정부서민금융 통합지원센터)</strong>
+                        </div>
+                        <div class="text">신용회복위원회는 깊은 공감능력, 상담에 대한 열정과 책임감을 가지고 내담자에게 효과적인 도움을</div>
+                        <div class="justifyWrap">
+                            <div class="starRating">
+                                <span class="num">4.8</span><span class="totalNum">5</span>
+                            </div>
+                            <div class="button">
+                                <button type="button" class="btn btnGray btn-s">상세보기</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="btnWrap btnWrap-col2 fixedBtm">
+        <button type="button" class="btn btn-d btnGray w78"><span>이전</span></button>
+        <button type="button" class="btn btn-d"><span>다음</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $.datepicker.setDefaults({
+        dateFormat: 'yymmdd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년'
+    });
+
+    $( "#datepicker").datepicker({
+        minDate: 1
+    });
+
+    $('.timeArea button').on('click',function(){
+        $('.timeArea button').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
+</body>
+</html>

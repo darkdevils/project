@@ -2,24 +2,29 @@
 /* Datepicker */
 .hasDatepicker {
   max-width: 100% !important;
+  margin: 0 !important;
 }
 .ui-datepicker {
   width: 100%;
   .ui-datepicker-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     span {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
-      @include numberText;
+      //@include numberText;
     }
+  }
+  .ui-datepicker-header {
+    padding: 40px 0 30px;
   }
   .ui-datepicker-prev {
     left: 2px;
-
+    top: 42px;
   }
   .ui-datepicker-next {
     margin-right: 0;
+    top: 42px;
   }
   td {
     border: 0;
@@ -29,7 +34,7 @@
       border: 0;
       span {
         font-family: 'Noto Sans KR',sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         opacity: 1;
       }
       &.ui-datepicker-week-end {
@@ -63,7 +68,7 @@
         border-radius: 28px;
         font-size: 14px;
         @include numberText;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 28px;
         margin: 6px auto;
         padding: 0;
