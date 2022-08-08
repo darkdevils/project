@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담예약 - 상담내역</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">상담내역</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="detailsList">
+            <div class="countArea">총<span class="number">5</span>건의 상담신청 내역이 있습니다.</div>
+            <!-- 예약완료 -->
+            <div class="detailsList__item">
+                <span class="label label-cpt">예약완료</span>
+                <dl class="reservationTxt">
+                    <dt>상담 유형</dt>
+                    <dd>개인회생·파산</dd>
+                    <dt>상담 업체</dt>
+                    <dd>신용회복위원회 서울중앙지부</dd>
+                    <dt>상담 일시</dt>
+                    <dd>2022-09-08 15:00~15:30</dd>
+                    <dt>신청일</dt>
+                    <dd>2022.09.05</dd>
+                </dl>
+                <div class="rightArea">
+                    <a href="#" class="btn btnWhite btn-s"><span>예약취소</span></a>
+                </div>
+            </div>
+            <!-- //예약완료 -->
+
+            <!-- 상담불가 -->
+            <div class="detailsList__item">
+                <span class="label label-ipty">상담불가</span>
+                <dl class="reservationTxt">
+                    <dt>상담 유형</dt>
+                    <dd>개인회생·파산</dd>
+                    <dt>상담 업체</dt>
+                    <dd>의정부지부 (의정부서민금융통합지원센터)</dd>
+                    <dt>상담 일시</dt>
+                    <dd>2022-09-08 15:00~15:30</dd>
+                    <dt>신청일</dt>
+                    <dd>2022.09.05</dd>
+                </dl>
+            </div>
+            <!-- //상담불가 -->
+
+            <!-- 상담완료(후기등록) -->
+            <div class="detailsList__item">
+                <span class="label label-cpt2">상담완료</span>
+                <dl class="reservationTxt">
+                    <dt>상담 유형</dt>
+                    <dd>개인회생·파산</dd>
+                    <dt>상담 업체</dt>
+                    <dd>원주지부 (원주서민금융통합지원센터)</dd>
+                    <dt>상담 일시</dt>
+                    <dd>2022-09-08 15:00~15:30</dd>
+                    <dt>신청일</dt>
+                    <dd>2022.09.05</dd>
+                </dl>
+                <div class="rightArea">
+                    <a href="#" class="btn btnWhite btn-s"><span>후기등록</span></a>
+                </div>
+            </div>
+            <!-- //상담완료(후기등록) -->
+
+            <!-- 예약취소 -->
+            <div class="detailsList__item">
+                <span class="label label-cancel">예약취소</span>
+                <dl class="reservationTxt">
+                    <dt>상담 유형</dt>
+                    <dd>개인회생·파산</dd>
+                    <dt>상담 업체</dt>
+                    <dd>원주지부 (원주서민금융통합지원센터)</dd>
+                    <dt>상담 일시</dt>
+                    <dd>2022-09-08 15:00~15:30</dd>
+                    <dt>신청일</dt>
+                    <dd>2022.09.05</dd>
+                </dl>
+            </div>
+            <!-- //예약취소 -->
+
+            <!-- 상담완료(후기보기) -->
+            <div class="detailsList__item">
+                <span class="label label-cpt2">상담완료</span>
+                <dl class="reservationTxt">
+                    <dt>상담 유형</dt>
+                    <dd>개인회생·파산</dd>
+                    <dt>상담 업체</dt>
+                    <dd>원주지부 (원주서민금융통합지원센터)</dd>
+                    <dt>상담 일시</dt>
+                    <dd>2022-09-08 15:00~15:30</dd>
+                    <dt>신청일</dt>
+                    <dd>2022.09.05</dd>
+                </dl>
+                <div class="rightArea">
+                    <a href="#" class="btn btnWhite btn-s"><span>후기보기</span></a>
+                </div>
+            </div>
+            <!-- //상담완료(후기보기) -->
+        </div>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $.datepicker.setDefaults({
+        dateFormat: 'yymmdd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년'
+    });
+
+    $( "#datepicker").datepicker({
+        minDate: 1
+    });
+
+    $('.timeArea button').on('click',function(){
+        $('.timeArea button').removeClass('active');
+        $(this).addClass('active');
+        $('.fixedBtm button').prop('disabled', false);
+    })
+</script>
+</body>
+</html>

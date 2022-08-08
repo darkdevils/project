@@ -93,12 +93,22 @@
     vertical-align: top;
     span {
       font-size: 14px;
+      line-height: 22px;
     }
   }
   &.btnGray,&:disabled {
     background-color: var(--gray-color);
     span {
       color: var(--warmGrey-color2);
+    }
+  }
+  &.btnWhite {
+    height: 28px;
+    line-height: 26px;
+    border:1px solid #bbb;
+    background-color: var(--white-color);
+    span {
+      color: var(--brownishGrey-color);
     }
   }
 }

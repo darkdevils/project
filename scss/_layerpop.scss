@@ -41,7 +41,10 @@ $slider-btn-margin: 32px;
     padding: 0 24px;
   }
   .inputArea {
-    padding: 24px 24px 0;
+    padding: 24px 24px 160px;
+  }
+  .completeWrap {
+    padding: 70px 24px 0;
   }
 }
 
@@ -286,24 +289,6 @@ $slider-btn-margin: 32px;
       font-size: 18px;
       text-align: center;
     }
-    .reservationTxt {
-      border-top: 1px solid #e7e9ee;
-      border-bottom: 1px solid #e7e9ee;
-      padding: 24px 0 16px;
-      dt {
-        float: left;
-        margin-bottom: 8px;
-        width: 30%;
-        font-size: 16px;
-        color: var(--brownishGrey-color);
-      }
-      dd {
-        padding-left: 30%;
-        margin-bottom: 8px;
-        text-align: right;
-        font-size: 16px;
-      }
-    }
     .btnWrap {
       margin-top: $slider-btn-margin;
     }
@@ -315,6 +300,32 @@ $slider-btn-margin: 32px;
         font-size: 16px;
       }
     }
+    .reservationTxt {
+      border-top: 1px solid #e7e9ee;
+      border-bottom: 1px solid #e7e9ee;
+    }
+  }
+}
+
+/* Slide Datepicker */
+.slideDatepicker {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 30px 30px 0 0;
+  padding-bottom: 40px;
+  background-color: #fff;
+  z-index: 100;
+  .ui-datepicker .ui-datepicker-header {
+    padding: 30px 0;
+  }
+  .slideDatepicker__content {
+    height: 380px;
+    padding: 0 24px;
+  }
+  .btnWrap {
+    padding: 0 24px;
   }
 }
 

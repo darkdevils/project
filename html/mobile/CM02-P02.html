@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자유게시판 - 신고하기 레이어팝업</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">신고하기</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="reportWrap">
+            <strong class="reportWrap__title">해당 게시글의 신고 이유를 알려주세요.</strong>
+            <p class="reportWrap__text">신고접수 된 게시물에 대해서 면밀히 확인 후 적절한 조치를 취하도록 하겠습니다.</p>
+            <ul class="radioType">
+                <li><input type="radio" name="ck" id="radio01-1"><label for="radio01-1">타인명예를 훼손하는 글이에요</label></li>
+                <li><input type="radio" name="ck" id="radio01-2"><label for="radio01-2">광고/홍보 글이에요</label></li>
+                <li><input type="radio" name="ck" id="radio01-3"><label for="radio01-3">허위정보에요</label></li>
+                <li><input type="radio" name="ck" id="radio01-4"><label for="radio01-4">도배글이에요</label></li>
+                <li><input type="radio" name="ck" id="radio01-5"><label for="radio01-5">부적절한 댓글이에요</label></li>
+                <li>
+                    <input type="radio" name="ck" id="radio01-6"><label for="radio01-6">기타 (직접입력)</label>
+                    <div class="textStyle">
+                        <textarea name="" id="textarea" cols="30" rows="10" placeholder="신고내용을 입력해주세요"></textarea>
+                    </div>
+                    <div class="textCount"><span class="num">0</span><span class="totalNum">1,000<em>자</em></span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d btnCom" disabled><span>신고하기</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+
+    // textarea 체크시 radio버튼도 checked
+    $("#textarea").on('click',function(){
+        $(this).closest('li').find('input[type="radio"]').prop('checked',true);
+    });
+
+    // Radio 클릭시 '신고하기'버튼 활성화
+    $('.radioType input[type="radio"]').on('click', function(){
+        //event.preventDefault();
+        $('.btnCom').removeAttr('disabled');
+    });
+
+    /* 퍼블에서만 사용하는 스크립트입니다. */
+    $("#textarea").keyup(function(){
+        $(".num").text($(this).val().length).css({"color" : "#000"});
+    });
+});
+</script>
+</body>
+</html>

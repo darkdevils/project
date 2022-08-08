@@ -28,7 +28,11 @@
                     </ol>
                 </div>
             </div>
-            <button type="button" class="hopeSelect mgTop40"><span>상담 희망일자 선택</span></button>
+            <div class="inputDateArea">
+                <button type="button" class="hopeSelect" onclick="datepickerOpen('slideLayer02')"><span>상담 희망일자 선택</span></button>
+                <div class="inputDate"><input type="text" name="" id="" value="2022-09-08" disabled></div>
+            </div>
+
             <div class="justifyWrap mgTop40">
                 <div class="leftTotal">총<span class="totalNum">55</span>건</div>
                 <div class="rightArea">
@@ -57,7 +61,22 @@
                             <div class="thumbnail"><img src="../../images/temp/thumbnail_12.png" alt="의정부지부 (의정부서민금융 통합지원센터)"></div>
                             <strong class="title">의정부지부 (의정부서민금융 통합지원센터)</strong>
                         </div>
-                        <div class="text">신용회복위원회는 깊은 공감능력, 상담에 대한 열정과 책임감을 가지고 내담자에게 효과적인 도움을</div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aliquid amet atque distinctio, dolore earum enim ex incidunt itaque libero magni nemo odit quas quos sapiente sequi similique voluptate.</div>
+                        <div class="justifyWrap">
+                            <div class="starRating">
+                                <span class="num">4.8</span><span class="totalNum">5</span>
+                            </div>
+                            <div class="button">
+                                <button type="button" class="btn btnGray btn-s">상세보기</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="textContent">
+                            <div class="thumbnail"></div>
+                            <strong class="title">대전지부 (대전서민금융통합지원센터)</strong>
+                        </div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aliquid amet atque distinctio, dolore earum enim ex incidunt itaque libero magni nemo odit quas quos sapiente sequi similique voluptate.</div>
                         <div class="justifyWrap">
                             <div class="starRating">
                                 <span class="num">4.8</span><span class="totalNum">5</span>
@@ -69,21 +88,44 @@
                     </li>
                 </ul>
             </div>
-
         </div>
     </div>
     <div class="btnWrap btnWrap-col2 fixedBtm">
         <button type="button" class="btn btn-d btnGray w78"><span>이전</span></button>
-        <button type="button" class="btn btn-d"><span>다음</span></button>
+        <button type="button" class="btn btn-d" disabled><span>다음</span></button>
     </div>
 </div>
+
+<!-- 정렬기준 선택 레이어팝업 -->
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title">정렬옵션</h2>
+        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle">
+            <li><input type="radio" name="sortRadio" id="radio1-1" checked><label for="radio1-1">업체명</label></li>
+            <li><input type="radio" name="sortRadio" id="radio1-2"><label for="radio1-2">평점순</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //정렬기준 선택 레이어팝업 -->
+
+<!-- 날짜 레이어 팝업 -->
+<div class="slideDatepicker" id="slideLayer02">
+    <div id="datepicker" class="slideDatepicker__content"></div>
+    <div class="btnWrap">
+        <button type="button" class="btn btn-d" onclick="datepickerClose();"><span>확인</span></button>
+    </div>
+</div>
+<!-- //날짜 레이어 팝업 -->
 
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/lib/datepicker.js"></script>
 <script src="../../js/common.js"></script>
 <script>
     $.datepicker.setDefaults({
-        dateFormat: 'yymmdd',
+        dateFormat: 'yy-mm-dd',
         prevText: '이전 달',
         nextText: '다음 달',
         monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
@@ -94,14 +136,40 @@
         showMonthAfterYear: true,
         yearSuffix: '년'
     });
-
-    $( "#datepicker").datepicker({
-        minDate: 1
+    $("#datepicker").datepicker({
+        minDate: 1,
+    });
+    const datepickerHeight = $('.ui-datepicker').outerHeight() + 150;
+    $('.slideDatepicker').css({
+        bottom : -(datepickerHeight)
     });
 
-    $('.timeArea button').on('click',function(){
-        $('.timeArea button').removeClass('active');
-        $(this).addClass('active');
+    $('.inputDate').val($('#datepicker').datepicker('setDate', 'today').val()); // 오늘날짜
+    // Datepicker 열기
+    function datepickerOpen(el) {
+        const layerId = $("#" + el );
+        $('body').append('<div class="dim"></div>');
+        $('.slideDatepicker').animate({
+            bottom: 0
+        });
+    }
+    // Datepicker 닫기
+    function datepickerClose() {
+        $('.dim').fadeOut();
+        $('.slideDatepicker').animate({
+            bottom: -datepickerHeight
+        });
+        $('.inputDate').fadeIn();
+        $('.hopeSelect').hide();
+        $('.inputDate').val($('#datepicker').val());
+    }
+
+    $(function(){
+        // 정렬기준 선택
+        $('.radioStyle li input[type="radio"]').on('click',function(){
+            const selectText = $(this).next().text();
+            $('.btnSelect').text(selectText);
+        });
     })
 </script>
 </body>

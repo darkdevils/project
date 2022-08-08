@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담예약 - Step04</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">상담예약</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="reservationArea">
+            <div class="stepArea">
+                <h2 class="stepArea__title">상담내용 입력</h2>
+                <div class="stepArea__list">
+                    <ol>
+                        <li><span>01</span></li>
+                        <li><span>02</span></li>
+                        <li><span>03</span></li>
+                        <li><span class="active"><em class="blind">현재선택</em>04</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="textStyle textStyle-res">
+                <label for="textarea01" class="blind">상담내용입력</label>
+                <textarea name="" id="textarea01" cols="30" rows="10" placeholder="상담받고자 하는 내용을 간략히 작성해주세요"></textarea>
+            </div>
+            <div class="textCount"><span class="num">0</span><span class="totalNum">100<em>자</em></span></div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d btnGray"><span>상담예약</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+
+    /* 퍼블에서만 사용하는 스크립트입니다. */
+    $("#textarea01").keyup(function(){
+        $(".num").text($(this).val().length).css({"color" : "#000"});
+    });
+})
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 
 /***** 상담업체정보 *****/
-.consulting {
+.layerContent .consulting {
   padding: 0 0 80px;
 }
 .consultingImage {
@@ -38,7 +38,7 @@
     }
   }
 }
-.lableList {
+.labelList {
   padding: 0 24px 16px;
   margin-left: -8px;
   span {
@@ -348,7 +348,7 @@
 
 /* 상담예약 */
 .reservationArea {
-  padding: 24px 24px 0;
+  padding: 24px 24px 62px;
   .timeArea {
     margin: 30px 0 0;
     border-top: 1px solid #e7e9ee;
@@ -389,24 +389,56 @@
   }
 }
 
+
 /* 상담예약 - 상담업체 선택 */
-.hopeSelect {
-  width: 100%;
-  height: 42px;
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-  text-align: center;
-  line-height: 40px;
-  span {
+.inputDateArea {
+  margin-top: 40px;
+  .hopeSelect {
+    width: 100%;
+    height: 44px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 0 0 0 30px;
+      color: var(--primary-color);
+      @include bgImage(0, 0, common_sprite) {
+        width: 24px;
+        height: 24px;
+        background-size: 250px;
+        background-position: calc(-248px / 2) calc(-254px / 2);
+      }
+    }
+  }
+  .inputDate {
+    display: none;
     position: relative;
-    display: inline-block;
-    padding: 0 0 0 30px;
-    color: var(--primary-color);
-    @include bgImage(0,0,common_sprite) {
+    width: 100%;
+    height: 44px;
+    margin-top: 40px;
+    border: 1px solid var(--font-color);
+    background-color: var(--white-color);
+    border-radius: 4px;
+    text-align: center;
+    input {
+      position: relative;
+      display: inline-block;
+      width: 96px;
+      height: 42px;
+      padding: 0 0 0 16px;
+      border: 0;
+      background-color: transparent;
+      @include numberText;
+    }
+    @include bgImage(calc(50% - 60px), 8px ,common_sprite) {
       width: 24px;
       height: 24px;
       background-size: 250px;
-      background-position: calc(-248px / 2) calc(-254px / 2);
+      background-position: calc(-306px / 2) calc(-254px / 2);
     }
   }
 }
@@ -430,7 +462,7 @@
           margin-right: 12px;
           padding-left: 48px;
           overflow: hidden;
-          @include bgImage(0,0, bg_default) {
+          @include bgImage(0,0, bg_default_300x300) {
             width: 48px;
             height: 48px;
             background-size: contain;
@@ -502,61 +534,138 @@
   }
 }
 
-
 /* 상담 예약완료 */
-.completionWrap {
-  position: relative;
-  padding: 82px 0 0;
-  text-align: center;
-  @include bgImage(50%,10px, common_sprite) {
-    width: 52px;
-    height: 52px;
-    background-size: 250px;
-    background-position: 0 -70px;
-    margin-left: -26px;
-  }
-  strong {
-    display: block;
-    font-size: 24px;
-    font-weight: 500;
-  }
-  p {
-    margin-top: 4px;
+.reservationTxt {
+  padding: 24px 0 16px;
+  dt {
+    float: left;
+    margin-bottom: 8px;
+    width: 61px;
     font-size: 16px;
-    color: var(--brownishGrey-color);
     font-weight: 300;
+    color: var(--brownishGrey-color);
+  }
+  dd {
+    padding-left: 85px;
+    margin-bottom: 8px;
+    text-align: right;
+    font-size: 16px;
+  }
+}
+
+.completeWrap {
+  .completeWrap__text {
+    position: relative;
+    padding: 92px 0 80px;
+    text-align: center;
+    @include bgImage(50%,10px, common_sprite) {
+      width: 52px;
+      height: 52px;
+      background-size: 250px;
+      background-position: 0 -70px;
+      margin-left: -26px;
+    }
+    strong {
+      display: block;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+    }
+    p {
+      margin-top: 4px;
+      font-size: 16px;
+      color: var(--brownishGrey-color);
+      font-weight: 300;
+    }
+  }
+  .completeWrap__info {
+    border-top: 1px solid #e7e9ee;
+    border-bottom: 1px solid #e7e9ee;
+  }
+}
+
+/* 상담내역 */
+.detailsList {
+  padding: 24px 24px 0;
+  .countArea {
+    color: var(--brownishGrey-color);
+    line-height: 22px;
+    font-size: 14px;
+    .number {
+      margin: 0 3px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+      color: var(--primary-color);
+    }
+  }
+  .detailsList__item {
+    border-bottom: 1px solid #e7e9ee;
+    padding: 20px 0 12px;
+    .label {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 22px;
+      &.label-cpt {
+        color: var(--primary-color);
+      }
+      &.label-ipty {
+        color: var(--lipstick-color);
+      }
+      &.label-cpt2 {
+        color: var(--duskyBlue-color);
+      }
+      &.label-cancel {
+        color: var(--coolGrey-color);
+        text-decoration: line-through;
+      }
+    }
+    .reservationTxt {
+      padding: 0;
+    }
+    .rightArea {
+      margin: 16px 0 8px;
+      text-align: right;
+    }
   }
 }
 
 /* 게시판목록 */
 .boardWrap {
-  padding: 78px 24px 0;
+  padding: 24px 24px 64px;
   .searchArea {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
   .justifyWrap {
     margin-bottom: 12px;
   }
 }
 .boardWrap__list,.listType {
+  border-bottom: 1px solid #e7e9ee;
   li {
     border-top: 1px solid #e7e9ee;
     padding: 24px 0 0;
     .justifyWrap {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       .leftArea {
         span,em {
           color: var(--warmGrey-color2);
           line-height: 20px;
         }
         .name {
+          font-size: 14px;
+          line-height: 22px;
           margin-right: 25px;
           @include numberText;
         }
         .time {
           position: relative;
+          font-size: 14px;
+          line-height: 22px;
           em {
             @include numberText;
+            line-height: 22px;
           }
           &:after {
             content: "";
@@ -702,6 +811,8 @@
       span {
         position: relative;
         color: var(--warmGrey-color2);
+        font-size: 14px;
+        line-height: 22px;
         + span {
           margin-left: 25px;
           &:after {
@@ -718,7 +829,7 @@
     }
   }
   .boardView__content {
-    padding: 0 0 30px;
+    padding: 0 0 40px;
     .img {
       overflow: hidden;
       text-align: center;
@@ -728,7 +839,7 @@
       }
     }
     .text {
-      padding: 16px 24px 24px;
+      padding: 0 24px 24px;
       font-size: 16px;
       color: var(--brownishGrey-color);
     }
@@ -748,48 +859,54 @@
       }
     }
   }
-  .listType {
-    padding: 0 24px;
-    .numArea {
-      .comments {
-        position: relative;
-        padding-right: 24px;
+  .borderView__list {
+    padding: 40px 24px 64px;
+    .listType {
+      padding: 6px 0 0;
+      .numArea {
+        .comments {
+          position: relative;
+          padding-right: 24px;
 
-        &:before {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: 0;
-          width: 20px;
-          height: 20px;
-          @include imageUrl(bg_arrow,png);
-          background-size: 20px;
-          transition: 0.7s ease;
-        }
-        &.on {
           &:before {
-            transform: rotate(-180deg);
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            @include imageUrl(bg_arrow, png);
+            background-size: 20px;
+            transition: 0.7s ease;
+          }
+
+          &.on {
+            &:before {
+              transform: rotate(-180deg);
+            }
           }
         }
       }
-    }
-    .btnReply {
-      color: $Grey600;
-    }
-    .listType {
-      display: none;
-      position: relative;
-      padding: 0 0 1px;
 
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -24px;
-        width: calc(100% + 48px);
-        height: 100%;
-        background-color: var(--paleGrey-color);
-        z-index: -1;
+      .btnReply {
+        color: $Grey600;
+      }
+
+      .listType {
+        display: none;
+        position: relative;
+        padding: 0 0 1px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -24px;
+          width: calc(100% + 48px);
+          height: 100%;
+          background-color: var(--paleGrey-color);
+          z-index: -1;
+        }
       }
     }
   }

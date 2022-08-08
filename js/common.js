@@ -76,7 +76,7 @@ const common = {
             });
         },
         slideClose: function() {
-            $('.dim').remove();
+            $('.dim').fadeOut();
             $('.slideLayer').animate({
                 bottom: -h
             });

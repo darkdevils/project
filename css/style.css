@@ -158,6 +158,8 @@
   --sea-color: #3b8384;
   --primary-color: #3971de;
   --goldenBrown-color: #bf7f02;
+  --lipstick-color: #e53a4c;
+  --duskyBlue-color: #455896;
 }
 
 /* Grey color */
@@ -574,12 +576,22 @@ div.hasDatepicker {
 }
 .btn.btn-s span {
   font-size: 14px;
+  line-height: 22px;
 }
 .btn.btnGray, .btn:disabled {
   background-color: var(--gray-color);
 }
 .btn.btnGray span, .btn:disabled span {
   color: var(--warmGrey-color2);
+}
+.btn.btnWhite {
+  height: 28px;
+  line-height: 26px;
+  border: 1px solid #bbb;
+  background-color: var(--white-color);
+}
+.btn.btnWhite span {
+  color: var(--brownishGrey-color);
 }
 
 /* 좋아요 버튼 */
@@ -651,9 +663,10 @@ div.hasDatepicker {
 .searchArea {
   position: relative;
   width: 100%;
-  height: 60px;
-  border: 1px solid var(--silver-color);
-  border-radius: 200px;
+  height: 56px;
+  border: 1px solid var(--paleGrey-color2);
+  background-color: var(--paleGrey-color2);
+  border-radius: 8px;
   margin: 0 auto;
   padding: 0 10px 0 58px;
   overflow: hidden;
@@ -678,6 +691,7 @@ div.hasDatepicker {
   font-weight: 300;
   letter-spacing: -0.5px;
   color: var(--black-color);
+  background-color: transparent;
 }
 .searchArea .btnSearchClose {
   display: none;
@@ -697,6 +711,15 @@ div.hasDatepicker {
   border: 1px solid var(--silver-color);
   border-radius: 10px;
   overflow: hidden;
+}
+.textStyle textarea {
+  height: 100%;
+}
+.textStyle textarea:focus-visible {
+  outline-color: var(--primary-color);
+}
+.textStyle.textStyle-res {
+  height: 127px;
 }
 
 /* Checkbox, RadioButton */
@@ -1123,7 +1146,10 @@ div.hasDatepicker {
   padding: 0 24px;
 }
 .layerContent .inputArea {
-  padding: 24px 24px 0;
+  padding: 24px 24px 160px;
+}
+.layerContent .completeWrap {
+  padding: 70px 24px 0;
 }
 
 /* 신용상담 후기작성 */
@@ -1361,24 +1387,6 @@ div.hasDatepicker {
   font-size: 18px;
   text-align: center;
 }
-.slideLayer .slideLayer__content .reservationTxt {
-  border-top: 1px solid #e7e9ee;
-  border-bottom: 1px solid #e7e9ee;
-  padding: 24px 0 16px;
-}
-.slideLayer .slideLayer__content .reservationTxt dt {
-  float: left;
-  margin-bottom: 8px;
-  width: 30%;
-  font-size: 16px;
-  color: var(--brownishGrey-color);
-}
-.slideLayer .slideLayer__content .reservationTxt dd {
-  padding-left: 30%;
-  margin-bottom: 8px;
-  text-align: right;
-  font-size: 16px;
-}
 .slideLayer .slideLayer__content .btnWrap {
   margin-top: 32px;
 }
@@ -1387,6 +1395,32 @@ div.hasDatepicker {
   padding: 12px 0;
   color: var(--font-color);
   font-size: 16px;
+}
+.slideLayer .slideLayer__content .reservationTxt {
+  border-top: 1px solid #e7e9ee;
+  border-bottom: 1px solid #e7e9ee;
+}
+
+/* Slide Datepicker */
+.slideDatepicker {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 30px 30px 0 0;
+  padding-bottom: 40px;
+  background-color: #fff;
+  z-index: 100;
+}
+.slideDatepicker .ui-datepicker .ui-datepicker-header {
+  padding: 30px 0;
+}
+.slideDatepicker .slideDatepicker__content {
+  height: 380px;
+  padding: 0 24px;
+}
+.slideDatepicker .btnWrap {
+  padding: 0 24px;
 }
 
 /* 자유게시판 - 시곤하기 */
@@ -2927,7 +2961,7 @@ div.hasDatepicker {
 }
 
 .container {
-  padding: 60px 0 150px;
+  padding: 60px 0 80px;
 }
 
 /* 별점 */
@@ -3471,7 +3505,7 @@ div.hasDatepicker {
   }
 }
 /***** 상담업체정보 *****/
-.consulting {
+.layerContent .consulting {
   padding: 0 0 80px;
 }
 
@@ -3512,11 +3546,11 @@ div.hasDatepicker {
   background-position: -111px -29px;
 }
 
-.lableList {
+.labelList {
   padding: 0 24px 16px;
   margin-left: -8px;
 }
-.lableList span {
+.labelList span {
   display: inline-block;
   height: 24px;
   border-radius: 6px;
@@ -3529,22 +3563,22 @@ div.hasDatepicker {
   vertical-align: top;
   background-color: var(--white-color);
 }
-.lableList span.roseColor {
+.labelList span.roseColor {
   color: #be5d6e;
 }
-.lableList span.greyColor {
+.labelList span.greyColor {
   border-color: #505866;
   color: #505866;
 }
-.lableList span.seaColor {
+.labelList span.seaColor {
   border-color: #3b8384;
   color: #3b8384;
 }
-.lableList span.primaryColor {
+.labelList span.primaryColor {
   border-color: #3971de;
   color: #3971de;
 }
-.lableList span.goldenColor {
+.labelList span.goldenColor {
   border-color: #bf7f02;
   color: #bf7f02;
 }
@@ -3829,7 +3863,7 @@ div.hasDatepicker {
 
 /* 상담예약 */
 .reservationArea {
-  padding: 24px 24px 0;
+  padding: 24px 24px 62px;
 }
 .reservationArea .timeArea {
   margin: 30px 0 0;
@@ -3870,21 +3904,24 @@ div.hasDatepicker {
 }
 
 /* 상담예약 - 상담업체 선택 */
-.hopeSelect {
+.inputDateArea {
+  margin-top: 40px;
+}
+.inputDateArea .hopeSelect {
   width: 100%;
-  height: 42px;
+  height: 44px;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   text-align: center;
   line-height: 40px;
 }
-.hopeSelect span {
+.inputDateArea .hopeSelect span {
   position: relative;
   display: inline-block;
   padding: 0 0 0 30px;
   color: var(--primary-color);
 }
-.hopeSelect span:after {
+.inputDateArea .hopeSelect span:after {
   content: "";
   display: block;
   position: absolute;
@@ -3895,6 +3932,40 @@ div.hasDatepicker {
   height: 24px;
   background-size: 250px;
   background-position: -124px -127px;
+}
+.inputDateArea .inputDate {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 44px;
+  margin-top: 40px;
+  border: 1px solid var(--font-color);
+  background-color: var(--white-color);
+  border-radius: 4px;
+  text-align: center;
+}
+.inputDateArea .inputDate input {
+  position: relative;
+  display: inline-block;
+  width: 96px;
+  height: 42px;
+  padding: 0 0 0 16px;
+  border: 0;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0;
+}
+.inputDateArea .inputDate:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(50% - 60px);
+  top: 8px;
+  background: url("../images/common_sprite.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  background-size: 250px;
+  background-position: -153px -127px;
 }
 
 .companyList {
@@ -3926,7 +3997,7 @@ div.hasDatepicker {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("../images/bg_default.png") no-repeat;
+  background: url("../images/bg_default_300x300.png") no-repeat;
   width: 48px;
   height: 48px;
   background-size: contain;
@@ -4001,12 +4072,30 @@ div.hasDatepicker {
 }
 
 /* 상담 예약완료 */
-.completionWrap {
+.reservationTxt {
+  padding: 24px 0 16px;
+}
+.reservationTxt dt {
+  float: left;
+  margin-bottom: 8px;
+  width: 61px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--brownishGrey-color);
+}
+.reservationTxt dd {
+  padding-left: 85px;
+  margin-bottom: 8px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.completeWrap .completeWrap__text {
   position: relative;
-  padding: 82px 0 0;
+  padding: 92px 0 80px;
   text-align: center;
 }
-.completionWrap:after {
+.completeWrap .completeWrap__text:after {
   content: "";
   display: block;
   position: absolute;
@@ -4019,51 +4108,111 @@ div.hasDatepicker {
   background-position: 0 -70px;
   margin-left: -26px;
 }
-.completionWrap strong {
+.completeWrap .completeWrap__text strong {
   display: block;
   font-size: 24px;
   font-weight: 500;
+  line-height: 36px;
 }
-.completionWrap p {
+.completeWrap .completeWrap__text p {
   margin-top: 4px;
   font-size: 16px;
   color: var(--brownishGrey-color);
   font-weight: 300;
 }
+.completeWrap .completeWrap__info {
+  border-top: 1px solid #e7e9ee;
+  border-bottom: 1px solid #e7e9ee;
+}
+
+/* 상담내역 */
+.detailsList {
+  padding: 24px 24px 0;
+}
+.detailsList .countArea {
+  color: var(--brownishGrey-color);
+  line-height: 22px;
+  font-size: 14px;
+}
+.detailsList .countArea .number {
+  margin: 0 3px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--primary-color);
+}
+.detailsList .detailsList__item {
+  border-bottom: 1px solid #e7e9ee;
+  padding: 20px 0 12px;
+}
+.detailsList .detailsList__item .label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.detailsList .detailsList__item .label.label-cpt {
+  color: var(--primary-color);
+}
+.detailsList .detailsList__item .label.label-ipty {
+  color: var(--lipstick-color);
+}
+.detailsList .detailsList__item .label.label-cpt2 {
+  color: var(--duskyBlue-color);
+}
+.detailsList .detailsList__item .label.label-cancel {
+  color: var(--coolGrey-color);
+  text-decoration: line-through;
+}
+.detailsList .detailsList__item .reservationTxt {
+  padding: 0;
+}
+.detailsList .detailsList__item .rightArea {
+  margin: 16px 0 8px;
+  text-align: right;
+}
 
 /* 게시판목록 */
 .boardWrap {
-  padding: 78px 24px 0;
+  padding: 24px 24px 64px;
 }
 .boardWrap .searchArea {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 .boardWrap .justifyWrap {
   margin-bottom: 12px;
 }
 
+.boardWrap__list, .listType {
+  border-bottom: 1px solid #e7e9ee;
+}
 .boardWrap__list li, .listType li {
   border-top: 1px solid #e7e9ee;
   padding: 24px 0 0;
 }
 .boardWrap__list li .justifyWrap, .listType li .justifyWrap {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .boardWrap__list li .justifyWrap .leftArea span, .boardWrap__list li .justifyWrap .leftArea em, .listType li .justifyWrap .leftArea span, .listType li .justifyWrap .leftArea em {
   color: var(--warmGrey-color2);
   line-height: 20px;
 }
 .boardWrap__list li .justifyWrap .leftArea .name, .listType li .justifyWrap .leftArea .name {
+  font-size: 14px;
+  line-height: 22px;
   margin-right: 25px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0;
 }
 .boardWrap__list li .justifyWrap .leftArea .time, .listType li .justifyWrap .leftArea .time {
   position: relative;
+  font-size: 14px;
+  line-height: 22px;
 }
 .boardWrap__list li .justifyWrap .leftArea .time em, .listType li .justifyWrap .leftArea .time em {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0;
+  line-height: 22px;
 }
 .boardWrap__list li .justifyWrap .leftArea .time:after, .listType li .justifyWrap .leftArea .time:after {
   content: "";
@@ -4191,6 +4340,8 @@ div.hasDatepicker {
 .boardView .boardView__header .infoArea span {
   position: relative;
   color: var(--warmGrey-color2);
+  font-size: 14px;
+  line-height: 22px;
 }
 .boardView .boardView__header .infoArea span + span {
   margin-left: 25px;
@@ -4205,7 +4356,7 @@ div.hasDatepicker {
   background-color: #D9D9D9;
 }
 .boardView .boardView__content {
-  padding: 0 0 30px;
+  padding: 0 0 40px;
 }
 .boardView .boardView__content .img {
   overflow: hidden;
@@ -4216,7 +4367,7 @@ div.hasDatepicker {
   height: auto;
 }
 .boardView .boardView__content .text {
-  padding: 16px 24px 24px;
+  padding: 0 24px 24px;
   font-size: 16px;
   color: var(--brownishGrey-color);
 }
@@ -4235,14 +4386,17 @@ div.hasDatepicker {
 .boardView .boardView__content .bookMark.on {
   background-position: -112px 0;
 }
-.boardView .listType {
-  padding: 0 24px;
+.boardView .borderView__list {
+  padding: 40px 24px 64px;
 }
-.boardView .listType .numArea .comments {
+.boardView .borderView__list .listType {
+  padding: 6px 0 0;
+}
+.boardView .borderView__list .listType .numArea .comments {
   position: relative;
   padding-right: 24px;
 }
-.boardView .listType .numArea .comments:before {
+.boardView .borderView__list .listType .numArea .comments:before {
   content: "";
   position: absolute;
   right: 0;
@@ -4253,18 +4407,18 @@ div.hasDatepicker {
   background-size: 20px;
   transition: 0.7s ease;
 }
-.boardView .listType .numArea .comments.on:before {
+.boardView .borderView__list .listType .numArea .comments.on:before {
   transform: rotate(-180deg);
 }
-.boardView .listType .btnReply {
+.boardView .borderView__list .listType .btnReply {
   color: #666666;
 }
-.boardView .listType .listType {
+.boardView .borderView__list .listType .listType {
   display: none;
   position: relative;
   padding: 0 0 1px;
 }
-.boardView .listType .listType:after {
+.boardView .borderView__list .listType .listType:after {
   content: "";
   position: absolute;
   top: 0;
