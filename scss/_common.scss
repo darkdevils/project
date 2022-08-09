@@ -445,7 +445,8 @@ $border-line: #ededf0;
   position: relative;
   padding: 0 0 0 24px;
   line-height: 20px;
-  color: $Grey600;
+  color: var(--warmGrey-color2);
+  font-size: 14px;
   @include numberText;
   @include bgImage(0,-1px,common_sprite) {
     width: 20px;
