@@ -717,6 +717,14 @@
           background-size: 250px;
         }
       }
+      .numArea {
+        button {
+          .number {
+            font-size: 14px;
+            color: var(--warmGrey-color2);
+          }
+        }
+      }
     }
     .textContent {
       display: flex;
@@ -777,6 +785,7 @@
         }
       }
     }
+
   }
 }
 .boardWrap__list {
@@ -1021,5 +1030,13 @@
 
       }
     }
+  }
+}
+
+/* 자유게시판 - 글쓰기 */
+.boardWriting {
+  padding: 24px 24px 48px;
+  .textStyle {
+    height: calc(100vh - 312px);
   }
 }

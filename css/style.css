@@ -521,7 +521,7 @@ div.hasDatepicker {
   width: 100%;
   bottom: 0;
   padding: 0 24px 40px;
-  z-index: 1;
+  z-index: 5;
 }
 .btnWrap.fixedBtm:after {
   content: "";
@@ -629,8 +629,7 @@ div.hasDatepicker {
   height: 20px;
 }
 .btnLike.on span {
-  font-weight: 500;
-  color: var(--black-color);
+  color: var(--black-color) !important;
 }
 
 .inputArea {
@@ -3237,7 +3236,8 @@ div.hasDatepicker {
   position: relative;
   padding: 0 0 0 24px;
   line-height: 20px;
-  color: #666666;
+  color: var(--warmGrey-color2);
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0;
 }
@@ -4262,6 +4262,10 @@ div.hasDatepicker {
   background-position: -190px -29px;
   background-size: 250px;
 }
+.boardWrap__list li .justifyWrap .numArea button .number, .listType li .justifyWrap .numArea button .number {
+  font-size: 14px;
+  color: var(--warmGrey-color2);
+}
 .boardWrap__list li .textContent, .listType li .textContent {
   display: flex;
   margin-bottom: 16px;
@@ -4533,6 +4537,14 @@ div.hasDatepicker {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* 자유게시판 - 글쓰기 */
+.boardWriting {
+  padding: 24px 24px 48px;
+}
+.boardWriting .textStyle {
+  height: calc(100vh - 312px);
+}
+
 /* 파일 첨부 */
 .attch {
   width: 100%;
