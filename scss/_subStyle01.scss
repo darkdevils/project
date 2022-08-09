@@ -757,7 +757,25 @@
           }
         }
       }
+      .textarea {
+        display: flex;
+        .name {
 
+          span {
+            display: block;
+            width: 45px;
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--primary-color);
+          }
+        }
+        .reText {
+          margin-left: 12px;
+        }
+        .noText {
+          color: var(--warmGrey-color2);
+        }
+      }
     }
   }
 }
@@ -827,6 +845,16 @@
         }
       }
     }
+    .rightArea {
+      .btn {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        @include imageUrl(common_sprite,png);
+        background-position: -190px -29px;
+        background-size: 250px;
+      }
+    }
   }
   .boardView__content {
     padding: 0 0 40px;
@@ -887,25 +915,58 @@
           }
         }
       }
-
-      .btnReply {
-        color: $Grey600;
+      .reText {
+        color: var(--font-color);
       }
-
-      .listType {
+      .btnReply {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--warmGrey-color2);
+      }
+      .commentsArea {
         display: none;
-        position: relative;
-        padding: 0 0 1px;
-
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -24px;
-          width: calc(100% + 48px);
-          height: 100%;
-          background-color: var(--paleGrey-color);
-          z-index: -1;
+        .listType {
+          position: relative;
+          padding: 0 0 1px;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -24px;
+            width: calc(100% + 48px);
+            height: 100%;
+            background-color: var(--paleGrey-color);
+            z-index: -1;
+          }
+        }
+        .btnReplyClose {
+          position: relative;
+          button {
+            display: block;
+            width: 100%;
+            height: 55px;
+            text-align: center;
+            span {
+              position: relative;
+              display: inline-block;
+              padding: 0 22px 0 0;
+              font-size: 14px;
+              line-height: 22px;
+              color: var(--brownishGrey-color);
+              &:before {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 2px;
+                width: 20px;
+                height: 20px;
+                @include imageUrl(bg_arrow, png);
+                background-size: 20px;
+                transform: rotate(-180deg);
+                transition: 0.7s ease;
+              }
+            }
+          }
         }
       }
     }

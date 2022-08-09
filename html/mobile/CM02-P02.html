@@ -46,6 +46,7 @@ $(function(){
     // textarea 체크시 radio버튼도 checked
     $("#textarea").on('click',function(){
         $(this).closest('li').find('input[type="radio"]').prop('checked',true);
+        $('.btnCom').removeAttr('disabled');
     });
 
     // Radio 클릭시 '신고하기'버튼 활성화

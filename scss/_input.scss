@@ -36,7 +36,7 @@
   margin: 0 auto;
   padding: 0 10px 0 58px;
   overflow: hidden;
-  @include bgImage(18px,18px,common_sprite) {
+  @include bgImage(18px,17px,common_sprite) {
     width: 24px;
     height: 24px;
     background-position: 0 0;
@@ -44,7 +44,7 @@
   }
   input[type="text"] {
     width: calc(100% - 56px);
-    height: 58px;
+    height: 54px;
     border: 0;
     font-size: 16px;
     font-weight: 300;
@@ -56,7 +56,7 @@
     display: none;
     position: absolute;
     right: 18px;
-    top: 18px;
+    top: 17px;
     width: 24px;
     height: 24px;
     @include imageUrl(common_sprite,png);

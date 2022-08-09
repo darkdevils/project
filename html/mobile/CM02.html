@@ -25,7 +25,9 @@
                         <span class="tiem"><em class="number">2022-08-02 13:00</em></span>
                         <span class="counting">조회 <em class="number">999</em></span>
                     </div>
-                    <button type="button"><span class="blind">추가옵션</span></button>
+                    <div class="rightArea">
+                        <button type="button" class="btn"><span class="blind">추가옵션</span></button>
+                    </div>
                 </div>
             </div>
             <div class="boardView__content">
@@ -39,17 +41,25 @@
             </div>
             <hr class="bgLine">
 
+            <!-- 댓글 입력 -->
+            <div class="reviewInput">
+                <div class="reviewInput__textarea">
+                    <textarea name="" id="reviewInput1" cols="30" rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="댓글을 입력하세요"></textarea>
+                    <button type="button" class="btnRegister">등록</button>
+                </div>
+            </div>
+            <!-- //댓글 입력 -->
             <!-- 댓글 입력 이름이 있을경우 -->
-            <div class="reviewInput reviewInput--name">
+            <!--<div class="reviewInput reviewInput&#45;&#45;name">
                 <div class="reviewInput__textarea">
                     <div class="name"><span>@홍*동동ehd</span></div>
                     <textarea name="" id="reviewInput2" cols="30" rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="댓글을 입력하세요"></textarea>
                     <button type="button" class="btnRegister">등록</button>
                 </div>
-            </div>
+            </div>-->
             <!-- //댓글 입력 이름이 있을경우  -->
 
-
+            <!-- 댓글 리스트 -->
             <div class="borderView__list">
                 <div class="justifyWrap">
                     <div class="leftTotal">총<span class="totalNum">55</span>개의 댓글</div>
@@ -71,15 +81,15 @@
                         </div>
                         <div class="textContent">
                             <div class="textArea">
-                                <div class="text">소양교육 들었는데 진도확인 안되고, 합격증 출력도 안됩니다. 소양교육 들었는데 진도확인 안되고, 합격증 출력도 안됩니다.</div>
+                                <div class="reText">소양교육 들었는데 진도확인 안되고, 합격증 출력도 안됩니다. 소양교육 들었는데 진도확인 안되고, 합격증 출력도 안됩니다.</div>
                             </div>
                         </div>
                         <div class="justifyWrap">
                             <div class="numArea">
                                 <button type="button" class="btnLike mgRight30" onclick="common.btnToggle(this);"><span class="number">10</span></button>
-                                <button class="comments">56</button>
+                                <button class="comments">0</button>
                             </div>
-                            <button type="button" class="btnReply">답글 쓰기</button>
+                            <button type="button" class="btnReply">답글 작성</button>
                         </div>
                     </li>
                     <li>
@@ -95,15 +105,15 @@
                         </div>
                         <div class="textContent">
                             <div class="textArea">
-                                <div class="text">시험지를 제공하는 것도 아니라서. 틀린 문제나 오류등을 알수 없습니다. 과년도등 문제와 답안 공유부탁드립니다.</div>
+                                <div class="reText">시험지를 제공하는 것도 아니라서. 틀린 문제나 오류등을 알수 없습니다. 과년도등 문제와 답안 공유부탁드립니다.</div>
                             </div>
                         </div>
                         <div class="justifyWrap">
                             <div class="numArea">
                                 <button type="button" class="btnLike mgRight30" onclick="common.btnToggle(this);"><span class="number">10</span></button>
-                                <button class="comments">56</button>
+                                <button class="comments">0</button>
                             </div>
-                            <button type="button" class="btnReply">답글 쓰기</button>
+                            <button type="button" class="btnReply">답글 작성</button>
                         </div>
                     </li>
                     <li>
@@ -119,7 +129,7 @@
                         </div>
                         <div class="textContent">
                             <div class="textArea">
-                                <div class="text">합격자 날짜랑 점수 확인은 언제 가능한가요?</div>
+                                <div class="reText">합격자 날짜랑 점수 확인은 언제 가능한가요?</div>
                             </div>
                         </div>
                         <div class="justifyWrap">
@@ -127,47 +137,95 @@
                                 <button type="button" class="btnLike mgRight30" onclick="common.btnToggle(this);"><span class="number">10</span></button>
                                 <button class="comments" onclick="slideToggle(this);">56</button>
                             </div>
-                            <button type="button" class="btnReply">답글 쓰기</button>
+                            <button type="button" class="btnReply">답글 작성</button>
                         </div>
-                        <ul class="listType">
-                            <li>
-                                <div class="justifyWrap">
-                                    <div class="leftArea">
-                                        <span class="name">홍*동</span>
-                                        <span class="time"><em>2022-08-02 13:00</em></span>
+                        <div class="commentsArea">
+                            <ul class="listType">
+                                <li>
+                                    <div class="justifyWrap">
+                                        <div class="leftArea">
+                                            <span class="name">홍*동</span>
+                                            <span class="time"><em>2022-08-02 13:00</em></span>
+                                        </div>
+                                        <div class="rightArea">
+                                            <button type="button" class="btn"></button>
+                                            <button type="button" style="display: none"></button>
+                                        </div>
                                     </div>
-                                    <div class="rightArea">
-                                        <button type="button" class="btn"></button>
-                                        <button type="button" style="display: none"></button>
+                                    <div class="textContent">
+                                        <div class="textArea">
+                                            <div class="reText">오... 감사합니다 ㅠㅠ<br>고객센터에 전화해 봐야겠네요...</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="textContent">
-                                    <div class="textArea">
-                                        <div class="text">시험지를 제공하는 것도 아니라서. 틀린 문제나 오류등을 알수 없습니다. 과년도등 문제와 답안 공유부탁드립니다.</div>
+                                </li>
+                                <li>
+                                    <div class="justifyWrap">
+                                        <div class="leftArea">
+                                            <span class="name">홍*동</span>
+                                            <span class="time"><em>2022-08-02 13:00</em></span>
+                                        </div>
+                                        <div class="rightArea">
+                                            <button type="button" class="btn"></button>
+                                            <button type="button" style="display: none"></button>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="justifyWrap">
-                                    <div class="leftArea">
-                                        <span class="name">홍*동</span>
-                                        <span class="time"><em>2022-08-02 13:00</em></span>
+                                    <div class="textContent">
+                                        <div class="textarea">
+                                            <div class="name"><span>@홍*동동ehd</span></div>
+                                            <div class="reText">오... 감사합니다 ㅠㅠ<br>고객센터에 전화해 봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요...</div>
+                                        </div>
                                     </div>
-                                    <div class="rightArea">
-                                        <button type="button" class="btn"></button>
-                                        <button type="button" style="display: none"></button>
+                                </li>
+                                <li>
+                                    <div class="justifyWrap">
+                                        <div class="leftArea">
+                                            <span class="name">홍*동</span>
+                                            <span class="time"><em>2022-08-02 13:00</em></span>
+                                        </div>
+                                        <div class="rightArea">
+                                            <button type="button" class="btn"></button>
+                                            <button type="button" style="display: none"></button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="textContent">
-                                    <div class="textArea">
-                                        <div class="text">시험지를 제공하는 것도 아니라서. 틀린 문제나 오류등을 알수 없습니다. 과년도등 문제와 답안 공유부탁드립니다.</div>
+                                    <div class="textContent">
+                                        <div class="textarea">
+                                            <div class="noText">작성자에 의해 삭제되었습니다.</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                            <div class="btnReplyClose">
+                                <button type="button" onclick="slideClose(this)"><span>답글 접기</span></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <div class="leftArea">
+                                <span class="name">홍*동</span>
+                                <span class="time"><em>2022-08-02 13:00</em></span>
+                            </div>
+                            <div class="rightArea">
+                                <button type="button" class="btn"></button>
+                                <button type="button" style="display: none"></button>
+                            </div>
+                        </div>
+                        <div class="textContent">
+                            <div class="textArea">
+                                <div class="reText">시험지를 제공하는 것도 아니라서. 틀린 문제나 오류등을 알수 없습니다. 과년도등 문제와 답안 공유부탁드립니다.</div>
+                            </div>
+                        </div>
+                        <div class="justifyWrap">
+                            <div class="numArea">
+                                <button type="button" class="btnLike mgRight30" onclick="common.btnToggle(this);"><span class="number">10</span></button>
+                                <button class="comments">0</button>
+                            </div>
+                            <button type="button" class="btnReply">답글 작성</button>
+                        </div>
                     </li>
                 </ul>
             </div>
+            <!-- //댓글 리스트 -->
         </div>
     </div>
 </div>
@@ -192,8 +250,14 @@
     function slideToggle (el) {
         const _this = $(el);
         _this.toggleClass('on');
-        _this.closest('li').find('> .listType').slideToggle();
+        _this.closest('li').find('> .commentsArea').slideToggle();
     }
+    function slideClose (el) {
+        const _this = $(el);
+        _this.closest('li').find('> .commentsArea').slideUp();
+        _this.closest('li').find('.comments').removeClass('on');
+    }
+
     // 댓글 Textarea 높이값 auto
     function resize(obj) {
         obj.style.height = '1px';

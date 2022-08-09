@@ -94,33 +94,47 @@
     </div>
 </div>
 
-<!-- 정렬옵션 레이어 팝업 -->
-<div id="slideLayer01" class="slideLayer">
-    <div class="slideLayer__header">
-        <h2 class="title">정렬옵션</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
-    </div>
-    <div class="slideLayer__content">
-        <ul class="radioStyle">
-            <li><input type="radio" name="sortRadio" id="radio1-1" checked><label for="radio1-1">최신순</label></li>
-            <li><input type="radio" name="sortRadio" id="radio1-2"><label for="radio1-2">조회순</label></li>
-            <li><input type="radio" name="sortRadio" id="radio1-3"><label for="radio1-3">좋아요순</label></li>
-            <li><input type="radio" name="sortRadio" id="radio1-4"><label for="radio1-4">관리자추천순</label></li>
-        </ul>
-    </div>
+<!-- 토스트 팝업 -->
+<div class="toastLayer" id="toastLayer01">
+    제목을 입력해 주세요.
 </div>
-<!-- //정렬옵션 레이어 팝업 -->
+<!-- //토스트 팝업 -->
+
+<!-- 토스트 팝업 -->
+<div class="toastLayer" id="toastLayer02">
+    게시글 내용을 20자 이상 입력해 주세요.
+</div>
+<!-- //토스트 팝업 -->
+
+<!-- 토스트 팝업(두줄일경우) -->
+<div class="toastLayer" id="toastLayer03">
+    김*환님이 차단되었습니다.<br>
+    피차단자의 게시글은 조회되지 않습니다.
+</div>
+<!-- //토스트 팝업(두줄일경우) -->
+
 
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/common.js"></script>
 <script>
-    $(function(){
-        // 정렬기준 선택
-        $('.radioStyle li input[type="radio"]').on('click',function(){
-           const selectText = $(this).next().text();
-           $('.btnSelect').text(selectText);
-        });
-    })
+    // 토스트팝업 호툴
+    common.toastLayer('toastLayer01');
+
+    setTimeout(function(){
+        common.toastLayer('toastLayer02');
+    },3000);
+
+    setTimeout(function(){
+        common.toastLayer('toastLayer03');
+    },6000);
+
 </script>
 </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>게시판 - 자유게시판(목록)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
 </html>

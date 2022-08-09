@@ -676,7 +676,7 @@ div.hasDatepicker {
   display: block;
   position: absolute;
   left: 18px;
-  top: 18px;
+  top: 17px;
   background: url("../images/common_sprite.png") no-repeat;
   width: 24px;
   height: 24px;
@@ -685,7 +685,7 @@ div.hasDatepicker {
 }
 .searchArea input[type=text] {
   width: calc(100% - 56px);
-  height: 58px;
+  height: 54px;
   border: 0;
   font-size: 16px;
   font-weight: 300;
@@ -697,7 +697,7 @@ div.hasDatepicker {
   display: none;
   position: absolute;
   right: 18px;
-  top: 18px;
+  top: 17px;
   width: 24px;
   height: 24px;
   background: url("../images/common_sprite.png") no-repeat;
@@ -1416,7 +1416,6 @@ div.hasDatepicker {
   padding: 30px 0;
 }
 .slideDatepicker .slideDatepicker__content {
-  height: 380px;
   padding: 0 24px;
 }
 .slideDatepicker .btnWrap {
@@ -1448,6 +1447,7 @@ div.hasDatepicker {
   border-radius: 18px;
   overflow: hidden;
   color: var(--white-color);
+  z-index: 10;
 }
 .toastLayer:after {
   content: "";
@@ -4300,6 +4300,22 @@ div.hasDatepicker {
   border-radius: 18px;
   overflow: hidden;
 }
+.boardWrap__list li .textContent .textarea, .listType li .textContent .textarea {
+  display: flex;
+}
+.boardWrap__list li .textContent .textarea .name span, .listType li .textContent .textarea .name span {
+  display: block;
+  width: 45px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--primary-color);
+}
+.boardWrap__list li .textContent .textarea .reText, .listType li .textContent .textarea .reText {
+  margin-left: 12px;
+}
+.boardWrap__list li .textContent .textarea .noText, .listType li .textContent .textarea .noText {
+  color: var(--warmGrey-color2);
+}
 
 .boardWrap__list li {
   padding: 24px 0;
@@ -4354,6 +4370,14 @@ div.hasDatepicker {
   width: 1px;
   height: 12px;
   background-color: #D9D9D9;
+}
+.boardView .boardView__header .rightArea .btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -190px -29px;
+  background-size: 250px;
 }
 .boardView .boardView__content {
   padding: 0 0 40px;
@@ -4410,15 +4434,22 @@ div.hasDatepicker {
 .boardView .borderView__list .listType .numArea .comments.on:before {
   transform: rotate(-180deg);
 }
-.boardView .borderView__list .listType .btnReply {
-  color: #666666;
+.boardView .borderView__list .listType .reText {
+  color: var(--font-color);
 }
-.boardView .borderView__list .listType .listType {
+.boardView .borderView__list .listType .btnReply {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--warmGrey-color2);
+}
+.boardView .borderView__list .listType .commentsArea {
   display: none;
+}
+.boardView .borderView__list .listType .commentsArea .listType {
   position: relative;
   padding: 0 0 1px;
 }
-.boardView .borderView__list .listType .listType:after {
+.boardView .borderView__list .listType .commentsArea .listType:after {
   content: "";
   position: absolute;
   top: 0;
@@ -4427,6 +4458,35 @@ div.hasDatepicker {
   height: 100%;
   background-color: var(--paleGrey-color);
   z-index: -1;
+}
+.boardView .borderView__list .listType .commentsArea .btnReplyClose {
+  position: relative;
+}
+.boardView .borderView__list .listType .commentsArea .btnReplyClose button {
+  display: block;
+  width: 100%;
+  height: 55px;
+  text-align: center;
+}
+.boardView .borderView__list .listType .commentsArea .btnReplyClose button span {
+  position: relative;
+  display: inline-block;
+  padding: 0 22px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--brownishGrey-color);
+}
+.boardView .borderView__list .listType .commentsArea .btnReplyClose button span:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background: url("../images/bg_arrow.png") no-repeat;
+  background-size: 20px;
+  transform: rotate(-180deg);
+  transition: 0.7s ease;
 }
 
 .reviewInput {

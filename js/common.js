@@ -1,9 +1,14 @@
 'use strict';
 
 //const h = $('.slideLayer').outerHeight();
-const toastHeigh = $('.toastLayer').outerHeight();
 let h = 0;
-$('.toastLayer').css({bottom: -toastHeigh});
+//$('.toastLayer').css({bottom: -toastHeigh});
+
+$('.toastLayer').each(function(){
+    h = $(this).outerHeight();
+    $(this).css({bottom: -h });
+});
+
 $('.slideLayer').each(function(){
     h = $(this).outerHeight();
     $(this).css({bottom: -h});
@@ -91,7 +96,7 @@ const common = {
         });
         setTimeout(function(){
             toastId.animate({
-                bottom: -toastHeigh
+                bottom: -h
             });
         },3000);
     },
