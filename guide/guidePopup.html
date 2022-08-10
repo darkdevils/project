@@ -23,23 +23,23 @@
     <h1 class="guideTitle">Layer Popup</h1>
     <h2 class="guideTitle">Slide Popup</h2>
     <div class="guideBox">
-        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer01')">Slide Layer 버튼</button>
+        <button type="button" class="guideBtn layerOpen" aria-controls="slideLayer01">Slide Layer 버튼</button>
         <p class="guidePoint">※ "버튼"클릭시 Slide Layer 활성화</p>
         <!-- tag highlinght 적용 -->
         <pre>
-<code class="html">&lt;div class=&quot;slideLayer&quot;&gt;
+<code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer01&quot;&gt;
     &lt;div class=&quot;slideLayer__content&quot;&gt;
-        &lt;p class=&quot;txtCenter&quot;&gt;&#xC544;&#xB798; &#xB0B4;&#xC6A9;&#xC73C;&#xB85C; &#xC608;&#xC57D;&#xC2E0;&#xCCAD;&#xD558;&#xC2DC;&#xACA0;&#xC2B5;&#xB2C8;&#xAE4C;?&lt;/p&gt;
+        &lt;p class=&quot;txtCenter&quot;&gt;&#xC0C1;&#xB2F4; &#xC608;&#xC57D;&#xC744; &#xCDE8;&#xC18C;&#xD558;&#xC2DC;&#xACA0;&#xC2B5;&#xB2C8;&#xAE4C;?&lt;/p&gt;
         &lt;dl class=&quot;reservationTxt&quot;&gt;
             &lt;dt&gt;&#xC0C1;&#xB2F4; &#xC720;&#xD615;&lt;/dt&gt;
-            &lt;dd&gt;&#xCC44;&#xBB34;&#xC870;&#xC815;&lt;/dd&gt;
-            &lt;dt&gt;&#xB2F4;&#xB2F9; &#xC0C1;&#xB2F4;&#xC0AC;&lt;/dt&gt;
-            &lt;dd&gt;&#xC804;&#xBBF8;&#xC18C; &#xC0C1;&#xB2F4;&#xC0AC;&lt;/dd&gt;
+            &lt;dd&gt;&#xAC1C;&#xC778;&#xD68C;&#xC0DD;&middot;&#xD30C;&#xC0B0;&lt;/dd&gt;
+            &lt;dt&gt;&#xC0C1;&#xB2F4; &#xC5C5;&#xCCB4;&lt;/dt&gt;
+            &lt;dd&gt;&#xC2E0;&#xC6A9;&#xD68C;&#xBCF5;&#xC704;&#xC6D0;&#xD68C; &#xC11C;&#xC6B8;&#xC911;&#xC559;&#xC9C0;&#xBD80;&lt;/dd&gt;
             &lt;dt&gt;&#xC0C1;&#xB2F4; &#xC77C;&#xC2DC;&lt;/dt&gt;
-            &lt;dd&gt;2022.09.08 14:00~14:30&lt;/dd&gt;
+            &lt;dd&gt;2022-09-08 15:00~15:30&lt;/dd&gt;
         &lt;/dl&gt;
         &lt;div class=&quot;btnWrap btnWrap-col2&quot;&gt;
-            &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnGray w78&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span&gt;&#xCDE8;&#xC18C;&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnGray w78 layerClose&quot;&gt;&lt;span&gt;&#xCDE8;&#xC18C;&lt;/span&gt;&lt;/button&gt;
             &lt;button type=&quot;button&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xD655;&#xC778;&lt;/span&gt;&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -49,16 +49,16 @@
     </div>
 
     <div class="guideBox">
-        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer02')">정렬옵션</button>
-        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer03')">내가 쓴 게시글</button>
-        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer04')">사용자가 쓴 게시글</button>
-        <button type="button" class="guideBtn" onclick="common.slideLayer.slideOpen('slideLayer05')">신용솔루션 카테고리</button>
+        <button type="button" class="guideBtn layerOpen" aria-controls="slideLayer02">정렬옵션</button>
+        <button type="button" class="guideBtn layerOpen" aria-controls="slideLayer03">내가 쓴 게시글</button>
+        <button type="button" class="guideBtn layerOpen" aria-controls="slideLayer04">사용자가 쓴 게시글</button>
+        <button type="button" class="guideBtn layerOpen" aria-controls="slideLayer05">신용솔루션 카테고리</button>
         <p class="guidePoint">※ "아이디"값은 onclick과 동일하게 작성해주셔야 합니다.</p>
         <h3 class="guideTitle">1.정렬옵션 레이어팝업</h3>
         <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer02&quot;&gt;
     &lt;div class=&quot;slideLayer__header&quot;&gt;
         &lt;h2 class=&quot;title&quot;&gt;&#xC815;&#xB82C;&#xC635;&#xC158;&lt;/h2&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose layerClose&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class=&quot;slideLayer__content&quot;&gt;
         &lt;ul class=&quot;radioStyle&quot;&gt;
@@ -74,7 +74,7 @@
         <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer03&quot;&gt;
     &lt;div class=&quot;slideLayer__header&quot;&gt;
         &lt;h2 class=&quot;title&quot;&gt;&#xB0B4;&#xAC00; &#xC4F4; &#xAC8C;&#xC2DC;&#xAE00;&lt;/h2&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose layerClose&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class=&quot;slideLayer__content&quot;&gt;
         &lt;div class=&quot;linkArea&quot;&gt;
@@ -88,13 +88,32 @@
         <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer04&quot;&gt;
     &lt;div class=&quot;slideLayer__header&quot;&gt;
         &lt;h2 class=&quot;title&quot;&gt;&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC4F4; &#xAC8C;&#xC2DC;&#xAE00;&lt;/h2&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose layerClose&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class=&quot;slideLayer__content&quot;&gt;
         &lt;div class=&quot;linkArea&quot;&gt;
             &lt;a href=&quot;#&quot;&gt;&#xC2E0;&#xACE0;&#xD558;&#xAE30;&lt;/a&gt;
             &lt;a href=&quot;#&quot;&gt;&#xC791;&#xC131;&#xC790; &#xCC28;&#xB2E8;&#xD558;&#xAE30;&lt;/a&gt;
         &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3 class="guideTitle mgTop20">4. 신용솔루션 카테고리 레이어팝업</h3>
+        <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer05&quot;&gt;
+    &lt;div class=&quot;slideLayer__header&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;&#xC2E0;&#xC6A9;&#xC194;&#xB8E8;&#xC158; &#xCE74;&#xD14C;&#xACE0;&#xB9AC;&lt;/h2&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose layerClose&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slideLayer__content&quot;&gt;
+        &lt;ul class=&quot;radioStyle&quot;&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio2&quot; id=&quot;radio2-1&quot; checked&gt;&lt;label for=&quot;radio2-1&quot;&gt;&#xC804;&#xCCB4;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio2&quot; id=&quot;radio2-2&quot;&gt;&lt;label for=&quot;radio2-2&quot;&gt;&#xC2E0;&#xC6A9;&#xD68C;&#xBCF5;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio2&quot; id=&quot;radio2-3&quot;&gt;&lt;label for=&quot;radio2-3&quot;&gt;&#xAC1C;&#xC778;&#xD68C;&#xC0DD;&middot;&#xD30C;&#xC0DD;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio2&quot; id=&quot;radio2-4&quot;&gt;&lt;label for=&quot;radio2-4&quot;&gt;&#xC2E0;&#xC6A9;&middot;&#xC7AC;&#xBB34;&#xAD00;&#xB9AC;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio2&quot; id=&quot;radio2-5&quot;&gt;&lt;label for=&quot;radio2-5&quot;&gt;&#xC11C;&#xBBFC;&#xAE08;&#xC735;&middot;&#xBCF5;&#xC9C0;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio2&quot; id=&quot;radio2-6&quot;&gt;&lt;label for=&quot;radio2-6&quot;&gt;&#xC7AC;&#xBB34;&#xAD00;&#xB828;&#xBC95;&#xB960;&#xC0C1;&#xB2F4;&lt;/label&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;sortRadio2&quot; id=&quot;radio2-7&quot;&gt;&lt;label for=&quot;radio2-7&quot;&gt;&#xAE30;&#xD0C0;&lt;/label&gt;&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
@@ -128,7 +147,7 @@
             <dd>2022-09-08 15:00~15:30</dd>
         </dl>
         <div class="btnWrap btnWrap-col2">
-            <button type="button" class="btn btn-d btnGray w78" onclick="common.slideLayer.slideClose(this);"><span>취소</span></button>
+            <button type="button" class="btn btn-d btnGray w78 layerClose"><span>취소</span></button>
             <button type="button" class="btn btn-d"><span>확인</span></button>
         </div>
     </div>
@@ -138,7 +157,7 @@
 <div class="slideLayer" id="slideLayer02">
     <div class="slideLayer__header">
         <h2 class="title">정렬옵션</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose(this);"><span class="blind">레이어 닫기</span></button>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="slideLayer__content">
         <ul class="radioStyle">
@@ -155,7 +174,7 @@
 <div class="slideLayer" id="slideLayer03">
     <div class="slideLayer__header">
         <h2 class="title">내가 쓴 게시글</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose(this);"><span class="blind">레이어 닫기</span></button>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="slideLayer__content">
         <div class="linkArea">
@@ -170,7 +189,7 @@
 <div class="slideLayer" id="slideLayer04">
     <div class="slideLayer__header">
         <h2 class="title">사용자가 쓴 게시글</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose(this);"><span class="blind">레이어 닫기</span></button>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="slideLayer__content">
         <div class="linkArea">
@@ -185,17 +204,17 @@
 <div class="slideLayer" id="slideLayer05">
     <div class="slideLayer__header">
         <h2 class="title">신용솔루션 카테고리</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose(this);"><span class="blind">레이어 닫기</span></button>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="slideLayer__content">
         <ul class="radioStyle">
-            <li><input type="radio" name="sortRadio" id="radio2-1" checked><label for="radio2-1">전체</label></li>
-            <li><input type="radio" name="sortRadio" id="radio2-2"><label for="radio2-2">신용회복</label></li>
-            <li><input type="radio" name="sortRadio" id="radio2-3"><label for="radio2-3">개인회생·파생</label></li>
-            <li><input type="radio" name="sortRadio" id="radio2-4"><label for="radio2-4">신용·재무관리</label></li>
-            <li><input type="radio" name="sortRadio" id="radio2-5"><label for="radio2-5">서민금융·복지</label></li>
-            <li><input type="radio" name="sortRadio" id="radio2-6"><label for="radio2-6">재무관련법률상담</label></li>
-            <li><input type="radio" name="sortRadio" id="radio2-7"><label for="radio2-7">기타</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-1" checked><label for="radio2-1">전체</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-2"><label for="radio2-2">신용회복</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-3"><label for="radio2-3">개인회생·파생</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-4"><label for="radio2-4">신용·재무관리</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-5"><label for="radio2-5">서민금융·복지</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-6"><label for="radio2-6">재무관련법률상담</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-7"><label for="radio2-7">기타</label></li>
         </ul>
     </div>
 </div>
@@ -221,9 +240,8 @@ $(function(){
     $('h2.guideTitle').each(function(index){
         $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
     });
+
 });
-
-
 </script>
 </body>
 </html>
