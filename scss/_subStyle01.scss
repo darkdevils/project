@@ -365,9 +365,9 @@
         button {
           display: inline-block;
           width: 76px;
-          height: 40px;
+          height: 42px;
           line-height: 40px;
-          border: 1px solid #f3f4f5;
+          border: 2px solid #f3f4f5;
           background-color: #f3f4f5;
           border-radius: 8px;
           margin-left: 8px;
@@ -382,6 +382,9 @@
             border-color: var(--primary-color);
             color: var(--primary-color);
             font-weight: 500;
+          }
+          &:nth-child(4n) {
+            width: 75px;
           }
         }
       }
@@ -1037,6 +1040,6 @@
 .boardWriting {
   padding: 24px 24px 48px;
   .textStyle {
-    height: calc(100vh - 312px);
+    height: calc(100vh - 317px);
   }
 }
