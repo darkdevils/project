@@ -4540,6 +4540,10 @@ div.hasDatepicker {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.reviewInput.reviewInput--name .reviewInput__textarea textarea {
+  margin: 0;
+}
+
 /* 자유게시판 - 글쓰기 */
 .boardWriting {
   padding: 24px 24px 48px;
