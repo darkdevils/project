@@ -4670,10 +4670,11 @@ div.hasDatepicker {
 
 .boardWrap .boardWrap__list .justifyWrap .leftArea .case {
   padding: 3px 8px;
-  font-family: "NotoSansKR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
   border-radius: 6px;
   background: #fff;
+  letter-spacing: -0.5px;
 }
 
 .boardWrap .boardWrap__list .justifyWrap .leftArea .case01 {
