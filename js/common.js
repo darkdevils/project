@@ -80,10 +80,11 @@ const common = {
                 bottom: 0
             });
         },
-        slideClose: function() {
+        slideClose: function(el) {
+            const layerH = $(el).closest('.slideLayer').height();
             $('.dim').fadeOut();
-            $('.slideLayer').animate({
-                bottom: -h
+            $(el).closest('.slideLayer').animate({
+                bottom: -layerH
             });
         }
     },

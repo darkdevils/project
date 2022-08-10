@@ -39,7 +39,7 @@
             &lt;dd&gt;2022.09.08 14:00~14:30&lt;/dd&gt;
         &lt;/dl&gt;
         &lt;div class=&quot;btnWrap btnWrap-col2&quot;&gt;
-            &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnGray w78&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span&gt;&#xCDE8;&#xC18C;&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-d btnGray w78&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span&gt;&#xCDE8;&#xC18C;&lt;/span&gt;&lt;/button&gt;
             &lt;button type=&quot;button&quot; class=&quot;btn btn-d&quot;&gt;&lt;span&gt;&#xD655;&#xC778;&lt;/span&gt;&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -58,7 +58,7 @@
         <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer02&quot;&gt;
     &lt;div class=&quot;slideLayer__header&quot;&gt;
         &lt;h2 class=&quot;title&quot;&gt;&#xC815;&#xB82C;&#xC635;&#xC158;&lt;/h2&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class=&quot;slideLayer__content&quot;&gt;
         &lt;ul class=&quot;radioStyle&quot;&gt;
@@ -74,7 +74,7 @@
         <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer03&quot;&gt;
     &lt;div class=&quot;slideLayer__header&quot;&gt;
         &lt;h2 class=&quot;title&quot;&gt;&#xB0B4;&#xAC00; &#xC4F4; &#xAC8C;&#xC2DC;&#xAE00;&lt;/h2&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class=&quot;slideLayer__content&quot;&gt;
         &lt;div class=&quot;linkArea&quot;&gt;
@@ -88,7 +88,7 @@
         <pre><code class="html">&lt;div class=&quot;slideLayer&quot; id=&quot;slideLayer04&quot;&gt;
     &lt;div class=&quot;slideLayer__header&quot;&gt;
         &lt;h2 class=&quot;title&quot;&gt;&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC4F4; &#xAC8C;&#xC2DC;&#xAE00;&lt;/h2&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose();&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btnLayerClose&quot; onclick=&quot;common.slideLayer.slideClose(this);&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xB808;&#xC774;&#xC5B4; &#xB2EB;&#xAE30;&lt;/span&gt;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class=&quot;slideLayer__content&quot;&gt;
         &lt;div class=&quot;linkArea&quot;&gt;
@@ -138,7 +138,7 @@
 <div class="slideLayer" id="slideLayer02">
     <div class="slideLayer__header">
         <h2 class="title">정렬옵션</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
+        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose(this);"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="slideLayer__content">
         <ul class="radioStyle">
@@ -155,7 +155,7 @@
 <div class="slideLayer" id="slideLayer03">
     <div class="slideLayer__header">
         <h2 class="title">내가 쓴 게시글</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
+        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose(this);"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="slideLayer__content">
         <div class="linkArea">
@@ -170,7 +170,7 @@
 <div class="slideLayer" id="slideLayer04">
     <div class="slideLayer__header">
         <h2 class="title">사용자가 쓴 게시글</h2>
-        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose();"><span class="blind">레이어 닫기</span></button>
+        <button type="button" class="btnLayerClose" onclick="common.slideLayer.slideClose(this);"><span class="blind">레이어 닫기</span></button>
     </div>
     <div class="slideLayer__content">
         <div class="linkArea">
