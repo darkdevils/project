@@ -127,6 +127,16 @@ $border-line: #ededf0;
       background-size: 250px;
       background-position: calc(-190px / 2) calc(-254px / 2);
     }
+    &:before {
+      content: "";
+      position: absolute;
+      right: 7px;
+      top: 17px;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: var(--red-color);
+    }
   }
 
   /* 게시판 글쓰기 버튼 */

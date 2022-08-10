@@ -2929,6 +2929,16 @@ div.hasDatepicker {
   background-size: 250px;
   background-position: -95px -127px;
 }
+.header .btnAlarm:before {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 17px;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--red-color);
+}
 .header .btnWriting {
   position: absolute;
   right: 20px;
