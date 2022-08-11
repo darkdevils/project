@@ -591,9 +591,11 @@
 .detailsList {
   padding: 24px 24px 0;
   .countArea {
+    padding: 0 0 12px;
     color: var(--brownishGrey-color);
     line-height: 22px;
     font-size: 14px;
+    border-bottom: 1px solid #e7e9ee;
     .number {
       margin: 0 3px;
       font-size: 14px;
@@ -604,7 +606,7 @@
   }
   .detailsList__item {
     border-bottom: 1px solid #e7e9ee;
-    padding: 20px 0 12px;
+    padding: 24px 0 16px;
     .label {
       display: block;
       margin-bottom: 16px;
@@ -1040,6 +1042,6 @@
 .boardWriting {
   padding: 24px 24px 48px;
   .textStyle {
-    height: calc(100vh - 317px);
+    height: calc(100vh - 343px);
   }
 }

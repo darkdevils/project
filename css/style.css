@@ -972,12 +972,12 @@ div.hasDatepicker {
 
 .fileText {
   margin-top: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--brownishGrey-color);
   line-height: 20px;
 }
 .fileText .number {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--brownishGrey-color);
   line-height: 20px;
 }
@@ -3280,7 +3280,7 @@ div.hasDatepicker {
   padding: 8px 0 0;
   line-height: 20px;
   text-align: right;
-  z-index: 4;
+  z-index: 6;
 }
 .textCount span {
   position: relative;
@@ -4146,9 +4146,11 @@ div.hasDatepicker {
   padding: 24px 24px 0;
 }
 .detailsList .countArea {
+  padding: 0 0 12px;
   color: var(--brownishGrey-color);
   line-height: 22px;
   font-size: 14px;
+  border-bottom: 1px solid #e7e9ee;
 }
 .detailsList .countArea .number {
   margin: 0 3px;
@@ -4159,7 +4161,7 @@ div.hasDatepicker {
 }
 .detailsList .detailsList__item {
   border-bottom: 1px solid #e7e9ee;
-  padding: 20px 0 12px;
+  padding: 24px 0 16px;
 }
 .detailsList .detailsList__item .label {
   display: block;
@@ -4562,7 +4564,7 @@ div.hasDatepicker {
   padding: 24px 24px 48px;
 }
 .boardWriting .textStyle {
-  height: calc(100vh - 317px);
+  height: calc(100vh - 343px);
 }
 
 /* 파일 첨부 */

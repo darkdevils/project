@@ -189,7 +189,6 @@ $(function(){
     common.init();
 });
 
-
 (function ($) {
     $.fn.starRating = function (setup) {
         let settings = $.extend(true, {
@@ -237,7 +236,7 @@ $(function(){
                         }
                     }).appendTo(starWrapper);
 
-                    $('<i>', {
+                    $('<button>', {
                         'data-index': i - 1,
                         title: settings.titles[i - 1] || i + " Sterne",
                         css: {
@@ -272,8 +271,7 @@ $(function(){
             }
 
             function events(wrapper) {
-                wrapper
-                    .on('click', 'i', function (e) {
+                wrapper.on('click', 'button', function (e) {
                         let index = $(e.currentTarget).data('index'),
                             value = index + 1,
                             label = settings.titles[index] || value + " Sterne";
@@ -284,7 +282,7 @@ $(function(){
                         }
                         // set stars
                         let allStars = wrapper
-                            .find('i')
+                            .find('button')
                             .css('color', settings.starColorEmpty)
                             .removeClass(settings.starIconFull)
                             .addClass(settings.starIconEmpty);
