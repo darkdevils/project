@@ -219,7 +219,12 @@ $border-line: #ededf0;
           border-radius: 100%;
           background-color: $Grey150;
           font-size: 0;
-          &.active {
+        }
+        + li {
+          margin-left: 8px;
+        }
+        &.active {
+          span {
             width: 24px;
             height: 24px;
             border-radius: 100%;
@@ -231,8 +236,10 @@ $border-line: #ededf0;
             text-align: center;
           }
         }
-        + li {
-          margin-left: 8px;
+        &.on {
+          span {
+            background-color: #556b79;
+          }
         }
       }
     }

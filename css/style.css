@@ -3021,7 +3021,10 @@ div.hasDatepicker {
   background-color: #D9D9D9;
   font-size: 0;
 }
-.stepArea .stepArea__list ol li span.active {
+.stepArea .stepArea__list ol li + li {
+  margin-left: 8px;
+}
+.stepArea .stepArea__list ol li.active span {
   width: 24px;
   height: 24px;
   border-radius: 100%;
@@ -3033,8 +3036,8 @@ div.hasDatepicker {
   letter-spacing: 0;
   text-align: center;
 }
-.stepArea .stepArea__list ol li + li {
-  margin-left: 8px;
+.stepArea .stepArea__list ol li.on span {
+  background-color: #556b79;
 }
 
 /* Tab Type */

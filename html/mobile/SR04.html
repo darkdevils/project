@@ -22,7 +22,7 @@
                 <div class="stepArea__list">
                     <ol>
                         <li><span>01</span></li>
-                        <li><span class="active"><em class="blind">현재선택</em>02</span></li>
+                        <li class="active"><span><em class="blind">현재선택</em>02</span></li>
                         <li><span>03</span></li>
                         <li><span>04</span></li>
                     </ol>
@@ -165,6 +165,9 @@
     }
 
     $(function(){
+        // Step active class 이전에 on class 추가
+        $('.stepArea__list li.active').prev().addClass('on');
+
         // 정렬기준 선택
         $('.radioStyle li input[type="radio"]').on('click',function(){
             const selectText = $(this).next().text();
