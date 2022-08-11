@@ -20,7 +20,7 @@ const common = {
         this.btnSearchClose();
         this.selectColor();
         this.headerLine();
-        this.slideLayer();
+        this.slideLayer.slideType();
         //this.btnToggle();
     },
 
@@ -73,8 +73,8 @@ const common = {
     },
 
     // Slide Layer
-    slideLayer: function() {
-        /*slideOpen: function(el) {
+    slideLayer: {
+        slideOpen: function(el) {
             const layerId = $("#" + el );
             $('body').append('<div class="dim"></div>');
             layerId.animate({
@@ -87,63 +87,65 @@ const common = {
             $(el).closest('.slideLayer').animate({
                 bottom: -layerH
             });
-        }*/
-        $('.layerOpen').on('click',function(){
-            const _this = $(this);
-            const layerPopup = $("#" + $(this).attr("aria-controls"));
-            const layerObjClose = layerPopup.find(".layerClose");
-            const layerObj = layerPopup.find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
-            const layerObjFirst = layerObj && layerObj.first();
-            const layerObjLast = layerObj && layerObj.last();
-            let tabDisable;
+        },
+        slideType: function() {
+            $('.layerOpen').on('click',function(){
+                const _this = $(this);
+                const layerPopup = $("#" + $(this).attr("aria-controls"));
+                const layerObjClose = layerPopup.find(".layerClose");
+                const layerObj = layerPopup.find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+                const layerObjFirst = layerObj && layerObj.first();
+                const layerObjLast = layerObj && layerObj.last();
+                let tabDisable;
 
-            function layerClose() {
-                const layerH = layerPopup.height();
-                $('.dim').fadeOut();
-                layerPopup.animate({
-                    bottom: -layerH
+                function layerClose() {
+                    const layerH = layerPopup.height();
+                    $('.dim').fadeOut();
+                    layerPopup.animate({
+                        bottom: -layerH
+                    });
+                    if (tabDisable === true) layerPopup.attr("tabindex", "-1");
+                    _this.focus();
+                    $(document).off("keydown.lp_keydown");
+                }
+                $(this).blur();
+
+                layerObj.length ? layerObjFirst.focus().on("keydown", function(event) {
+                    // 레이어 열리자마자 초점 받을 수 있는 첫번째 요소로 초점 이동
+                    if (event.shiftKey && (event.keyCode || event.which) === 9) {
+                        // Shift + Tab키 : 초점 받을 수 있는 첫번째 요소에서 마지막 요소로 초점 이동
+                        event.preventDefault();
+                        layerObjLast.focus();
+                    }
+                }) : layerPopup.attr("tabindex", "0").focus().on("keydown", function(event){
+                    tabDisable = true;
+                    if ((event.keyCode || event.which) === 9) event.preventDefault();
+                    // Tab키 / Shift + Tab키 : 초점 받을 수 있는 요소가 없을 경우 레이어 밖으로 초점 이동 안되게
                 });
-                if (tabDisable === true) layerPopup.attr("tabindex", "-1");
-                _this.focus();
-                $(document).off("keydown.lp_keydown");
-            }
-            $(this).blur();
+                layerObjLast.on("keydown", function(event) {
+                    if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+                        // Tab키 : 초점 받을 수 있는 마지막 요소에서 첫번째 요소으로 초점 이동
+                        event.preventDefault();
+                        layerObjFirst.focus();
+                    }
+                });
 
-            layerObj.length ? layerObjFirst.focus().on("keydown", function(event) {
-                // 레이어 열리자마자 초점 받을 수 있는 첫번째 요소로 초점 이동
-                if (event.shiftKey && (event.keyCode || event.which) === 9) {
-                    // Shift + Tab키 : 초점 받을 수 있는 첫번째 요소에서 마지막 요소로 초점 이동
-                    event.preventDefault();
-                    layerObjLast.focus();
-                }
-            }) : layerPopup.attr("tabindex", "0").focus().on("keydown", function(event){
-                tabDisable = true;
-                if ((event.keyCode || event.which) === 9) event.preventDefault();
-                // Tab키 / Shift + Tab키 : 초점 받을 수 있는 요소가 없을 경우 레이어 밖으로 초점 이동 안되게
-            });
-            layerObjLast.on("keydown", function(event) {
-                if (!event.shiftKey && (event.keyCode || event.which) === 9) {
-                    // Tab키 : 초점 받을 수 있는 마지막 요소에서 첫번째 요소으로 초점 이동
-                    event.preventDefault();
-                    layerObjFirst.focus();
-                }
-            });
+                layerObjClose.on("click", layerClose); // 닫기 버튼 클릭 시 레이어 닫기
+                $('body').append('<div class="dim"></div>');
+                layerPopup.animate({
+                    bottom: 0
+                });
 
-            layerObjClose.on("click", layerClose); // 닫기 버튼 클릭 시 레이어 닫기
-            $('body').append('<div class="dim"></div>');
-            layerPopup.animate({
-                bottom: 0
-            });
+                $(document).on("keydown.lp_keydown", function(event) {
+                    // Esc키 : 레이어 닫기
+                    const keyType = event.keyCode || event.which;
 
-            $(document).on("keydown.lp_keydown", function(event) {
-                // Esc키 : 레이어 닫기
-                const keyType = event.keyCode || event.which;
-
-                if (keyType === 27) {
-                    layerClose();
-                }
-            });
-        })
+                    if (keyType === 27) {
+                        layerClose();
+                    }
+                });
+            })
+        }
     },
 
     //Toast Layer
@@ -299,9 +301,7 @@ $(function(){
                         wrapper.trigger('change', [value, index]);
                     })
             }
-
             return this;
         }
-
     };
 }(jQuery));

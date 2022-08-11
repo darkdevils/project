@@ -23,7 +23,7 @@
                     <ol>
                         <li><span>01</span></li>
                         <li><span>02</span></li>
-                        <li><span class="active"><em class="blind">현재선택</em>03</span></li>
+                        <li class="active"><span><em class="blind">현재선택</em>03</span></li>
                         <li><span>04</span></li>
                     </ol>
                 </div>
@@ -57,6 +57,9 @@
 <script src="../../js/lib/datepicker.js"></script>
 <script src="../../js/common.js"></script>
 <script>
+    // Step active class 이전에 on class 추가
+    $('.stepArea__list li.active').prevAll().addClass('on');
+
     $.datepicker.setDefaults({
         dateFormat: 'yymmdd',
         prevText: '이전 달',

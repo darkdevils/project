@@ -24,7 +24,7 @@
                         <li><span>01</span></li>
                         <li><span>02</span></li>
                         <li><span>03</span></li>
-                        <li><span class="active"><em class="blind">현재선택</em>04</span></li>
+                        <li class="active"><span><em class="blind">현재선택</em>04</span></li>
                     </ol>
                 </div>
             </div>
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="btnWrap fixedBtm">
-        <button type="button" class="btn btn-d btnGray"><span>상담예약</span></button>
+        <button type="button" class="btn btn-d" disabled><span>상담예약</span></button>
     </div>
 </div>
 
@@ -45,11 +45,19 @@
 <script src="../../js/common.js"></script>
 <script>
 $(function(){
-
     /* 퍼블에서만 사용하는 스크립트입니다. */
+    // Step active class 이전에 on class 추가
+    $('.stepArea__list li.active').prevAll().addClass('on');
     $("#textarea01").keyup(function(){
-        $(".num").text($(this).val().length).css({"color" : "#000"});
+        if($(this).val().length > 0) {
+            $('.btnWrap button').attr('disabled',false);
+            $(".num").text($(this).val().length).css({"color" : "#000"});
+        } else {
+            $('.btnWrap button').attr('disabled',true);
+            $(".num").text($(this).val().length).css({"color" : "#757575"});
+        }
     });
+
 })
 </script>
 </body>
