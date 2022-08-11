@@ -4694,31 +4694,33 @@ div.hasDatepicker {
   letter-spacing: -0.5px;
 }
 
-.boardWrap .boardWrap__list .justifyWrap .leftArea .case01 {
-  color: #be5d6e;
+/* 상담분야 카테고리 별 색상 구분 */
+.case01 {
+  color: #be5d6e !important;
   border: solid 1px #be5d6e;
 }
 
-.boardWrap .boardWrap__list .justifyWrap .leftArea .case02 {
-  color: #505866;
+.case02 {
+  color: #505866 !important;
   border: solid 1px #505866;
 }
 
-.boardWrap .boardWrap__list .justifyWrap .leftArea .case03 {
-  color: #3b8384;
+.case03 {
+  color: #3b8384 !important;
   border: solid 1px #3b8384;
 }
 
-.boardWrap .boardWrap__list .justifyWrap .leftArea .case04 {
-  color: #3971de;
+.case04 {
+  color: #3971de !important;
   border: solid 1px #3971de;
 }
 
-.boardWrap .boardWrap__list .justifyWrap .leftArea .case05 {
-  color: #bf7f02;
+.case05 {
+  color: #bf7f02 !important;
   border: solid 1px #bf7f02;
 }
 
+/* 상담분야 카테고리 별 색상 구분 끝 */
 .numArea .justifyWrap {
   float: right;
 }
