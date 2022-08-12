@@ -114,34 +114,34 @@
   margin-left:10px;
 }
 
-.boardWrap .boardWrap__list .justifyWrap .leftArea .case{
-  padding:3px 8px;
+/* 상담분야 카테고리 별 색상 구분 */
+.case{
+  padding:2px 8px 3px;
   font-family:"Noto Sans KR", sans-serif;
   font-size:12px;
   border-radius:6px;
   background:#fff;
-  letter-spacing:-0.5px;
-}
-/* 상담분야 카테고리 별 색상 구분 */
-.case01{
-  color:#be5d6e !important;
-  border:solid 1px #be5d6e;
-}
-.case02{
-  color:#505866 !important;
-  border:solid 1px #505866;
-}
-.case03{
-  color:#3b8384 !important;
-  border:solid 1px #3b8384;
-}
-.case04{
-  color:#3971de !important;
-  border:solid 1px #3971de;
-}
-.case05{
-  color:#bf7f02 !important;
-  border:solid 1px #bf7f02;
+  line-height: 18px;
+  &.case01{
+    color:#be5d6e !important;
+    border:solid 1px #be5d6e;
+  }
+  &.case02{
+    color:#505866 !important;
+    border:solid 1px #505866;
+  }
+  &.case03{
+    color:#3b8384 !important;
+    border:solid 1px #3b8384;
+  }
+  &.case04{
+    color:#3971de !important;
+    border:solid 1px #3971de;
+  }
+  &.case05{
+    color:#bf7f02 !important;
+    border:solid 1px #bf7f02;
+  }
 }
 /* 상담분야 카테고리 별 색상 구분 끝 */
 .numArea .justifyWrap{

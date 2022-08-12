@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용솔루션 - 질문등록</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">신용솔루션</h1>
+        <button type="button" class="btnAlarm active"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div>
+            <div class="selectWrap">
+                <div class="selectBox">
+                    <label for="selectTest1-1" class="blind">상담분약 선택</label>
+                    <select name="" id="selectTest1-1">
+                        <option value="" disabled selected>상담분야 선택</option>
+                        <option value="">전문분야 선택</option>
+                    </select>
+                </div>
+                <div class="selectBox">
+                    <label for="selectTest1-2" class="blind">상담사 선택[필수]</label>
+                    <select name="" id="selectTest1-2">
+                        <option value="" disabled selected>상담사 선택[필수]</option>
+                        <option value="">상담분야 선택</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d" disabled><span>등록하기</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $(function(){
+        //퍼블에서 임시로 사용중입니다. 참고만 해주세요.
+        const itemLength = $('.boardAnswer__item').length;
+        $('.totalNum').text(itemLength);
+
+        //좋아요 버튼 클릭시 on,off
+        $('.btnLike').on('click',function(){
+            const textStting = $(this).find('.number').text();
+            const number = Number(textStting);
+            if($(this).hasClass('on')) {
+                $(this).find('.number').text(number + 1);
+            } else {
+                $(this).find('.number').text(number - 1);
+            }
+        });
+    });
+
+    // 댓글 slide Toggle
+    function slideToggle (el) {
+        const _this = $(el);
+        _this.toggleClass('on');
+        _this.closest('li').find('> .listType').slideToggle();
+    }
+    // 댓글 Textarea 높이값 auto
+    function resize(obj) {
+        obj.style.height = '1px';
+        obj.style.height = (obj.scrollHeight) + 'px';
+        let  _Number = parseInt(obj.style.height);
+        if( _Number >= 155) {
+            $('.reviewInput__textarea textarea').outerHeight(155);
+        } else {
+            console.log('높이값: ' + _Number);
+        }
+        if($('.reviewInput__textarea textarea').val().length > 0) {
+            $('.btnRegister').prop('disabled', true);
+        } else {
+            $('.btnRegister').prop('disabled', false);
+        }
+    }
+
+</script>
+</body>
+</html>

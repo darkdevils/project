@@ -869,10 +869,15 @@
         background-size: 250px;
       }
     }
+    .case {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
   }
   .boardView__content {
     padding: 0 0 40px;
     .img {
+      margin-bottom: 24px;
       overflow: hidden;
       text-align: center;
       img {
@@ -887,6 +892,10 @@
     }
     .numArea {
       padding: 0 24px;
+      .number {
+        font-size: 14px;
+        color: var(--warmGrey-color2);
+      }
     }
     .bookMark {
       position: relative;
@@ -1043,5 +1052,52 @@
   padding: 24px 24px 48px;
   .textStyle {
     height: calc(100vh - 343px);
+  }
+}
+
+/* 신용솔루션 - 상세 */
+.boardAnswer {
+  padding: 40px 24px;
+  .justifyWrap {
+    margin-bottom: 12px;
+  }
+  .boardAnswer__item {
+    padding: 24px;
+    background-color: var(--paleGrey-color);
+    border-radius: 18px;
+    overflow: hidden;
+    .title {
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      margin-bottom: 16px;
+    }
+    .text {
+      margin-bottom: 16px;
+      color: var(--brownishGrey-color);
+    }
+    + .boardAnswer__item {
+      margin-top: 16px;
+    }
+    .numArea {
+      .number {
+        color: var(--warmGrey-color2);
+      }
+    }
+    .time {
+      @include numberText;
+      color: var(--warmGrey-color2);
+    }
+  }
+  .noData {
+    padding: 169px 0 36px;
+    color: var(--brownishGrey-color);
+    &:after {
+      height: 80px;
+      @include imageUrl(common_sprite,png);
+      background-size: 250px;
+      background-position: calc(-170px / 2) calc(-340px / 2);
+    }
   }
 }

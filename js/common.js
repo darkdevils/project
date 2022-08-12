@@ -163,7 +163,10 @@ const common = {
     // Select Color
     selectColor: function(){
         $('.selectBox select').change(function() {
-            $('.selectBox select').css({'color' : '#000'});
+            $(this).css({
+                'color' : '#000',
+                'font-weight': '400'
+            });
         });
     },
 

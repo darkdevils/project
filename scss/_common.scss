@@ -322,10 +322,15 @@ $border-line: #ededf0;
   .leftTotal {
     color: var(--brownishGrey-color);
     font-size: 14px;
+    * {
+      align-items: center;
+      color: var(--brownishGrey-color);
+      font-size: 14px;
+      line-height: 22px;
+    }
     .totalNum {
       margin: 0 3px 0 5px;
       @include numberText;
-      font-size: 14px;
       font-weight: 500;
       color: var(--darkSkyBlue-color);
     }
@@ -337,6 +342,8 @@ $border-line: #ededf0;
     color: var(--brownishGrey-color);
     background: url(../images/bg_arrow.png) no-repeat 95% 50%;
     background-size: 20px;
+    line-height: 22px;
+    vertical-align: top;
   }
 }
 
@@ -382,6 +389,7 @@ $border-line: #ededf0;
       border: none;
       font-size: 16px;
       color: var(--warmGrey-color);
+      font-weight: 300;
       option {
         color: var(--black-color);
       }
