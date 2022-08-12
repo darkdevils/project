@@ -658,6 +658,9 @@ div.hasDatepicker {
   font-size: 16px;
   color: var(--black-color);
 }
+.inputWrap input[type=text]::placeholder {
+  font-weight: 300;
+}
 
 /* Input Type - Search */
 .searchArea {
@@ -1648,6 +1651,14 @@ div.hasDatepicker {
   margin-bottom: 0px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop0 {
   padding-top: 0px !important;
 }
@@ -1678,6 +1689,14 @@ div.hasDatepicker {
 
 .mgBottom5 {
   margin-bottom: 5px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop5 {
@@ -1712,6 +1731,14 @@ div.hasDatepicker {
   margin-bottom: 10px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop10 {
   padding-top: 10px !important;
 }
@@ -1742,6 +1769,14 @@ div.hasDatepicker {
 
 .mgBottom15 {
   margin-bottom: 15px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop15 {
@@ -1776,6 +1811,14 @@ div.hasDatepicker {
   margin-bottom: 20px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop20 {
   padding-top: 20px !important;
 }
@@ -1806,6 +1849,14 @@ div.hasDatepicker {
 
 .mgBottom25 {
   margin-bottom: 25px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop25 {
@@ -1840,6 +1891,14 @@ div.hasDatepicker {
   margin-bottom: 30px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop30 {
   padding-top: 30px !important;
 }
@@ -1870,6 +1929,14 @@ div.hasDatepicker {
 
 .mgBottom35 {
   margin-bottom: 35px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop35 {
@@ -1904,6 +1971,14 @@ div.hasDatepicker {
   margin-bottom: 40px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop40 {
   padding-top: 40px !important;
 }
@@ -1934,6 +2009,14 @@ div.hasDatepicker {
 
 .mgBottom45 {
   margin-bottom: 45px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop45 {
@@ -1968,6 +2051,14 @@ div.hasDatepicker {
   margin-bottom: 50px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop50 {
   padding-top: 50px !important;
 }
@@ -1998,6 +2089,14 @@ div.hasDatepicker {
 
 .mgBottom55 {
   margin-bottom: 55px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop55 {
@@ -2032,6 +2131,14 @@ div.hasDatepicker {
   margin-bottom: 60px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop60 {
   padding-top: 60px !important;
 }
@@ -2062,6 +2169,14 @@ div.hasDatepicker {
 
 .mgBottom65 {
   margin-bottom: 65px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop65 {
@@ -2096,6 +2211,14 @@ div.hasDatepicker {
   margin-bottom: 70px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop70 {
   padding-top: 70px !important;
 }
@@ -2126,6 +2249,14 @@ div.hasDatepicker {
 
 .mgBottom75 {
   margin-bottom: 75px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop75 {
@@ -2160,6 +2291,14 @@ div.hasDatepicker {
   margin-bottom: 80px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop80 {
   padding-top: 80px !important;
 }
@@ -2190,6 +2329,14 @@ div.hasDatepicker {
 
 .mgBottom85 {
   margin-bottom: 85px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop85 {
@@ -2224,6 +2371,14 @@ div.hasDatepicker {
   margin-bottom: 90px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop90 {
   padding-top: 90px !important;
 }
@@ -2254,6 +2409,14 @@ div.hasDatepicker {
 
 .mgBottom95 {
   margin-bottom: 95px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop95 {
@@ -2288,6 +2451,14 @@ div.hasDatepicker {
   margin-bottom: 100px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop100 {
   padding-top: 100px !important;
 }
@@ -2318,6 +2489,14 @@ div.hasDatepicker {
 
 .mgBottom105 {
   margin-bottom: 105px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop105 {
@@ -2352,6 +2531,14 @@ div.hasDatepicker {
   margin-bottom: 110px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop110 {
   padding-top: 110px !important;
 }
@@ -2384,6 +2571,14 @@ div.hasDatepicker {
   margin-bottom: 115px !important;
 }
 
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 .padTop115 {
   padding-top: 115px !important;
 }
@@ -2414,6 +2609,14 @@ div.hasDatepicker {
 
 .mgBottom120 {
   margin-bottom: 120px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 .padTop120 {

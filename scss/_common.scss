@@ -14,6 +14,12 @@ $border-line: #ededf0;
   .mgBottom#{$i * 5}{
     margin-bottom: $i * 5px !important;
   }
+  .mgTop16 {
+    margin-top: 16px !important;
+  }
+  .mgBottom16 {
+    margin-bottom: 16px !important;
+  }
 
   .padTop#{$i * 5}{
     padding-top: $i * 5px !important;

@@ -118,30 +118,6 @@
             }
         });
     });
-
-    // 댓글 slide Toggle
-    function slideToggle (el) {
-        const _this = $(el);
-        _this.toggleClass('on');
-        _this.closest('li').find('> .listType').slideToggle();
-    }
-    // 댓글 Textarea 높이값 auto
-    function resize(obj) {
-        obj.style.height = '1px';
-        obj.style.height = (obj.scrollHeight) + 'px';
-        let  _Number = parseInt(obj.style.height);
-        if( _Number >= 155) {
-            $('.reviewInput__textarea textarea').outerHeight(155);
-        } else {
-            console.log('높이값: ' + _Number);
-        }
-        if($('.reviewInput__textarea textarea').val().length > 0) {
-            $('.btnRegister').prop('disabled', true);
-        } else {
-            $('.btnRegister').prop('disabled', false);
-        }
-    }
-
 </script>
 </body>
 </html>

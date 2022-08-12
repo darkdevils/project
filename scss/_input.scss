@@ -22,6 +22,9 @@
     line-height: 60px;
     font-size: 16px;
     color: var(--black-color);
+    &::placeholder {
+      font-weight: 300;
+    }
   }
 }
 

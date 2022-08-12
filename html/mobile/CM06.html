@@ -33,6 +33,15 @@
                     </select>
                 </div>
             </div>
+            <div class="inputWrap mgTop16">
+                <label for="title" class="blind">제목 타이틀</label>
+                <input type="text" name="" id="title" placeholder="제목을 입력해주세요.(100자 이내)">
+            </div>
+            <div class="textStyle">
+                <label for="textarea01" class="blind">질문 등록 내용</label>
+                <textarea name="" id="textarea01" cols="30" rows="10" placeholder="내용을 입력해 주세요.&#13;&#10;(최소 20자 이상 1,000자까지 입력 가능합니다)&#13;&#10;&#13;&#10;※ 신용회복과 관련되지 않은 질문 시 해당 질문&#13;&#10;은 관리자에 의해서 삭제될 수 있습니다."></textarea>
+            </div>
+            <div class="textCount"><span class="num">0</span><span class="totalNum">1,000<em>자</em></span></div>
         </div>
     </div>
     <div class="btnWrap fixedBtm">
@@ -43,45 +52,7 @@
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/common.js"></script>
 <script>
-    $(function(){
-        //퍼블에서 임시로 사용중입니다. 참고만 해주세요.
-        const itemLength = $('.boardAnswer__item').length;
-        $('.totalNum').text(itemLength);
 
-        //좋아요 버튼 클릭시 on,off
-        $('.btnLike').on('click',function(){
-            const textStting = $(this).find('.number').text();
-            const number = Number(textStting);
-            if($(this).hasClass('on')) {
-                $(this).find('.number').text(number + 1);
-            } else {
-                $(this).find('.number').text(number - 1);
-            }
-        });
-    });
-
-    // 댓글 slide Toggle
-    function slideToggle (el) {
-        const _this = $(el);
-        _this.toggleClass('on');
-        _this.closest('li').find('> .listType').slideToggle();
-    }
-    // 댓글 Textarea 높이값 auto
-    function resize(obj) {
-        obj.style.height = '1px';
-        obj.style.height = (obj.scrollHeight) + 'px';
-        let  _Number = parseInt(obj.style.height);
-        if( _Number >= 155) {
-            $('.reviewInput__textarea textarea').outerHeight(155);
-        } else {
-            console.log('높이값: ' + _Number);
-        }
-        if($('.reviewInput__textarea textarea').val().length > 0) {
-            $('.btnRegister').prop('disabled', true);
-        } else {
-            $('.btnRegister').prop('disabled', false);
-        }
-    }
 
 </script>
 </body>
