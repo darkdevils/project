@@ -64,7 +64,7 @@
                 <div class="justifyWrap">
                     <div class="leftTotal">총<span class="totalNum">55</span>개의 댓글</div>
                     <div class="rightArea">
-                        <button type="button" class="btnSelect" onclick="common.slideLayer.slideOpen('slideLayer01');">최신순</button>
+                        <button type="button" class="btnSelect layerOpen" aria-controls="slideLayer01">최신순</button>
                     </div>
                 </div>
                 <ul class="listType">
@@ -75,8 +75,7 @@
                                 <span class="time"><em>2022-08-02 13:00</em></span>
                             </div>
                             <div class="rightArea">
-                                <button type="button" class="btn"></button>
-                                <button type="button" style="display: none"></button>
+                                <button type="button" class="btn layerOpen" aria-controls="slideLayer02"><span class="blind">내가 쓴 댓글</span></button>
                             </div>
                         </div>
                         <div class="textContent">
@@ -99,8 +98,7 @@
                                 <span class="time"><em>2022-08-02 13:00</em></span>
                             </div>
                             <div class="rightArea">
-                                <button type="button" class="btn"></button>
-                                <button type="button" style="display: none"></button>
+                                <button type="button" class="btn layerOpen" aria-controls="slideLayer03"><span class="blind">사용자가 쓴 댓글</span></button>
                             </div>
                         </div>
                         <div class="textContent">
@@ -148,8 +146,7 @@
                                             <span class="time"><em>2022-08-02 13:00</em></span>
                                         </div>
                                         <div class="rightArea">
-                                            <button type="button" class="btn"></button>
-                                            <button type="button" style="display: none"></button>
+                                            <button type="button" class="btn layerOpen" aria-controls="slideLayer04"><span class="blind">내가 쓴 답글</span></button>
                                         </div>
                                     </div>
                                     <div class="textContent">
@@ -165,8 +162,7 @@
                                             <span class="time"><em>2022-08-02 13:00</em></span>
                                         </div>
                                         <div class="rightArea">
-                                            <button type="button" class="btn"></button>
-                                            <button type="button" style="display: none"></button>
+                                            <button type="button" class="btn layerOpen" aria-controls="slideLayer05"><span class="blind">사용자가 쓴 답글</span></button>
                                         </div>
                                     </div>
                                     <div class="textContent">
@@ -229,6 +225,82 @@
         </div>
     </div>
 </div>
+
+<!-- 정렬기준 레이어팝업 -->
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title">정렬기준 선택</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle">
+            <li><input type="radio" name="sortRadio" id="radio1-1" checked><label for="radio1-1">최신순</label></li>
+            <li><input type="radio" name="sortRadio" id="radio1-2"><label for="radio1-2">댓글순</label></li>
+            <li><input type="radio" name="sortRadio" id="radio1-3"><label for="radio1-3">좋아요순</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //정렬기준 레이어팝업 -->
+
+<!-- 내가 쓴 댓글 레이어팝업 -->
+<div class="slideLayer" id="slideLayer02">
+    <div class="slideLayer__header">
+        <h2 class="title">내가 쓴 댓글</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle">
+            <li><input type="radio" name="sortRadio2" id="radio2-1" checked><label for="radio2-1">수정하기</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-2"><label for="radio2-2">삭제하기</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //내가 쓴 댓글 레이어팝업 -->
+
+<!-- 사용자가 쓴 댓글 레이어팝업 -->
+<div class="slideLayer" id="slideLayer03">
+    <div class="slideLayer__header">
+        <h2 class="title">사용자가 쓴 댓글</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle">
+            <li><input type="radio" name="sortRadio3" id="radio3-1" checked><label for="radio3-1">신고하기</label></li>
+            <li><input type="radio" name="sortRadio3" id="radio3-2"><label for="radio3-2">작성자 차단하기</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //사용자가 쓴 댓글 레이어팝업 -->
+
+<!-- 내가 쓴 답글 레이어팝업 -->
+<div class="slideLayer" id="slideLayer04">
+    <div class="slideLayer__header">
+        <h2 class="title">내가 쓴 답글</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle">
+            <li><input type="radio" name="sortRadio2" id="radio4-1" checked><label for="radio4-1">수정하기</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio4-2"><label for="radio4-2">삭제하기</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //내가 쓴 답글 레이어팝업 -->
+
+<!-- 사용자가 쓴 답글 레이어팝업 -->
+<div class="slideLayer" id="slideLayer05">
+    <div class="slideLayer__header">
+        <h2 class="title">사용자가 쓴 댓글</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle">
+            <li><input type="radio" name="sortRadio3" id="radio5-1" checked><label for="radio5-1">신고하기</label></li>
+            <li><input type="radio" name="sortRadio3" id="radio5-2"><label for="radio5-2">작성자 차단하기</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //사용자가 쓴 답글 레이어팝업 -->
 
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/common.js"></script>

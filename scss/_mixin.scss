@@ -240,5 +240,7 @@
 @mixin numberText {
   font-family: 'Roboto',sans-serif;
   letter-spacing: 0;
+  font-size: 14px;
+  @content;
 }
 
