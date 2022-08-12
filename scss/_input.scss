@@ -240,9 +240,6 @@
 /* Input File */
 .fileWrap {
   display: flex;
-  overflow-y: hidden;
-  overflow-x: auto;
-
   .fileBox {
     position: relative;
     width: 80px;
@@ -255,13 +252,17 @@
       position: relative;
       display: block;
       width: 80px;
-      height: 80px;
+      height: 79px;
+      z-index: 2;
       @include bgImage(50%,28px,common_sprite2) {
         width: 24px;
         height: 24px;
         background-size: 250px;
         margin: -12px 0 0 -12px;
       }
+    }
+    .uploadName {
+      display: none;
     }
     .counting {
       position: absolute;
@@ -302,6 +303,49 @@
       border: 0;
     }
   }
+  .uploadDisplay {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 78px;
+      height: 78px;
+      border: 1px solid var(--silver-color);
+      border-radius: 10px;
+    }
+    .uploadThumbWrap {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 100%;
+      }
+      .btnDel {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        z-index: 5;
+        @include bgImage(0,0,common_sprite2) {
+          width: 20px;
+          height: 20px;
+          background-size: 250px;
+          background-position: -29px 0;
+        }
+      }
+    }
+  }
+
   .fileList {
     display: flex;
     .item {
@@ -320,19 +364,6 @@
         border: 1px solid #dddee4;
         border-radius: 10px;
         z-index: 1;
-      }
-      .btnDel {
-        position: absolute;
-        right: 4px;
-        top: 4px;
-        width: 20px;
-        height: 20px;
-        @include bgImage(0,0,common_sprite2) {
-          width: 20px;
-          height: 20px;
-          background-size: 250px;
-          background-position: -29px 0;
-        }
       }
       img {
         width: 100%;

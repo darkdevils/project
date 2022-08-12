@@ -39,8 +39,16 @@
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/common.js"></script>
 <script>
-
-
+    /* 퍼블에서만 사용하는 스크립트입니다. */
+    $("#textarea01").keyup(function(){
+        if($(this).val().length > 0) {
+            $('.btnWrap button').attr('disabled',false);
+            $(".num").text($(this).val().length).css({"color" : "#000"});
+        } else {
+            $('.btnWrap button').attr('disabled',true);
+            $(".num").text($(this).val().length).css({"color" : "#757575"});
+        }
+    });
 </script>
 </body>
 </html>
