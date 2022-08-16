@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>화면 해상도 1600</title>
+    <link rel="stylesheet" href="guideStyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./highlight/styles/atom-one-dark.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
+    <style>
+        .guideWrap {padding: 0;}
+        h1.guideTitle {padding: 20px;}
+    </style>
+</head>
+<body>
+<div class="w1600 wCenter">
+    <div class="guideNav">Navigation</div>
+    <div class="guideContainer">
+        <div class="guideLnb">Lnb</div>
+        <div class="guideContent">
+            <div class="guideW1280">
+                Content 1280px
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+$(function(){
+    $('h2.guideTitle').each(function(index){
+        $(this).prepend('<span class="guideNum">'+ (index+1) +')</span>');
+    });
+
+});
+</script>
+</body>
+</html>

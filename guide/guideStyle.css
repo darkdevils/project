@@ -14,3 +14,47 @@ h3.guideTitle {font-size: 16px;font-weight: 400;margin: 5px 0 10px;}
 .guideBtn {background-color: #0aaeb3;padding:5px;display: inline-block;vertical-align: top;}
 .guidePoint {color: #fd3e3e;}
 .guideBox .layerHead {position: relative;}
+.w1280 {border: 2px solid #394040;width: 1280px;height: 100vh;box-sizing: border-box}
+.w1280.wCenter,.w1600.wCenter,.w1920.wCenter {margin: 0 auto;}
+.w800 {display: flex;align-items: center;justify-content: center; width: 800px;height: calc(100%);background-color: #f00;margin: 0 auto;color: #fff;font-size: 22px;font-weight: 700;}
+.w1000 {display: flex;align-items: center;justify-content: center; width: 1000px;height: calc(100%);background-color: #f00;margin: 0 auto;color: #fff;font-size: 22px;font-weight: 700;}
+.w1400 {display: flex;align-items: center;justify-content: center; width: 1400px;height: calc(100%);background-color: #f00;margin: 0 auto;color: #fff;font-size: 22px;font-weight: 700;}
+.w1600 {border: 2px solid #394040;width: 1600px;height: 100vh;box-sizing: border-box}
+.w1920 {border: 2px solid #394040;width: 1920px;height: 100vh;box-sizing: border-box}
+.guideW1280 {display: flex;align-items: center;justify-content: center; width: 1280px;height: calc(100%);background-color: #f00;margin: 0 auto;color: #fff;font-size: 22px;font-weight: 700;}
+.guideW1200 {display: flex;align-items: center;justify-content: center; width: 1200px;height: calc(100%);background-color: #f00;margin: 0 auto;color: #fff;font-size: 22px;font-weight: 700;}
+
+.guideNav {display: flex;align-items: center;justify-content: center;width: 100%;height: 100px;border-bottom: 2px solid #0aaeb3;box-sizing: border-box;font-size: 22px;font-weight: 700;}
+.guideContainer {display: flex;}
+.guideLnb {display: flex;align-items: center;justify-content: center;width: 200px;height: calc(100vh - 104px);border-right: 2px solid #0aaeb3;font-size: 22px;font-weight: 700;}
+.guideContent {display: flex;align-items: center;justify-content: center;width: calc(100% - 200px);height: calc(100vh - 104px);font-size: 22px;font-weight: 700;}
+
+.guideResolution {display: flex;padding: 0 20px;}
+.guideResolution > div {position: relative;margin-right: 10px;text-align: center;transition: 0.5s ease;}
+.guideResolution > div:before {content:"";display:block;position: relative;left: 0;top: 0;width: 100px;height: 100px;border: 1px solid #ddd;border-radius: 4px;}
+.guideResolution a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 100px 0 0;
+    text-align: center;
+}
+.guideResolution a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100px;
+    background: url(layout.png) no-repeat;
+    background-size: contain;
+}
+.guideResolution > div:nth-child(2) a:before,
+.guideResolution > div:nth-child(3) a:before {
+    left: 50%;
+    margin-left: -40%;
+}
+.guideResolution > div:nth-child(4) a:before,
+.guideResolution > div:nth-child(5) a:before {width: 100%;}
+.guideResolution span {display: block;margin-top: 10px;}

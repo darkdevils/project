@@ -44,72 +44,42 @@
             <div class="textCount"><span class="num">0</span><span class="totalNum">1,000<em>자</em></span></div>
             <div class="fileWrap">
                 <div class="fileBox">
-                    <input class="uploadName" value="파일첨부" disabled="disabled">
-                    <label for="fileEx"><span class="blind">파일첨부</span></label>
+                    <button type="button" class="btnFile layerOpen" aria-controls="slideLayer01"><span class="blind">이미지 선택</span></button>
                     <div class="counting">
                         <span class="count">0</span><span class="total">1</span>
                     </div>
-                    <input type="file" id="fileEx">
                 </div>
-                <!--<div class="fileList">
-                    <div class="item">
-                        <button type="button" class="btnDel"><span class="blind">삭제</span></button>
-                        <img src="../../images/temp/thumbnail_04.png" alt="임시 이미지01">
-                    </div>
-                </div>-->
+                <div class="uploadDisplay"><div class="uploadThumbWrap"><img src="../../images/temp/thumbnail_04.png" class="uploadThumb"><button type="button" class="btnDel"><span class="blind">삭제</span></button></div></div>
             </div>
-            <div class="fileText">JPEG, JPG, PNG 사진 최대 <span class="number">1</span>개까지 등록 가능(선택)</div>
+            <div class="fileText">JPEG, JPG, PNG 사진 최대 <span class="number">1</span>개까지 등록 가능(선택)</div
         </div>
     </div>
     <div class="btnWrap fixedBtm">
         <button type="button" class="btn btn-d" disabled><span>등록하기</span></button>
+        <!-- 수정하기 버튼 -->
+        <!--<button type="button" class="btn btn-d" ><span>수정하기</span></button>-->
+        <!-- //수정하기 버튼 -->
     </div>
 </div>
+
+<!-- 이미지 선택 레이어팝업 -->
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title">이미지 선택</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="listBtn">
+            <li><button type="button"><span>사진촬영</span></button></li>
+            <li><button type="button"><span>앨범에서 가져오기</span></button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이미지 선택 레이어팝업 -->
 
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/common.js"></script>
 <script>
-    /* 파일첨부 클릭 시 */
-    const imgTarget = $('#fileEx');
-
-    imgTarget.on('change', function(){
-        const parent = $(this).closest('.fileWrap');
-        parent.children('.uploadDisplay').remove();
-        let num = 0;
-
-       if(window.FileReader) {
-           if (!$(this)[0].files[0].type.match(/image\//)) return;
-
-           const reader = new FileReader();
-
-
-           reader.onload = function (e) {
-               const src = e.target.result;
-               parent.append('<div class="uploadDisplay"><div class="uploadThumbWrap"><img src="'+src+'" class="uploadThumb"><button type="button" class="btnDel"><span class="blind">삭제</span></button></div></div>').on('click','.btnDel',function(){
-                   $('.uploadDisplay').remove();
-                   num = $('.uploadDisplay').length;
-                   $('.counting .count').text(num);
-               });
-               num = $('.uploadDisplay').length;
-               $('.counting .count').text(num);
-           }
-           reader.readAsDataURL($(this)[0].files[0]);
-
-
-       } else {
-           $(this)[0].select();
-           $(this)[0].blur();
-           const imgSrc = document.selection.createRange().text;
-           parent.append('<div class="uploadDisplay"><div class="uploadThumbWrap"><img class="uploadThumb"><button type="button" class="btnDel"><span class="blind">삭제</span></button></div></div>').on('click','.btnDel',function(){
-               $('.uploadDisplay').remove();
-           });
-           const img = $(this).siblings('.uploadDisplay').find('img');
-           img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";
-       };
-
-       //$(this).siblings('.uploadName').val(filename);
-    });
-
 
 
     /* 퍼블에서만 사용하는 스크립트입니다. */
@@ -122,10 +92,13 @@
             $(".num").text($(this).val().length).css({"color" : "#757575"});
         }
     });
-
+    $('.listBtn button').on('click',function(){
+        $('.uploadDisplay').show();
+        common.slideLayer.slideClose('.btnLayerClose');
+        $('.btnWrap .btn').prop('disabled',false);
+    })
     $('.btnDel').on('click',function(){
-        console.log('111111111');
-        $('.uploadDisplay').remove();
+        $('.uploadDisplay').hide();
     });
 </script>
 </body>

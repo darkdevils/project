@@ -139,3 +139,20 @@
     }
   }
 }
+
+/* 이미지 선택 */
+.listBtn {
+  li {
+    button {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    span {
+      color: var(--font-color);
+    }
+    + li {
+      margin-top: 24px;
+    }
+  }
+}
