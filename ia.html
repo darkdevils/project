@@ -29,7 +29,7 @@
         /*.bor_t.c td {background: #007ae1;color:#fff;}*/
         .t-c {text-align: center;}
         .t-c {text-align: center;}
-        .table_type {padding: 70px 10px 20px;}
+        .table_type {width: 100%;padding: 70px 10px 20px;box-sizing: border-box;}
         h1 {margin-bottom: 20px;font-size: 20px;font-weight: bold;}
         .fixedTop {position: fixed;right: 0;top: 0;width: calc(100%);height: 30px;background-color: #ffffff;padding: 20px 0 20px 10px;}
         .fileList {display: flex;height: 100vh;}
@@ -43,6 +43,13 @@
         .fileList__left  ol > li > ol li a {text-decoration: none;color: #333;font-size: 14px;font-weight:700;}
         .fileList__content {position: relative;padding: 0;width: calc(100vw - 180px);padding: 0 0 0 180px;}
         .fileList__content:after {content: "";position: absolute;left: 0;top: 0;width: 1px;height: 100%;background-color: #ccc;}
+        @media screen and (max-width: 720px) {
+            body {min-width: initial;}
+            table th:nth-child(2),table th:nth-child(4),table th:nth-child(5),table th:nth-child(6),table th:nth-child(8),
+            table td:nth-child(2),table td:nth-child(4),table td:nth-child(5),table td:nth-child(6),table td:nth-child(8) {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>

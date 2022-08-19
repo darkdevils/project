@@ -22,6 +22,7 @@ const common = {
         this.headerLine();
         this.slideLayer.slideType();
         //this.btnToggle();
+        $(".slideLayerScroll").closest('.slideLayer').addClass('slideLayer-half');
     },
 
     // search close button
@@ -69,6 +70,7 @@ const common = {
 
     // Toggle Button
     btnToggle: function(el) {
+        //el.classList.toggle('on');
         $(el).toggleClass('on');
     },
 
@@ -98,6 +100,22 @@ const common = {
                 const layerObjLast = layerObj && layerObj.last();
                 let tabDisable;
 
+                // Slide Popup 시 내용이 길어서 Scroll 생성 및 Title Line 생성
+                const slideheaderH = layerPopup.find('.slideLayer__header').outerHeight();
+                const slideH = layerPopup.outerHeight() - slideheaderH;
+                const layerScrollTop = $('.slideLayerScroll').scrollTop();
+                layerPopup.find(".slideLayerScroll").outerHeight(slideH - 70);
+                $('body').css({overflow : 'hidden' });
+
+                $('.slideLayerScroll').scroll(function(){
+                    if($(this).scrollTop() > 0) {
+                        $('.slideLayer__header').addClass('borBtm');
+                    } else {
+                        $('.slideLayer__header').removeClass('borBtm');
+                    }
+                });
+
+
                 function layerClose() {
                     const layerH = layerPopup.height();
                     $('.dim').fadeOut();
@@ -107,6 +125,7 @@ const common = {
                     if (tabDisable === true) layerPopup.attr("tabindex", "-1");
                     _this.focus();
                     $(document).off("keydown.lp_keydown");
+                    $('body').css({overflow : 'auto' });
                 }
                 $(this).blur();
 

@@ -27,12 +27,27 @@
             <label for="title" class="blind">제목 타이틀</label>
             <input type="text" name="" id="title" placeholder="제목을 입력해주세요.(100자 이내)">
         </div>
+        <div class="inputWrap mgTop10">
+            <label for="title2" class="blind">제목 타이틀</label>
+            <input type="text" name="" id="title2" value="Test" disabled>
+        </div>
         <!-- tag highlinght 적용 -->
         <pre><code class="html">&lt;div class=&quot;inputWrap&quot;&gt;
     &lt;label for=&quot;title&quot; class=&quot;blind&quot;&gt;&#xC81C;&#xBAA9; &#xD0C0;&#xC774;&#xD2C0;&lt;/label&gt;
     &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;title&quot; placeholder=&quot;&#xC81C;&#xBAA9;&#xC744; &#xC785;&#xB825;&#xD574;&#xC8FC;&#xC138;&#xC694;.(100&#xC790; &#xC774;&#xB0B4;)&quot;&gt;
 &lt;/div&gt;</code></pre>
         <!-- //tag highlinght 적용 -->
+        <h3 class="guideTitle mgTop20">* Input에 "만원" 텍스트 추가</h3>
+        <div class="inputWrap inputWrap-Money">
+            <label for="inputMoney" class="blind">금액</label>
+            <input type="number" name="" id="inputMoney" placeholder="소수점은 입력할 수 없습니다.">
+            <span class="moneyText">만원</span>
+        </div>
+        <div class="inputWrap inputWrap-Money mgTop10">
+            <label for="inputMoney2" class="blind">금액</label>
+            <input type="number" name="" id="inputMoney2" value="123" disabled>
+            <span class="moneyText">만원</span>
+        </div>
     </div>
 
     <h2 class="guideTitle">TextArea</h2>
@@ -89,6 +104,47 @@
         </code></pre>
     </div>
 
+    <h2 class="guideTitle">CheckBox</h2>
+    <div class="guideBox">
+        <h3 class="guideTitle">1. Vertical Checkbox Button</h3>
+        <div class="checkboxType">
+            <input type="checkbox" name="ck" id="check01-1" disabled><label for="check01-1">Checkbox1-1</label>
+        </div>
+        <div class="checkboxType mgTop10">
+            <input type="checkbox" name="ck" id="check01-2" checked><label for="check01-2">Checkbox1-2</label>
+        </div>
+
+        <!-- tag highlinght 적용 -->
+        <pre><code class="html">&lt;div class=&quot;checkboxType&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;ck&quot; id=&quot;check01-1&quot; disabled&gt;&lt;label for=&quot;check01-1&quot;&gt;Checkbox1-1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkboxType mgTop10&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;ck&quot; id=&quot;check01-2&quot; checked&gt;&lt;label for=&quot;check01-2&quot;&gt;Checkbox1-2&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+
+        <h3 class="guideTitle mgTop20">2. Horizontal Checkbox Button</h3>
+        <div class="checkboxHorizontal">
+            <div class="checkboxType">
+                <input type="checkbox" name="ck" id="check02-1" checked><label for="check02-1">Checkbox1-3</label>
+            </div>
+            <div class="checkboxType">
+                <input type="checkbox" name="ck" id="check02-2"><label for="check02-2">Checkbox1-4</label>
+            </div>
+        </div>
+
+        <!-- tag highlinght 적용 -->
+        <pre><code class="html">&lt;div class=&quot;checkboxHorizontal&quot;&gt;
+    &lt;div class=&quot;checkboxType&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;ck&quot; id=&quot;check02-1&quot; checked&gt;&lt;label for=&quot;check02-1&quot;&gt;Checkbox1-3&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;checkboxType&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;ck&quot; id=&quot;check02-2&quot;&gt;&lt;label for=&quot;check02-2&quot;&gt;Checkbox1-4&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <!-- //tag highlinght 적용 -->
+
+    </div>
     <h2 class="guideTitle">Input File</h2>
     <div class="guideBox">
         <div class="fileWrap">
@@ -110,11 +166,27 @@
             &lt;span class=&quot;count&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;total&quot;&gt;1&lt;/span&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+    &lt;div class=&quot;uploadDisplay&quot;&gt;&lt;div class=&quot;uploadThumbWrap&quot;&gt;&lt;img src=&quot;../../images/temp/thumbnail_04.png&quot; class=&quot;uploadThumb&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btnDel&quot;&gt;&lt;span class=&quot;blind&quot;&gt;&#xC0AD;&#xC81C;&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;fileText&quot;&gt;JPEG, JPG, PNG &#xC0AC;&#xC9C4; &#xCD5C;&#xB300; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&#xAC1C;&#xAE4C;&#xC9C0; &#xB4F1;&#xB85D; &#xAC00;&#xB2A5;(&#xC120;&#xD0DD;)&lt;/div&gt;</code></pre>
         <!-- //tag highlinght 적용 -->
     </div>
 </div>
+
+<!-- 이미지 선택 레이어팝업 -->
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title">이미지 선택</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="listBtn">
+            <li><button type="button"><span>사진촬영</span></button></li>
+            <li><button type="button"><span>앨범에서 가져오기</span></button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이미지 선택 레이어팝업 -->
 
 <script src="../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../js/lib/datepicker.js"></script>

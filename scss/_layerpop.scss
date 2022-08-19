@@ -265,7 +265,7 @@ $slider-btn-margin: 32px;
   z-index: 100;
   .slideLayer__header {
     position: relative;
-    padding: 32px 0 0;
+    padding: 30px 0 20px;
     h2.title {
       font-size: 18px;
       line-height: 26px;
@@ -281,11 +281,16 @@ $slider-btn-margin: 32px;
       width: 24px;
       height: 24px;
     }
+    &.borBtm {
+      border-bottom: 1px solid #e2e2e3;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.03);
+    }
   }
   .slideLayer__content {
-    padding: 30px 24px 40px;
+    padding: 10px 24px 40px;
     .txtCenter {
       margin-bottom: 30px;
+      padding: 20px 0 0;
       font-size: 18px;
       text-align: center;
     }
@@ -304,6 +309,12 @@ $slider-btn-margin: 32px;
       border-top: 1px solid #e7e9ee;
       border-bottom: 1px solid #e7e9ee;
     }
+  }
+  .slideLayerScroll {
+    overflow: auto;
+  }
+  &.slideLayer-half {
+    height: calc(100vh - 210px);
   }
 }
 
@@ -330,6 +341,7 @@ $slider-btn-margin: 32px;
 
 /* 자유게시판 - 시곤하기 */
 .reportWrap {
+  padding: 0 24px 120px !important;
   .reportWrap__title {
     display: block;
     margin-top: 24px;

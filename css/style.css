@@ -521,7 +521,7 @@ div.hasDatepicker {
   width: 100%;
   bottom: 0;
   padding: 0 24px 40px;
-  z-index: 5;
+  z-index: 6;
 }
 .btnWrap.fixedBtm:after {
   content: "";
@@ -658,12 +658,14 @@ div.hasDatepicker {
 
 /* Input[type="text"] */
 .inputWrap {
+  position: relative;
   border: 1px solid #dddee4;
   height: 60px;
   border-radius: 8px;
   overflow: hidden;
+  /* Input 만원 */
 }
-.inputWrap input[type=text] {
+.inputWrap input[type=text], .inputWrap input[type=number] {
   width: 100%;
   height: 58px;
   border: 0;
@@ -672,9 +674,45 @@ div.hasDatepicker {
   border-radius: 8px;
   font-size: 16px;
   color: var(--black-color);
+  outline-color: var(--primary-color);
 }
-.inputWrap input[type=text]::placeholder {
+.inputWrap input[type=text]::placeholder, .inputWrap input[type=number]::placeholder {
   font-weight: 300;
+}
+.inputWrap input[type=text]:disabled, .inputWrap input[type=number]:disabled {
+  background-color: #f3f4f5;
+  color: var(--brownishGrey-color);
+}
+.inputWrap input[type=text]:disabled:after, .inputWrap input[type=number]:disabled:after {
+  color: var(--brownishGrey-color);
+}
+.inputWrap.inputWrap-Money input[type=text], .inputWrap.inputWrap-Money input[type=number] {
+  line-height: 57px;
+  text-align: right;
+  padding-right: 49px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.inputWrap.inputWrap-Money input[type=text]::placeholder, .inputWrap.inputWrap-Money input[type=number]::placeholder {
+  text-align: left;
+}
+.inputWrap.inputWrap-Money input[type=text]:disabled, .inputWrap.inputWrap-Money input[type=number]:disabled {
+  background-color: #f3f4f5;
+  color: var(--brownishGrey-color);
+}
+.inputWrap.inputWrap-Money input[type=text]:disabled:after, .inputWrap.inputWrap-Money input[type=number]:disabled:after {
+  color: var(--brownishGrey-color);
+}
+.inputWrap.inputWrap-Money input[type=text]:disabled + .moneyText, .inputWrap.inputWrap-Money input[type=number]:disabled + .moneyText {
+  color: var(--brownishGrey-color);
+}
+.inputWrap.inputWrap-Money .moneyText {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 16px;
+  color: #000;
 }
 
 /* Input Type - Search */
@@ -701,7 +739,7 @@ div.hasDatepicker {
   background-position: 0 0;
   background-size: 250px;
 }
-.searchArea input[type=text] {
+.searchArea input[type=text], .searchArea input[type=search] {
   width: calc(100% - 56px);
   height: 54px;
   border: 0;
@@ -868,6 +906,57 @@ div.hasDatepicker {
   display: flex;
 }
 .radioHorizontal .radioType + .radioType {
+  margin-left: 10px;
+}
+
+/* Check Box */
+.checkboxType input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.checkboxType input[type=checkbox] + label {
+  display: block;
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 16px;
+  color: var(--black-color);
+}
+.checkboxType input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-size: 250px;
+  background-position: 0 -160px;
+}
+.checkboxType input[type=checkbox]:checked + label:active:before {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.checkboxType input[type=checkbox]:checked + label:before {
+  background-position: -33px -160px;
+}
+.checkboxType input[type=checkbox]:disabled + label:before {
+  background-position: 0 -193px;
+}
+
+.checkboxHorizontal {
+  display: flex;
+}
+.checkboxHorizontal .checkboxType + .checkboxType {
   margin-left: 10px;
 }
 
@@ -1431,7 +1520,7 @@ div.hasDatepicker {
 }
 .slideLayer .slideLayer__header {
   position: relative;
-  padding: 32px 0 0;
+  padding: 30px 0 20px;
 }
 .slideLayer .slideLayer__header h2.title {
   font-size: 18px;
@@ -1448,11 +1537,16 @@ div.hasDatepicker {
   width: 24px;
   height: 24px;
 }
+.slideLayer .slideLayer__header.borBtm {
+  border-bottom: 1px solid #e2e2e3;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.03);
+}
 .slideLayer .slideLayer__content {
-  padding: 30px 24px 40px;
+  padding: 10px 24px 40px;
 }
 .slideLayer .slideLayer__content .txtCenter {
   margin-bottom: 30px;
+  padding: 20px 0 0;
   font-size: 18px;
   text-align: center;
 }
@@ -1468,6 +1562,12 @@ div.hasDatepicker {
 .slideLayer .slideLayer__content .reservationTxt {
   border-top: 1px solid #e7e9ee;
   border-bottom: 1px solid #e7e9ee;
+}
+.slideLayer .slideLayerScroll {
+  overflow: auto;
+}
+.slideLayer.slideLayer-half {
+  height: calc(100vh - 210px);
 }
 
 /* Slide Datepicker */
@@ -1492,6 +1592,9 @@ div.hasDatepicker {
 }
 
 /* 자유게시판 - 시곤하기 */
+.reportWrap {
+  padding: 0 24px 120px !important;
+}
 .reportWrap .reportWrap__title {
   display: block;
   margin-top: 24px;
@@ -5166,12 +5269,12 @@ div.hasDatepicker {
   width: 28px;
   height: 28px;
   text-align: center;
-  background: url("../../images/common_sprite2.png") no-repeat -139px 0;
+  background: url("../images/common_sprite2.png") no-repeat -139px 0;
   background-size: 250px;
 }
 
 .info_popup01 .info_close input[type=checkbox]:checked + label:before {
-  background: url("../../images/common_sprite2.png") no-repeat -167px 0;
+  background: url("../images/common_sprite2.png") no-repeat -167px 0;
   background-size: 250px;
 }
 
