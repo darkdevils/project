@@ -64,6 +64,30 @@ $border-line: #ededf0;
   border: 0;
 }
 
+.skipMenu {
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  a {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: auto;
+    height: 40px;
+    padding: 0 10px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    line-height: 40px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+    &:active,&:hover,&:focus {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+
 /* Sub Heaer */
 .header {
   position: fixed;
