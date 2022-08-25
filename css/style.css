@@ -1620,6 +1620,7 @@ div.hasDatepicker {
   overflow: hidden;
   color: var(--white-color);
   z-index: 10;
+  transition: 0.3s ease-out;
 }
 .toastLayer:after {
   content: "";
