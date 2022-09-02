@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신쏙진단 - Step04(월상환금액 입력)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">산쏙진단</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="reservationArea">
+            <div class="stepArea">
+                <h2 class="stepArea__title">월상환금액 입력</h2>
+                <div class="stepArea__list">
+                    <ol>
+                        <li><span>1</span></li>
+                        <li><span>02</span></li>
+                        <li><span>03</span></li>
+                        <li><span>04</span></li>
+                        <li class="active"><em class="blind">현재선택</em><span>05</span></li>
+                        <li><span>06</span></li>
+                        <li><span>07</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="inputWrap inputWrap-Money mgTop40">
+                <label for="inputMoney" class="blind">금액</label>
+                <input type="number" name="" id="inputMoney" placeholder="소수점은 입력할 수 없습니다.">
+                <span class="moneyText">만원</span>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap btnWrap-col2 fixedBtm">
+        <button type="button" class="btn btn-d btnGray w78"><span>이전</span></button>
+        <button type="button" class="btn btn-d" disabled><span>다음</span></button>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+    // Step active class 이전에 on class 추가
+    $('.stepArea__list li.active').prevAll().addClass('on');
+
+    // 퍼블에서만 임시로 사용중입니다.
+    $('#inputMoney').on('change keyup paste',function(){
+        if($('#inputMoney').val().length > 0) {
+            $('.btn').prop('disabled',false);
+        } else {
+            $('.btn').prop('disabled',true);
+        }
+    });
+})
+</script>
+</body>
+</html>

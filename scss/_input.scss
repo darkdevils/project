@@ -66,6 +66,35 @@
       color: #000;
     }
   }
+  /* Input 인원 */
+  &.inputWrap-persons {
+    input[type="text"],input[type="number"] {
+      line-height: 57px;
+      text-align: right;
+      padding-right: 39px;
+      @include numberText;
+      &::placeholder {
+        text-align: left;
+      }
+      &:disabled {
+        background-color: #f3f4f5;
+        color: var(--brownishGrey-color);
+        &:after {
+          color: var(--brownishGrey-color);
+        }
+        + .personsText {
+          color: var(--brownishGrey-color);
+        }
+      }
+    }
+    .personsText {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 16px;
+      color: #000;
+    }
+  }
 }
 
 /* Input Type - Search */
@@ -262,6 +291,31 @@
           > * {
             color: var(--primary-color);
           }
+        }
+      }
+    }
+    &.col3 {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -8px;
+      padding: 40px 0 8px;
+      li {
+        flex-basis: calc(33.33% - 8px);
+        margin: 0 0 8px 8px;
+        input[type="radio"] {
+          + label {
+            text-align: center;
+            color: var(--warmGrey-color2);
+          }
+          &:checked {
+            + label {
+              color: var(--primary-color);
+              font-weight: 500;
+            }
+          }
+        }
+        + li {
+          margin-top: 0;
         }
       }
     }

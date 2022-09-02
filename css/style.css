@@ -664,6 +664,7 @@ div.hasDatepicker {
   border-radius: 8px;
   overflow: hidden;
   /* Input 만원 */
+  /* Input 인원 */
 }
 .inputWrap input[type=text], .inputWrap input[type=number] {
   width: 100%;
@@ -708,6 +709,34 @@ div.hasDatepicker {
   color: var(--brownishGrey-color);
 }
 .inputWrap.inputWrap-Money .moneyText {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 16px;
+  color: #000;
+}
+.inputWrap.inputWrap-persons input[type=text], .inputWrap.inputWrap-persons input[type=number] {
+  line-height: 57px;
+  text-align: right;
+  padding-right: 39px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.inputWrap.inputWrap-persons input[type=text]::placeholder, .inputWrap.inputWrap-persons input[type=number]::placeholder {
+  text-align: left;
+}
+.inputWrap.inputWrap-persons input[type=text]:disabled, .inputWrap.inputWrap-persons input[type=number]:disabled {
+  background-color: #f3f4f5;
+  color: var(--brownishGrey-color);
+}
+.inputWrap.inputWrap-persons input[type=text]:disabled:after, .inputWrap.inputWrap-persons input[type=number]:disabled:after {
+  color: var(--brownishGrey-color);
+}
+.inputWrap.inputWrap-persons input[type=text]:disabled + .personsText, .inputWrap.inputWrap-persons input[type=number]:disabled + .personsText {
+  color: var(--brownishGrey-color);
+}
+.inputWrap.inputWrap-persons .personsText {
   position: absolute;
   right: 16px;
   top: 16px;
@@ -899,6 +928,27 @@ div.hasDatepicker {
 }
 .radioType.radioType--box input[type=radio]:checked + label > * {
   color: var(--primary-color);
+}
+.radioType.radioType--box.col3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  padding: 40px 0 8px;
+}
+.radioType.radioType--box.col3 li {
+  flex-basis: calc(33.33% - 8px);
+  margin: 0 0 8px 8px;
+}
+.radioType.radioType--box.col3 li input[type=radio] + label {
+  text-align: center;
+  color: var(--warmGrey-color2);
+}
+.radioType.radioType--box.col3 li input[type=radio]:checked + label {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.radioType.radioType--box.col3 li + li {
+  margin-top: 0;
 }
 
 /* Horizontal Radio Button */
@@ -3551,14 +3601,14 @@ div.hasDatepicker {
 }
 
 /* Select Type */
-.selectWrap .selectBox {
+.selectWrap .selectBox, .selectWrap .btnSelect {
   position: relative;
   height: 60px;
   border: 1px solid var(--silver-color);
   border-radius: 8px;
   overflow: hidden;
 }
-.selectWrap .selectBox:after {
+.selectWrap .selectBox:after, .selectWrap .btnSelect:after {
   content: "";
   display: block;
   position: absolute;
@@ -3571,7 +3621,7 @@ div.hasDatepicker {
   margin-top: -10px;
   background-size: 20px;
 }
-.selectWrap .selectBox select {
+.selectWrap .selectBox select, .selectWrap .btnSelect select {
   width: 100%;
   height: 58px;
   line-height: 58px;
@@ -3581,17 +3631,24 @@ div.hasDatepicker {
   color: var(--warmGrey-color);
   font-weight: 300;
 }
-.selectWrap .selectBox select option {
+.selectWrap .selectBox select option, .selectWrap .btnSelect select option {
   color: var(--black-color);
 }
-.selectWrap .selectBox select option[value=""][disabled] {
+.selectWrap .selectBox select option[value=""][disabled], .selectWrap .btnSelect select option[value=""][disabled] {
   display: none;
 }
-.selectWrap .selectBox select:focus {
+.selectWrap .selectBox select:focus, .selectWrap .btnSelect select:focus {
   border-radius: 8px;
 }
-.selectWrap .selectBox + .selectBox {
+.selectWrap .selectBox + .selectBox, .selectWrap .btnSelect + .selectBox, .selectWrap .selectBox + .btnSelect, .selectWrap .btnSelect + .btnSelect {
   margin-top: 16px;
+}
+.selectWrap .btnSelect {
+  display: block;
+  width: 100%;
+  color: var(--warmGrey-color);
+  text-align: left;
+  padding: 0 0 0 16px;
 }
 
 /* Dl - Symbol */
@@ -3723,6 +3780,27 @@ div.hasDatepicker {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0;
   font-size: 14px;
+}
+
+/* Tip */
+.tipArea {
+  position: fixed;
+  left: 24px;
+  bottom: 144px;
+  width: calc(100% - 48px);
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px;
+}
+.tipArea .tipArea__title {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--primary-color);
+}
+.tipArea .tipArea__text {
+  color: var(--font-color);
 }
 
 /* Dim 화면 */
