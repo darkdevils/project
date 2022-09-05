@@ -545,6 +545,20 @@ div.hasDatepicker {
   color: #666666;
   line-height: 39px;
 }
+.btnWrap .btnGo {
+  display: block;
+  width: 100%;
+  height: 42px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  text-align: center;
+}
+.btnWrap .btnGo span {
+  display: block;
+  font-size: 16px;
+  line-height: 42px;
+  color: var(--primary-color);
+}
 
 .btn {
   display: inline-block;
@@ -742,6 +756,18 @@ div.hasDatepicker {
   top: 16px;
   font-size: 16px;
   color: #000;
+}
+
+.inputSection label {
+  display: block;
+  margin: 30px 0 14px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.inputSection label .number {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
 }
 
 /* Input Type - Search */
@@ -1689,6 +1715,65 @@ div.hasDatepicker {
   border-radius: 30px 30px 0 0;
   height: 313px;
   background-image: linear-gradient(130deg, #010617, #192248 45%, #192248 57%, #010617 103%);
+}
+
+/* 신쏙진단 - 변동내역팝업 */
+.layerCreditScore .grayBox .orderedList {
+  margin-top: 4px;
+  line-height: 24px;
+}
+.layerCreditScore .grayBox .orderedList li {
+  position: relative;
+  color: var(--brownishGrey-color);
+  padding: 0 0 0 20px;
+}
+.layerCreditScore .grayBox .orderedList li .number {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--brownishGrey-color);
+}
+.layerCreditScore .layerScoreText, .layerCreditScore .layerScoreText span {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.layerCreditScore .layerScoreText span.max {
+  color: var(--primary-color);
+}
+.layerCreditScore .layerScoreText span.low {
+  color: var(--lipstick-color);
+}
+.layerCreditScore .graphList li {
+  display: flex;
+}
+.layerCreditScore .graphList li .day {
+  display: inline-block;
+  width: 52px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--brownishGrey-color);
+}
+.layerCreditScore .graphList li .graphArea {
+  width: calc(100% - 100px);
+}
+.layerCreditScore .graphList li .graphArea .graphBar {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  border-radius: 0 6px 6px 0;
+  background-color: #ebebeb;
+}
+.layerCreditScore .graphList li .graphArea .graphBar .number {
+  position: absolute;
+  right: -38px;
+  display: inline-block;
+  width: 30px;
+  font-size: 12px;
+  color: var(--font-color);
 }
 
 /* List Type - 상담사 검색 */
@@ -5046,24 +5131,24 @@ button.swiper-pagination-bullet {
 }
 
 /* 상담예약 */
-.reservationArea {
+.reservationArea, .sectionInfo {
   padding: 24px 24px 62px;
 }
-.reservationArea .timeArea {
+.reservationArea .timeArea, .sectionInfo .timeArea {
   margin: 30px 0 0;
   border-top: 1px solid #e7e9ee;
 }
-.reservationArea .timeArea dl dt {
+.reservationArea .timeArea dl dt, .sectionInfo .timeArea dl dt {
   display: block;
   margin: 24px 0 8px;
   font-size: 14px;
   color: var(--font-color);
   line-height: 22px;
 }
-.reservationArea .timeArea dl dd {
+.reservationArea .timeArea dl dd, .sectionInfo .timeArea dl dd {
   margin-left: -8px;
 }
-.reservationArea .timeArea dl dd button {
+.reservationArea .timeArea dl dd button, .sectionInfo .timeArea dl dd button {
   display: inline-block;
   width: 76px;
   height: 42px;
@@ -5078,16 +5163,16 @@ button.swiper-pagination-bullet {
   letter-spacing: 0;
   font-size: 14px;
 }
-.reservationArea .timeArea dl dd button:disabled {
+.reservationArea .timeArea dl dd button:disabled, .sectionInfo .timeArea dl dd button:disabled {
   color: #d9d9d9;
 }
-.reservationArea .timeArea dl dd button.active {
+.reservationArea .timeArea dl dd button.active, .sectionInfo .timeArea dl dd button.active {
   background-color: var(--white-color);
   border-color: var(--primary-color);
   color: var(--primary-color);
   font-weight: 500;
 }
-.reservationArea .timeArea dl dd button:nth-child(4n) {
+.reservationArea .timeArea dl dd button:nth-child(4n), .sectionInfo .timeArea dl dd button:nth-child(4n) {
   width: 75px;
 }
 
@@ -5500,6 +5585,9 @@ button.swiper-pagination-bullet {
 }
 .boardWrap__list li .textContent .textarea, .listType li .textContent .textarea {
   display: flex;
+  /*.reText {
+    margin-left: 12px;
+  }*/
 }
 .boardWrap__list li .textContent .textarea .name span, .listType li .textContent .textarea .name span {
   display: block;
@@ -5507,9 +5595,6 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   line-height: 22px;
   color: var(--primary-color);
-}
-.boardWrap__list li .textContent .textarea .reText, .listType li .textContent .textarea .reText {
-  margin-left: 12px;
 }
 .boardWrap__list li .textContent .textarea .noText, .listType li .textContent .textarea .noText {
   color: var(--warmGrey-color2);
@@ -5723,10 +5808,13 @@ button.swiper-pagination-bullet {
 }
 .reviewInput .reviewInput__textarea .btnRegister {
   width: 58px;
-  color: var(--warmGrey-color2);
+  color: #3971de;
 }
 .reviewInput .reviewInput__textarea .btnRegister:disabled {
-  color: #3971de;
+  color: var(--warmGrey-color2);
+}
+.reviewInput.reviewInput--name {
+  padding-top: 13px;
 }
 .reviewInput.reviewInput--name .reviewInput__textarea .name {
   display: flex;
@@ -5742,6 +5830,34 @@ button.swiper-pagination-bullet {
 }
 .reviewInput.reviewInput--name .reviewInput__textarea textarea {
   margin: 0;
+}
+.reviewInput .reviewCancle {
+  margin-bottom: 6px;
+  line-height: 22px;
+}
+.reviewInput .reviewCancle button {
+  font-size: 14px;
+  color: var(--font-color);
+}
+.reviewInput .reviewCancle button span {
+  font-size: 14px;
+  color: var(--font-color);
+}
+.reviewInput .reviewCancle button span.bl {
+  position: relative;
+  padding: 0 0 0 20px;
+  color: var(--brownishGrey-color);
+}
+.reviewInput .reviewCancle button span.bl:after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background-color: var(--brownishGrey-color);
 }
 
 /* 자유게시판 - 글쓰기 */
@@ -5802,6 +5918,130 @@ button.swiper-pagination-bullet {
 /* 신용솔루션 - 질문등록 */
 .registerQuestion {
   padding: 24px 24px 60px;
+}
+
+/***** 신쏙진단 *****/
+/* 신쏙진단 - 기타채무액 입력 */
+.grayBox {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
+.grayBox h3.title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-color);
+}
+.grayBox .infoTitle, .grayBox .money {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--brownishGrey-color);
+}
+.grayBox .infoTitle .number, .grayBox .money .number {
+  color: #666;
+  line-height: 22px;
+}
+.grayBox .money .number {
+  color: #666;
+  line-height: 22px;
+}
+
+/* 신쏙진단 - 결과보고서 */
+.articleWrap article {
+  padding: 40px 24px;
+}
+.articleWrap article h2.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.articleWrap article .text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--brownishGrey-color);
+}
+.articleWrap article .percent {
+  border-radius: 100px;
+  padding: 3px 8px;
+  background-color: #eef6ff;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--primary-color);
+  text-align: center;
+}
+.articleWrap article .percent .number {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--primary-color);
+}
+.articleWrap article .creditScore {
+  position: relative;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 0 28px 0 0;
+}
+.articleWrap article .creditScore:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 50%;
+  background: url("../images/common_sprite.png") no-repeat;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background-size: 250px;
+  background-position: -104px -70px;
+  transform: rotate(180deg);
+}
+.articleWrap article .creditScore .number {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+}
+.articleWrap article .grayBox {
+  margin-bottom: 0;
+}
+.articleWrap article .grayBox .justifyWrap + .justifyWrap {
+  margin-top: 7px;
+}
+.articleWrap article .grayBox .infoTitle, .articleWrap article .grayBox .money {
+  font-size: 16px;
+  font-weight: 300;
+}
+.articleWrap article .grayBox .numArea {
+  font-size: 16px;
+}
+.articleWrap article .grayBox .numArea .number {
+  font-size: 16px;
+}
+.articleWrap article .justifyWrap--result .grayBox {
+  width: calc(50% - 7.5px);
+  height: 102px;
+  text-align: center;
+}
+.articleWrap article .justifyWrap--result .grayBox span {
+  display: block;
+  margin-bottom: 4px;
+  line-height: 22px;
+}
+.articleWrap article .justifyWrap--result .grayBox strong {
+  display: block;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.articleWrap article .justifyWrap--result .grayBox + .grayBox {
+  width: calc(50% - 7.5px);
+}
+.articleWrap article .videoArea {
+  margin: 40px 0;
+}
+.articleWrap article .videoArea iframe {
+  width: 100%;
 }
 
 /* 파일 첨부 */

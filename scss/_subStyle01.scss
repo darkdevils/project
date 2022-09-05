@@ -782,9 +782,9 @@
             color: var(--primary-color);
           }
         }
-        .reText {
+        /*.reText {
           margin-left: 12px;
-        }
+        }*/
         .noText {
           color: var(--warmGrey-color2);
         }
@@ -1020,13 +1020,14 @@
     }
     .btnRegister {
       width: 58px;
-      color: var(--warmGrey-color2);
+      color: #3971de;
       &:disabled {
-        color: #3971de;
+        color: var(--warmGrey-color2);
       }
     }
   }
   &.reviewInput--name {
+    padding-top: 13px;
     .reviewInput__textarea {
       .name {
         display: flex;
@@ -1042,6 +1043,34 @@
       }
       textarea {
         margin: 0;
+      }
+    }
+  }
+  .reviewCancle {
+    margin-bottom: 6px;
+    line-height: 22px;
+    button {
+      font-size: 14px;
+      color: var(--font-color);
+      span {
+        font-size: 14px;
+        color: var(--font-color);
+        &.bl {
+          position: relative;
+          padding: 0 0 0 20px;
+          color: var(--brownishGrey-color);
+          &:after {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            margin-top: -2px;
+            background-color: var(--brownishGrey-color);
+          }
+        }
       }
     }
   }
@@ -1105,4 +1134,135 @@
 /* 신용솔루션 - 질문등록 */
 .registerQuestion {
   padding: 24px 24px 60px;
+}
+
+/***** 신쏙진단 *****/
+.sectionInfo {
+  @extend .reservationArea;
+}
+
+/* 신쏙진단 - 기타채무액 입력 */
+.grayBox {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  h3.title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black-color);
+  }
+  .infoTitle {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--brownishGrey-color);
+    .number {
+      color: #666;
+      line-height: 22px;
+    }
+  }
+  .money {
+    @extend .infoTitle;
+    .number {
+      color: #666;
+      line-height: 22px;
+    }
+  }
+}
+
+/* 신쏙진단 - 결과보고서 */
+.articleWrap {
+  article {
+    padding: 40px 24px;
+    h2.title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .text {
+      margin-top: 10px;
+      font-size: 16px;
+      color: var(--brownishGrey-color);
+    }
+    .percent {
+      border-radius: 100px;
+      padding: 3px 8px;
+      background-color: #eef6ff;
+      font-size: 12px;
+      line-height: 18px;
+      color: var(--primary-color);
+      text-align: center;
+      .number {
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--primary-color);
+      }
+    }
+    .creditScore {
+      position: relative;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 36px;
+      padding: 0 28px 0 0;
+      @include bgImage(auto,50%,common_sprite) {
+        right: 0;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        background-size: 250px;
+        background-position: -104px -70px;
+        transform: rotate(180deg);
+      }
+      .number {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+      }
+    }
+    .grayBox {
+      margin-bottom: 0;
+      .justifyWrap {
+        + .justifyWrap {
+          margin-top: 7px;
+        }
+      }
+      .infoTitle {
+        font-size: 16px;
+        font-weight: 300;
+      }
+      .numArea {
+        font-size: 16px;
+        .number {
+          font-size: 16px;
+        }
+      }
+    }
+    .justifyWrap--result {
+      .grayBox {
+        width: calc(50% - 7.5px);
+        height: 102px;
+        text-align: center;
+        span {
+          display: block;
+          margin-bottom: 4px;
+          line-height: 22px;
+        }
+        strong {
+          display: block;
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 500;
+        }
+        + .grayBox {
+          width: calc(50% - 7.5px);
+        }
+      }
+    }
+    .videoArea {
+      margin: 40px 0;
+      iframe {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신쏙진단 - 결과보고서</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">산쏙진단</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="articleWrap">
+            <article>
+                <h2 class="title">고객님의 신용평점</h2>
+                <p class="text">대출심사 또는 카드 발급 시 사용되는 NICE 평가 정보를 기준으로 조회된 신용평점입니다.</p>
+                <div class="justifyWrap mgTop40">
+                    <div class="percent">상위<span class="number">10</span>%</div>
+                    <a href="#" class="creditScore"><span class="number">954</span>점</a>
+                </div>
+                <div class="creditGraph"></div>
+            </article>
+            <hr class="bgLine">
+            <article>
+                <h2 class="title">재무상태</h2>
+                <p class="text">고객님께서 입력하신 데이터와, 국가통계자료를 기반으로 산정된 재무상태 결과입니다.</p>
+                <div class="financialGraph"></div>
+                <div class="grayBox">
+                    <div class="justifyWrap">
+                        <div class="infoTitle">부양가족수</div>
+                        <div class="numArea"><span class="number">6</span>명</div>
+                    </div>
+                    <div class="justifyWrap">
+                        <div class="infoTitle">월소득</div>
+                        <div class="numArea"><span class="number">228</span>만원</div>
+                    </div>
+                    <div class="justifyWrap">
+                        <div class="infoTitle">총대출잔액</div>
+                        <div class="numArea"><span class="number">47,500</span>만원</div>
+                    </div>
+                    <div class="justifyWrap">
+                        <div class="infoTitle">월지출액</div>
+                        <div class="numArea"><span class="number">500</span>만원</div>
+                    </div>
+                    <div class="justifyWrap">
+                        <div class="infoTitle">월채무상환액</div>
+                        <div class="numArea"><span class="number">150</span>만원</div>
+                    </div>
+                    <div class="justifyWrap">
+                        <div class="infoTitle">총재산</div>
+                        <div class="numArea"><span class="number">18,500</span>만원</div>
+                    </div>
+                </div>
+            </article>
+            <hr class="bgLine">
+            <article>
+                <h2 class="title">채무과중도</h2>
+                <p class="text">채무과중도는 DSR, DTA 수치 를 기준으로 산정한  평가결과입니다. DSR은 월채무상환액  대비 월소득의 비율이며 DTA는 총대출잔액 대비 총재산의 비율입니다.</p>
+                <div>
+                    <div class="justifyWrap">
+                        <span class="">채무과중도 최종 평가결과</span>
+                        <span>‘주의’</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="">DSR(채무상환액 대비 월소득 비율) </span>
+                            <span>위험</span>
+                        </li>
+                        <li>
+                            <span class="">DTA(대출잔액 대비 총재산 비율)</span>
+                            <span>양호</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <hr class="bgLine">
+            <article>
+                <h2 class="title">고객 맞춤형 채무조정제도 제시</h2>
+                <p class="text">아래 결과는 현시점 고객님의 채무액, 재산가액, 월소득, 연체 등 정보를 종합평가후 법원제도와 신용회복위원회 제도의 기준으로 자동제시해 드리는 결과입니다.</p>
+                <div class="justifyWrap justifyWrap--result">
+                    <div class="grayBox">
+                        <span>법원 제도</span>
+                        <strong>파산</strong>
+                    </div>
+                    <div class="grayBox">
+                        <span>신복위 제도</span>
+                        <strong>개인워크아웃</strong>
+                    </div>
+                </div>
+            </article>
+            <hr class="bgLine">
+            <article>
+                <h2 class="title">연관 교육자료</h2>
+                <p class="text">신용회복위원회에서 제공하는 채무조정제도에 대한 교육자료입니다.</p>
+                <div class="videoArea">
+                    <!-- 임시로 유튜브 동영상 사용중 -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Vm4Y8A3GWBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- //임시로 유튜브 동영상 사용중 -->
+                </div>
+                <div class="btnWrap">
+                    <a href="#" class="btnGo"><span>신용상담예약 바로가기</span></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

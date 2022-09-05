@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신쏙진단 - 변동내역팝업</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">신용점수 변동내역</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="layerCreditScore">
+            <div class="grayBox">
+                <strong class="title">신용점수는 다음 두 가지 방법으로 산출돼요!</strong>
+                <ol class="orderedList">
+                    <li><span class="number">1.</span> 매월 15일과 말일에 정기적으로</li>
+                    <li><span class="number">2.</span> 내 신용정보를 조회하는 시점에 실시간으로</li>
+                </ol>
+            </div>
+            <p class="layerScoreText">최근 <span class="number">1</span>년간 나의 신용 점수내역에서<br>최고 점수는 <span class="number max">954</span>점<br>최저 점수는 <span class="number low">400</span>점 입니다.</p>
+            <ul class="graphList">
+                <li class="lowGraph">
+                    <span class="day">오늘</span>
+                    <div class="graphArea">
+                        <div class="graphBar" style="width: 50%" data-width=""><span class="number">400</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">07.31</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">920</span></div>
+                    </div>
+                </li>
+                <li class="maxGraph">
+                    <span class="day">07.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">400</span></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+   $('.graphList li .number').each(function(){
+      console.log($(this).text());
+   });
+});
+</script>
+
+</body>
+</html>

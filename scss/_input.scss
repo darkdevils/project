@@ -96,6 +96,19 @@
     }
   }
 }
+.inputSection {
+  label {
+    display: block;
+    margin: 30px 0 14px;
+    font-size: 16px;
+    font-weight: 500;
+    .number {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+    }
+  }
+}
 
 /* Input Type - Search */
 .searchArea {

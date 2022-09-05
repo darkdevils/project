@@ -45,18 +45,19 @@
             <div class="reviewInput">
                 <div class="reviewInput__textarea">
                     <textarea name="" id="reviewInput1" cols="30" rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="댓글을 입력하세요"></textarea>
-                    <button type="button" class="btnRegister">등록</button>
+                    <button type="button" class="btnRegister" disabled>등록</button>
                 </div>
             </div>
             <!-- //댓글 입력 -->
             <!-- 댓글 입력 이름이 있을경우 -->
-            <!--<div class="reviewInput reviewInput&#45;&#45;name">
+            <div class="reviewInput reviewInput--name">
+                <div class="reviewCancle"><button type="button"><span>@김*우</span>님에게 답글 남기기<span class="bl">취소</span></button></div>
                 <div class="reviewInput__textarea">
                     <div class="name"><span>@홍*동동ehd</span></div>
                     <textarea name="" id="reviewInput2" cols="30" rows="10" onkeydown="resize(this)" onkeyup="resize(this)" placeholder="댓글을 입력하세요"></textarea>
-                    <button type="button" class="btnRegister">등록</button>
+                    <button type="button" class="btnRegister" disabled>등록</button>
                 </div>
-            </div>-->
+            </div>
             <!-- //댓글 입력 이름이 있을경우  -->
 
             <!-- 댓글 리스트 -->
@@ -150,7 +151,7 @@
                                         </div>
                                     </div>
                                     <div class="textContent">
-                                        <div class="textArea">
+                                        <div class="textarea">
                                             <div class="reText">오... 감사합니다 ㅠㅠ<br>고객센터에 전화해 봐야겠네요...</div>
                                         </div>
                                     </div>
@@ -167,7 +168,6 @@
                                     </div>
                                     <div class="textContent">
                                         <div class="textarea">
-                                            <div class="name"><span>@홍*동동ehd</span></div>
                                             <div class="reText">오... 감사합니다 ㅠㅠ<br>고객센터에 전화해 봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요봐야겠네요...</div>
                                         </div>
                                     </div>
@@ -337,13 +337,11 @@
         let  _Number = parseInt(obj.style.height);
         if( _Number >= 155) {
             $('.reviewInput__textarea textarea').outerHeight(155);
-        } else {
-            console.log('높이값: ' + _Number);
         }
-        if($('.reviewInput__textarea textarea').val().length > 0) {
-            $('.btnRegister').prop('disabled', true);
-        } else {
+        if(obj.value.length > 0) {
             $('.btnRegister').prop('disabled', false);
+        } else {
+            $('.btnRegister').prop('disabled', true);
         }
     }
 
