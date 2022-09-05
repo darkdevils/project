@@ -27,19 +27,19 @@
                 <li class="lowGraph">
                     <span class="day">오늘</span>
                     <div class="graphArea">
-                        <div class="graphBar" style="width: 50%" data-width=""><span class="number">400</span></div>
+                        <div class="graphBar"><span class="number">400</span></div>
                     </div>
                 </li>
                 <li>
                     <span class="day">07.31</span>
                     <div class="graphArea">
-                        <div class="graphBar"><span class="number">920</span></div>
+                        <div class="graphBar"><span class="number">954</span></div>
                     </div>
                 </li>
                 <li class="maxGraph">
                     <span class="day">07.15</span>
                     <div class="graphArea">
-                        <div class="graphBar"><span class="number">400</span></div>
+                        <div class="graphBar"><span class="number">700</span></div>
                     </div>
                 </li>
             </ul>
@@ -50,8 +50,28 @@
 <script src="../../js/common.js"></script>
 <script>
 $(function(){
-   $('.graphList li .number').each(function(){
-      console.log($(this).text());
+
+    let arr =  [];
+   $('.graphList li').each(function(){
+       let _width = $(this).find('.number').text();
+        _width = Number(_width);
+       arr.push(_width);
+       const maxVal = Math.max.apply(null,arr);
+       const minVal = Math.min.apply(null,arr);
+       $(this).find('.graphBar').css({
+           width : (_width / 999) * 100 + '%'
+       });
+
+       for( idx in arr) {
+           console.log(arr[idx]);
+           if(arr[idx] === _width) {
+               console.log('11111111');
+               return true;
+           }
+       }
+
+
+       console.log('Max:' + maxVal + '========= Min:' + minVal );
    });
 });
 </script>
