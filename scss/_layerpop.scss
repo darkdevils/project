@@ -414,6 +414,7 @@ $slider-btn-margin: 32px;
     font-size: 20px;
     line-height: 28px;
     font-weight: 500;
+    margin: 40px 0;
     span {
       @extend .layerScoreText;
       &.max {
@@ -430,9 +431,12 @@ $slider-btn-margin: 32px;
       .day {
         display: inline-block;
         width: 52px;
-        font-size: 14px;
-        line-height: 22px;
+        line-height: 20px;
         color: var(--brownishGrey-color);
+        @include numberText;
+        &.today {
+          color: var(--black-color);
+        }
       }
       .graphArea {
         width: calc(100% - 100px);
@@ -450,9 +454,77 @@ $slider-btn-margin: 32px;
             width: 30px;
             font-size: 12px;
             color: var(--font-color);
+            line-height: 20px;
           }
         }
       }
+      &.lowGraph {
+        .graphBar {
+          background-color: var(--lipstick-color);
+          .number {
+            color: var(--lipstick-color);
+            font-weight: bold;
+          }
+        }
+      }
+      &.maxGraph {
+        .graphBar {
+          background-color: var(--primary-color);
+          .number {
+            color: var(--primary-color);
+            font-weight: bold;
+          }
+        }
+      }
+      + li {
+        margin-top: 26px;
+      }
+    }
+  }
+}
+
+/* 신쏙진단 - 정보체크 */
+.infoCheck {
+  padding: 120px 0 0;
+  text-align: center;
+  .bigText {
+    position: relative;
+    margin-bottom: 8px;
+    padding: 82px 0 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black-color);
+    line-height: 36px;
+    @include bgImage(50%,0,common_sprite2) {
+      width: 52px;
+      height: 52px;
+      margin-left: -26px;
+      background-size: 500px;
+      background-position: 0 -58px;
+    }
+    span {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--black-color);
+      line-height: 35px;
+    }
+  }
+  .text {
+    margin-bottom: 40px;
+    color: var(--brownishGrey-color);
+    font-weight: 300;
+  }
+  .link {
+    position: relative;
+    color: var(--primary-color);
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--primary-color);
     }
   }
 }

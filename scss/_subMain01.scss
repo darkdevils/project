@@ -149,7 +149,6 @@
         padding: 16px 0 0 40px;
         font-size: 16px;
         color: var(--font-color);
-        font-weight: 300;
         @include bgImage(0,16px, common_sprite) {
           width: 24px;
           height: 24px;
@@ -177,6 +176,152 @@
     }
     .banner {
       margin-bottom: 40px;
+    }
+  }
+}
+
+/* 신쏙진단 - 서브메인 */
+.ssMain01 {
+  background-color: #eeedf7;
+  .subCopy {
+    position: relative;
+    margin: 24px 0 50px;
+    text-align: center;
+    /*@include bgImage(50%,191px,bg_ss01_submain) {
+      width: 279px;
+      height: 320px;
+      margin-left: calc(-279px / 2);
+      background-size: contain;
+    }*/
+    .txtSmall {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--slateGrey-color);
+      font-size: 16px;
+    }
+    .txtBig {
+      display: block;
+      margin-bottom: 40px;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 38px;
+    }
+  }
+  h2.title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+  .textContent {
+    padding: 24px;
+    background-color: var(--white-color);
+    .list {
+      margin-bottom: 56px;
+      li {
+        position: relative;
+        height: 56px;
+        padding: 16px 0 0 40px;
+        font-size: 16px;
+        color: var(--font-color);
+        @include bgImage(0,16px, common_sprite) {
+          width: 24px;
+          height: 24px;
+          background-size: 250px;
+        }
+        &:nth-child(1) {
+          &:after {
+            background-position: calc(-432px / 2) 0;
+          }
+        }
+        &:nth-child(2) {
+          &:after {
+            background-position: calc(-432px / 2) calc(-58px / 2);
+          }
+        }
+        &:nth-child(3) {
+          &:after {
+            background-position: calc(-432px / 2) calc(-116px / 2);
+          }
+        }
+        + li {
+          border-top: 1px solid #e7e9ee;
+        }
+      }
+    }
+    .stepList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 0 36px;
+      li {
+        position: relative;
+        width: 50%;
+        margin: 24px 0 0;
+        padding: 132px 0 0 0;
+        text-align: center;
+        &:before,&:after {
+          content: "";
+          position: absolute;
+        }
+        &:before {
+          left: 50%;
+          top: 0;
+          width: 120px;
+          height: 120px;
+          margin-left: -60px;
+          background-color: #f6f6f6;
+          border-radius: 60px;
+        }
+        @include bgImage(50%,30px,common_sprite2) {
+          width: 60px;
+          height: 60px;
+          margin-left: -30px;
+          background-position: 0 -141px;
+        }
+        &:nth-child(2) {
+          &:after {
+            background-position: -70px -141px;
+          }
+        }
+        &:nth-child(3) {
+          &:after {
+            background-position: -140px -141px;
+          }
+        }
+        &:nth-child(4) {
+          &:after {
+            background-position: -210px -141px;
+          }
+        }
+        &:nth-child(5) {
+          &:after {
+            background-position: -280px -141px;
+          }
+        }
+        &:nth-child(6) {
+          &:after {
+            background-position: -350px -141px;
+          }
+        }
+        &:nth-child(7) {
+          &:after {
+            background-position: -420px -141px;
+          }
+        }
+        .stepNum {
+          width: 120px;
+          margin: 0 auto;
+          color: var(--brownishGrey-color);
+          font-size: 14px;
+          line-height: 22px;
+          font-family: 'Roboto',sans-serif;
+          .number {
+            color: var(--brownishGrey-color);
+            line-height: 22px;
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }

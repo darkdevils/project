@@ -22,24 +22,119 @@
                     <li><span class="number">2.</span> 내 신용정보를 조회하는 시점에 실시간으로</li>
                 </ol>
             </div>
-            <p class="layerScoreText">최근 <span class="number">1</span>년간 나의 신용 점수내역에서<br>최고 점수는 <span class="number max">954</span>점<br>최저 점수는 <span class="number low">400</span>점 입니다.</p>
+            <p class="layerScoreText">최근 <span class="number">1</span>년간 나의 신용 점수내역에서<br>최고 점수는 <span class="number max">999</span>점<br>최저 점수는 <span class="number low">400</span>점 입니다.</p>
             <ul class="graphList">
+                <!-- 최저 점수일 경우 'lowGraph' class 추가 -->
                 <li class="lowGraph">
-                    <span class="day">오늘</span>
+                    <span class="day today">오늘</span>
                     <div class="graphArea">
                         <div class="graphBar"><span class="number">400</span></div>
                     </div>
                 </li>
-                <li>
+                <!-- //최저 점수일 경우 'lowGraph' class 추가 -->
+
+                <!-- 최대 점수일 경우 'maxGraph' class 추가 -->
+                <li class="maxGraph">
                     <span class="day">07.31</span>
                     <div class="graphArea">
-                        <div class="graphBar"><span class="number">954</span></div>
+                        <div class="graphBar"><span class="number">999</span></div>
                     </div>
                 </li>
-                <li class="maxGraph">
+                <!-- 최대 점수일 경우 'maxGraph' class 추가 -->
+                <li>
                     <span class="day">07.15</span>
                     <div class="graphArea">
+                        <div class="graphBar"><span class="number">850</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">07.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">780</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">06.30</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">720</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">06.15</span>
+                    <div class="graphArea">
                         <div class="graphBar"><span class="number">700</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">05.31</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">690</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">05.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">680</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">04.30</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">670</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">04.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">630</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">03.31</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">590</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">03.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">570</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">02.28</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">550</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">02.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">510</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">01.31</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">500</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">01.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">490</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">12.31</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">470</span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="day">12.15</span>
+                    <div class="graphArea">
+                        <div class="graphBar"><span class="number">450</span></div>
                     </div>
                 </li>
             </ul>
@@ -52,26 +147,16 @@
 $(function(){
 
     let arr =  [];
-   $('.graphList li').each(function(){
+   $('.graphList li').each(function(i,el){
        let _width = $(this).find('.number').text();
         _width = Number(_width);
        arr.push(_width);
-       const maxVal = Math.max.apply(null,arr);
-       const minVal = Math.min.apply(null,arr);
+       //maxVal = Math.max.apply(null,arr);
+       //minVal = Math.min.apply(null,arr);
+
        $(this).find('.graphBar').css({
            width : (_width / 999) * 100 + '%'
        });
-
-       for( idx in arr) {
-           console.log(arr[idx]);
-           if(arr[idx] === _width) {
-               console.log('11111111');
-               return true;
-           }
-       }
-
-
-       console.log('Max:' + maxVal + '========= Min:' + minVal );
    });
 });
 </script>
