@@ -199,9 +199,9 @@ const common = {
             const _window = $(window);
             const scrollTop = _window.scrollTop();
             if(scrollTop > 0) {
-                $('.header').addClass('borBtm');
+                $('.header,.layerHead').addClass('borBtm');
             } else {
-                $('.header').removeClass('borBtm');
+                $('.header,.layerHead').removeClass('borBtm');
             }
         }
     },

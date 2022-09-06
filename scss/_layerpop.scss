@@ -32,6 +32,19 @@ $slider-btn-margin: 32px;
     width: 24px;
     height: 24px;
   }
+  /* Scroll 시 border Line 생성 */
+  &.borBtm {
+    background: var(--white-color);
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 60px;
+      left: 0;
+      background-color: #e7e9ed;
+    }
+  }
 }
 
 .layerContent {
