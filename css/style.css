@@ -674,7 +674,7 @@ div.hasDatepicker {
 .inputWrap {
   position: relative;
   border: 1px solid #dddee4;
-  height: 60px;
+  height: 56px;
   border-radius: 8px;
   overflow: hidden;
   /* Input 만원 */
@@ -682,7 +682,7 @@ div.hasDatepicker {
 }
 .inputWrap input[type=text], .inputWrap input[type=number] {
   width: 100%;
-  height: 58px;
+  height: 56px;
   border: 0;
   line-height: 60px;
   padding: 0 16px;
@@ -702,7 +702,7 @@ div.hasDatepicker {
   color: var(--brownishGrey-color);
 }
 .inputWrap.inputWrap-Money input[type=text], .inputWrap.inputWrap-Money input[type=number] {
-  line-height: 57px;
+  line-height: 56px;
   text-align: right;
   padding-right: 49px;
   font-family: "Roboto", sans-serif;
@@ -818,7 +818,7 @@ div.hasDatepicker {
 
 /* TextArea */
 .textStyle {
-  margin-top: 13px;
+  margin-top: 16px;
   border: 1px solid var(--silver-color);
   border-radius: 10px;
   overflow: hidden;
@@ -831,6 +831,7 @@ div.hasDatepicker {
 }
 .textStyle.textStyle-res {
   height: 127px;
+  margin-top: 40px;
 }
 
 /* Checkbox, RadioButton */
@@ -932,7 +933,7 @@ div.hasDatepicker {
   margin-top: 16px;
 }
 .radioType.radioType--box input[type=radio] + label {
-  padding: 16px;
+  padding: 15px 16px;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
 }
@@ -1731,6 +1732,9 @@ div.hasDatepicker {
 }
 
 /* 신쏙진단 - 변동내역팝업 */
+.layerCreditScore .grayBox {
+  margin-top: 24px;
+}
 .layerCreditScore .grayBox .orderedList {
   margin-top: 4px;
   line-height: 24px;
@@ -1774,6 +1778,7 @@ div.hasDatepicker {
 }
 .layerCreditScore .graphList li .day.today {
   color: var(--black-color);
+  font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
 }
 .layerCreditScore .graphList li .graphArea {
   width: calc(100% - 100px);
@@ -3713,7 +3718,6 @@ div.hasDatepicker {
   font-weight: 500;
 }
 .tabsContent .tabItem .text {
-  line-height: 22px;
   color: var(--brownishGrey-color);
 }
 .tabsContent .tabItem .justifyWrap h2.title {
@@ -3777,7 +3781,7 @@ div.hasDatepicker {
 /* Select Type */
 .selectWrap .selectBox, .selectWrap .btnSelect {
   position: relative;
-  height: 60px;
+  height: 56px;
   border: 1px solid var(--silver-color);
   border-radius: 8px;
   overflow: hidden;
@@ -3797,8 +3801,8 @@ div.hasDatepicker {
 }
 .selectWrap .selectBox select, .selectWrap .btnSelect select {
   width: 100%;
-  height: 58px;
-  line-height: 58px;
+  height: 56px;
+  line-height: 56px;
   padding: 0 52px 0 16px;
   border: none;
   font-size: 16px;
@@ -3975,6 +3979,7 @@ div.hasDatepicker {
 }
 .tipArea .tipArea__text {
   color: var(--font-color);
+  word-break: keep-all;
 }
 
 /* Dim 화면 */
@@ -4672,7 +4677,7 @@ button.swiper-pagination-bullet {
 }
 .subMain01 .subCopy {
   position: relative;
-  margin: 24px 0 40px;
+  margin: 30px 0 24px;
   text-align: center;
 }
 .subMain01 .subCopy .txtSmall {
@@ -4715,7 +4720,9 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: 24px;
   bottom: 74px;
+  font-size: 14px;
   font-weight: 300;
+  line-height: 22px;
   color: #5978ae;
 }
 .subMain01 .subSwiper .swiper-wrapper .swiper-slide p {
@@ -4843,7 +4850,7 @@ button.swiper-pagination-bullet {
 }
 .ssMain01 .subCopy {
   position: relative;
-  margin: 24px 0 50px;
+  margin: 30px 0 50px;
   text-align: center;
   /*@include bgImage(50%,191px,bg_ss01_submain) {
     width: 279px;
@@ -4875,7 +4882,7 @@ button.swiper-pagination-bullet {
   background-color: var(--white-color);
 }
 .ssMain01 .textContent .list {
-  margin-bottom: 56px;
+  margin-bottom: 65px;
 }
 .ssMain01 .textContent .list li {
   position: relative;
@@ -5373,6 +5380,9 @@ button.swiper-pagination-bullet {
   color: var(--font-color);
   line-height: 22px;
 }
+.reservationArea .timeArea dl dt:first-child, .sectionInfo .timeArea dl dt:first-child {
+  margin-top: 40px;
+}
 .reservationArea .timeArea dl dd, .sectionInfo .timeArea dl dd {
   margin-left: -8px;
 }
@@ -5474,14 +5484,14 @@ button.swiper-pagination-bullet {
   margin-top: 12px;
 }
 .companyList > ul .item {
-  padding: 24px;
+  padding: 23px 24px;
   border: 1px solid #e5e5e5;
   border-radius: 18px;
 }
 .companyList > ul .item .textContent {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 .companyList > ul .item .textContent .thumbnail {
   position: relative;
@@ -5580,7 +5590,7 @@ button.swiper-pagination-bullet {
 }
 .reservationTxt dt {
   float: left;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   width: 61px;
   font-size: 16px;
   font-weight: 300;
@@ -5588,7 +5598,7 @@ button.swiper-pagination-bullet {
 }
 .reservationTxt dd {
   padding-left: 85px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-align: right;
   font-size: 16px;
 }
@@ -5794,6 +5804,7 @@ button.swiper-pagination-bullet {
   -webkit-box-orient: vertical;
   color: #666666;
   line-height: 22px;
+  font-size: 14px;
 }
 .boardWrap__list li .textContent .textArea + .thumbnail, .listType li .textContent .textArea + .thumbnail {
   position: relative;

@@ -405,6 +405,7 @@ $slider-btn-margin: 32px;
 /* 신쏙진단 - 변동내역팝업 */
 .layerCreditScore {
   .grayBox {
+    margin-top: 24px;
     .orderedList {
       margin-top: 4px;
       line-height: 24px;
@@ -449,6 +450,7 @@ $slider-btn-margin: 32px;
         @include numberText;
         &.today {
           color: var(--black-color);
+          font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
         }
       }
       .graphArea {

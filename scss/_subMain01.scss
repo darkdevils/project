@@ -12,7 +12,7 @@
   }
   .subCopy {
     position: relative;
-    margin: 24px 0 40px;
+    margin: 30px 0 24px;
     text-align: center;
     .txtSmall {
       display: block;
@@ -50,7 +50,9 @@
           position: absolute;
           left: 24px;
           bottom: 74px;
+          font-size: 14px;
           font-weight: 300;
+          line-height: 22px;
           color: #5978ae;
         }
         p {
@@ -185,7 +187,7 @@
   background-color: #eeedf7;
   .subCopy {
     position: relative;
-    margin: 24px 0 50px;
+    margin: 30px 0 50px;
     text-align: center;
     /*@include bgImage(50%,191px,bg_ss01_submain) {
       width: 279px;
@@ -216,7 +218,7 @@
     padding: 24px;
     background-color: var(--white-color);
     .list {
-      margin-bottom: 56px;
+      margin-bottom: 65px;
       li {
         position: relative;
         height: 56px;
