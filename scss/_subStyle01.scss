@@ -1268,5 +1268,51 @@
         width: 100%;
       }
     }
+    .finalResult {
+      border: 1px solid #e3e4e8;
+      border-radius: 12px;
+      .justifyWrap {
+        padding: 24px 24px 20px;
+      }
+      .attention {
+        color: #b6901f;
+        font-weight: 400;
+      }
+      .danger {
+        color: #f26100;
+        font-weight: 400;
+      }
+      .good {
+        color: #70a301;
+        font-weight: 400;
+      }
+      ul {
+        border-top: 1px solid #e3e4e8;
+        padding: 19px 24px 24px;
+        li {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          padding-left: 12px;
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background: #999;
+          }
+          span {
+            color: var(--brownishGrey-color);
+            font-weight: 300;
+          }
+          + li {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
   }
 }

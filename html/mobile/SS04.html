@@ -24,7 +24,9 @@
                     <div class="percent">상위<span class="number">10</span>%</div>
                     <a href="#" class="creditScore"><span class="number">954</span>점</a>
                 </div>
+                <!-- 차트 확인 후 진행 -->
                 <div class="creditGraph"></div>
+                <!-- //차트 확인 후 진행 -->
             </article>
             <hr class="bgLine">
             <article>
@@ -62,19 +64,19 @@
             <article>
                 <h2 class="title">채무과중도</h2>
                 <p class="text">채무과중도는 DSR, DTA 수치 를 기준으로 산정한  평가결과입니다. DSR은 월채무상환액  대비 월소득의 비율이며 DTA는 총대출잔액 대비 총재산의 비율입니다.</p>
-                <div>
+                <div class="finalResult">
                     <div class="justifyWrap">
-                        <span class="">채무과중도 최종 평가결과</span>
-                        <span>‘주의’</span>
+                        <span>채무과중도 최종 평가결과</span>
+                        <span class="attention">‘주의’</span>
                     </div>
                     <ul>
                         <li>
-                            <span class="">DSR(채무상환액 대비 월소득 비율) </span>
-                            <span>위험</span>
+                            <span>DSR(채무상환액 대비 월소득 비율) </span>
+                            <span class="danger">위험</span>
                         </li>
                         <li>
-                            <span class="">DTA(대출잔액 대비 총재산 비율)</span>
-                            <span>양호</span>
+                            <span>DTA(대출잔액 대비 총재산 비율)</span>
+                            <span class="good">양호</span>
                         </li>
                     </ul>
                 </div>
@@ -114,5 +116,6 @@
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/lib/datepicker.js"></script>
 <script src="../../js/common.js"></script>
+
 </body>
 </html>

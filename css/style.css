@@ -6282,6 +6282,52 @@ button.swiper-pagination-bullet {
 .articleWrap article .videoArea iframe {
   width: 100%;
 }
+.articleWrap article .finalResult {
+  border: 1px solid #e3e4e8;
+  border-radius: 12px;
+}
+.articleWrap article .finalResult .justifyWrap {
+  padding: 24px 24px 20px;
+}
+.articleWrap article .finalResult .attention {
+  color: #b6901f;
+  font-weight: 400;
+}
+.articleWrap article .finalResult .danger {
+  color: #f26100;
+  font-weight: 400;
+}
+.articleWrap article .finalResult .good {
+  color: #70a301;
+  font-weight: 400;
+}
+.articleWrap article .finalResult ul {
+  border-top: 1px solid #e3e4e8;
+  padding: 19px 24px 24px;
+}
+.articleWrap article .finalResult ul li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 12px;
+}
+.articleWrap article .finalResult ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: #999;
+}
+.articleWrap article .finalResult ul li span {
+  color: var(--brownishGrey-color);
+  font-weight: 300;
+}
+.articleWrap article .finalResult ul li + li {
+  margin-top: 8px;
+}
 
 /* 파일 첨부 */
 .attch {
