@@ -85,7 +85,9 @@ const common = {
         },
         slideClose: function(el) {
             const layerH = $(el).closest('.slideLayer').height();
-            $('.dim').fadeOut();
+            $('.dim').fadeOut().queue(function(){
+                $('.dim').remove();
+            });
             $(el).closest('.slideLayer').animate({
                 bottom: -layerH
             });
@@ -118,7 +120,9 @@ const common = {
 
                 function layerClose() {
                     const layerH = layerPopup.height();
-                    $('.dim').fadeOut();
+                    $('.dim').fadeOut().queue(function(){
+                        $('.dim').remove();
+                    });
                     layerPopup.animate({
                         bottom: -layerH
                     });
