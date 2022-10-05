@@ -4060,6 +4060,120 @@ h2.h2_title {
   line-height: 30px;
 }
 
+/* Loading */
+.loadingWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.loadingWrap:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: var(--black-color);
+  opacity: 0.5;
+}
+.loadingWrap .loadingCenter {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -9px 0 0 -9px;
+  z-index: 2;
+}
+.loadingWrap .loadingBall {
+  width: 32px;
+  height: 32px;
+  clear: both;
+  margin: 20px auto;
+}
+.loadingWrap .loadingBall, .loadingWrap .loadingBall:before, .loadingWrap .loadingBall:after {
+  border-radius: 50%;
+  background-color: #000;
+  width: 18px;
+  height: 18px;
+  transform-origin: center center;
+  display: inline-block;
+}
+.loadingWrap .loadingBall {
+  position: relative;
+  background-color: black;
+  opacity: 1;
+  -webkit-animation: spScaleAlpha 1s infinite linear;
+  animation: spScaleAlpha 1s infinite linear;
+}
+.loadingWrap .loadingBall:before, .loadingWrap .loadingBall:after {
+  content: "";
+  position: relative;
+  opacity: 0.25;
+}
+.loadingWrap .loadingBall:before {
+  left: 30px;
+  top: 0px;
+  -webkit-animation: spScaleAlphaBefore 1s infinite linear;
+  animation: spScaleAlphaBefore 1s infinite linear;
+}
+.loadingWrap .loadingBall:after {
+  left: -30px;
+  top: -23px;
+  -webkit-animation: spScaleAlphaAfter 1s infinite linear;
+  animation: spScaleAlphaAfter 1s infinite linear;
+}
+@-webkit-keyframes spScaleAlpha {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.25;
+  }
+  66% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spScaleAlpha {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.25;
+  }
+  66% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spScaleAlphaBefore {
+  0% {
+    opacity: 0.25;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0.25;
+  }
+}
+@keyframes spScaleAlphaAfter {
+  33% {
+    opacity: 0.25;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
 /**
  * Swiper 8.3.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -6503,7 +6617,9 @@ button.swiper-pagination-bullet {
 }
 .totalMenu .joinWrap .text {
   font-size: 14px;
+  font-weight: 300;
   line-height: 22px;
+  letter-spacing: 0;
   color: var(--brownishGrey-color);
 }
 .totalMenu .totalMenu__item {
@@ -6620,7 +6736,7 @@ button.swiper-pagination-bullet {
   background: url("../images/member_img02.png") no-repeat;
   background-size: contain;
   transform: rotate(9deg);
-  opacity: 0.3;
+  opacity: 0.4;
   animation: animate2 0.7s ease 0.8s 1 both;
 }
 .joinMembership .memberImg03 {
@@ -6632,7 +6748,7 @@ button.swiper-pagination-bullet {
   background: url("../images/member_img02.png") no-repeat;
   background-size: contain;
   transform: rotate(10deg);
-  opacity: 0.3;
+  opacity: 0.4;
   animation: animate3 0.7s ease 1.2s 1 both;
 }
 .joinMembership .memberImg04 {
@@ -6644,7 +6760,7 @@ button.swiper-pagination-bullet {
   background: url("../images/member_img02.png") no-repeat;
   background-size: contain;
   transform: rotate(10deg);
-  opacity: 0.3;
+  opacity: 0.4;
   animation: animate4 0.7s ease 1s 1 both;
 }
 .joinMembership .btnWrap {
@@ -6767,7 +6883,56 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
-/* 신용내역 */
+/* 신용내역 - 신용분석리포트 */
+.creditRating {
+  padding: 24px 24px 0 !important;
+}
+.creditRating h3.title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+.creditRating .text {
+  color: #666666;
+}
+.creditRating .creditRating__graph {
+  padding: 45px 0;
+}
+.creditRating .creditRating__graph .graph {
+  display: flex;
+  align-items: center;
+}
+.creditRating .creditRating__graph .graph .title {
+  width: 67px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.creditRating .creditRating__graph .graph .graphBg {
+  width: calc(100% - 101px);
+  background-color: #ebebeb;
+  height: 12px;
+  border-radius: 100px;
+}
+.creditRating .creditRating__graph .graph .graphBg .graphBar {
+  background-color: var(--primary-color);
+  height: 12px;
+  border-radius: 100px;
+  transition: 0.5s ease;
+}
+.creditRating .creditRating__graph .graph .percent {
+  width: 50px;
+  font-size: 14px;
+  color: #333333;
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+}
+.creditRating .creditRating__graph .graph + .graph {
+  margin-top: 26px;
+}
+
 @keyframes textAnimate1 {
   0% {
     transform: translate(0, 25px);

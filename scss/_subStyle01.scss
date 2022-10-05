@@ -1346,7 +1346,9 @@
     }
     .text {
       font-size: 14px;
+      font-weight: 300;
       line-height: 22px;
+      letter-spacing: 0;
       color: var(--brownishGrey-color);
     }
   }
@@ -1454,7 +1456,7 @@
     @include imageUrl(member_img02,png);
     background-size: contain;
     transform: rotate(9deg);
-    opacity: 0.3;
+    opacity: 0.4;
     animation: animate2 0.7s ease 0.8s 1 both;
   }
   .memberImg03 {
@@ -1466,7 +1468,7 @@
     @include imageUrl(member_img02,png);
     background-size: contain;
     transform: rotate(10deg);
-    opacity: 0.3;
+    opacity: 0.4;
     animation: animate3 0.7s ease 1.2s 1 both;
   }
   .memberImg04 {
@@ -1478,7 +1480,7 @@
     @include imageUrl(member_img02,png);
     background-size: contain;
     transform: rotate(10deg);
-    opacity: 0.3;
+    opacity: 0.4;
     animation: animate4 0.7s ease 1s 1 both;
   }
   .btnWrap {
@@ -1597,7 +1599,55 @@
   }
 }
 
-/* 신용내역 */
+/* 신용내역 - 신용분석리포트 */
+.creditRating {
+  padding: 24px 24px 0 !important;
+  h3.title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+  .text {
+    color: $Grey600;
+  }
+  .creditRating__graph {
+    padding: 45px 0;
+    .graph {
+      display: flex;
+      align-items: center;
+      .title {
+        width: 67px;
+        color: $Grey600;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+      }
+      .graphBg {
+        width: calc(100% - 101px);
+        background-color: #ebebeb;
+        height: 12px;
+        border-radius: 100px;
+        .graphBar {
+          background-color: var(--primary-color);
+          height: 12px;
+          border-radius: 100px;
+          transition: 0.5s ease;
+        }
+      }
+      .percent {
+        width: 50px;
+        font-size: 14px;
+        color: $Grey800;
+        text-align: right;
+        font-family: 'Roboto', sans-serif;
+      }
+      + .graph {
+        margin-top: 26px;
+      }
+    }
+  }
+}
 .accodianWrap {
 
 }
