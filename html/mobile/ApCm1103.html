@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원가입 - 회원가입 약관(동의전)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">회원가입</h1>
+    </div>
+    <div class="container">
+        <div class="agreeTerms">
+            <h2 class="h2_title">약관동의</h2>
+            <p class="text">신용플러스 회원가입을 위하여 서비스이용 약관에 동의해주세요.</p>
+            <div class="agreeCheck">
+                <div class="totalCheck checkboxType">
+                    <input type="checkbox" name="ckAll" id="totalCk"><label for="totalCk">모두 동의합니다.</label>
+                </div>
+                <ul>
+                    <li>
+                        <div class="checkboxType">
+                            <input type="checkbox" name="ck" id="check01-1"><label for="check01-1">(필수) 신용플러스 서비스이용 약관</label>
+                        </div>
+                        <a href="#" class="agreeLink"><span class="blind">신용플러스 서비스이용 약관보기</span></a>
+                    </li>
+                    <li>
+                        <div class="checkboxType">
+                            <input type="checkbox" name="ck" id="check01-2"><label for="check01-2">(필수) KCB 서비스연결 이용약관</label>
+                        </div>
+                        <a href="#" class="agreeLink"><span class="blind">KCB 서비스연결 이용약관 보기</span></a>
+                    </li>
+                    <li>
+                        <div class="checkboxType">
+                            <input type="checkbox" name="ck" id="check01-3"><label for="check01-3">(필수) NICE 서비스연결 이용약관</label>
+                        </div>
+                        <a href="#" class="agreeLink"><span class="blind">NICE 서비스연결 이용약관 보기</span></a>
+                    </li>
+                    <li>
+                        <div class="checkboxType">
+                            <input type="checkbox" name="ck" id="check01-4"><label for="check01-4">(필수) 개인정보처리방침</label>
+                        </div>
+                        <a href="#" class="agreeLink"><span class="blind">개인정보처리방침 약관보기</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d" disabled><span>다음</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    const $checkAll = $("#totalCk");
+    $checkAll.change(function() {
+        const $this = $(this);
+        const checked = $this.prop('checked');
+        $('input[name="ck"]').prop('checked',checked);
+        if($this.prop('checked')) {
+            $('.fixedBtm button').prop('disabled', false);
+        } else {
+            $('.fixedBtm button').prop('disabled', true);
+        }
+    });
+    const ckBox = $('ul li input[name="ck"]');
+    ckBox.change(function() {
+        const ckBoxLength = ckBox.length;
+        const checkedLength = $('ul li input[name="ck"]:checked').length;
+        const selectAll = (ckBoxLength == checkedLength);
+        $checkAll.prop('checked', selectAll);
+        if(selectAll) {
+            $('.fixedBtm button').prop('disabled', false);
+        } else {
+            $('.fixedBtm button').prop('disabled', true);
+        }
+    });
+</script>
+</body>
+</html>

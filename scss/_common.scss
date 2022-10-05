@@ -168,6 +168,30 @@ $border-line: #ededf0;
       background-color: var(--red-color);
     }
   }
+  .btnHome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    @include bgImage(50%,50%, common_sprite) {
+      width: 24px;
+      height: 24px;
+      margin: -12px 0 0 -12px;
+      background-size: 250px;
+      background-position: calc(-419px / 2) calc(-258px / 2);
+    }
+  }
+  .menuClose {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    @include imageUrl(common_sprite,png);
+    background-position: -29px 0;
+    background-size: 250px;
+    width: 24px;
+    height: 24px;
+  }
 
   /* 게시판 글쓰기 버튼 */
   .btnWriting {
@@ -592,4 +616,11 @@ $border-line: #ededf0;
   background-color: #000;
   opacity: 0.6;
   z-index: 99;
+}
+
+/* Title H2 */
+h2.h2_title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
 }

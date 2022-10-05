@@ -59,6 +59,17 @@ $slider-btn-margin: 32px;
   .completeWrap {
     padding: 70px 24px 0;
   }
+  /* 약관보기팝업 */
+  .agreeTermsContent {
+    padding-top: 24px;
+    * {
+      color: var(--brownishGrey-color);
+      margin-bottom: 20px;
+    }
+    h3.title {
+      color: var(--black-color);
+    }
+  }
 }
 
 /* 신용상담 후기작성 */

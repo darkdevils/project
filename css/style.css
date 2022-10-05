@@ -109,6 +109,7 @@
   font-weight: 300;
   src: url("../fonts/roboto-v30-latin-300.eot"); /* IE9 Compat Modes */
   src: local(""), url("../fonts/roboto-v30-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-300.woff2") format("woff2"), url("../fonts/roboto-v30-latin-300.woff") format("woff"), url("../fonts/roboto-v30-latin-300.ttf") format("truetype"), url("../fonts/roboto-v30-latin-300.svg#Roboto") format("svg"); /* Legacy iOS */
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 /* roboto-regular - latin */
 @font-face {
@@ -117,6 +118,7 @@
   font-weight: 400;
   src: url("../fonts/roboto-v30-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""), url("../fonts/roboto-v30-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin-regular.woff") format("woff"), url("../fonts/roboto-v30-latin-regular.ttf") format("truetype"), url("../fonts/roboto-v30-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 /* roboto-500 - latin */
 @font-face {
@@ -125,6 +127,7 @@
   font-weight: 500;
   src: url("../fonts/roboto-v30-latin-500.eot"); /* IE9 Compat Modes */
   src: local(""), url("../fonts/roboto-v30-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto-v30-latin-500.woff") format("woff"), url("../fonts/roboto-v30-latin-500.ttf") format("truetype"), url("../fonts/roboto-v30-latin-500.svg#Roboto") format("svg"); /* Legacy iOS */
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 /* root */
 :root {
@@ -237,7 +240,7 @@ html, body {
 body, th, td, input, select, textarea, button, div, li, span, p, select, textarea, input, button {
   font-size: 16px;
   line-height: 24px;
-  font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "돋움", dotum, sans-serif;
   letter-spacing: -0.5px;
   font-weight: 400;
   color: #000;
@@ -1389,6 +1392,7 @@ div.hasDatepicker {
 .layerContent {
   position: relative;
   padding: 60px 0 0;
+  /* 약관보기팝업 */
 }
 .layerContent > div {
   padding: 0 24px;
@@ -1398,6 +1402,16 @@ div.hasDatepicker {
 }
 .layerContent .completeWrap {
   padding: 70px 24px 0;
+}
+.layerContent .agreeTermsContent {
+  padding-top: 24px;
+}
+.layerContent .agreeTermsContent * {
+  color: var(--brownishGrey-color);
+  margin-bottom: 20px;
+}
+.layerContent .agreeTermsContent h3.title {
+  color: var(--black-color);
 }
 
 /* 신용상담 후기작성 */
@@ -3568,6 +3582,36 @@ div.hasDatepicker {
   border-radius: 4px;
   background-color: var(--red-color);
 }
+.header .btnHome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+}
+.header .btnHome:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("../images/common_sprite.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  background-size: 250px;
+  background-position: -209.5px -129px;
+}
+.header .menuClose {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: url("../images/common_sprite.png") no-repeat;
+  background-position: -29px 0;
+  background-size: 250px;
+  width: 24px;
+  height: 24px;
+}
 .header .btnWriting {
   position: absolute;
   right: 20px;
@@ -3992,6 +4036,13 @@ div.hasDatepicker {
   background-color: #000;
   opacity: 0.6;
   z-index: 99;
+}
+
+/* Title H2 */
+h2.h2_title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
 }
 
 /**
@@ -5715,6 +5766,21 @@ button.swiper-pagination-bullet {
   border-top: 1px solid #e7e9ee;
   border-bottom: 1px solid #e7e9ee;
 }
+.completeWrap.memberCompleted {
+  position: relative;
+  height: calc(100vh - 156px);
+  padding: 80px 0 0;
+}
+.completeWrap.memberCompleted .psBtm {
+  position: absolute;
+  left: 0;
+  bottom: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--font-color);
+  line-height: 22px;
+}
 
 /* 상담내역 */
 .detailsList {
@@ -6408,6 +6474,287 @@ button.swiper-pagination-bullet {
   margin-top: 8px;
 }
 
+/* 전체메뉴 */
+.totalMenu .joinWrap {
+  padding: 24px 25px 30px;
+}
+.totalMenu .joinWrap strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--black-color);
+}
+.totalMenu .joinWrap .text {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--brownishGrey-color);
+}
+.totalMenu .totalMenu__item {
+  margin: 0 24px;
+  padding: 30px 0;
+}
+.totalMenu .totalMenu__item h2.title {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #999999;
+}
+.totalMenu .totalMenu__item h2.title a {
+  position: relative;
+  display: block;
+  color: #999999;
+}
+.totalMenu .totalMenu__item h2.title a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 0;
+  background: url("../images/common_sprite.png") no-repeat;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-position: -178.5px -70px;
+  background-size: 250px;
+}
+.totalMenu .totalMenu__item ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.totalMenu .totalMenu__item ul li {
+  width: 50%;
+}
+.totalMenu .totalMenu__item ul li a {
+  position: relative;
+  padding: 12px 0;
+  display: block;
+  color: var(--black-color);
+}
+.totalMenu .totalMenu__item ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 50%;
+  background: url("../images/common_sprite.png") no-repeat;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background-position: -185.5px -129px;
+  background-size: 250px;
+}
+.totalMenu .totalMenu__item ul li:nth-child(even) {
+  padding-left: 16px;
+}
+.totalMenu .totalMenu__item + .totalMenu__item {
+  border-top: 1px solid #e2e2e3;
+}
+.totalMenu .totalMenu__item:last-child {
+  padding-bottom: 0;
+}
+
+/***** 회원가입 *****/
+/* 회원가입 안내 */
+.joinMembership {
+  position: relative;
+  padding: 60px 24px 0;
+  height: 100vh;
+  background-color: #f5f5f5;
+  /*background-image: url(../images/temp/bg_test.png);
+  background-size: contain;*/
+  overflow: hidden;
+}
+.joinMembership .aniText01, .joinMembership .aniText02 {
+  display: block;
+  font-size: 24px;
+  line-height: 36px;
+}
+.joinMembership .aniText01 {
+  animation: textAnimate1 0.7s ease 1 both;
+}
+.joinMembership .aniText02 {
+  font-weight: 500;
+  animation: textAnimate1 0.7s ease 0.2s 1 both;
+}
+.joinMembership .aniText03 {
+  margin-top: 16px;
+  color: var(--brownishGrey-color);
+  animation: textAnimate2 0.7s ease 0.2s 1 both;
+}
+.joinMembership .memberImg01 {
+  position: absolute;
+  right: calc(0% - 79px);
+  bottom: 176px;
+  width: 349px;
+  height: 380px;
+  background: url("../images/member_img01.png") no-repeat;
+  background-size: contain;
+  transform: rotate(10deg);
+  animation: animate 0.7s ease 0.6s 1 both;
+}
+.joinMembership .memberImg02 {
+  position: absolute;
+  right: calc(0% + 185px);
+  bottom: -93px;
+  width: 350px;
+  height: 380px;
+  background: url("../images/member_img02.png") no-repeat;
+  background-size: contain;
+  transform: rotate(9deg);
+  opacity: 0.3;
+  animation: animate2 0.7s ease 0.8s 1 both;
+}
+.joinMembership .memberImg03 {
+  position: absolute;
+  right: 146px;
+  bottom: -340px;
+  width: 350px;
+  height: 380px;
+  background: url("../images/member_img02.png") no-repeat;
+  background-size: contain;
+  transform: rotate(10deg);
+  opacity: 0.3;
+  animation: animate3 0.7s ease 1.2s 1 both;
+}
+.joinMembership .memberImg04 {
+  position: absolute;
+  right: -120px;
+  bottom: -73px;
+  width: 350px;
+  height: 380px;
+  background: url("../images/member_img02.png") no-repeat;
+  background-size: contain;
+  transform: rotate(10deg);
+  opacity: 0.3;
+  animation: animate4 0.7s ease 1s 1 both;
+}
+.joinMembership .btnWrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 40px;
+  padding: 0 24px;
+  animation: btnAnimate 1s ease-in-out 1.8s 1 both;
+}
+.joinMembership .btnWrap .text {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--brownishGrey-color);
+}
+
+.agreeTerms {
+  padding: 24px 24px 0;
+}
+.agreeTerms .text {
+  margin: 8px 0 30px;
+  color: var(--brownishGrey-color);
+}
+.agreeTerms .agreeCheck .totalCheck {
+  margin-bottom: 22px;
+}
+.agreeTerms .agreeCheck .totalCheck label {
+  font-weight: 500;
+}
+.agreeTerms .agreeCheck ul {
+  border-top: 1px solid #e2e2e3;
+}
+.agreeTerms .agreeCheck ul li {
+  position: relative;
+  margin-top: 20px;
+}
+.agreeTerms .agreeCheck ul li .checkboxType input[type=checkbox] + label {
+  color: var(--brownishGrey-color);
+}
+.agreeTerms .agreeCheck ul li .agreeLink {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
+.agreeTerms .agreeCheck ul li .agreeLink:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background: url("../images/common_sprite.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background-position: -184.5px -129px;
+  background-size: 250px;
+}
+
+@keyframes textAnimate1 {
+  0% {
+    transform: translate(0, 25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes textAnimate2 {
+  0% {
+    transform: translate(0, 35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translate(296px, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translate(-240px, 0) rotate(9deg);
+    right: calc(0% + 185px);
+  }
+  100% {
+    transform: translate(0, 0) rotate(9deg);
+    right: calc(0% + 185px);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: translate(0, 300px) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translate(0, 300px) rotate(9deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(9deg);
+  }
+}
+@keyframes btnAnimate {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 /* 파일 첨부 */
 .attch {
   width: 100%;
