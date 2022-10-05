@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용진단</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">신용점수 변동·조회</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="tabWrap">
+            <ul id="tabs" class="tabType">
+                <li><a href="#">점수내역</a></li>
+                <li><a href="#">조회내역</a></li>
+                <li><a href="#">변동사유</a></li>
+            </ul>
+        </div>
+        <div id="tabs__con" class="tabContent">
+            <!-- 점수내역 -->
+            <div class="layerCreditScore">
+                <p class="layerScoreText">최근 1년간<br>최고 점수는 <span class="number max">999</span>점<br>최저 점수는 <span class="number low">400</span>점 입니다.</p>
+                <ul class="graphList">
+                    <!-- 최저 점수일 경우 'lowGraph' class 추가 -->
+                    <li class="lowGraph">
+                        <span class="day today">오늘</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">400</span></div>
+                        </div>
+                    </li>
+                    <!-- //최저 점수일 경우 'lowGraph' class 추가 -->
+
+                    <!-- 최대 점수일 경우 'maxGraph' class 추가 -->
+                    <li class="maxGraph">
+                        <span class="day">07.31</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">999</span></div>
+                        </div>
+                    </li>
+                    <!-- 최대 점수일 경우 'maxGraph' class 추가 -->
+                    <li>
+                        <span class="day">07.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">850</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">07.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">780</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">06.30</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">720</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">06.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">700</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">05.31</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">690</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">05.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">680</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">04.30</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">670</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">04.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">630</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">03.31</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">590</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">03.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">570</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">02.28</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">550</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">02.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">510</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">01.31</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">500</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">01.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">490</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">12.31</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">470</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="day">12.15</span>
+                        <div class="graphArea">
+                            <div class="graphBar"><span class="number">450</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //점수내역 -->
+
+            <!-- 조회내역 -->
+            <div class="areaDetail">
+                <div class="textWrap">최근 1년간<br><span class="blueCor">5</span>건의 조회내역이 있어요</div>
+                <h3 class="titleBox">조회 상세내역</h3>
+                <ul class="listDetail">
+                    <!-- 조회 내역이 없을 경우 -->
+                    <!--<li class="noData">조회 내역이 없습니다.</li>-->
+                    <!-- //조회 내역이 없을 경우 -->
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                            <span class="content">개설</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                            <span class="content">개설</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                            <span class="content">개설</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                            <span class="content">개설</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                            <span class="content">개설</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //조회내역 -->
+
+            <!-- 변동사유 -->
+            <div class="areaDetail">
+                <div class="textWrap">최근 1년간<br><span class="blueCor">10</span>건의 변동내역이 있어요</div>
+                <h3 class="titleBox">변동 상세내역</h3>
+                <ul class="listDetail">
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">우리은행</span>
+                            <span class="content">대출변동</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">150,500,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">삼성카드</span>
+                            <span class="content">신용/체크카드 발급</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">2,350,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">카카오뱅크</span>
+                            <span class="content">신용정보 조회</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">2,350,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">부산은행</span>
+                            <span class="content">대출계좌 해지</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">2,350,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">우리은행</span>
+                            <span class="content">대출변동</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">2,350,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">우리은행</span>
+                            <span class="content">대출변동</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">2,350,000원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //변동사유 -->
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+    // 탭
+    common.tabType('#tabs',0);
+
+    // 그래프
+    let arr =  [];
+   $('.graphList li').each(function(i,el){
+       let _width = $(this).find('.number').text();
+        _width = Number(_width);
+       arr.push(_width);
+       //maxVal = Math.max.apply(null,arr);
+       //minVal = Math.min.apply(null,arr);
+
+       $(this).find('.graphBar').css({
+           width : (_width / 999) * 100 + '%'
+       });
+   });
+});
+</script>
+
+</body>
+</html>

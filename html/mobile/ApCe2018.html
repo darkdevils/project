@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용내역_신용분석리포트(거래기간)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">신용분석리포트</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="">
+            <h3 class="title">신용도 반영비중</h3>
+            <p class="text">2022년 07월 01일 기준 신용분석 정보입니다.</p>
+            <div class="graph">
+                <div class="title">상환이력</div>
+                <div class="graphBg">
+                    <div class="graphBar" style="width: 80%;"></div>
+                </div>
+                <div class="percent">31%</div>
+            </div>
+            <div class="graph">
+                <div class="title">부채</div>
+                <div class="graphBg">
+                    <div class="graphBar" style="width: 100%;"></div>
+                </div>
+                <div class="percent">100%</div>
+            </div>
+            <div class="graph">
+                <div class="title">신용형태</div>
+                <div class="graphBg">
+                    <div class="graphBar" style="width: 55%;"></div>
+                </div>
+                <div class="percent">55%</div>
+            </div>
+            <div class="graph">
+                <div class="title">거래기간</div>
+                <div class="graphBg">
+                    <div class="graphBar" style="width: 90%;"></div>
+                </div>
+                <div class="percent">90%</div>
+            </div>
+        </div>
+        <hr class="bgLine">
+        <div>
+            <h3 class="title">신용분석 상세내용</h3>
+            <div class="accodianWrap">
+                <ul>
+                    <li>
+                        <div class="justifyWrap">
+                            <span>거래기간</span>
+                            <span class="infoCor infoCor--orange">불안정</span>
+                        </div>
+                        <div class="content">
+                            <ul class="blType">
+                                <li>신용거래기간이 평균 수준입니다.</li>
+                                <li>회원님의 신용거래기간 수준은 동일성별에 비해동일 수준이며, 동일연령에 비해 높은 수준입니다.</li>
+                                <li>회원님의 신용거래기간수준은 전체 대상자 중 상위 40% 수준입니다.</li>
+                            </ul>
+                            <h4 class="title">카드 거래기간</h4>
+                            <ul class="blType">
+                                <li class="justifyWrap">
+                                    <span>가장 오래된 카드<br>(신용/체크) 보유기간</span>
+                                    <span>1,500일</span>
+                                </li>
+                                <li class="justifyWrap">
+                                    <span>최근 개설한  카드<br>(신용/체크) 보유기간</span>
+                                    <span>200일</span>
+                                </li>
+                            </ul>
+                            <h4 class="title">대출 거래기간</h4>
+                            <ul class="blType">
+                                <li class="justifyWrap">
+                                    <span>가장 오래된 대출 거래기간</span>
+                                    <span>500일</span>
+                                </li>
+                                <li class="justifyWrap">
+                                    <span>최근 개설한  대출 거래기간</span>
+                                    <span>500일</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+    // 탭
+    common.tabType('#tabs',0);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용내역</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">신용내역</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="tabWrap">
+            <ul id="tabs" class="tabType">
+                <li><a href="#">카드</a></li>
+                <li><a href="#">대출</a></li>
+                <li><a href="#">연체</a></li>
+                <li><a href="#">보증</a></li>
+            </ul>
+        </div>
+        <div id="tabs__con" class="tabContent">
+            <!-- 카드 -->
+            <div class="areaDetail">
+                <div class="textWrap">6월 사용 금액은<br><span class="blueCor">1,500,000</span>원 이에요</div>
+                <h3 class="titleBox">카드 상세내역</h3>
+                <ul class="listDetail">
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">국민은행</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">2,350,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">토스뱅크</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">150,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">150,000원</span>
+                        </div>
+                    </li>
+                    <!-- 보증 내역이 없을 경우 -->
+                    <!--<li class="noData">보증 내역이 없습니다.</li>-->
+                    <!-- //보증 내역이 없을 경우 -->
+                </ul>
+            </div>
+            <!-- //카드 -->
+
+            <!-- 대출 -->
+            <div class="areaDetail">
+                <div class="textWrap">현재 대출 잔액은<br><span class="blueCor">10,000,000</span>원 이에요</div>
+                <h3 class="titleBox">대출 상세내역</h3>
+                <ul class="listDetail">
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">국민은행</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">개설일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">만기일자</span>
+                            <span class="textNum">2024-03-02</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">10,000,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">토스뱅크</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">개설일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">만기일자</span>
+                            <span class="textNum">2024-03-02</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">800,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">개설일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">만기일자</span>
+                            <span class="textNum">2024-03-02</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">대출잔액</span>
+                            <span class="textNum">2,500,000원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //대출 -->
+
+            <!-- 연체 -->
+            <div class="areaDetail">
+                <div class="textWrap">현재 연체 잔액은<br><span class="blueCor">5,251,200,000</span>원 이에요</div>
+                <h3 class="titleBox">연체 상세내역</h3>
+                <ul class="listDetail">
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">국민은행</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">연체발생일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">150,500,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">토스뱅크</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">연체발생일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">150,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">연체발생일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">2,050,000원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //연체 -->
+
+            <!-- 보증 -->
+            <div class="areaDetail">
+                <div class="textWrap">현재 보증 잔액은<br><span class="blueCor">500,000</span>원 이에요</div>
+                <h3 class="titleBox">보증 상세내역</h3>
+                <ul class="listDetail">
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">국민은행</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">개설일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">150,500,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">토스뱅크</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">개설일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">150,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="justifyWrap">
+                            <span class="title">현대카드</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">개설일자</span>
+                            <span class="textNum">2021-12-22</span>
+                        </div>
+                        <div class="justifyWrap">
+                            <span class="grayTitle">금액</span>
+                            <span class="textNum">2,050,000원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //보증 -->
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+    // 탭
+    common.tabType('#tabs',0);
+});
+</script>
+
+</body>
+</html>

@@ -70,6 +70,20 @@ $slider-btn-margin: 32px;
       color: var(--black-color);
     }
   }
+
+  .tabWrap {
+    padding: 0;
+  }
+  .tabContent {
+    padding: 0;
+    .textWrap {
+      padding: 40px 24px;
+    }
+    .layerCreditScore {
+      padding: 0 24px;
+    }
+
+  }
 }
 
 /* 신용상담 후기작성 */
@@ -451,6 +465,7 @@ $slider-btn-margin: 32px;
     }
   }
   .graphList {
+    padding-bottom: 80px;
     li {
       display: flex;
       .day {

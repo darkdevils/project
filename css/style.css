@@ -1413,6 +1413,18 @@ div.hasDatepicker {
 .layerContent .agreeTermsContent h3.title {
   color: var(--black-color);
 }
+.layerContent .tabWrap {
+  padding: 0;
+}
+.layerContent .tabContent {
+  padding: 0;
+}
+.layerContent .tabContent .textWrap {
+  padding: 40px 24px;
+}
+.layerContent .tabContent .layerCreditScore {
+  padding: 0 24px;
+}
 
 /* 신용상담 후기작성 */
 .layerReview .layerReview__rating {
@@ -1777,6 +1789,9 @@ div.hasDatepicker {
 }
 .layerCreditScore .layerScoreText span.low {
   color: var(--lipstick-color);
+}
+.layerCreditScore .graphList {
+  padding-bottom: 80px;
 }
 .layerCreditScore .graphList li {
   display: flex;
@@ -6691,6 +6706,68 @@ button.swiper-pagination-bullet {
   background-size: 250px;
 }
 
+/***** 신용진단 *****/
+/* 조회내역 */
+.textWrap {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  padding: 40px 0;
+}
+.textWrap .blueCor {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.blueCor {
+  color: var(--primary-color);
+}
+
+.titleBox {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 24px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  color: #666666;
+}
+
+.listDetail {
+  padding: 0 24px 80px;
+}
+.listDetail li {
+  padding: 24px 0;
+  border-bottom: 1px solid #e7e9ee;
+}
+.listDetail li .justifyWrap .content {
+  font-size: 14px;
+}
+.listDetail li .justifyWrap .grayTitle {
+  font-weight: 300;
+  color: #666666;
+}
+.listDetail li .justifyWrap .textNum {
+  font-weight: 300;
+  color: var(--black-color);
+}
+.listDetail li .justifyWrap:first-child {
+  margin-bottom: 18px;
+}
+.listDetail li .justifyWrap + .justifyWrap {
+  margin-top: 4px;
+}
+.listDetail li.noData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0 none;
+  height: calc(100vh - 374px);
+}
+.listDetail li.noData:after {
+  display: none;
+}
+
+/* 신용내역 */
 @keyframes textAnimate1 {
   0% {
     transform: translate(0, 25px);

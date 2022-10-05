@@ -1537,6 +1537,71 @@
   }
 }
 
+/***** 신용진단 *****/
+/* 조회내역 */
+.textWrap {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  padding: 40px 0;
+  .blueCor {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+.blueCor {
+  color: var(--primary-color);
+}
+.titleBox {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 24px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  color: $Grey600;
+}
+.listDetail {
+  padding: 0 24px 80px;
+  li {
+    padding: 24px 0;
+    border-bottom: 1px solid #e7e9ee;
+    .justifyWrap {
+      .content {
+        font-size: 14px;
+      }
+      .grayTitle {
+        font-weight: 300;
+        color: $Grey600;
+      }
+      .textNum {
+        font-weight: 300;
+        color: var(--black-color);
+      }
+      &:first-child {
+        margin-bottom: 18px;
+      }
+      + .justifyWrap {
+        margin-top: 4px;
+      }
+    }
+    &.noData {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0 none;
+      height: calc(100vh - 374px);
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 신용내역 */
+.accodianWrap {
+
+}
+
 @keyframes textAnimate1 {
   0% {
     transform: translate(0, 25px);
