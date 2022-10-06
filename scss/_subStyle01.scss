@@ -1632,7 +1632,6 @@
           background-color: var(--primary-color);
           height: 12px;
           border-radius: 100px;
-          transition: 0.5s ease;
         }
       }
       .percent {
@@ -1648,8 +1647,87 @@
     }
   }
 }
-.accodianWrap {
 
+.accodianWrap {
+  border: 1px solid #e3e4e8;
+  border-radius: 8px;
+  > ul {
+    > li {
+      border-top: 1px solid #e3e4e8;
+      &:first-child {
+        border: none 0;
+      }
+      .accodianWrap__head {
+        position: relative;
+        height: 56px;
+        padding: 0 44px 0 16px;
+        //border-bottom: 1px solid #e3e4e8;
+        .infoLabel {
+          margin-right: 8px;
+        }
+        @include bgImage(auto,16px,bg_arrow) {
+          right: 16px;
+          width: 20px;
+          height: 20px;
+          background-size: 20px;
+          transition: 0.5s ease;
+        }
+      }
+      &.on {
+        .accodianWrap__head {
+          &:after {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+  .accodianWrap__content {
+    display: none;
+    padding: 20px 16px;
+    border-top: 1px solid #e3e4e8;
+    h4.title {
+      margin: 40px 0 8px;
+    }
+    .blType {
+      li {
+        &:after {
+          top: 10px;
+        }
+        &.justifyWrap {
+          align-items: start;
+        }
+        .title {
+          color: var(--brownishGrey-color);
+        }
+        + li {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+.infoLabel {
+  height: 24px;
+  padding: 0 8px;
+  font-size: 12px;
+  border-radius: 100px;
+  &.infoLabel--brightOrange {
+    border: 1px solid var(--bright-orange);
+    color: var(--bright-orange);
+  }
+  &.infoLabel--brownishOrange {
+    border: 1px solid var(--brownish-orange);
+    color: var(--brownish-orange);
+  }
+  &.infoLabel--redOrange {
+    border: 1px solid var(--red-orange);
+    color: var(--red-orange);
+  }
+  &.infoLabel--treeGreen {
+    border: 1px solid var(--tree-green);
+    color: var(--tree-green);
+  }
 }
 
 @keyframes textAnimate1 {
