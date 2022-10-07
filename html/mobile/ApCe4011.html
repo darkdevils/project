@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용점수 올리기</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap ssMain01 ssMain01--score">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">신용점수 올리기</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="subCopy">
+            <span class="txtSmall">성실한 납부는 신용점수 상승에 플러스가 되요!</span>
+            <span class="txtBig">납부내역을 제공하고<br>신용점수를 올려보세요</span>
+            <img src="../../images/bg_mobile.png" alt="신용점수">
+            <div class="arrowWrap"></div>
+        </div>
+        <div class="textContent">
+            <div class="roundBox">
+                <span>납부내역으로 신용점수 올리기</span>
+                <button type="button"><span>제출</span></button>
+            </div>
+            <h2 class="title">유의사항</h2>
+            <ul class="blType">
+                <li>통신사 또는 (구)공인인증서 정보입력을 통해 관련 서류를 신용평가서에 자동제출하며, 신용점수에 즉시 반영됩니다.</li>
+                <li>납부내역을 제출하더라도 다른 요인의 의해 점수가 오르지 않을 수 있습니다.</li>
+                <li>통신비와 일반 납부내역을 동시에 제출하면 신용점수를 더 많이 올릴 수 있습니다.</li>
+                <li>본 서비스는 NICE평가정보에서 제공하는것으로 궁금한 사항은 아래로 문의하시기 바랍니다.</li>
+                <li>신용점수 올리기 관련 문의는 NICE지키미 사이트 또는 NICE지키미 고객센터 비금융정보 개인신용평가 반영팀(1588-2486)으로 문의주시기 바랍니다.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+    const bArray = [];
+    const sArray = [35,30,20];
+    const arrowNum = [1,2,3,4];
+
+    for (let i = 0; i < $('.arrowWrap').width(); i++) {
+        bArray.push(i);
+    }
+
+    function randomValue(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    setInterval(function(){
+        const size = randomValue(sArray);
+        $('.arrowWrap').append('<div class="aniArrow'+ randomValue(arrowNum) +'" style="left: ' + randomValue(bArray) + 'px;width: ' + size + 'px; height: 100%;"></div>');
+
+        $('.aniArrow1,.aniArrow2,.aniArrow3,.aniArrow4').animate({
+                'bottom': '100%',
+                'opacity' : '-=0.7'
+            }, 4500, function(){
+                $(this).remove()
+            }
+        );
+    }, 950);
+});
+</script>
+</body>
+</html>

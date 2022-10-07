@@ -102,11 +102,9 @@ $border-line: #ededf0;
     top: 0;
     width: 60px;
     height: 60px;
-    @include bgImage(17px,18px, common_sprite) {
+    @include svgImage(17px,18px,bg_back) {
       width: 24px;
       height: 24px;
-      background-size: 250px;
-      background-position: calc(-316px / 2) 0;
     }
   }
   .headerTitle {
@@ -124,7 +122,7 @@ $border-line: #ededf0;
       right: 22px;
       width: 24px;
       height: 24px;
-      background-size: 250px;
+      background-size: 440px;
       background-position: calc(-374px / 2) 0;
     }
   }
@@ -135,12 +133,10 @@ $border-line: #ededf0;
     top: 0;
     width: 40px;
     height: 60px;
-    @include bgImage(auto,18px, common_sprite) {
+    @include svgImage(auto,18px,bg_menu) {
       right: 8px;
       width: 24px;
       height: 24px;
-      background-size: 250px;
-      background-position: calc(-132px / 2) calc(-254px / 2);
     }
   }
   .btnAlarm {
@@ -150,12 +146,10 @@ $border-line: #ededf0;
     top: 0;
     width: 40px;
     height: 60px;
-    @include bgImage(auto,18px, common_sprite) {
+    @include svgImage(auto,18px,bg_alarm) {
       right: 7px;
       width: 24px;
       height: 24px;
-      background-size: 250px;
-      background-position: calc(-190px / 2) calc(-254px / 2);
     }
     &:before {
       content: "";
@@ -178,7 +172,7 @@ $border-line: #ededf0;
       width: 24px;
       height: 24px;
       margin: -12px 0 0 -12px;
-      background-size: 250px;
+      background-size: 440px;
       background-position: calc(-419px / 2) calc(-258px / 2);
     }
   }
@@ -187,8 +181,8 @@ $border-line: #ededf0;
     top: 18px;
     right: 24px;
     @include imageUrl(common_sprite,png);
-    background-position: -29px 0;
-    background-size: 250px;
+    background-size: calc(885px / 3) calc(816px / 3);
+    background-position: calc(-131px / 3) calc(-3px / 3);
     width: 24px;
     height: 24px;
   }
@@ -240,7 +234,7 @@ $border-line: #ededf0;
     width: calc(72px / 2);
     height: calc(72px / 2);
     background-position: 0 -29px;
-    background-size: 250px;
+    background-size: 440px;
   }
   &.fas {
     &:after {
@@ -519,7 +513,7 @@ $border-line: #ededf0;
       right: 24px;
       width: calc(84px / 2);
       height: calc(92px / 2);
-      background-size: 250px;
+      background-size: 440px;
       background-position: -57px -70px;
       margin-top: calc(-84px / 4);
     }
@@ -537,7 +531,7 @@ $border-line: #ededf0;
   @include bgImage(0,-1px,common_sprite) {
     width: 20px;
     height: 20px;
-    background-size: 250px;
+    background-size: 440px;
     background-position: calc(-249px / 2) calc(-140px / 2);
   }
 }

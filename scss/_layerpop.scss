@@ -26,9 +26,10 @@ $slider-btn-margin: 32px;
     position: absolute;
     top: 18px;
     right: 24px;
-    @include imageUrl(common_sprite,png);
-    background-position: -29px 0;
-    background-size: 250px;
+    @include svgImage(0,0,bg_close) {
+      width: 24px;
+      height: 24px;
+    }
     width: 24px;
     height: 24px;
   }
@@ -324,8 +325,8 @@ $slider-btn-margin: 32px;
       top: 33px;
       right: 24px;
       @include imageUrl(common_sprite,png);
-      background-position: -29px 0;
-      background-size: 250px;
+      background-position: calc(-131px / 3) calc(-3px / 3);
+      background-size: calc(885px / 3) calc(816px / 3);
       width: 24px;
       height: 24px;
     }

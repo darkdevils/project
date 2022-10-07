@@ -31,7 +31,7 @@
     width: 24px;
     height: 24px;
     @include imageUrl(common_sprite,png);
-    background-size: 250px;
+    background-size: 440px;
     background-position: calc(-164px / 2) calc(-58px / 2);
     &.on {
       background-position: calc(-222px / 2) calc(-58px / 2);
@@ -412,11 +412,9 @@
       display: inline-block;
       padding: 0 0 0 30px;
       color: var(--primary-color);
-      @include bgImage(0, 0, common_sprite) {
+      @include svgImage(0,2px,bg_calendar_blue) {
         width: 24px;
         height: 24px;
-        background-size: 250px;
-        background-position: calc(-248px / 2) calc(-254px / 2);
       }
     }
   }
@@ -440,11 +438,9 @@
       background-color: transparent;
       @include numberText;
     }
-    @include bgImage(calc(50% - 60px), 8px ,common_sprite) {
+    @include svgImage(calc(50% - 60px), 10px,bg_calendar) {
       width: 24px;
       height: 24px;
-      background-size: 250px;
-      background-position: calc(-306px / 2) calc(-254px / 2);
     }
   }
 }
@@ -522,7 +518,7 @@
           width: calc(32px / 2);
           height: calc(32px / 2);
           margin-top: -8px;
-          background-size: 250px;
+          background-size: 440px;
           background-position: calc(-274px / 2) 0;
         }
       }
@@ -564,11 +560,9 @@
     position: relative;
     padding: 92px 0 80px;
     text-align: center;
-    @include bgImage(50%,10px, common_sprite) {
+    @include svgImage(50%,10px,bg_completion) {
       width: 52px;
       height: 52px;
-      background-size: 250px;
-      background-position: 0 -70px;
       margin-left: -26px;
     }
     strong {
@@ -737,7 +731,7 @@
           height: 20px;
           @include imageUrl(common_sprite,png);
           background-position: -190px -29px;
-          background-size: 250px;
+          background-size: 440px;
         }
       }
       .numArea {
@@ -885,7 +879,7 @@
         height: 20px;
         @include imageUrl(common_sprite,png);
         background-position: -190px -29px;
-        background-size: 250px;
+        background-size: 440px;
       }
     }
     .case {
@@ -922,7 +916,7 @@
       width: 20px;
       height: 20px;
       @include imageUrl(common_sprite,png);
-      background-size: 250px;
+      background-size: 440px;
       background-position: calc(-174px / 2) 0;
       &.on {
         background-position: calc(-224px / 2) 0;
@@ -1144,7 +1138,7 @@
     &:after {
       height: 80px;
       @include imageUrl(common_sprite,png);
-      background-size: 250px;
+      background-size: 440px;
       background-position: calc(-170px / 2) calc(-340px / 2);
     }
   }
@@ -1228,7 +1222,7 @@
         width: 20px;
         height: 20px;
         margin-top: -10px;
-        background-size: 250px;
+        background-size: 440px;
         background-position: -104px -70px;
         transform: rotate(180deg);
       }
@@ -1365,12 +1359,10 @@
         position: relative;
         display: block;
         color: $Grey400;
-        @include bgImage(auto,0,common_sprite) {
+        @include svgImage(auto,0,bg_arrow_right2) {
           right: 0;
           width: 20px;
           height: 20px;
-          background-position: calc(-357px / 2) calc(-140px / 2);
-          background-size: 250px;
         }
       }
     }
@@ -1384,13 +1376,11 @@
           padding: 12px 0;
           display: block;
           color: var(--black-color);
-          @include bgImage(auto,50%,common_sprite) {
+          @include svgImage(auto,50%,bg_arrow_right) {
             right: 0;
             width: 20px;
             height: 20px;
             margin-top: -10px;
-            background-position: calc(-371px / 2) calc(-258px / 2);
-            background-size: 250px;
           }
         }
         &:nth-child(even) {
@@ -1526,12 +1516,10 @@
           width: 20px;
           height: 20px;
           margin-top: -10px;
-          @include bgImage(0,50%, common_sprite) {
+          @include svgImage(0,50%,bg_arrow_right) {
             width: 20px;
             height: 20px;
             margin-top: -10px;
-            background-position: calc(-369px / 2) calc(-258px / 2);
-            background-size: 250px;
           }
         }
       }
@@ -1612,7 +1600,7 @@
     color: $Grey600;
   }
   .creditRating__graph {
-    padding: 45px 0;
+    padding: 40px 0;
     .graph {
       display: flex;
       align-items: center;
@@ -1625,7 +1613,8 @@
       }
       .graphBg {
         width: calc(100% - 101px);
-        background-color: #ebebeb;
+        background-color: #ebf5f6;
+        box-shadow: inset 0 1px 1px 0 rgba(219, 219, 219, 0.25);
         height: 12px;
         border-radius: 100px;
         .graphBar {
@@ -1642,7 +1631,7 @@
         font-family: 'Roboto', sans-serif;
       }
       + .graph {
-        margin-top: 26px;
+        margin-top: 16px;
       }
     }
   }
@@ -1665,11 +1654,10 @@
         .infoLabel {
           margin-right: 8px;
         }
-        @include bgImage(auto,16px,bg_arrow) {
+        @include svgImage(auto,16px,bg_arrow_down) {
           right: 16px;
           width: 20px;
           height: 20px;
-          background-size: 20px;
           transition: 0.5s ease;
         }
       }

@@ -125,7 +125,7 @@
     width: 24px;
     height: 24px;
     background-position: 0 0;
-    background-size: 250px;
+    background-size: 440px;
   }
   input[type="text"],input[type="search"] {
     width: calc(100% - 56px);
@@ -145,7 +145,7 @@
     width: 24px;
     height: 24px;
     @include imageUrl(common_sprite,png);
-    background-size: 250px;
+    background-size: 440px;
     background-position: calc(-116px / 2) 0;
   }
 }
@@ -207,7 +207,7 @@
           width: 24px;
           height: 24px;
           @include imageUrl(common_sprite,png);
-          background-size: 250px;
+          background-size: 440px;
           background-position: calc(-299px / 2) -70px;
         }
       }
@@ -254,7 +254,7 @@
         height: 28px;
         text-align: center;
         @include imageUrl(common_sprite,png);
-        background-size: 250px;
+        background-size: 440px;
         background-position: 0 calc(-254px / 2);
       }
     }
@@ -374,9 +374,7 @@
         width: 28px;
         height: 28px;
         text-align: center;
-        @include imageUrl(common_sprite,png);
-        background-size: 250px;
-        background-position: 0 calc(-320px / 2);
+        @include imageUrl(bg_checkbox,svg);
       }
     }
     &:checked {
@@ -387,7 +385,7 @@
           }
         }
         &:before {
-          background-position: -33px calc(-320px / 2);
+          @include imageUrl(bg_checkbox_on,svg);
         }
       }
     }

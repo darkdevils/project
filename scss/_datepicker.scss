@@ -133,17 +133,16 @@
   .ui-datepicker-prev,
   .ui-datepicker-next {
     border: 0;
-    &:after {
-      @include imageUrl(common_sprite,png);
+    @include svgImage(0,0,bg_arrow_right3) {
       width: 20px;
       height: 20px;
-      background-size: 250px;
-      background-position: -104px -70px;
+      margin: 0;
+      transform: rotate(180deg);
     }
   }
   .ui-datepicker-next {
     &:after {
-      transform: rotate(180deg);
+      transform: rotate(0);
     }
   }
 }

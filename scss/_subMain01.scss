@@ -157,24 +157,24 @@
         padding: 16px 0 0 40px;
         font-size: 16px;
         color: var(--font-color);
-        @include bgImage(0,16px, common_sprite) {
-          width: 24px;
-          height: 24px;
-          background-size: 250px;
-        }
+
+
         &:nth-child(1) {
-          &:after {
-            background-position: calc(-432px / 2) 0;
+          @include svgImage(0,16px,bg_call) {
+            width: 24px;
+            height: 24px;
           }
         }
         &:nth-child(2) {
-          &:after {
-            background-position: calc(-432px / 2) calc(-58px / 2);
+          @include svgImage(0,16px,bg_puzzle) {
+            width: 24px;
+            height: 24px;
           }
         }
         &:nth-child(3) {
-          &:after {
-            background-position: calc(-432px / 2) calc(-116px / 2);
+          @include svgImage(0,16px,bg_money) {
+            width: 24px;
+            height: 24px;
           }
         }
         + li {
@@ -306,7 +306,7 @@
         @include bgImage(0,16px, common_sprite) {
           width: 24px;
           height: 24px;
-          background-size: 250px;
+          background-size: 440px;
         }
         &:nth-child(1) {
           &:after {
@@ -404,6 +404,68 @@
       }
     }
   }
+  &--score {
+    background-color: #ffedf3;
+    .subCopy {
+      margin: 30px 0 82px;
+      .txtBig {
+        margin-bottom: 88px;
+      }
+      img {
+        position: relative;
+        width: 50%;
+        z-index: 2;
+      }
+      .arrowWrap {
+        position: absolute;
+        bottom: -250px;
+        left: 0;
+        height: 280px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .aniArrow1 {
+        position: absolute;
+        /*right: 48px;
+        top: 170px;*/
+        @include imageUrl(bg_arrow01,png);
+        background-size: contain;
+        width: calc(177px / 3);
+        height: calc(351px / 3);
+        //animation: arrowAni 2s ease-out infinite;
+      }
+      .aniArrow2 {
+        position: absolute;
+        /*left: 78px;
+        top: 180px;*/
+        @include imageUrl(bg_arrow02,png);
+        background-size: contain;
+        width: calc(117px / 3);
+        height: calc(234px / 3);
+        //animation: arrowAni 5s ease-out infinite;
+      }
+      .aniArrow3 {
+        position: absolute;
+        /*left: 48px;
+        top: 330px;*/
+        @include imageUrl(bg_arrow03,png);
+        background-size: contain;
+        width: calc(177px / 3);
+        height: calc(351px / 3);
+        //animation: arrowAni 3s ease-out infinite;
+      }
+      .aniArrow4 {
+        position: absolute;
+        /*right: 48px;
+        top: 410px;*/
+        @include imageUrl(bg_arrow04,png);
+        background-size: contain;
+        width: calc(129px / 3);
+        height: calc(252px / 3);
+        //animation: arrowAni 4s ease-out infinite;
+      }
+    }
+  }
 }
 
 @keyframes moveUpDown {
@@ -424,5 +486,19 @@
   100% {
     //transform: translateY(14px);
     top: 14px;
+  }
+}
+@keyframes arrowAni {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  95% {
+    transform: scale(1) translateY(-70px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(-80px);
+    opacity: 0;
   }
 }

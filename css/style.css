@@ -631,7 +631,7 @@ div.hasDatepicker {
   top: 2px;
   background: url("../images/common_sprite.png") no-repeat;
   background-position: -140px -29px;
-  background-size: 250px;
+  background-size: 440px;
   width: 20px;
   height: 20px;
 }
@@ -646,7 +646,7 @@ div.hasDatepicker {
   top: 2px;
   background: url("../images/common_sprite.png") no-repeat;
   background-position: -165px -29px;
-  background-size: 250px;
+  background-size: 440px;
   width: 20px;
   height: 20px;
 }
@@ -799,7 +799,7 @@ div.hasDatepicker {
   width: 24px;
   height: 24px;
   background-position: 0 0;
-  background-size: 250px;
+  background-size: 440px;
 }
 .searchArea input[type=text], .searchArea input[type=search] {
   width: calc(100% - 56px);
@@ -819,7 +819,7 @@ div.hasDatepicker {
   width: 24px;
   height: 24px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -58px 0;
 }
 
@@ -880,7 +880,7 @@ div.hasDatepicker {
   width: 24px;
   height: 24px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -149.5px -70px;
 }
 
@@ -921,7 +921,7 @@ div.hasDatepicker {
   height: 28px;
   text-align: center;
   background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   background-position: 0 -127px;
 }
 .radioType input[type=radio]:checked + label:active:before {
@@ -1023,15 +1023,13 @@ div.hasDatepicker {
   width: 28px;
   height: 28px;
   text-align: center;
-  background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
-  background-position: 0 -160px;
+  background: url("../images/bg_checkbox.svg") no-repeat;
 }
 .checkboxType input[type=checkbox]:checked + label:active:before {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 .checkboxType input[type=checkbox]:checked + label:before {
-  background-position: -33px -160px;
+  background: url("../images/bg_checkbox_on.svg") no-repeat;
 }
 .checkboxType input[type=checkbox]:disabled + label:before {
   background-position: 0 -193px;
@@ -1336,14 +1334,19 @@ div.hasDatepicker {
 }
 .ui-datepicker .ui-datepicker-prev:after,
 .ui-datepicker .ui-datepicker-next:after {
-  background: url("../images/common_sprite.png") no-repeat;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/bg_arrow_right3.svg") no-repeat;
   width: 20px;
   height: 20px;
-  background-size: 250px;
-  background-position: -104px -70px;
+  margin: 0;
+  transform: rotate(180deg);
 }
 .ui-datepicker .ui-datepicker-next:after {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 
 /* Layer Popup - 전체팝업 */
@@ -1374,9 +1377,16 @@ div.hasDatepicker {
   position: absolute;
   top: 18px;
   right: 24px;
-  background: url("../images/common_sprite.png") no-repeat;
-  background-position: -29px 0;
-  background-size: 250px;
+  width: 24px;
+  height: 24px;
+}
+.layerHead .btnLayerClose:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/bg_close.svg") no-repeat;
   width: 24px;
   height: 24px;
 }
@@ -1661,8 +1671,8 @@ div.hasDatepicker {
   top: 33px;
   right: 24px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-position: -29px 0;
-  background-size: 250px;
+  background-position: -43.6666666667px -1px;
+  background-size: 295px 272px;
   width: 24px;
   height: 24px;
 }
@@ -1967,7 +1977,7 @@ div.hasDatepicker {
   background: url("../images/common_sprite.png") no-repeat;
   width: 16px;
   height: 16px;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -137px 0;
 }
 .listItem .infoWrap .detailInfo .infoText .career {
@@ -1990,7 +2000,7 @@ div.hasDatepicker {
   width: 30px;
   height: 30px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -82px 4px;
 }
 .listItem .infoWrap .bookMark.on {
@@ -2049,7 +2059,7 @@ div.hasDatepicker {
   height: 74px;
   margin: -55px 0 0 -40px;
   background-position: -170px -176px;
-  background-size: 250px;
+  background-size: 440px;
 }
 
 .noSentence {
@@ -3527,11 +3537,9 @@ div.hasDatepicker {
   position: absolute;
   left: 17px;
   top: 18px;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_back.svg") no-repeat;
   width: 24px;
   height: 24px;
-  background-size: 250px;
-  background-position: -158px 0;
 }
 .header .headerTitle {
   font-size: 18px;
@@ -3555,7 +3563,7 @@ div.hasDatepicker {
   right: 22px;
   width: 24px;
   height: 24px;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -187px 0;
 }
 .header .btnMenu {
@@ -3572,12 +3580,10 @@ div.hasDatepicker {
   position: absolute;
   left: auto;
   top: 18px;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_menu.svg") no-repeat;
   right: 8px;
   width: 24px;
   height: 24px;
-  background-size: 250px;
-  background-position: -66px -127px;
 }
 .header .btnAlarm {
   position: absolute;
@@ -3593,12 +3599,10 @@ div.hasDatepicker {
   position: absolute;
   left: auto;
   top: 18px;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_alarm.svg") no-repeat;
   right: 7px;
   width: 24px;
   height: 24px;
-  background-size: 250px;
-  background-position: -95px -127px;
 }
 .header .btnAlarm:before {
   content: "";
@@ -3627,7 +3631,7 @@ div.hasDatepicker {
   width: 24px;
   height: 24px;
   margin: -12px 0 0 -12px;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -209.5px -129px;
 }
 .header .menuClose {
@@ -3635,8 +3639,8 @@ div.hasDatepicker {
   top: 18px;
   right: 24px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-position: -29px 0;
-  background-size: 250px;
+  background-size: 295px 272px;
+  background-position: -43.6666666667px -1px;
   width: 24px;
   height: 24px;
 }
@@ -3690,7 +3694,7 @@ div.hasDatepicker {
   width: 36px;
   height: 36px;
   background-position: 0 -29px;
-  background-size: 250px;
+  background-size: 440px;
 }
 .fa-star.fas:after {
   background-position: -41px -29px;
@@ -3957,7 +3961,7 @@ div.hasDatepicker {
   right: 24px;
   width: 42px;
   height: 46px;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -57px -70px;
   margin-top: -21px;
 }
@@ -3982,7 +3986,7 @@ div.hasDatepicker {
   background: url("../images/common_sprite.png") no-repeat;
   width: 20px;
   height: 20px;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -124.5px -70px;
 }
 
@@ -5033,25 +5037,35 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   color: var(--font-color);
 }
-.subMain01 .textContent .list li:after {
+.subMain01 .textContent .list li:nth-child(1):after {
   content: "";
   display: block;
   position: absolute;
   left: 0;
   top: 16px;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_call.svg") no-repeat;
   width: 24px;
   height: 24px;
-  background-size: 250px;
-}
-.subMain01 .textContent .list li:nth-child(1):after {
-  background-position: -216px 0;
 }
 .subMain01 .textContent .list li:nth-child(2):after {
-  background-position: -216px -29px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  background: url("../images/bg_puzzle.svg") no-repeat;
+  width: 24px;
+  height: 24px;
 }
 .subMain01 .textContent .list li:nth-child(3):after {
-  background-position: -216px -58px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  background: url("../images/bg_money.svg") no-repeat;
+  width: 24px;
+  height: 24px;
 }
 .subMain01 .textContent .list li + li {
   border-top: 1px solid #e7e9ee;
@@ -5185,7 +5199,7 @@ button.swiper-pagination-bullet {
   background: url("../images/common_sprite.png") no-repeat;
   width: 24px;
   height: 24px;
-  background-size: 250px;
+  background-size: 440px;
 }
 .ssMain01 .textContent .list li:nth-child(1):after {
   background-position: -216px 0;
@@ -5268,6 +5282,64 @@ button.swiper-pagination-bullet {
   line-height: 22px;
   font-size: 14px;
 }
+.ssMain01--score {
+  background-color: #ffedf3;
+}
+.ssMain01--score .subCopy {
+  margin: 30px 0 82px;
+}
+.ssMain01--score .subCopy .txtBig {
+  margin-bottom: 88px;
+}
+.ssMain01--score .subCopy img {
+  position: relative;
+  width: 50%;
+  z-index: 2;
+}
+.ssMain01--score .subCopy .arrowWrap {
+  position: absolute;
+  bottom: -250px;
+  left: 0;
+  height: 280px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ssMain01--score .subCopy .aniArrow1 {
+  position: absolute;
+  /*right: 48px;
+  top: 170px;*/
+  background: url("../images/bg_arrow01.png") no-repeat;
+  background-size: contain;
+  width: 59px;
+  height: 117px;
+}
+.ssMain01--score .subCopy .aniArrow2 {
+  position: absolute;
+  /*left: 78px;
+  top: 180px;*/
+  background: url("../images/bg_arrow02.png") no-repeat;
+  background-size: contain;
+  width: 39px;
+  height: 78px;
+}
+.ssMain01--score .subCopy .aniArrow3 {
+  position: absolute;
+  /*left: 48px;
+  top: 330px;*/
+  background: url("../images/bg_arrow03.png") no-repeat;
+  background-size: contain;
+  width: 59px;
+  height: 117px;
+}
+.ssMain01--score .subCopy .aniArrow4 {
+  position: absolute;
+  /*right: 48px;
+  top: 410px;*/
+  background: url("../images/bg_arrow04.png") no-repeat;
+  background-size: contain;
+  width: 43px;
+  height: 84px;
+}
 
 @keyframes moveUpDown {
   0% {
@@ -5283,6 +5355,20 @@ button.swiper-pagination-bullet {
   }
   100% {
     top: 14px;
+  }
+}
+@keyframes arrowAni {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  95% {
+    transform: scale(1) translateY(-70px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(-80px);
+    opacity: 0;
   }
 }
 /***** 상담업체정보 *****/
@@ -5320,7 +5406,7 @@ button.swiper-pagination-bullet {
   width: 24px;
   height: 24px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -82px -29px;
 }
 .consultingInfo .bookMark.on {
@@ -5722,12 +5808,10 @@ button.swiper-pagination-bullet {
   display: block;
   position: absolute;
   left: 0;
-  top: 0;
-  background: url("../images/common_sprite.png") no-repeat;
+  top: 2px;
+  background: url("../images/bg_calendar_blue.svg") no-repeat;
   width: 24px;
   height: 24px;
-  background-size: 250px;
-  background-position: -124px -127px;
 }
 .inputDateArea .inputDate {
   display: none;
@@ -5757,12 +5841,10 @@ button.swiper-pagination-bullet {
   display: block;
   position: absolute;
   left: calc(50% - 60px);
-  top: 8px;
-  background: url("../images/common_sprite.png") no-repeat;
+  top: 10px;
+  background: url("../images/bg_calendar.svg") no-repeat;
   width: 24px;
   height: 24px;
-  background-size: 250px;
-  background-position: -153px -127px;
 }
 
 .companyList {
@@ -5855,7 +5937,7 @@ button.swiper-pagination-bullet {
   width: 16px;
   height: 16px;
   margin-top: -8px;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -137px 0;
 }
 .companyList > ul .item .btn {
@@ -5899,11 +5981,9 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: 50%;
   top: 10px;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_completion.svg") no-repeat;
   width: 52px;
   height: 52px;
-  background-size: 250px;
-  background-position: 0 -70px;
   margin-left: -26px;
 }
 .completeWrap .completeWrap__text strong {
@@ -6077,7 +6157,7 @@ button.swiper-pagination-bullet {
   height: 20px;
   background: url("../images/common_sprite.png") no-repeat;
   background-position: -190px -29px;
-  background-size: 250px;
+  background-size: 440px;
 }
 .boardWrap__list li .justifyWrap .numArea button .number, .listType li .justifyWrap .numArea button .number {
   font-size: 14px;
@@ -6199,7 +6279,7 @@ button.swiper-pagination-bullet {
   height: 20px;
   background: url("../images/common_sprite.png") no-repeat;
   background-position: -190px -29px;
-  background-size: 250px;
+  background-size: 440px;
 }
 .boardView .boardView__header .case {
   display: inline-block;
@@ -6235,7 +6315,7 @@ button.swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -87px 0;
 }
 .boardView .boardView__content .bookMark.on {
@@ -6450,7 +6530,7 @@ button.swiper-pagination-bullet {
 .boardAnswer .noData:after {
   height: 80px;
   background: url("../images/common_sprite.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -85px -170px;
 }
 
@@ -6532,7 +6612,7 @@ button.swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  background-size: 250px;
+  background-size: 440px;
   background-position: -104px -70px;
   transform: rotate(180deg);
 }
@@ -6671,12 +6751,10 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: auto;
   top: 0;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_arrow_right2.svg") no-repeat;
   right: 0;
   width: 20px;
   height: 20px;
-  background-position: -178.5px -70px;
-  background-size: 250px;
 }
 .totalMenu .totalMenu__item ul {
   display: flex;
@@ -6697,13 +6775,11 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: auto;
   top: 50%;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_arrow_right.svg") no-repeat;
   right: 0;
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  background-position: -185.5px -129px;
-  background-size: 250px;
 }
 .totalMenu .totalMenu__item ul li:nth-child(even) {
   padding-left: 16px;
@@ -6841,12 +6917,10 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: 0;
   top: 50%;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_arrow_right.svg") no-repeat;
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  background-position: -184.5px -129px;
-  background-size: 250px;
 }
 
 /***** 신용진단 *****/
@@ -6924,7 +6998,7 @@ button.swiper-pagination-bullet {
   color: #666666;
 }
 .creditRating .creditRating__graph {
-  padding: 45px 0;
+  padding: 40px 0;
 }
 .creditRating .creditRating__graph .graph {
   display: flex;
@@ -6939,7 +7013,8 @@ button.swiper-pagination-bullet {
 }
 .creditRating .creditRating__graph .graph .graphBg {
   width: calc(100% - 101px);
-  background-color: #ebebeb;
+  background-color: #ebf5f6;
+  box-shadow: inset 0 1px 1px 0 rgba(219, 219, 219, 0.25);
   height: 12px;
   border-radius: 100px;
 }
@@ -6956,7 +7031,7 @@ button.swiper-pagination-bullet {
   font-family: "Roboto", sans-serif;
 }
 .creditRating .creditRating__graph .graph + .graph {
-  margin-top: 26px;
+  margin-top: 16px;
 }
 
 .accodianWrap {
@@ -6983,11 +7058,10 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: auto;
   top: 16px;
-  background: url("../images/bg_arrow.png") no-repeat;
+  background: url("../images/bg_arrow_down.svg") no-repeat;
   right: 16px;
   width: 20px;
   height: 20px;
-  background-size: 20px;
   transition: 0.5s ease;
 }
 .accodianWrap > ul > li.on .accodianWrap__head:after {
@@ -7162,7 +7236,7 @@ button.swiper-pagination-bullet {
   left: 50%;
   top: 28px;
   background: url("../images/common_sprite2.png") no-repeat;
-  background-size: 250px;
+  background-size: 440px;
   width: 24px;
   height: 24px;
   margin: -12px 0 0 -12px;

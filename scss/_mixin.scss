@@ -237,6 +237,18 @@
   }
 }
 
+@mixin svgImage($psLeft, $psTop,$imgName) {
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: $psLeft;
+    top: $psTop;
+    background: url("../images/" + $imgName + ".svg") no-repeat;
+    @content;
+  }
+}
+
 @mixin numberText {
   font-family: 'Roboto',sans-serif;
   letter-spacing: 0;

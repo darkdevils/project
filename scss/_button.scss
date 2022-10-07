@@ -134,7 +134,7 @@
   @include numberText;
   @include bgImage(0,2px,common_sprite) {
     background-position: -140px -29px;
-    background-size: 250px;
+    background-size: 440px;
     width: 20px;
     height: 20px;
     span {
@@ -144,7 +144,7 @@
   &.on {
     @include bgImage(0,2px,common_sprite) {
       background-position: -165px -29px;
-      background-size: 250px;
+      background-size: 440px;
       width: 20px;
       height: 20px;
     }
