@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>글 작성 영구 사용제한 팝업</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title blind">글 작성 영구 사용제한 팝업</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <div class="warning">
+            <p class="fs18">글작성이 영구제한되었습니다.</p>
+            <p class="fs16">운영자에 의해 글작성이 영구제한 되었습니다.<br>
+                제한해제를 원하시는 경우 <a href="tel:1600-5500">1600-5500</a>으로<br>문의해 주시기 바랍니다.</p>
+        </div>
+        <div class="btnWrap">
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    common.slideLayer.slideOpen('slideLayer01');
+</script>
+</body>
+</html>

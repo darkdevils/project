@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>글 작성 15일 사용제한 팝업</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title blind">글 작성 15일 사용제한 팝업</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <div class="warning">
+            <p class="fs18">글작성이 15일 제한되었습니다.</p>
+            <p class="fs16">작성하신 글이 블라인드를 누적으로 5회 받을 때마다 자동으로 글 작성이 15일간 제한됩니다.</p>
+            <div class="roundBox">
+                <span>남은기간: </span><span class="blueCor">14일</span>
+            </div>
+        </div>
+        <div class="btnWrap">
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    common.slideLayer.slideOpen('slideLayer01');
+</script>
+</body>
+</html>

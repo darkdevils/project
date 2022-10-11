@@ -132,19 +132,15 @@
   position: relative;
   padding: 0 0 0 24px;
   @include numberText;
-  @include bgImage(0,2px,common_sprite) {
-    background-position: -140px -29px;
-    background-size: 440px;
+  @include svgImage(0,2px,bg_like_off) {
     width: 20px;
     height: 20px;
-    span {
-      color: var(--brownishGrey-color);
-    }
+  }
+  span {
+    color: var(--brownishGrey-color);
   }
   &.on {
-    @include bgImage(0,2px,common_sprite) {
-      background-position: -165px -29px;
-      background-size: 440px;
+    @include svgImage(0,2px,bg_like_on) {
       width: 20px;
       height: 20px;
     }

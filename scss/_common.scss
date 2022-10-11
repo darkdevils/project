@@ -230,15 +230,13 @@ $border-line: #ededf0;
   position: relative;
   width: calc(72px / 2);
   height: calc(72px / 2);
-  @include bgImage(0,0, common_sprite) {
+  @include svgImage(0,0, bg_star_off) {
     width: calc(72px / 2);
     height: calc(72px / 2);
-    background-position: 0 -29px;
-    background-size: 440px;
   }
   &.fas {
     &:after {
-      background-position: -41px -29px;
+      @include imageUrl(bg_star_on,svg);
     }
 
   }
@@ -412,6 +410,26 @@ $border-line: #ededf0;
     }
   }
 }
+.blDash {
+  li {
+    position: relative;
+    padding: 0 0 0 12px;
+    color: var(--brownishGrey-color);
+    line-height: 24px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 5px;
+      height: 1px;
+      background-color: var(--brownishGrey-color);
+    }
+    + li {
+      margin-top: 4px;
+    }
+  }
+}
 
 /* Select Type */
 .selectWrap {
@@ -528,11 +546,9 @@ $border-line: #ededf0;
   color: var(--warmGrey-color2);
   font-size: 14px;
   @include numberText;
-  @include bgImage(0,-1px,common_sprite) {
+  @include svgImage(0,1px,bg_comment) {
     width: 20px;
     height: 20px;
-    background-size: 440px;
-    background-position: calc(-249px / 2) calc(-140px / 2);
   }
 }
 

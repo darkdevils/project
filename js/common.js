@@ -117,7 +117,6 @@ const common = {
                     }
                 });
 
-
                 function layerClose() {
                     const layerH = layerPopup.height();
                     $('.dim').fadeOut().queue(function(){
@@ -209,6 +208,21 @@ const common = {
             }
         }
     },
+
+    // 안내팝업
+    popupGuide: function(){
+        const popGuide =  $('.popupGuide');
+        const popHeight = popGuide.outerHeight();
+        $('body').append('<div class="dim"></div>');
+        popGuide.css({
+            height: popHeight,
+            "margin-top":-popHeight/2
+        })
+    },
+    popupGuideClose: function(){
+        $('.dim').remove();
+        $('.popupGuide').hide();
+    }
 }
 
 $(function(){

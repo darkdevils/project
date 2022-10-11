@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신고 누적 5회 경고 팝업</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title blind">신고누적 5회 경고팝업</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <div class="warning">
+            <p class="fs18">신고 누적이 <span class="blueCor">5회</span>가 되었습니다!</p>
+            <p class="fs16">타인을 비방하거나 광고성 글을<br>작성 하신 경우 신고 될 수 있습니다.<br>글작성 시 유의하시기 바랍니다.</p>
+        </div>
+        <div class="btnWrap">
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    common.slideLayer.slideOpen('slideLayer01');
+</script>
+</body>
+</html>

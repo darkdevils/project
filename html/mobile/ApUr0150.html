@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원탈퇴</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">회원탈퇴</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="secession">
+            <h2 class="h2_title">회원탈퇴 이유를 선택해주세요.</h2>
+            <ul class="radioType">
+                <li><input type="radio" name="ck" id="radio01-1"><label for="radio01-1">쓰지 않은 앱이에요</label></li>
+                <li><input type="radio" name="ck" id="radio01-2"><label for="radio01-2">오류가 생겨서 쓸수 없어요</label></li>
+                <li><input type="radio" name="ck" id="radio01-3"><label for="radio01-3">보안이 걱정돼요</label></li>
+                <li><input type="radio" name="ck" id="radio01-4"><label for="radio01-4">앱 사용법을 모르겠어요</label></li>
+                <li>
+                    <input type="radio" name="ck" id="radio01-5"><label for="radio01-5">기타 (직접입력)</label>
+                    <div class="textStyle">
+                        <textarea name="" id="textarea" cols="30" rows="10" placeholder="이유를 입력해주세요.(1,000자까지 입력 가능합니다.)"></textarea>
+                    </div>
+                    <div class="textCount"><span class="num">0</span><span class="totalNum">1,000<em>자</em></span></div>
+                </li>
+            </ul>
+            <h3 class="title">유의사항</h3>
+            <ul class="blType">
+                <li>회원탈퇴 시, 즉시 처리되므로 신중하게 진행하여 주십시오.</li>
+                <li>회원정보 및 서비스의 정보 삭제
+                    <ul class="blDash">
+                        <li>신용솔루션, 상담후기 등 게시판형 서비스에 등록된 게시물은 탈퇴후에도 삭제되지 않습니다.</li>
+                        <li>게시물 등의 삭제를 원하시는 경우, 반드시 직접 삭제하신 후, 탈퇴를 신청하시기 바랍니다.</li>
+                    </ul>
+                </li>
+                <li>불량이용 및 이용제한
+                    <ul>
+                        <li>부적합한 이용기록정보는 서비스운영정책에 의해 일정기간동안 보관됩니다.</li>
+                        <li>개인정보취급 방침에 따라 불량이용 및 이용제한에 관한 기록은 일정기간동안 보관될수 있습니다.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d"><span>탈퇴하기</span></button>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+
+});
+</script>
+
+</body>
+</html>

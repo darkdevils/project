@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>동시접속안내팝업</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="popupGuide">
+    <h1>동시접속안내</h1>
+    <p class="text">동일한 계정으로 다른 기기에<br>로그인이 되어있습니다.<br>계속 진행을 원하시는 경우<br>‘접속하기’ 버튼을 선택해주세요.</p>
+    <p class="sText">접속하기 선택 시 다른 기기에<br>실행되고 있는 앱은 자동으로 종료됩니다.</p>
+    <div class="btnWrap btnWrap-col2 mgTop30">
+        <button type="button" class="btn btn-d btnBlue" onclick="common.popupGuideClose();"><span>앱종료</span></button>
+        <button type="button" class="btn btn-d" onclick="common.popupGuideClose();"><span>접속하기</span></button>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    // 팝업호출
+    common.popupGuide();
+</script>
+</body>
+</html>

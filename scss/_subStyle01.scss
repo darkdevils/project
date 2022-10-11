@@ -30,11 +30,9 @@
     position: relative;
     width: 24px;
     height: 24px;
-    @include imageUrl(common_sprite,png);
-    background-size: 440px;
-    background-position: calc(-164px / 2) calc(-58px / 2);
+    @include imageUrl(bg_bookmark_off,svg);
     &.on {
-      background-position: calc(-222px / 2) calc(-58px / 2);
+      @include imageUrl(bg_bookmark_on,svg);
     }
   }
 }
@@ -582,7 +580,7 @@
     border-top: 1px solid #e7e9ee;
     border-bottom: 1px solid #e7e9ee;
   }
-  &.memberCompleted {
+  &.memberCompleted,&.secessionCompleted {
     position: relative;
     height: calc(100vh - 156px);
     padding: 80px 0 0;
@@ -597,6 +595,8 @@
       line-height: 22px;
     }
   }
+
+
 }
 
 /* 상담내역 */
@@ -729,9 +729,7 @@
           position: relative;
           width: 20px;
           height: 20px;
-          @include imageUrl(common_sprite,png);
-          background-position: -190px -29px;
-          background-size: 440px;
+          @include imageUrl(bg_ellipsis_vert,svg);
         }
       }
       .numArea {
@@ -877,9 +875,7 @@
         position: relative;
         width: 20px;
         height: 20px;
-        @include imageUrl(common_sprite,png);
-        background-position: -190px -29px;
-        background-size: 440px;
+        @include imageUrl(bg_ellipsis_vert,svg);
       }
     }
     .case {
@@ -1138,8 +1134,8 @@
     &:after {
       height: 80px;
       @include imageUrl(common_sprite,png);
-      background-size: 440px;
-      background-position: calc(-170px / 2) calc(-340px / 2);
+      background-size: calc(885px / 3) calc(816px / 3);
+      background-position: calc(-299px / 3) calc(-549px / 3);
     }
   }
 }
@@ -1217,14 +1213,12 @@
       font-weight: 500;
       line-height: 36px;
       padding: 0 28px 0 0;
-      @include bgImage(auto,50%,common_sprite) {
+      @include svgImage(auto,50%,bg_arrow_right) {
         right: 0;
         width: 20px;
         height: 20px;
         margin-top: -10px;
-        background-size: 440px;
-        background-position: -104px -70px;
-        transform: rotate(180deg);
+        transform: rotate(0deg);
       }
       .number {
         font-size: 28px;
@@ -1782,5 +1776,92 @@
   100% {
     opacity: 1;
     transform: translate(0,0);
+  }
+}
+
+/***** 회원탈퇴 *****/
+.secession {
+  padding: 24px 24px 64px;
+  .h2_title {
+    margin-bottom: 20px;
+  }
+  .radioType li .textStyle {
+    textarea {
+      height: 180px;
+    }
+  }
+  h3.title {
+    margin: 40px 0 8px;
+    font-size: 16px;
+  }
+}
+
+.errorWrap {
+  position: relative;
+  padding: 120px 24px 0;
+  .errorWrap__text {
+    position: relative;
+    padding: 82px 0px 80px;
+    text-align: center;
+    @include svgImage(50%,0,bg_warning) {
+      width: 52px;
+      height: 52px;
+      margin-left: -26px;
+    }
+    strong {
+      display: block;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+    }
+    p {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--brownishGrey-color);
+    }
+  }
+  .roundBox {
+    margin-bottom: 16px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    .blType {
+      font-size: 14px;
+      li {
+        line-height: 22px;
+        &:after {
+          top: 10px;
+        }
+        + li {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+  .sText {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--font-color);
+    a {
+      color: var(--primary-color);
+    }
+  }
+  .inspection {
+    padding: 24px 0;
+    border-top: 1px solid #e7e9ee;
+    border-bottom: 1px solid #e7e9ee;
+    .justifyWrap {
+      span {
+        font-size: 16px;
+        &.title {
+          font-weight: 300;
+          color: var(--brownishGrey-color);
+        }
+      }
+      + .justifyWrap {
+        margin-top: 8px;
+      }
+    }
   }
 }

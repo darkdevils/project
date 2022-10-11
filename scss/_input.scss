@@ -121,14 +121,12 @@
   margin: 0 auto;
   padding: 0 10px 0 58px;
   overflow: hidden;
-  @include bgImage(18px,17px,common_sprite) {
+  @include svgImage(18px,17px,bg_search) {
     width: 24px;
     height: 24px;
-    background-position: 0 0;
-    background-size: 440px;
   }
   input[type="text"],input[type="search"] {
-    width: calc(100% - 56px);
+    width: 100%;
     height: 54px;
     border: 0;
     font-size: 16px;
@@ -206,9 +204,7 @@
           top: 0;
           width: 24px;
           height: 24px;
-          @include imageUrl(common_sprite,png);
-          background-size: 440px;
-          background-position: calc(-299px / 2) -70px;
+          @include imageUrl(bg_check2,svg);
         }
       }
     }
@@ -253,9 +249,7 @@
         width: 28px;
         height: 28px;
         text-align: center;
-        @include imageUrl(common_sprite,png);
-        background-size: 440px;
-        background-position: 0 calc(-254px / 2);
+        @include imageUrl(bg_radio_box_off,svg);
       }
     }
 
@@ -267,7 +261,7 @@
           }
         }
         &:before {
-          background-position: -33px calc(-254px / 2);
+          @include imageUrl(bg_radio_box_on,svg);
         }
       }
     }
@@ -424,10 +418,9 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      @include bgImage(50%,28px,common_sprite2) {
+      @include svgImage(50%,28px,bg_camera) {
         width: 24px;
         height: 24px;
-        background-size: 250px;
         margin: -12px 0 0 -12px;
       }
     }

@@ -210,21 +210,22 @@
           width: 60px;
           height: 60px;
           margin-left: -30px;
-          background-position: 0 -211px;
+          background-position: 0 calc(-258px / 3);
+          background-size: calc(1085px / 3) calc(900px / 3);
         }
         &:nth-child(2) {
           &:after {
-            background-position: -70px -211px;
+            background-position: calc(-195px / 3) calc(-258px / 3);
           }
         }
         &:nth-child(3) {
           &:after {
-            background-position: -140px -211px;
+            background-position: calc(-390px / 3) calc(-258px / 3);
           }
         }
         &:nth-child(4) {
           &:after {
-            background-position: -210px -211px;
+            background-position: calc(-585px / 3) calc(-258px / 3);
           }
         }
         .stepNum {
@@ -303,24 +304,18 @@
         padding: 16px 0 0 40px;
         font-size: 16px;
         color: var(--font-color);
-        @include bgImage(0,16px, common_sprite) {
+        @include svgImage(0,16px, bg_call) {
           width: 24px;
           height: 24px;
-          background-size: 440px;
-        }
-        &:nth-child(1) {
-          &:after {
-            background-position: calc(-432px / 2) 0;
-          }
         }
         &:nth-child(2) {
           &:after {
-            background-position: calc(-432px / 2) calc(-58px / 2);
+            @include imageUrl(bg_puzzle,svg);
           }
         }
         &:nth-child(3) {
           &:after {
-            background-position: calc(-432px / 2) calc(-116px / 2);
+            @include imageUrl(bg_money,svg);
           }
         }
         + li {
@@ -356,36 +351,37 @@
           width: 60px;
           height: 60px;
           margin-left: -30px;
-          background-position: 0 -141px;
+          background-size: calc(1085px / 3) calc(900px / 3);
+          background-position: calc(-780px / 3) calc(-258px / 3);
         }
         &:nth-child(2) {
           &:after {
-            background-position: -70px -141px;
+            background-position: 0 calc(-468px / 3);
           }
         }
         &:nth-child(3) {
           &:after {
-            background-position: -140px -141px;
+            background-position: calc(-195px / 3) calc(-468px / 3);
           }
         }
         &:nth-child(4) {
           &:after {
-            background-position: -210px -141px;
+            background-position: calc(-390px / 3) calc(-468px / 3);
           }
         }
         &:nth-child(5) {
           &:after {
-            background-position: -280px -141px;
+            background-position: calc(-585px / 3) calc(-468px / 3);
           }
         }
         &:nth-child(6) {
           &:after {
-            background-position: -350px -141px;
+            background-position: calc(-780px / 3) calc(-468px / 3);
           }
         }
         &:nth-child(7) {
           &:after {
-            background-position: -420px -141px;
+            background-position: 0 calc(-678px / 3);
           }
         }
         .stepNum {
