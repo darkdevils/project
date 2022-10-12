@@ -14,7 +14,6 @@ $('.slideLayer').each(function(){
     $(this).css({bottom: -h});
 });
 
-
 const common = {
     init: function() {
         this.btnSearchClose();

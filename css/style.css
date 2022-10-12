@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://webfontworld.github.io/naver/NanumSquareRound.css");
 /* NotoSansKr */
 /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@500&display=swap');*/
 /*@font-face {
@@ -5417,6 +5418,90 @@ button.swiper-pagination-bullet {
   width: 43px;
   height: 84px;
 }
+.ssMain01--score .subCopy .count {
+  position: absolute;
+  left: 50%;
+  top: 233px;
+  width: 55px;
+  margin-left: -15%;
+  text-align: center;
+  font-size: 32px;
+  color: #3a4962;
+  font-family: "NanumSquareRound";
+  font-weight: 700;
+  z-index: 8;
+}
+.ssMain01--score .textContent {
+  padding: 40px 24px 0;
+}
+.ssMain01--score .roundBox {
+  display: flex;
+  padding: 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+}
+.ssMain01--score .roundBox .title {
+  position: relative;
+  width: 52px;
+  font-weight: 500;
+}
+.ssMain01--score .roundBox .title:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 1px;
+  height: 16px;
+  background-color: #e5e5e5;
+}
+.ssMain01--score .roundBox > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0 0 16px;
+}
+.ssMain01--score .roundBox .ing {
+  color: #999;
+  font-weight: 300;
+}
+.ssMain01--score .roundBox .up {
+  position: relative;
+  color: var(--primary-color);
+}
+.ssMain01--score .roundBox .up:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 5px;
+  background: url("../images/up.svg") no-repeat;
+  right: -22px;
+  width: 16px;
+  height: 16px;
+}
+.ssMain01--score .roundBox .down {
+  position: relative;
+  color: var(--lipstick-color);
+}
+.ssMain01--score .roundBox .down:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 5px;
+  background: url("../images/down.svg") no-repeat;
+  right: -22px;
+  width: 16px;
+  height: 16px;
+}
+.ssMain01--score .roundBox strong {
+  font-weight: 500;
+}
+.ssMain01--score h2.title {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
 
 @keyframes moveUpDown {
   0% {
@@ -7009,6 +7094,10 @@ button.swiper-pagination-bullet {
   color: var(--primary-color);
 }
 
+.redCor {
+  color: var(--lipstick-color);
+}
+
 .titleBox {
   height: 42px;
   line-height: 42px;
@@ -7331,6 +7420,184 @@ button.swiper-pagination-bullet {
 }
 .errorWrap .inspection .justifyWrap + .justifyWrap {
   margin-top: 8px;
+}
+
+.articleWrap--nice .inquiryChange {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  margin: 30px 0 16px;
+}
+.articleWrap--nice .inquiryChange a {
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 102px;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+}
+.articleWrap--nice .inquiryChange a .title {
+  position: relative;
+  font-size: 14px;
+  color: var(--brownishGrey-color);
+}
+.articleWrap--nice .inquiryChange a .title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 3px;
+  background: url("../images/bg_arrow_right.svg") no-repeat;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+}
+.articleWrap--nice .inquiryChange a .num {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.articleWrap--nice .inquiryChange a + a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 1px;
+  height: 54px;
+  background-color: #e5e5e5;
+}
+.articleWrap--nice .sText {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--font-color);
+  line-height: 22px;
+}
+.articleWrap--nice article h2.title {
+  font-size: 20px;
+  line-height: 28px;
+}
+.articleWrap--nice article .infoLink {
+  padding: 16px 0 0;
+}
+.articleWrap--nice article .infoLink a {
+  position: relative;
+  padding: 24px 28px 24px 0;
+  border-top: 1px solid #e7e9ee;
+}
+.articleWrap--nice article .infoLink a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 26px;
+  background: url("../images/bg_arrow_right.svg") no-repeat;
+  right: 0;
+  width: 20px;
+  height: 20px;
+}
+.articleWrap--nice article .infoLink a span:last-child {
+  font-weight: 300;
+}
+.articleWrap--nice article .infoLink a:first-child {
+  border: 0 none;
+}
+.articleWrap--nice article .infoLink a:last-child {
+  padding-bottom: 0;
+}
+.articleWrap--nice article .infoLink .grayBox {
+  margin: 0 0 24px;
+}
+.articleWrap--nice article .bText {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.articleWrap--nice article .bText span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+/* 앱 초기 접근권한 설정 */
+.initialWrap {
+  padding: 0 24px;
+}
+.initialWrap .bText {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.initialWrap ul li {
+  position: relative;
+  margin-top: 24px;
+  padding: 0 0 0 66px;
+}
+.initialWrap ul li strong {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.initialWrap ul li span {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--brownishGrey-color);
+}
+.initialWrap ul li:before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+}
+.initialWrap ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #f6f6f6;
+  border-radius: 50px;
+}
+.initialWrap ul li.lock:before {
+  background: url("../images/bg_lock.svg") no-repeat;
+}
+.initialWrap ul li.call:before {
+  background: url("../images/bg_cellphone.svg") no-repeat;
+}
+.initialWrap ul li.file:before {
+  background: url("../images/bg_file.svg") no-repeat;
+}
+.initialWrap ul li.camera:before {
+  background: url("../images/bg_camera.svg") no-repeat;
+}
+.initialWrap ul li.push:before {
+  background: url("../images/bg_notice.svg") no-repeat;
+}
+.initialWrap ul li.sms:before {
+  background: url("../images/bg_speech_bubble.svg") no-repeat;
+}
+.initialWrap ul + ul {
+  border-top: 1px solid #e2e2e3;
+}
+.initialWrap dl {
+  margin-top: 40px;
+  padding-bottom: 64px;
+  font-size: 14px;
+}
+.initialWrap dl dt {
+  color: #333;
+  margin-bottom: 4px;
+  line-height: 22px;
+}
+.initialWrap dl dd {
+  color: #333;
+  line-height: 22px;
+  font-weight: 300;
 }
 
 /* 파일 첨부 */
