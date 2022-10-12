@@ -556,9 +556,9 @@
 .completeWrap {
   .completeWrap__text {
     position: relative;
-    padding: 92px 0 80px;
+    padding: 80px 0 80px;
     text-align: center;
-    @include svgImage(50%,10px,bg_completion) {
+    @include svgImage(50%,0,bg_completion) {
       width: 52px;
       height: 52px;
       margin-left: -26px;

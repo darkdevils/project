@@ -62,13 +62,20 @@ $slider-btn-margin: 32px;
   }
   /* 약관보기팝업 */
   .agreeTermsContent {
-    padding-top: 24px;
-    * {
-      color: var(--brownishGrey-color);
-      margin-bottom: 20px;
-    }
-    h3.title {
-      color: var(--black-color);
+    padding: 24px 24px 150px;
+    background-color: #f9f9fb;
+    .contentWrap {
+      background-color: #fff;
+      padding: 20px;
+      * {
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--brownishGrey-color);
+        margin-bottom: 20px;
+      }
+      h3.title {
+        color: var(--black-color);
+      }
     }
   }
 

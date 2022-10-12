@@ -570,7 +570,7 @@ div.hasDatepicker {
 
 .btn {
   display: inline-block;
-  background-color: var(--darkSkyBlue-color);
+  background-color: var(--primary-color);
   /* Button Size 기본 */
   /* Button Size가 작을 경우*/
 }
@@ -998,7 +998,7 @@ div.hasDatepicker {
 .checkboxType input[type=checkbox] + label {
   display: block;
   position: relative;
-  padding-left: 34px;
+  padding-left: 36px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1408,13 +1408,20 @@ div.hasDatepicker {
   padding: 70px 24px 0;
 }
 .layerContent .agreeTermsContent {
-  padding-top: 24px;
+  padding: 24px 24px 150px;
+  background-color: #f9f9fb;
 }
-.layerContent .agreeTermsContent * {
+.layerContent .agreeTermsContent .contentWrap {
+  background-color: #fff;
+  padding: 20px;
+}
+.layerContent .agreeTermsContent .contentWrap * {
+  font-size: 14px;
+  line-height: 22px;
   color: var(--brownishGrey-color);
   margin-bottom: 20px;
 }
-.layerContent .agreeTermsContent h3.title {
+.layerContent .agreeTermsContent .contentWrap h3.title {
   color: var(--black-color);
 }
 .layerContent .tabWrap {
@@ -2165,14 +2172,6 @@ div.hasDatepicker {
   margin-bottom: 0px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop0 {
   padding-top: 0px !important;
 }
@@ -2203,14 +2202,6 @@ div.hasDatepicker {
 
 .mgBottom5 {
   margin-bottom: 5px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop5 {
@@ -2245,14 +2236,6 @@ div.hasDatepicker {
   margin-bottom: 10px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop10 {
   padding-top: 10px !important;
 }
@@ -2283,14 +2266,6 @@ div.hasDatepicker {
 
 .mgBottom15 {
   margin-bottom: 15px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop15 {
@@ -2325,14 +2300,6 @@ div.hasDatepicker {
   margin-bottom: 20px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop20 {
   padding-top: 20px !important;
 }
@@ -2363,14 +2330,6 @@ div.hasDatepicker {
 
 .mgBottom25 {
   margin-bottom: 25px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop25 {
@@ -2405,14 +2364,6 @@ div.hasDatepicker {
   margin-bottom: 30px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop30 {
   padding-top: 30px !important;
 }
@@ -2443,14 +2394,6 @@ div.hasDatepicker {
 
 .mgBottom35 {
   margin-bottom: 35px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop35 {
@@ -2485,14 +2428,6 @@ div.hasDatepicker {
   margin-bottom: 40px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop40 {
   padding-top: 40px !important;
 }
@@ -2523,14 +2458,6 @@ div.hasDatepicker {
 
 .mgBottom45 {
   margin-bottom: 45px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop45 {
@@ -2565,14 +2492,6 @@ div.hasDatepicker {
   margin-bottom: 50px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop50 {
   padding-top: 50px !important;
 }
@@ -2603,14 +2522,6 @@ div.hasDatepicker {
 
 .mgBottom55 {
   margin-bottom: 55px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop55 {
@@ -2645,14 +2556,6 @@ div.hasDatepicker {
   margin-bottom: 60px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop60 {
   padding-top: 60px !important;
 }
@@ -2683,14 +2586,6 @@ div.hasDatepicker {
 
 .mgBottom65 {
   margin-bottom: 65px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop65 {
@@ -2725,14 +2620,6 @@ div.hasDatepicker {
   margin-bottom: 70px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop70 {
   padding-top: 70px !important;
 }
@@ -2763,14 +2650,6 @@ div.hasDatepicker {
 
 .mgBottom75 {
   margin-bottom: 75px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop75 {
@@ -2805,14 +2684,6 @@ div.hasDatepicker {
   margin-bottom: 80px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop80 {
   padding-top: 80px !important;
 }
@@ -2843,14 +2714,6 @@ div.hasDatepicker {
 
 .mgBottom85 {
   margin-bottom: 85px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop85 {
@@ -2885,14 +2748,6 @@ div.hasDatepicker {
   margin-bottom: 90px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop90 {
   padding-top: 90px !important;
 }
@@ -2923,14 +2778,6 @@ div.hasDatepicker {
 
 .mgBottom95 {
   margin-bottom: 95px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop95 {
@@ -2965,14 +2812,6 @@ div.hasDatepicker {
   margin-bottom: 100px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop100 {
   padding-top: 100px !important;
 }
@@ -3003,14 +2842,6 @@ div.hasDatepicker {
 
 .mgBottom105 {
   margin-bottom: 105px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop105 {
@@ -3045,14 +2876,6 @@ div.hasDatepicker {
   margin-bottom: 110px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop110 {
   padding-top: 110px !important;
 }
@@ -3083,14 +2906,6 @@ div.hasDatepicker {
 
 .mgBottom115 {
   margin-bottom: 115px !important;
-}
-
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
 }
 
 .padTop115 {
@@ -3125,14 +2940,6 @@ div.hasDatepicker {
   margin-bottom: 120px !important;
 }
 
-.mgTop16 {
-  margin-top: 16px !important;
-}
-
-.mgBottom16 {
-  margin-bottom: 16px !important;
-}
-
 .padTop120 {
   padding-top: 120px !important;
 }
@@ -3147,6 +2954,14 @@ div.hasDatepicker {
 
 .padBottom120 {
   padding-bottom: 120px !important;
+}
+
+.mgTop16 {
+  margin-top: 16px !important;
+}
+
+.mgBottom16 {
+  margin-bottom: 16px !important;
 }
 
 /* Width,Height */
@@ -3692,12 +3507,10 @@ div.hasDatepicker {
   position: absolute;
   left: 50%;
   top: 50%;
-  background: url("../images/common_sprite.png") no-repeat;
+  background: url("../images/bg_home.svg") no-repeat;
   width: 24px;
   height: 24px;
   margin: -12px 0 0 -12px;
-  background-size: 440px;
-  background-position: -209.5px -129px;
 }
 .header .menuClose {
   position: absolute;
@@ -3800,9 +3613,6 @@ div.hasDatepicker {
   font-size: 12px;
   color: var(--white-color);
   line-height: 24px;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0;
-  font-size: 14px;
   text-align: center;
 }
 .stepArea .stepArea__list ol li.on span {
@@ -3904,7 +3714,7 @@ div.hasDatepicker {
   position: relative;
   padding: 0 0 0 12px;
   color: var(--brownishGrey-color);
-  line-height: 26px;
+  line-height: 24px;
 }
 .blType li:after {
   content: "";
@@ -4973,7 +4783,7 @@ button.swiper-pagination-bullet {
 }
 .subMain01 .subCopy .txtSmall {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--slateGrey-color);
   font-size: 16px;
 }
@@ -5262,7 +5072,7 @@ button.swiper-pagination-bullet {
   background-color: #f9f9fb;
 }
 .ssMain01 .textContent .list {
-  margin-bottom: 58px;
+  margin-bottom: 72px;
 }
 .ssMain01 .textContent .list li {
   position: relative;
@@ -6132,7 +5942,7 @@ button.swiper-pagination-bullet {
 
 .completeWrap .completeWrap__text {
   position: relative;
-  padding: 92px 0 80px;
+  padding: 80px 0 80px;
   text-align: center;
 }
 .completeWrap .completeWrap__text:after {
@@ -6140,7 +5950,7 @@ button.swiper-pagination-bullet {
   display: block;
   position: absolute;
   left: 50%;
-  top: 10px;
+  top: 0;
   background: url("../images/bg_completion.svg") no-repeat;
   width: 52px;
   height: 52px;

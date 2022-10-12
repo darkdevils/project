@@ -14,12 +14,6 @@ $border-line: #ededf0;
   .mgBottom#{$i * 5}{
     margin-bottom: $i * 5px !important;
   }
-  .mgTop16 {
-    margin-top: 16px !important;
-  }
-  .mgBottom16 {
-    margin-bottom: 16px !important;
-  }
 
   .padTop#{$i * 5}{
     padding-top: $i * 5px !important;
@@ -34,6 +28,13 @@ $border-line: #ededf0;
     padding-bottom: $i * 5px !important;
   }
 }
+.mgTop16 {
+  margin-top: 16px !important;
+}
+.mgBottom16 {
+  margin-bottom: 16px !important;
+}
+
 /* Width,Height */
 @for $i from 10 to 50 {
   .w#{$i * 5} {
@@ -168,12 +169,10 @@ $border-line: #ededf0;
     top: 0;
     width: 60px;
     height: 60px;
-    @include bgImage(50%,50%, common_sprite) {
+    @include svgImage(50%,50%, bg_home) {
       width: 24px;
       height: 24px;
       margin: -12px 0 0 -12px;
-      background-size: 440px;
-      background-position: calc(-419px / 2) calc(-258px / 2);
     }
   }
   .menuClose {
@@ -278,7 +277,6 @@ $border-line: #ededf0;
             font-size: 12px;
             color: var(--white-color);
             line-height: 24px;
-            @include numberText;
             text-align: center;
           }
         }
@@ -397,7 +395,7 @@ $border-line: #ededf0;
     position: relative;
     padding: 0 0 0 12px;
     color: var(--brownishGrey-color);
-    line-height: 26px;
+    line-height: 24px;
     &:after {
       content: "";
       position: absolute;
