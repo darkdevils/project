@@ -570,3 +570,85 @@
     opacity: 0;
   }
 }
+
+/* 신용진단 서브메인 */
+.diagnosis {
+  padding: 24px 24px 0;
+  .item {
+    position: relative;
+    height: 284px;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    a {
+      * {
+        display: block;
+      }
+      strong {
+        position: relative;
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        color: var(--white-color);
+        @include svgImage(auto,50%,bg_bracket_write) {
+          right: 0;
+          width: 20px;
+          height: 20px;
+          margin-top: -10px;
+        }
+      }
+      span {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        color: #eee;
+      }
+    }
+    &:after {
+      right: 24px;
+      bottom: 24px;
+      height: 132px;
+    }
+    &.item--nice {
+      background-color: #0f228b;
+      @include bgImage(auto,auto,bg_submain) {
+        width: 132px;
+        background-size: calc(2084px / 3) calc(396px / 3);
+        background-position: 0 0
+      }
+    }
+    &.item--kcb {
+      background-color: #e63e23;
+      @include bgImage(auto,auto,bg_submain) {
+        width: 132px;
+        background-size: calc(2084px / 3) calc(396px / 3);
+        background-position: calc(-396px / 3) 0
+      }
+    }
+    &.item--number {
+      background-color: #ff7a00;
+      @include bgImage(auto,auto,bg_submain) {
+        width: 132px;
+        background-size: calc(2084px / 3) calc(396px / 3);
+        background-position: calc(-792px / 3) 0
+      }
+    }
+    &.item--diagnosis {
+      background-color: #600f86;
+      @include bgImage(auto,auto,bg_submain) {
+        width: calc(423px / 3);
+        background-size: calc(2084px / 3) calc(396px / 3);
+        background-position: calc(-1188px / 3) 0
+      }
+    }
+    &.item--financial {
+      background-color: #138159;
+      @include bgImage(auto,auto,bg_submain) {
+        width: calc(473px / 3);
+        background-size: calc(2084px / 3) calc(396px / 3);
+        background-position: calc(-1611px / 3) 0
+      }
+    }
+  }
+}

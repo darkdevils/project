@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용진단 - 나의신용통계</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">나의 신용통계</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="tabWrap">
+            <ul id="tabs" class="tabType">
+                <li><a href="#">평점통계</a></li>
+                <li><a href="#">대출통계</a></li>
+                <li><a href="#">카드통계</a></li>
+            </ul>
+        </div>
+        <div id="tabs__con" class="tabContent">
+            <!-- 평점통계 -->
+            <div>평점통계</div>
+            <!-- //평점통계 -->
+
+            <!-- 대출통계 -->
+            <div>대출통계</div>
+            <!-- //대출통계 -->
+
+            <!-- 카드통계 -->
+            <div>카드통계</div>
+            <!-- //카드통계 -->
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(function(){
+    // 탭
+    common.tabType('#tabs',0);
+
+    // 그래프
+    let arr =  [];
+   $('.graphList li').each(function(i,el){
+       let _width = $(this).find('.number').text();
+        _width = Number(_width);
+       arr.push(_width);
+       //maxVal = Math.max.apply(null,arr);
+       //minVal = Math.min.apply(null,arr);
+
+       $(this).find('.graphBar').css({
+           width : (_width / 999) * 100 + '%'
+       });
+   });
+});
+</script>
+
+</body>
+</html>
