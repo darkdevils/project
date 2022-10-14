@@ -80,6 +80,64 @@
     </div>
 </div>
 
+<!-- 전체메뉴 레이어팝업 -->
+<div class="menuLayer">
+    <div class="header">
+        <button type="button" class="btnHome"><span class="blind">홈으로</span></button>
+        <h1 class="blind">전체메뉴</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="menuClose"><span class="blind">메뉴닫기</span></button>
+    </div>
+    <div class="container">
+        <div class="totalMenu">
+            <div class="joinWrap">
+                <strong>홍길동님</strong>
+                <p class="text">마지막 접속 2022.08.03 10:45:53</p>
+            </div>
+            <hr class="bgLine">
+            <div class="totalMenu__item">
+                <h2 class="title"><a href="#">내 신용진단하기</a></h2>
+                <ul>
+                    <li><a href="#">NICE 신용진단</a></li>
+                    <li><a href="#">KCB 신용진단</a></li>
+                    <li><a href="#">신용점수 올리기</a></li>
+                    <li><a href="#">신쏙진단</a></li>
+                    <li><a href="#">금융계산기</a></li>
+                </ul>
+            </div>
+            <div class="totalMenu__item">
+                <h2 class="title">신용상담 서비스</h2>
+                <ul>
+                    <li><a href="#">신용상담</a></li>
+                </ul>
+            </div>
+            <div class="totalMenu__item">
+                <h2 class="title">커뮤니티</h2>
+                <ul>
+                    <li><a href="#">신용솔루션</a></li>
+                    <li><a href="#">신용교육</a></li>
+                    <li><a href="#">신용뉴스</a></li>
+                    <li><a href="#">자유게시판</a></li>
+                </ul>
+            </div>
+            <div class="totalMenu__item">
+                <h2 class="title">마이페이지</h2>
+                <ul>
+                    <li><a href="#">상담내역</a></li>
+                    <li><a href="#">활동내역</a></li>
+                    <li><a href="#">관심목록</a></li>
+                    <li><a href="#">신고내역</a></li>
+                    <li><a href="#">사용자 매뉴얼</a></li>
+                    <li><a href="#">앱 설정</a></li>
+                    <li><a href="#">서비스 약관</a></li>
+                    <li><a href="#">회원탈퇴</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //전체메뉴 레이어팝업 -->
+
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/lib/swiper.js"></script>
 <script src="../../js/common.js"></script>
@@ -110,6 +168,20 @@
         });
     }
     loop();
+
+    // 전체메뉴 클릭시
+    const btnMenu = document.querySelector('.btnMenu');
+    const menuClose = document.querySelector('.menuClose');
+
+    btnMenu.addEventListener('click',function(){
+        document.querySelector('body').style.overflow = 'hidden';
+        document.querySelector('.menuLayer').classList.add('on');
+    });
+
+    menuClose.addEventListener('click', function(){
+        document.querySelector('body').style.overflow = 'auto';
+        document.querySelector('.menuLayer').classList.remove('on');
+    });
 
 </script>
 </body>
