@@ -193,17 +193,28 @@ const common = {
 
     // Scroll Down시 Header line 추가
     headerLine: function(){
+        const _menuLayer = $('.menuLayer .container');
         $(window).scroll(function(){
+            scrollDown()
+        });
+        _menuLayer.scroll(function(){
             scrollDown()
         });
         scrollDown();
         function scrollDown() {
             const _window = $(window);
+
             const scrollTop = _window.scrollTop();
+            const menuScrollTop = _menuLayer.scrollTop();
             if(scrollTop > 0) {
                 $('.header,.layerHead').addClass('borBtm');
             } else {
                 $('.header,.layerHead').removeClass('borBtm');
+            }
+            if(menuScrollTop > 0) {
+                $('.menuLayer .header').addClass('borBtm');
+            } else {
+                $('.menuLayer .header').removeClass('borBtm');
             }
         }
     },

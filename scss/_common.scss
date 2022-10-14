@@ -163,18 +163,7 @@ $border-line: #ededf0;
       background-color: var(--red-color);
     }
   }
-  .btnHome {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 60px;
-    height: 60px;
-    @include svgImage(50%,50%, bg_home) {
-      width: 24px;
-      height: 24px;
-      margin: -12px 0 0 -12px;
-    }
-  }
+
   .menuClose {
     position: absolute;
     top: 18px;
@@ -636,12 +625,15 @@ h2.h2_title {
 /* Loading */
 $spCol: #000;
 .loadingWrap {
+  display: none;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 999;
   &:after {
     display: none;
     content: "";
@@ -762,5 +754,41 @@ $spCol: #000;
   }
   100% {
     box-shadow: rgba(0, 0, 0, 0.5) -30px -16.66667px 2px, rgba(0, 0, 0, 0.5) 0 -16.66667px 2px, rgba(0, 0, 0, 0.5) 30px -16.66667px 2px;
+  }
+}
+
+/* 전체메뉴 */
+
+.menuLayer {
+  display: block;
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 100;
+  transition: 0.5s ease;
+  transform: translate(0, 0);
+  .container {
+    height: 100vh;
+    overflow: auto;
+  }
+  &.on {
+    transform: translate(-100%, 0);
+  }
+  .header {
+    .btnHome {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      @include svgImage(50%,50%, bg_home) {
+        width: 24px;
+        height: 24px;
+        margin: -12px 0 0 -12px;
+      }
+    }
   }
 }

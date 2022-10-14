@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
+
+<div class="btnWrap w120" style="position: absolute;left: 20px;top: 20px"><button type="button" class="btn btn-d"><span>로딩보이기</span></button></div>
+
 <div class="loadingWrap">
     <div class="loadingCenter">
         <div class="loadingBall"></div>
@@ -15,6 +18,18 @@
 </div>
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/common.js"></script>
+<script>
+    const btn = document.querySelector('.btn');
+    const loading = document.querySelector('.loadingWrap');
+    btn.addEventListener("click", function(){
+        loading.style.display = "block";
 
+        // 테스트실행 3.5초후 로딩 닫기
+        setTimeout(function(){
+            loading.style.display = "none";
+        },3500);
+    });
+
+</script>
 </body>
 </html>

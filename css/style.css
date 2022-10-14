@@ -4243,24 +4243,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   border-radius: 4px;
   background-color: var(--red-color);
 }
-.header .btnHome {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 60px;
-  height: 60px;
-}
-.header .btnHome:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background: url("../images/bg_home.svg") no-repeat;
-  width: 24px;
-  height: 24px;
-  margin: -12px 0 0 -12px;
-}
 .header .menuClose {
   position: absolute;
   top: 18px;
@@ -4718,11 +4700,15 @@ h2.h2_title {
 
 /* Loading */
 .loadingWrap {
+  display: none;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 999;
 }
 .loadingWrap:after {
   display: none;
@@ -4844,6 +4830,45 @@ h2.h2_title {
     box-shadow: rgba(0, 0, 0, 0.5) -30px -16.66667px 2px, rgba(0, 0, 0, 0.5) 0 -16.66667px 2px, rgba(0, 0, 0, 0.5) 30px -16.66667px 2px;
   }
 }
+/* 전체메뉴 */
+.menuLayer {
+  display: block;
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 100;
+  transition: 0.5s ease;
+  transform: translate(0, 0);
+}
+.menuLayer .container {
+  height: 100vh;
+  overflow: auto;
+}
+.menuLayer.on {
+  transform: translate(-100%, 0);
+}
+.menuLayer .header .btnHome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+}
+.menuLayer .header .btnHome:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("../images/bg_home.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+}
+
 /**
  * Swiper 8.3.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions

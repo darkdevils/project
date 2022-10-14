@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-<div class="wrap">
+<div class="btnWrap w120" style="position: absolute;left: 20px;top: 20px;"><button type="button" class="btn btn-d btnMenu"><span>전체메뉴</span></button></div>
+
+<div class="menuLayer">
     <div class="header">
         <button type="button" class="btnHome"><span class="blind">홈으로</span></button>
         <h1 class="blind">전체메뉴</h1>
@@ -66,5 +68,20 @@
 
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/common.js"></script>
+<script>
+    // 전체메뉴 클릭시
+    const btnMenu = document.querySelector('.btnMenu');
+    const menuClose = document.querySelector('.menuClose');
+
+    btnMenu.addEventListener('click',function(){
+        document.querySelector('body').style.overflow = 'hidden';
+        document.querySelector('.menuLayer').classList.add('on');
+    });
+
+    menuClose.addEventListener('click', function(){
+        document.querySelector('body').style.overflow = 'auto';
+        document.querySelector('.menuLayer').classList.remove('on');
+    });
+</script>
 </body>
 </html>
