@@ -168,6 +168,7 @@
   --bright-orange: #f26100;
   --tree-green: #1e842b;
   --red-orange: #ff2c00;
+  --pinkish-red: #ed1651;
 }
 
 /* Grey color */
@@ -1411,6 +1412,23 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
 }
 .listBtn li + li {
   margin-top: 24px;
+}
+
+/* 게시물 관리 버튼 ,옵션 버튼 */
+.btnOption {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.btnOption:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/bg_ellipsis.svg") no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
 .inputArea {
@@ -7083,6 +7101,22 @@ button.swiper-pagination-bullet {
 .boardWrap__list li .textContent .textarea .noText, .listType li .textContent .textarea .noText {
   color: var(--warmGrey-color2);
 }
+.boardWrap__list li .secretArticle, .listType li .secretArticle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+}
+.boardWrap__list li .secretArticle:after, .listType li .secretArticle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/bg_lock2.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+}
 
 .boardWrap__list li {
   padding: 24px 0;
@@ -7116,9 +7150,15 @@ button.swiper-pagination-bullet {
 .boardView .boardView__header .title {
   display: block;
   margin-bottom: 16px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 28px;
+}
+.boardView .boardView__header .title .mark {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--pinkish-red);
 }
 .boardView .boardView__header .infoArea span {
   position: relative;
@@ -7403,6 +7443,14 @@ button.swiper-pagination-bullet {
 }
 
 /***** 신쏙진단 *****/
+.sectionInfo .stepWrap {
+  margin: 30px 0 14px;
+}
+.sectionInfo .stepWrap h3.title {
+  color: #000;
+  font-weight: 500;
+}
+
 /* 신쏙진단 - 기타채무액 입력 */
 .grayBox {
   margin: 40px 0;
@@ -8305,6 +8353,87 @@ button.swiper-pagination-bullet {
   color: #333;
   line-height: 22px;
   font-weight: 300;
+}
+
+/* 커뮤니티 */
+.verticalScroll {
+  position: relative;
+  overflow: hidden;
+}
+.verticalScroll:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.verticalScroll .verticalScroll__list {
+  position: relative;
+  white-space: nowrap;
+  overflow-x: auto;
+  z-index: 1;
+}
+.verticalScroll .verticalScroll__list::-webkit-scrollbar {
+  display: none;
+}
+.verticalScroll .verticalScroll__list ul {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+}
+.verticalScroll .verticalScroll__list ul li {
+  position: relative;
+  vertical-align: top;
+  margin-left: 24px;
+}
+.verticalScroll .verticalScroll__list ul li a {
+  position: relative;
+  display: block;
+  height: 56px;
+  padding: 16px 8px 0;
+  box-sizing: border-box;
+  color: var(--warmGrey-color2);
+}
+.verticalScroll .verticalScroll__list ul li:first-child {
+  margin-left: 0;
+}
+.verticalScroll .verticalScroll__list ul li.on a {
+  color: var(--black-color);
+}
+.verticalScroll .verticalScroll__list ul li.on a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 6px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.contentTab {
+  margin-bottom: 24px;
+}
+.contentTab ul {
+  display: flex;
+}
+.contentTab ul li {
+  margin-right: 12px;
+}
+.contentTab ul li a {
+  display: block;
+  padding: 0 16px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #eee;
+  color: var(--warmGrey-color2);
+  border-radius: 100px;
+}
+.contentTab ul li.on a {
+  background-color: var(--black-color);
+  color: var(--white-color);
 }
 
 /* 파일 첨부 */

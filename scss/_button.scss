@@ -166,3 +166,14 @@
     }
   }
 }
+
+/* 게시물 관리 버튼 ,옵션 버튼 */
+.btnOption {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  @include svgImage(0,0,bg_ellipsis) {
+    width: 20px;
+    height: 20px;
+  }
+}
