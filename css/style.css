@@ -1772,7 +1772,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   background: url("../images/bg_checkbox_on.svg") no-repeat;
 }
 .checkboxType input[type=checkbox]:disabled + label:before {
-  background-position: 0 -193px;
+  background: url("../images/bg_checkbox_disabled.svg") no-repeat;
 }
 
 .checkboxHorizontal {
@@ -5815,6 +5815,7 @@ button.swiper-pagination-bullet {
   position: relative;
   margin: 30px 0 50px;
   text-align: center;
+  overflow: hidden;
   /*@include bgImage(50%,191px,bg_ss01_submain) {
     width: 279px;
     height: 320px;
@@ -5879,6 +5880,7 @@ button.swiper-pagination-bullet {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 0 36px;
+  overflow: hidden;
 }
 .ssMain01 .textContent .stepList li {
   position: relative;
@@ -5948,7 +5950,9 @@ button.swiper-pagination-bullet {
   background-color: #ffedf3;
 }
 .ssMain01--score .subCopy {
-  margin: 30px 0 82px;
+  margin: 30px 0 0;
+  padding-bottom: 82px;
+  overflow: hidden;
 }
 .ssMain01--score .subCopy .txtBig {
   margin-bottom: 88px;
@@ -5960,7 +5964,7 @@ button.swiper-pagination-bullet {
 }
 .ssMain01--score .subCopy .arrowWrap {
   position: absolute;
-  bottom: -250px;
+  bottom: -170px;
   left: 0;
   height: 280px;
   width: 100%;
@@ -6123,10 +6127,13 @@ button.swiper-pagination-bullet {
 }
 .diagnosis .item {
   position: relative;
-  height: 284px;
-  padding: 24px;
   border-radius: 16px;
   margin-bottom: 24px;
+}
+.diagnosis .item a {
+  display: block;
+  height: 284px;
+  padding: 24px;
 }
 .diagnosis .item a * {
   display: block;
