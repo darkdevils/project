@@ -386,7 +386,7 @@
     &:disabled {
       + label {
         &:before {
-          background-position: 0 calc(-386px / 2);
+          @include imageUrl(bg_checkbox_disabled,svg);
         }
       }
     }

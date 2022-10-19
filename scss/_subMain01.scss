@@ -267,6 +267,7 @@
     position: relative;
     margin: 30px 0 50px;
     text-align: center;
+    overflow: hidden;
     /*@include bgImage(50%,191px,bg_ss01_submain) {
       width: 279px;
       height: 320px;
@@ -328,6 +329,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 0 0 36px;
+      overflow: hidden;
       li {
         position: relative;
         width: 50%;
@@ -403,7 +405,9 @@
   &--score {
     background-color: #ffedf3;
     .subCopy {
-      margin: 30px 0 82px;
+      margin: 30px 0 0;
+      padding-bottom: 82px;
+      overflow: hidden;
       .txtBig {
         margin-bottom: 88px;
       }
@@ -414,7 +418,7 @@
       }
       .arrowWrap {
         position: absolute;
-        bottom: -250px;
+        bottom: -170px;
         left: 0;
         height: 280px;
         width: 100%;
@@ -576,11 +580,12 @@
   padding: 24px 24px 0;
   .item {
     position: relative;
-    height: 284px;
-    padding: 24px;
     border-radius: 16px;
     margin-bottom: 24px;
     a {
+      display: block;
+      height: 284px;
+      padding: 24px;
       * {
         display: block;
       }
