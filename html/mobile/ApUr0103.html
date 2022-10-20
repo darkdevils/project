@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담후기 - 등록</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="layerPopup">
+    <div class="layerHead">
+        <h2 class="title">상담후기</h2>
+        <button type="button" class="btnLayerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="layerContent">
+        <div class="layerReview">
+            <h2 class="title ">상담 정보</h2>
+            <div class="grayBox">
+                <div class="justifyWrap">
+                    <div class="infoTitle">상담업체</div>
+                    <div class="infoText">신용회복위원회</div>
+                </div>
+                <div class="justifyWrap">
+                    <div class="infoTitle">상담분야</div>
+                    <div class="infoText">신용·재무관리</div>
+                </div>
+                <div class="justifyWrap">
+                    <div class="infoTitle">상담일시</div>
+                    <div class="infoText">2022-09-08 15:00~15:30</div>
+                </div>
+            </div>
+            <h2 class="title">상담 별점</h2>
+            <div class="layerReview__rating">
+                <div class="rating"></div>
+                <p class="text">상담은 만족스러우셨나요?</p>
+            </div>
+            <h2 class="title">후기 내용</h2>
+            <div class="textStyle">
+                <label for="textarea01" class="blind">질문 등록 내용</label>
+                <textarea name="" id="textarea01" cols="30" rows="10" placeholder="후기내용을 입력해주세요&#13;&#10;(최소 20자 이상 1,000자 까지 입력 가능합니다)"></textarea>
+            </div>
+            <div class="textCount"><span class="num">0</span><span class="totalNum">1,000<em>자</em></span></div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d"><span>등록하기</span></button>
+        <button type="button" class="btn btn-d btnGray" disabled style="display: none"><span>작성완료</span></button>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $(function(){
+        $('.layerReview__rating .rating').starRating({
+            showInfo: true
+        });
+        $('.ratingList').on('click',function(){
+            $('.layerReview__rating .text').hide();
+            $('.btnWrap.fixedBtm button').prop('disabled', false);
+        });
+    });
+</script>
+</body>
+</html>

@@ -276,7 +276,7 @@
     }*/
     .txtSmall {
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       color: var(--slateGrey-color);
       font-size: 16px;
     }
@@ -503,7 +503,6 @@
       > div {
         display: flex;
         justify-content: space-between;
-        width: 100%;
         padding: 0 0 0 16px;
       }
       .ing {
@@ -586,6 +585,7 @@
       display: block;
       height: 284px;
       padding: 24px;
+      box-sizing: border-box;
       * {
         display: block;
       }
@@ -607,7 +607,7 @@
         font-size: 14px;
         font-weight: 300;
         line-height: 22px;
-        color: #eee;
+        color: #eaeaea;
       }
     }
     &:after {

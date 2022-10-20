@@ -34,6 +34,12 @@ $border-line: #ededf0;
 .mgBottom16 {
   margin-bottom: 16px !important;
 }
+.padTop16 {
+  padding-top: 16px !important;
+}
+.padBottom16 {
+  padding-bottom: 16px !important;
+}
 
 /* Width,Height */
 @for $i from 10 to 50 {
@@ -394,6 +400,9 @@ $border-line: #ededf0;
       height: 4px;
       border-radius: 4px;
       background-color: #999;
+    }
+    + li {
+      margin-top: 4px;
     }
   }
 }
