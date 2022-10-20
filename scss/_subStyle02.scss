@@ -220,10 +220,8 @@
   width:28px;
   height:28px;
   text-align:center;
-  background:url("../images/common_sprite2.png") no-repeat -139px 0;
-  background-size:250px;
+  background:url("../images/bg_checkbox.svg") no-repeat;
 }
 .info_popup01 .info_close input[type=checkbox]:checked + label:before{
-  background:url("../images/common_sprite2.png") no-repeat -167px 0;
-  background-size:250px;
+  background:url("../images/bg_checkbox_on.svg") no-repeat;
 }
