@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>금융계산기</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap finalCalculator">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">금융계산기</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="finalCalculator__con">
+            <h2 class="title">대출정보</h2>
+            <p class="text">대출의 상환금액과 일정을 계산해 드립니다.</p>
+            <h3 class="title">상환방법</h3>
+            <div class="selectBtn">
+                <button type="button"><span>원리금균등상환</span></button>
+            </div>
+            <h3 class="title">대출원금</h3>
+            <div class="inputWrap inputWrap-Text">
+                <label for="inputMoney" class="blind">금액</label>
+                <input type="number" name="" id="inputMoney" placeholder="대출원금을 입력해 주세요.">
+                <span class="moneyText">원</span>
+            </div>
+            <h3 class="title">대출금리</h3>
+            <div class="inputWrap inputWrap-Text">
+                <label for="inputMoney" class="blind">%</label>
+                <input type="number" name="" id="inputMoney2" placeholder="대출금리를 입력해 주세요.">
+                <span class="moneyText">%</span>
+            </div>
+            <h3 class="title">대출기간</h3>
+            <div class="inputWrap inputWrap-Text">
+                <label for="inputMoney" class="blind">개월</label>
+                <input type="number" name="" id="inputMoney3" placeholder="대출기간을 입력해 주세요.">
+                <span class="moneyText">개월</span>
+            </div>
+            <div class="btnWrap">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

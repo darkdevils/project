@@ -2598,3 +2598,24 @@
     }
   }
 }
+
+/* 금융계산기 */
+.finalCalculator {
+  background-color: #f9f9fb;
+  .finalCalculator__con {
+    padding: 24px 24px 40px;
+    h2.title {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    .text {
+      color: var(--brownishGrey-color);
+    }
+    h3.title {
+      margin: 30px 0 14px;
+      font-weight: 500;
+    }
+  }
+}

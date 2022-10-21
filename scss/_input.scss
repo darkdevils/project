@@ -38,7 +38,7 @@
     outline-color: var(--primary-color);
   }
   /* Input 만원 */
-  &.inputWrap-Money {
+  &.inputWrap-Money,&.inputWrap-Text {
     input[type="text"],input[type="number"] {
       line-height: 56px;
       text-align: right;
