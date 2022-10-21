@@ -233,7 +233,7 @@
 }
 
 .titleArea{
-  padding:24px 25px 40px;
+  padding:24px 24px 40px;
 }
 .titleArea .title_name{
   height:28px;
@@ -243,6 +243,20 @@
   color:#000;
   margin-bottom:8px;
 }
+.titleArea .title_v{
+  height:26px;
+  line-height:26px;
+  font-weight:500;
+  font-size:18px;
+  color:#000;
+}
+.titleArea .appInfo{
+  height:26px;
+  line-height:26px;
+  font-weight:400;
+  font-size:14px;
+  color:#666;
+}
 .titleArea .infoArea span{
   display:inline-block;
   height:22px;
@@ -251,6 +265,9 @@
   font-size:14px;
   font-weight:300;
   margin-right:8px;
+}
+.titleArea .mb8{
+  margin-bottom:8px;
 }
 .bg_grey{
   width:100%;
@@ -336,7 +353,53 @@
   height:20px;
   background:url("../images/bg_arrow_right.svg") no-repeat;
 }
-
+.listArea .check_sub{
+  padding:24px 0;
+  border-bottom:1px solid #e7e9ee;
+}
+.listArea .check_sub input[type=checkbox]{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0, 0, 0, 0);
+  border:0;
+}
+.listArea .check_sub input[type=checkbox] + label{
+  display:block;
+  position:relative;
+  width:100%;
+  height:24px;
+  line-height:24px;
+  font-size:16px;
+  font-weight:400;
+  color:#000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.listArea .check_sub input[type=checkbox] + label:before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:40px;
+  height:24px;
+  text-align:right;
+  background:url("../images/Toggle_off.svg") no-repeat;
+}
+.listArea .check_sub input[type=checkbox]:checked + label:before{
+  background:url("../images/Toggle_on.svg") no-repeat;
+}
+.listArea .check_sub p.txt{
+  line-height:22px;
+  font-size:14px;
+  font-weight:400;
+  color:#666;
+  margin-top:8px;
+}
 
 
 

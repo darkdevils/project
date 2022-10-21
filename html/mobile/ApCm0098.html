@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PUSH 수신 설정 안내 팝업</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title blind">PUSH 수신 설정 안내 팝업</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <div class="warning">
+            <p class="fs18">PUSH 수신 설정 안내</p>
+            <p class="fs16">PUSH 수신 설정이 Off 로 되어있습니다.</p>
+            <p class="fs14">신용조회 및 변동, 신용상담 서비스 진행상태,<br>
+                신용솔루션  답변에 대한 알림을 받으시려면<br>
+                아래 설정하기 버튼을 터치해 주세요.</p>
+        </div>
+        <div class="btnWrap btnWrap-col2">
+            <button type="button" class="btn btn-d btnGray w78 layerClose"><span>취소</span></button>
+            <button type="button" class="btn btn-d"><span>설정하기</span></button>
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    common.slideLayer.slideOpen('slideLayer01');
+</script>
+</body>
+</html>
