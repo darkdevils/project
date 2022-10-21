@@ -534,11 +534,9 @@
         width: 20px;
         height: 20px;
         z-index: 5;
-        @include bgImage(0,0,common_sprite2) {
+        @include svgImage(0,0,bg_del) {
           width: 20px;
           height: 20px;
-          background-size: 250px;
-          background-position: -29px 0;
         }
       }
     }

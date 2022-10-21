@@ -4,10 +4,11 @@
   padding: 0 0 80px;
 }
 .consultingImage {
-  /*height: 200px;*/
+  height: 200px;
   overflow: hidden;
   text-align: center;
-  background-color: var(--black-color);
+  background: #f4f4f4 url("../images/bg_default.png") no-repeat center;
+  background-size: contain;
   img {
     max-width: 100%;
     height: auto;
@@ -21,7 +22,7 @@
   align-items: center;
   .name {
     display: block;
-    width: calc(100% - 30px);
+    width: calc(100% - 40px);
     font-size: 20px;
     line-height: 30px;
     font-weight: 500;
@@ -37,7 +38,7 @@
   }
 }
 .labelList {
-  padding: 0 24px 16px;
+  padding: 0 24px 32px;
   margin-left: -8px;
   span {
     display: inline-block;
@@ -73,6 +74,17 @@
   }
 }
 
+.companyInfo {
+  padding: 0 24px;
+  h2.title {
+    margin: 40px 0 8px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .text {
+    color: var(--brownishGrey-color);
+  }
+}
 
 /***** 상담사 상세(상담일정)-금주 상담일정 *****/
 .scheduleTitle {
@@ -446,6 +458,7 @@
   margin-top: 12px;
   > ul {
     .item {
+      position: relative;
       padding: 23px 24px;
       border: 1px solid #e5e5e5;
       border-radius: 18px;
@@ -530,7 +543,31 @@
       + .item {
         margin-top: 16px;
       }
+      &.active {
+        &:after {
+          content: "";
+          position: absolute;
+          left: -1px;
+          top: -1px;
+          width: calc(100% - 1px);
+          height: calc(100% - 1px);
+          border: 2px solid var(--primary-color);
+          border-radius: 18px;
+        }
+      }
     }
+  }
+}
+.companyNodata {
+  height: calc(100vh - 208px);
+  padding-top: calc(50vh - 108px);
+  color: var(--brownishGrey-color);
+  text-align: center;
+  @include bgImage(50%,50%,bg_company) {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    margin: -96px 0 0 -40px;
   }
 }
 
@@ -554,6 +591,7 @@
 }
 
 .completeWrap {
+  padding: 80px 24px 0;
   .completeWrap__text {
     position: relative;
     padding: 80px 0 80px;
@@ -579,6 +617,11 @@
   .completeWrap__info {
     border-top: 1px solid #e7e9ee;
     border-bottom: 1px solid #e7e9ee;
+    .reservationTxt {
+      dt,dd {
+        margin-bottom: 8px;
+      }
+    }
   }
   &.memberCompleted,&.secessionCompleted {
     position: relative;
@@ -654,6 +697,34 @@
       }
     }
   }
+  .serviceText {
+    padding: 0 0 40px;
+    border-bottom: 1px solid #e7e9ee;
+    strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    p {
+      color: var(--brownishGrey-color);
+    }
+  }
+}
+.textType {
+  .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--black-color);
+  }
+  .text {
+    margin-bottom: 32px;
+    color: var(--brownishGrey-color);
+  }
 }
 
 /* 게시판목록 */
@@ -669,6 +740,7 @@
 .boardWrap__list,.listType {
   border-bottom: 1px solid #e7e9ee;
   li {
+    position: relative;
     border-top: 1px solid #e7e9ee;
     padding: 24px 0 0;
     .justifyWrap {
@@ -817,7 +889,88 @@
       @include svgImage(0,0,bg_lock2) {
         width: 20px;
         height: 20px;
-
+      }
+    }
+    &.noList {
+      position: relative;
+      height: calc(100vh - 417px);
+      border: 0;
+      text-align: center;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        z-index: 2;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 46px);
+        @include imageUrl(bg_nodata,png);
+        width: 80px;
+        height: 66px;
+        margin: -33px 0 0 -40px;
+        background-size: contain;
+      }
+      .text {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        color: var(--brownishGrey-color);
+      }
+    }
+    &.noSearch {
+      position: relative;
+      height: calc(100vh - 417px);
+      border: 0;
+      text-align: center;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        z-index: 2;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 54px);
+        @include imageUrl(bg_nosearch,png);
+        width: 80px;
+        height: 74px;
+        margin: -37px 0 0 -40px;
+        background-size: contain;
+      }
+      .text {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        color: var(--brownishGrey-color);
+      }
+    }
+    &.blindWrap {
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--white-color);
+        opacity: 0.5;
+        z-index: 2;
+      }
+      .reText {
+        color: #888 !important;
       }
     }
   }
@@ -826,7 +979,7 @@
   li {
     position: relative;
     padding: 24px 0;
-    &.readonly {
+    &.blindWrap {
       &:after{
         content: "";
         position: absolute;
@@ -1022,6 +1175,10 @@
       }
       .reText {
         color: var(--font-color);
+        .redCor {
+          margin-right: 5px;
+          color: var(--pinkish-red);
+        }
       }
       .btnReply {
         font-size: 14px;
@@ -1162,7 +1319,7 @@
 .boardWriting {
   padding: 24px 24px 48px;
   .textStyle {
-    height: calc(100vh - 343px);
+    height: 302px;
   }
 }
 

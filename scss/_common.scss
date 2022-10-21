@@ -31,6 +31,9 @@ $border-line: #ededf0;
 .mgTop16 {
   margin-top: 16px !important;
 }
+.mgTop24 {
+  margin-top: 24px !important;
+}
 .mgBottom16 {
   margin-bottom: 16px !important;
 }
@@ -800,4 +803,15 @@ $spCol: #000;
       }
     }
   }
+}
+
+/* align */
+.textl {
+  text-align: left !important;
+}
+.textR {
+  text-align: right !important;
+}
+.textC {
+  text-align: center !important;
 }
