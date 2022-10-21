@@ -142,15 +142,13 @@
     top: 17px;
     width: 24px;
     height: 24px;
-    @include imageUrl(common_sprite,png);
-    background-size: 440px;
-    background-position: calc(-116px / 2) 0;
+    @include imageUrl(bg_clear,svg);
   }
 }
 
 /* TextArea */
 .textStyle {
-  margin-top: 16px;
+  margin-top: 12px;
   border: 1px solid var(--silver-color);
   border-radius: 10px;
   overflow: hidden;
@@ -213,7 +211,7 @@
 
 .radioType {
   li {
-    padding: 10px 0;
+    padding: 8px 0;
     .textStyle {
       textarea {
         height: 120px;
@@ -233,7 +231,7 @@
     + label {
       display: block;
       position: relative;
-      padding-left: 34px;
+      padding-left: 36px;
       cursor: pointer;
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -387,6 +385,30 @@
       + label {
         &:before {
           @include imageUrl(bg_checkbox_disabled,svg);
+        }
+      }
+    }
+  }
+  &.borNone {
+    input[type="checkbox"] {
+      + label {
+        color: var(--brownishGrey-color);
+        &:before {
+          width: 24px;
+          height: 24px;
+          @include imageUrl(bg_check_borNone_off,svg);
+        }
+      }
+      &:checked {
+        + label {
+          &:active {
+            &:before {
+              box-shadow: none;
+            }
+          }
+          &:before {
+            @include imageUrl(bg_check_borNone_on,svg);
+          }
         }
       }
     }
@@ -560,4 +582,7 @@
     color: var(--brownishGrey-color);
     line-height: 20px;
   }
+}
+.videoList {
+
 }

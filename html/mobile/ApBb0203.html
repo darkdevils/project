@@ -18,17 +18,23 @@
     <div class="container">
         <div class="registerQuestion">
             <div class="selectWrap">
-                <div class="selectBox">
-                    <label for="selectTest1-1" class="blind">상담분약 선택</label>
-                    <select name="" id="selectTest1-1">
-                        <option value="" disabled selected>상담분야 선택</option>
-                        <option value="">전문분야 선택</option>
-                    </select>
+                <div class="flexWrap">
+                    <div class="selectBox flex1">
+                        <label for="selectTest1-1" class="blind">상담분야 선택</label>
+                        <select name="" id="selectTest1-1">
+                            <option value="" disabled selected>상담분야를 선택해 주세요.</option>
+                            <option value="">상담분야</option>
+                        </select>
+                    </div>
+                    <div class="checkboxType borNone">
+                        <input type="checkbox" name="ck" id="ck1">
+                        <label for="ck1">비밀글</label>
+                    </div>
                 </div>
                 <div class="selectBox">
-                    <label for="selectTest1-2" class="blind">상담사 선택[필수]</label>
+                    <label for="selectTest1-2" class="blind">상담사 선택</label>
                     <select name="" id="selectTest1-2">
-                        <option value="" disabled selected>상담사 선택[필수]</option>
+                        <option value="" disabled selected>상담사 선택</option>
                         <option value="">상담분야 선택</option>
                     </select>
                 </div>

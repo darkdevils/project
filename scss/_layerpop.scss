@@ -106,8 +106,35 @@ $slider-btn-margin: 32px;
 
 /* 신용상담 후기작성 */
 .layerReview {
+  padding-bottom: 145px !important;
+  h2.title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 40px;
+    color: var(--black-color);
+    &:first-of-type {
+      margin-top: 24px;
+    }
+  }
+  .grayBox {
+    margin-top: 16px;
+    .justifyWrap {
+      .infoTitle {
+        font-size: 16px;
+        color: var(--brownishGrey-color);
+      }
+      .infoText {
+
+      }
+      + .justifyWrap {
+        margin-top: 4px;
+      }
+    }
+  }
   .layerReview__rating {
-    padding-top: 120px;
+    position: relative;
+    padding-top: 16px;
     .thumbnail {
       text-align: center;
       img {
@@ -125,13 +152,16 @@ $slider-btn-margin: 32px;
       }
     }
     .text {
-      margin: 40px 0 16px;
-      font-size: 20px;
-      font-weight: 500;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      font-size: 14px;
       text-align: center;
+      color: var(--warmGrey-color2);
     }
     .ratingList {
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
     .js-wc-label {
       display: inline-block;
@@ -358,7 +388,7 @@ $slider-btn-margin: 32px;
       color: var(--brownishGrey-color);
     }
     .btnWrap {
-      margin-top: $slider-btn-margin;
+      margin-top: 30px;
     }
     .linkArea {
       a {
@@ -374,7 +404,7 @@ $slider-btn-margin: 32px;
     }
     .warning {
       position: relative;
-      padding: 86px 0 0;
+      padding: 96px 0 0;
       text-align: center;
       @include svgImage(50%,10px,bg_warning) {
         width: 52px;
@@ -450,7 +480,7 @@ $slider-btn-margin: 32px;
     line-height: 30px;
   }
   .reportWrap__text {
-    margin: 8px 0 22px;
+    margin: 8px 0 20px;
     font-size: 16px;
     color: var(--brownishGrey-color);
   }
@@ -657,5 +687,7 @@ $slider-btn-margin: 32px;
     margin-top: 16px;
     font-size: 14px;
     font-weight: 300;
+    line-height: 22px;
+    color: var(--font-color);
   }
 }
