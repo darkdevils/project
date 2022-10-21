@@ -102,6 +102,9 @@ $slider-btn-margin: 32px;
       line-height: 30px;
     }
   }
+  .textType {
+    padding-top: 24px;
+  }
 }
 
 /* 신용상담 후기작성 */
@@ -483,6 +486,9 @@ $slider-btn-margin: 32px;
     margin: 8px 0 20px;
     font-size: 16px;
     color: var(--brownishGrey-color);
+  }
+  .radioType {
+    padding: 2px 0 0;
   }
 }
 

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>커뮤니티 - 고충나눔(목록)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">커뮤니티</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="verticalScroll">
+            <div class="verticalScroll__list">
+                <ul>
+                    <li><a href="#">신용솔루션</a></li>
+                    <li><a href="#">신용교육</a></li>
+                    <li><a href="#">신용뉴스</a></li>
+                    <li class="on"><a href="#">고충나눔</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="boardWrap">
+            <div class="searchArea">
+                <fieldset>
+                    <legend>신용솔루션 검색</legend>
+                    <label for="search" class="blind">신용솔루션 검색어</label>
+                    <input type="text" id="search" placeholder="검색어(제목, 내용)를 입력해주세요.">
+                    <button type="button" class="btnSearchClose"><span class="blind">검색어 삭제</span></button>
+                </fieldset>
+            </div>
+            <div class="justifyWrap">
+                <div class="leftTotal">총<span class="totalNum">14</span>건</div>
+                <div class="rightArea">
+                    <button type="button" id ="sortRadio02" class="btnSelect layerOpen" aria-controls="slideLayer01">최신순</button>
+                </div>
+            </div>
+            <ul class="boardWrap__list">
+                <li class="noSearch">
+                    <div class="text">검색 결과가 없습니다.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d"><span>글쓰기</span></button>
+    </div>
+</div>
+
+<!-- 정렬옵션 레이어 팝업 -->
+<div id="slideLayer01" class="slideLayer">
+    <div class="slideLayer__header">
+        <h2 class="title">정렬기준 선택</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="radioStyle" data-radio="sortRadio02">
+            <li><input type="radio" name="sortRadio2" id="radio2-1" checked><label for="radio2-1">최신순</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-2"><label for="radio2-2">조회순</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-3"><label for="radio2-3">좋아요순</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-4"><label for="radio2-4">답글순</label></li>
+            <li><input type="radio" name="sortRadio2" id="radio2-5"><label for="radio2-5">내가쓴글</label></li>
+        </ul>
+    </div>
+</div>
+<!-- //정렬옵션 레이어 팝업 -->
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $(function(){
+        // 퍼블에서만 임시로 사용중입니다.
+        $('.verticalScroll__list li,.contentTab li').on('click', function(){
+           $(this).addClass('on').siblings().removeClass('on');
+        });
+
+        const radioList = $('[data-radio*=sortRadio]');
+        radioList.find('input[type="radio"]').on('click',function(){
+            const selectText = $(this).next().text();
+            const selectDate = $(this).closest('ul').attr('data-radio');
+            $('.btnSelect').each(function(index){
+                if(index === 0) {
+                    $('#' + selectDate).text(selectText);
+                }
+            })
+        });
+    })
+</script>
+
+</body>
+</html>

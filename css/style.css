@@ -1944,11 +1944,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   position: absolute;
   left: 0;
   top: 0;
-  background: url("../images/common_sprite2.png") no-repeat;
+  background: url("../images/bg_del.svg") no-repeat;
   width: 20px;
   height: 20px;
-  background-size: 250px;
-  background-position: -29px 0;
 }
 .fileWrap .fileList {
   display: flex;
@@ -2223,6 +2221,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
+}
+.layerContent .textType {
+  padding-top: 24px;
 }
 
 /* 신용상담 후기작성 */
@@ -2595,6 +2596,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   margin: 8px 0 20px;
   font-size: 16px;
   color: var(--brownishGrey-color);
+}
+.reportWrap .radioType {
+  padding: 2px 0 0;
 }
 
 /* Toast LayerPopup */
@@ -3768,6 +3772,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   margin-top: 16px !important;
 }
 
+.mgTop24 {
+  margin-top: 24px !important;
+}
+
 .mgBottom16 {
   margin-bottom: 16px !important;
 }
@@ -4937,6 +4945,19 @@ h2.h2_title {
   width: 24px;
   height: 24px;
   margin: -12px 0 0 -12px;
+}
+
+/* align */
+.textl {
+  text-align: left !important;
+}
+
+.textR {
+  text-align: right !important;
+}
+
+.textC {
+  text-align: center !important;
 }
 
 /**
@@ -6316,10 +6337,11 @@ button.swiper-pagination-bullet {
 }
 
 .consultingImage {
-  /*height: 200px;*/
+  height: 200px;
   overflow: hidden;
   text-align: center;
-  background-color: var(--black-color);
+  background: #f4f4f4 url("../images/bg_default.png") no-repeat center;
+  background-size: contain;
 }
 .consultingImage img {
   max-width: 100%;
@@ -6335,7 +6357,7 @@ button.swiper-pagination-bullet {
 }
 .consultingInfo .name {
   display: block;
-  width: calc(100% - 30px);
+  width: calc(100% - 40px);
   font-size: 20px;
   line-height: 30px;
   font-weight: 500;
@@ -6351,7 +6373,7 @@ button.swiper-pagination-bullet {
 }
 
 .labelList {
-  padding: 0 24px 16px;
+  padding: 0 24px 32px;
   margin-left: -8px;
 }
 .labelList span {
@@ -6385,6 +6407,18 @@ button.swiper-pagination-bullet {
 .labelList span.goldenColor {
   border-color: #bf7f02;
   color: #bf7f02;
+}
+
+.companyInfo {
+  padding: 0 24px;
+}
+.companyInfo h2.title {
+  margin: 40px 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.companyInfo .text {
+  color: var(--brownishGrey-color);
 }
 
 /***** 상담사 상세(상담일정)-금주 상담일정 *****/
@@ -6788,6 +6822,7 @@ button.swiper-pagination-bullet {
   margin-top: 12px;
 }
 .companyList > ul .item {
+  position: relative;
   padding: 23px 24px;
   border: 1px solid #e5e5e5;
   border-radius: 18px;
@@ -6887,6 +6922,35 @@ button.swiper-pagination-bullet {
 .companyList > ul .item + .item {
   margin-top: 16px;
 }
+.companyList > ul .item.active:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  border: 2px solid var(--primary-color);
+  border-radius: 18px;
+}
+
+.companyNodata {
+  height: calc(100vh - 208px);
+  padding-top: calc(50vh - 108px);
+  color: var(--brownishGrey-color);
+  text-align: center;
+}
+.companyNodata:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("../images/bg_company.png") no-repeat;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  margin: -96px 0 0 -40px;
+}
 
 /* 상담 예약완료 */
 .reservationTxt {
@@ -6907,6 +6971,9 @@ button.swiper-pagination-bullet {
   font-size: 16px;
 }
 
+.completeWrap {
+  padding: 80px 24px 0;
+}
 .completeWrap .completeWrap__text {
   position: relative;
   padding: 80px 0 80px;
@@ -6938,6 +7005,9 @@ button.swiper-pagination-bullet {
 .completeWrap .completeWrap__info {
   border-top: 1px solid #e7e9ee;
   border-bottom: 1px solid #e7e9ee;
+}
+.completeWrap .completeWrap__info .reservationTxt dt, .completeWrap .completeWrap__info .reservationTxt dd {
+  margin-bottom: 8px;
 }
 .completeWrap.memberCompleted, .completeWrap.secessionCompleted {
   position: relative;
@@ -7009,6 +7079,33 @@ button.swiper-pagination-bullet {
 .detailsList .detailsList__item .rightArea .btn + .btn {
   margin-left: 8px;
 }
+.detailsList .serviceText {
+  padding: 0 0 40px;
+  border-bottom: 1px solid #e7e9ee;
+}
+.detailsList .serviceText strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.detailsList .serviceText p {
+  color: var(--brownishGrey-color);
+}
+
+.textType .title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--black-color);
+}
+.textType .text {
+  margin-bottom: 32px;
+  color: var(--brownishGrey-color);
+}
 
 /* 게시판목록 */
 .boardWrap {
@@ -7025,6 +7122,7 @@ button.swiper-pagination-bullet {
   border-bottom: 1px solid #e7e9ee;
 }
 .boardWrap__list li, .listType li {
+  position: relative;
   border-top: 1px solid #e7e9ee;
   padding: 24px 0 0;
 }
@@ -7175,12 +7273,92 @@ button.swiper-pagination-bullet {
   width: 20px;
   height: 20px;
 }
+.boardWrap__list li.noList, .listType li.noList {
+  position: relative;
+  height: calc(100vh - 417px);
+  border: 0;
+  text-align: center;
+}
+.boardWrap__list li.noList:after, .listType li.noList:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  z-index: 2;
+}
+.boardWrap__list li.noList:before, .listType li.noList:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 46px);
+  background: url("../images/bg_nodata.png") no-repeat;
+  width: 80px;
+  height: 66px;
+  margin: -33px 0 0 -40px;
+  background-size: contain;
+}
+.boardWrap__list li.noList .text, .listType li.noList .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  color: var(--brownishGrey-color);
+}
+.boardWrap__list li.noSearch, .listType li.noSearch {
+  position: relative;
+  height: calc(100vh - 417px);
+  border: 0;
+  text-align: center;
+}
+.boardWrap__list li.noSearch:after, .listType li.noSearch:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  z-index: 2;
+}
+.boardWrap__list li.noSearch:before, .listType li.noSearch:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 54px);
+  background: url("../images/bg_nosearch.png") no-repeat;
+  width: 80px;
+  height: 74px;
+  margin: -37px 0 0 -40px;
+  background-size: contain;
+}
+.boardWrap__list li.noSearch .text, .listType li.noSearch .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  color: var(--brownishGrey-color);
+}
+.boardWrap__list li.blindWrap:after, .listType li.blindWrap:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  opacity: 0.5;
+  z-index: 2;
+}
+.boardWrap__list li.blindWrap .reText, .listType li.blindWrap .reText {
+  color: #888 !important;
+}
 
 .boardWrap__list li {
   position: relative;
   padding: 24px 0;
 }
-.boardWrap__list li.readonly:after {
+.boardWrap__list li.blindWrap:after {
   content: "";
   position: absolute;
   left: 0;
@@ -7190,7 +7368,7 @@ button.swiper-pagination-bullet {
   background-color: var(--white-color);
   opacity: 0.5;
 }
-.boardWrap__list li.readonly a {
+.boardWrap__list li.blindWrap a {
   color: #888;
 }
 .boardWrap__list.boardWrap__list--solutions .justifyWrap {
@@ -7354,6 +7532,10 @@ button.swiper-pagination-bullet {
 .boardView .borderView__list .listType .reText {
   color: var(--font-color);
 }
+.boardView .borderView__list .listType .reText .redCor {
+  margin-right: 5px;
+  color: var(--pinkish-red);
+}
 .boardView .borderView__list .listType .btnReply {
   font-size: 14px;
   line-height: 20px;
@@ -7490,7 +7672,7 @@ button.swiper-pagination-bullet {
   padding: 24px 24px 48px;
 }
 .boardWriting .textStyle {
-  height: calc(100vh - 343px);
+  height: 302px;
 }
 
 /* 신용솔루션 - 상세 */

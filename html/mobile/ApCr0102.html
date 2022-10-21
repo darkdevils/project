@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>신용상담 서비스</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">신용상담 서비스</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="detailsList">
+            <div class="serviceText">
+                <strong>고객님은 진행중인<br>상담예약 건이 있습니다.</strong>
+                <p>상담예약은 중복이 불가하며 상담종료 시 새로운 상담예약을 하실 수 있습니다.</p>
+            </div>
+            <div class="detailsList__item">
+                <dl class="reservationTxt">
+                    <dt>상담 유형</dt>
+                    <dd>개인회생·파산</dd>
+                    <dt>상담 업체</dt>
+                    <dd>신용회복위원회 서울중앙지부</dd>
+                    <dt>상담 일시</dt>
+                    <dd>2022-09-08 15:00~15:30</dd>
+                    <dt>신청일</dt>
+                    <dd>2022.09.05</dd>
+                </dl>
+                <div class="rightArea">
+                    <a href="#" class="btn btnWhite btn-s layerOpen" aria-controls="slideLayer01"><span>예약취소</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d"><span>상담내역 바로가기</span></button>
+    </div>
+</div>
+
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__content">
+        <p class="txtCenter">상담 예약을 취소하시겠습니까?</p>
+        <dl class="reservationTxt">
+            <dt>상담 유형</dt>
+            <dd>개인회생·파산</dd>
+            <dt>상담 업체</dt>
+            <dd>신용회복위원회 서울중앙지부</dd>
+            <dt>상담 일시</dt>
+            <dd>2022-09-08 15:00~15:30</dd>
+        </dl>
+        <div class="btnWrap btnWrap-col2">
+            <button type="button" class="btn btn-d btnGray w78 layerClose"><span>취소</span></button>
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/datepicker.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

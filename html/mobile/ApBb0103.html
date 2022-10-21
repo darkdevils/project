@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>고충나눔(등록)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <button type="button" class="btnBack"><span class="blind">이전</span></button>
+        <h1 class="headerTitle">고충나눔</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="boardWriting">
+            <div class="inputWrap">
+                <label for="title" class="blind">제목 타이틀</label>
+                <input type="text" name="" id="title" placeholder="제목을 입력해주세요.(100자 이내)">
+            </div>
+            <div class="textStyle">
+                <label for="textarea01" class="blind">질문 등록 내용</label>
+                <textarea name="" id="textarea01" cols="30" rows="10" placeholder="내용을 입력해 주세요.&#13;&#10;(최소 20자 이상 1,000자까지 입력 가능합니다)&#13;&#10;&#13;&#10;※ 게시판 성격에 맞지 않는 글은 관리자에 의해서 삭제 될 수 있습니다."></textarea>
+            </div>
+            <div class="textCount"><span class="num">0</span><span class="totalNum">1,000<em>자</em></span></div>
+            <div class="fileWrap">
+                <div class="fileBox">
+                    <button type="button" class="btnFile layerOpen" aria-controls="slideLayer01"><span class="blind">이미지 선택</span></button>
+                    <div class="counting">
+                        <span class="count">0</span><span class="total">1</span>
+                    </div>
+                </div>
+                <div class="uploadDisplay"><div class="uploadThumbWrap"><img src="../../images/temp/thumbnail_04.png" class="uploadThumb"><button type="button" class="btnDel"><span class="blind">삭제</span></button></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="btnWrap fixedBtm">
+        <button type="button" class="btn btn-d" disabled><span>등록하기</span></button>
+        <!-- 수정하기 버튼입니다
+        <button type="button" class="btn btn-d"><span>수정하기</span></button>
+        -->
+    </div>
+</div>
+
+<!-- 이미지 선택 레이어팝업 -->
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__header">
+        <h2 class="title">이미지 선택</h2>
+        <button type="button" class="btnLayerClose layerClose"><span class="blind">레이어 닫기</span></button>
+    </div>
+    <div class="slideLayer__content">
+        <ul class="listBtn">
+            <li><button type="button"><span>사진촬영</span></button></li>
+            <li><button type="button"><span>앨범에서 가져오기</span></button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이미지 선택 레이어팝업 -->
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    /* 퍼블에서만 사용하는 스크립트입니다. */
+    $("#textarea01").keyup(function(){
+        if($(this).val().length > 0) {
+            $('.btnWrap button').attr('disabled',false);
+            $(".num").text($(this).val().length).css({"color" : "#000"});
+        } else {
+            $('.btnWrap button').attr('disabled',true);
+            $(".num").text($(this).val().length).css({"color" : "#757575"});
+        }
+    });
+    $('.listBtn button').on('click',function(){
+        $('.uploadDisplay').show();
+        common.slideLayer.slideClose('.btnLayerClose');
+        $('.btnWrap .btn').prop('disabled',false);
+    })
+    $('.btnDel').on('click',function(){
+        $('.uploadDisplay').hide();
+    });
+</script>
+</body>
+</html>
