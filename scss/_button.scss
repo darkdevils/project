@@ -177,3 +177,12 @@
     height: 20px;
   }
 }
+
+.selectBtn {
+  border: 1px solid #dddee4;
+  border-radius: 8px;
+  height: 56px;
+  line-height: 55px;
+  padding: 0 40px 0 16px;
+  background-color: var(--white-color);
+}

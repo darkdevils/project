@@ -1431,6 +1431,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   height: 20px;
 }
 
+.selectBtn {
+  border: 1px solid #dddee4;
+  border-radius: 8px;
+  height: 56px;
+  line-height: 55px;
+  padding: 0 40px 0 16px;
+  background-color: var(--white-color);
+}
+
 .inputArea {
   padding: 0 0 160px;
 }
@@ -1472,7 +1481,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
 .inputWrap input[type=text]:disabled:after, .inputWrap input[type=number]:disabled:after {
   color: var(--brownishGrey-color);
 }
-.inputWrap.inputWrap-Money input[type=text], .inputWrap.inputWrap-Money input[type=number] {
+.inputWrap.inputWrap-Money input[type=text], .inputWrap.inputWrap-Money input[type=number], .inputWrap.inputWrap-Text input[type=text], .inputWrap.inputWrap-Text input[type=number] {
   line-height: 56px;
   text-align: right;
   padding-right: 49px;
@@ -1480,20 +1489,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   letter-spacing: 0;
   font-size: 14px;
 }
-.inputWrap.inputWrap-Money input[type=text]::placeholder, .inputWrap.inputWrap-Money input[type=number]::placeholder {
+.inputWrap.inputWrap-Money input[type=text]::placeholder, .inputWrap.inputWrap-Money input[type=number]::placeholder, .inputWrap.inputWrap-Text input[type=text]::placeholder, .inputWrap.inputWrap-Text input[type=number]::placeholder {
   text-align: left;
 }
-.inputWrap.inputWrap-Money input[type=text]:disabled, .inputWrap.inputWrap-Money input[type=number]:disabled {
+.inputWrap.inputWrap-Money input[type=text]:disabled, .inputWrap.inputWrap-Money input[type=number]:disabled, .inputWrap.inputWrap-Text input[type=text]:disabled, .inputWrap.inputWrap-Text input[type=number]:disabled {
   background-color: #f3f4f5;
   color: var(--brownishGrey-color);
 }
-.inputWrap.inputWrap-Money input[type=text]:disabled:after, .inputWrap.inputWrap-Money input[type=number]:disabled:after {
+.inputWrap.inputWrap-Money input[type=text]:disabled:after, .inputWrap.inputWrap-Money input[type=number]:disabled:after, .inputWrap.inputWrap-Text input[type=text]:disabled:after, .inputWrap.inputWrap-Text input[type=number]:disabled:after {
   color: var(--brownishGrey-color);
 }
-.inputWrap.inputWrap-Money input[type=text]:disabled + .moneyText, .inputWrap.inputWrap-Money input[type=number]:disabled + .moneyText {
+.inputWrap.inputWrap-Money input[type=text]:disabled + .moneyText, .inputWrap.inputWrap-Money input[type=number]:disabled + .moneyText, .inputWrap.inputWrap-Text input[type=text]:disabled + .moneyText, .inputWrap.inputWrap-Text input[type=number]:disabled + .moneyText {
   color: var(--brownishGrey-color);
 }
-.inputWrap.inputWrap-Money .moneyText {
+.inputWrap.inputWrap-Money .moneyText, .inputWrap.inputWrap-Text .moneyText {
   position: absolute;
   right: 16px;
   top: 16px;
@@ -8952,6 +8961,27 @@ button.swiper-pagination-bullet {
   width: 24px;
   height: 24px;
   margin-left: -12px;
+}
+
+/* 금융계산기 */
+.finalCalculator {
+  background-color: #f9f9fb;
+}
+.finalCalculator .finalCalculator__con {
+  padding: 24px 24px 40px;
+}
+.finalCalculator .finalCalculator__con h2.title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.finalCalculator .finalCalculator__con .text {
+  color: var(--brownishGrey-color);
+}
+.finalCalculator .finalCalculator__con h3.title {
+  margin: 30px 0 14px;
+  font-weight: 500;
 }
 
 /* 파일 첨부 */
