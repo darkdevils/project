@@ -8603,17 +8603,32 @@ button.swiper-pagination-bullet {
 .info_popup01 .info_content {
   width: 100%;
   height: auto;
-}
-
-.info_popup01 .info_content button {
-  width: 100%;
-  height: auto;
-}
-
-.info_popup01 .info_content button img {
+  background-color: #efedff;
   border-radius: 30px 30px 0 0;
-  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.info_popup01 .info_content .txt_q {
   height: auto;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+
+.info_popup01 .info_content .txt_q span {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.info_popup01 .info_content .txt_a {
+  height: auto;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #777;
 }
 
 .info_popup01 .info_close {
@@ -8626,24 +8641,14 @@ button.swiper-pagination-bullet {
 
 .info_popup01 .info_close ul {
   width: 100%;
-  height: 24px;
+  height: 28px;
 }
 
 .info_popup01 .info_close ul li {
+  height: 28px;
+  line-height: 28px;
   font-size: 16px;
   color: #000;
-}
-
-.info_popup01 .info_close ul li:first-child {
-  position: absolute;
-  left: 24px;
-  top: 18px;
-}
-
-.info_popup01 .info_close ul li:last-child {
-  position: absolute;
-  top: 15px;
-  right: 24px;
 }
 
 .info_popup01 .info_close input[type=checkbox] {
@@ -8680,6 +8685,125 @@ button.swiper-pagination-bullet {
 
 .info_popup01 .info_close input[type=checkbox]:checked + label:before {
   background: url("../images/bg_checkbox_on.svg") no-repeat;
+}
+
+.titleArea {
+  padding: 24px 25px 40px;
+}
+
+.titleArea .title_name {
+  height: 28px;
+  line-height: 28px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.titleArea .infoArea span {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 8px;
+}
+
+.bg_grey {
+  width: 100%;
+  height: 10px;
+  background-color: #eff0f3;
+}
+
+.listArea {
+  padding: 40px 24px 80px;
+}
+
+.listArea .checkArea {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9ee;
+}
+
+.listArea .checkArea input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.listArea .checkArea input[type=checkbox] + label {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 26px;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.listArea .checkArea input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 24px;
+  text-align: right;
+  background: url("../images/Toggle_off.svg") no-repeat;
+}
+
+.listArea .checkArea input[type=checkbox]:checked + label:before {
+  background: url("../images/Toggle_on.svg") no-repeat;
+}
+
+.listArea .checkArea p.txt {
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 8px;
+}
+
+.listArea.padTop24 {
+  padding-top: 24px;
+}
+
+.listArea ul li {
+  width: 100%;
+}
+
+.listArea ul li a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 26px;
+  line-height: 26px;
+  box-sizing: content-box;
+  padding: 24px 0;
+  border-bottom: 1px solid #e7e9ee;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.listArea ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 27px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../images/bg_arrow_right.svg") no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
