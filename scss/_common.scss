@@ -34,6 +34,9 @@ $border-line: #ededf0;
 .mgTop24 {
   margin-top: 24px !important;
 }
+.mgBottom12 {
+  margin-bottom: 12px !important;
+}
 .mgBottom16 {
   margin-bottom: 16px !important;
 }
@@ -294,6 +297,11 @@ $border-line: #ededf0;
     position: relative;
     display: flex;
     justify-content: space-evenly;
+
+    &.sBetween {
+      justify-content: space-between;
+      padding: 0 31px;
+    }
     &:after {
       content: "";
       position: absolute;
