@@ -303,19 +303,38 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  &:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:40px;
+    height:24px;
+    text-align:right;
+    border-radius: 12px;
+    background-color: #D9D9D9;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: calc(100% - 38px);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    transition: 0.25s ease;
+  }
 }
-.listArea .checkArea input[type=checkbox] + label:before{
-  content:"";
-  position:absolute;
-  top:0;
-  right:0;
-  width:40px;
-  height:24px;
-  text-align:right;
-  background:url("../images/Toggle_off.svg") no-repeat;
-}
+
 .listArea .checkArea input[type=checkbox]:checked + label:before{
-  background:url("../images/Toggle_on.svg") no-repeat;
+  background-color: var(--primary-color);
+  /*background:url("../images/Toggle_on.svg") no-repeat;*/
+}
+.listArea .checkArea input[type=checkbox]:checked + label:after {
+  left: calc(100% - 22px);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+  /*background:url("../images/Toggle_on.svg") no-repeat;*/
 }
 .listArea .checkArea p.txt{
   line-height:22px;
@@ -379,20 +398,38 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-}
-.listArea .check_sub input[type=checkbox] + label:before{
-  content:"";
-  position:absolute;
-  top:0;
-  right:0;
-  width:40px;
-  height:24px;
-  text-align:right;
-  background:url("../images/Toggle_off.svg") no-repeat;
+  &:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:40px;
+    height:24px;
+    text-align:right;
+    border-radius: 12px;
+    background-color: #D9D9D9;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: calc(100% - 38px);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    transition: 0.25s ease;
+  }
 }
 .listArea .check_sub input[type=checkbox]:checked + label:before{
-  background:url("../images/Toggle_on.svg") no-repeat;
+  background-color: var(--primary-color);
 }
+
+.listArea .check_sub input[type=checkbox]:checked + label:after {
+  left: calc(100% - 22px);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
 .listArea .check_sub p.txt{
   line-height:22px;
   font-size:14px;

@@ -884,6 +884,21 @@
 <script src="./js/lib/jquery-3.6.0.min.js"></script>
 <script>
     $(function(){
+        const IorA = navigator.userAgent.toLowerCase();
+
+        if(IorA.indexOf("android") !== -1){
+            $("table tbody tr td:nth-child(7)").each(function(){
+                let linkText = $(this).text();
+                $(this).contents().wrap('<a href="./html/mobile/'+ linkText + '"  target="_blank"></a>')
+                //console.log(linkText);
+            });
+        }else if(IorA.indexOf("iphone") !== -1){
+            $("table tbody tr td:nth-child(6)").each(function(){
+                let linkText = $(this).text();
+                $(this).contents().wrap('<a href="./html/mobile/'+ linkText + '"  target="_blank"></a>')
+                //console.log(linkText);
+            });
+        }
 
         $("table tbody tr").each(function(){
             let num = $(this).index() + 1;
@@ -891,7 +906,7 @@
         });
         $("table tbody tr td:nth-child(7)").each(function(){
             let linkText = $(this).text();
-            $(this).contents().wrap('<a href="./html/mobile/'+ linkText + '" + target="_blank"></a>')
+            $(this).contents().wrap('<a href="./html/mobile/'+ linkText + '"  target="_blank"></a>')
             //console.log(linkText);
         });
         //var cm = $('tr.c').length;
