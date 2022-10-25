@@ -9038,6 +9038,10 @@ button.swiper-pagination-bullet {
   margin-left: 10px;
 }
 
+.btnShare {
+  display: flex;
+  align-items: center;
+}
 .btnShare button {
   position: relative;
   margin-right: 24px;
@@ -9070,7 +9074,12 @@ button.swiper-pagination-bullet {
   height: 24px;
   margin-left: -12px;
 }
-.btnShare .btnView:after {
+.btnShare .viewNum {
+  position: relative;
+  padding: 26px 0 0 0;
+  margin-right: 24px;
+}
+.btnShare .viewNum:after {
   content: "";
   display: block;
   position: absolute;
@@ -9080,6 +9089,11 @@ button.swiper-pagination-bullet {
   width: 24px;
   height: 24px;
   margin-left: -12px;
+}
+.btnShare .viewNum span {
+  font-size: 12px;
+  color: var(--warmGrey-color2);
+  line-height: 20px;
 }
 .btnShare .bookMark:after {
   content: "";
