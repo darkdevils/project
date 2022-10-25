@@ -650,7 +650,7 @@
     font-size: 14px;
     border-bottom: 1px solid #e7e9ee;
     .number {
-      margin: 0 3px;
+      margin: 0 0 0 4px;
       font-size: 14px;
       font-weight: 500;
       line-height: 22px;
@@ -821,7 +821,59 @@
       }
     }
   }
+  &.detailsList--notify {
+    ul {
+      .item {
+        position: relative;
+        border-bottom: 1px solid #e7e9ee;
+        a {
+          position: relative;
+          display: block;
+          padding: 24px 40px 24px 30px;
+          @include svgImage(0,25px,bg_notice2) {
+            width: 20px;
+            height: 20px;
+            animation: notifyAnimate 0.15s ease 4 Alternate;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            @include imageUrl(bg_arrow_right,svg);
+          }
+          .data {
+            display: block;
+            font-size: 14px;
+            color: #888;
+            line-height: 22px;
+            margin-bottom: 8px;
+          }
+          .title {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }
+
+@keyframes notifyAnimate {
+  0% {
+    transform: rotate(45deg);
+
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
 .textType {
   .title {
     display: block;
