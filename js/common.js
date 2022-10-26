@@ -250,7 +250,7 @@ $(function(){
             starsSize: 4, // em
             stars: 5,
             showInfo: true,
-            titles: ["별로예요","그저 그래요", "보통이에요", "만족해요","최고예요"],
+            titles: ["불만족해요","별로에요", "보통이에요", "만족해요","최고예요"],
             inputName: 'rating'
         }, setup || {});
 
