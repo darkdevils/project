@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>신쏙진단 - Step07(기타채무액 입력)</title>
+    <title>신쏙진단 - Step07(총채무금액 입력)</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="container">
         <div class="sectionInfo">
             <div class="stepArea">
-                <h2 class="stepArea__title">기타채무액 입력</h2>
+                <h2 class="stepArea__title">총채무금액 입력</h2>
                 <div class="stepArea__list">
                     <ol>
                         <li><span>1</span></li>
@@ -32,34 +32,15 @@
                 </div>
             </div>
 
-            <div class="grayBox">
-                <h3 class="title">이달 카드/대출 정보</h3>
-                <div class="justifyWrap">
-                    <div class="infoTitle"><span class="number">8</span>월 카드 사용금액</div>
-                    <div class="money"><span class="number">15,000,000</span>원</div>
-                </div>
-                <div class="justifyWrap">
-                    <div class="infoTitle"><span class="number">8</span>대출잔액</div>
-                    <div class="money"><span class="number">8,000,000</span>원</div>
-                </div>
+            <div class="inputWrap inputWrap-Money mgTop40">
+                <label for="inputMoney" class="blind">금액</label>
+                <input type="number" name="" id="inputMoney" placeholder="소수점은 입력할 수 없습니다.">
+                <span class="moneyText">만원</span>
             </div>
 
-            <div class="inputSection">
-                <label for="inputMoney">제<span class="number">1</span>금융권 채무금액</label>
-                <div class="inputWrap inputWrap-Money">
-                    <input type="number" name="" id="inputMoney" placeholder="소수점은 입력할 수 없습니다.">
-                    <span class="moneyText">만원</span>
-                </div>
-                <label for="inputMoney2">저축은행권 채무금액</label>
-                <div class="inputWrap inputWrap-Money">
-                    <input type="number" name="" id="inputMoney2" placeholder="소수점은 입력할 수 없습니다.">
-                    <span class="moneyText">만원</span>
-                </div>
-                <label for="inputMoney3">대부업체 채무금액</label>
-                <div class="inputWrap inputWrap-Money">
-                    <input type="number" name="" id="inputMoney3" placeholder="소수점은 입력할 수 없습니다.">
-                    <span class="moneyText">만원</span>
-                </div>
+            <div class="tipArea">
+                <span class="tipArea__title">TIP</span>
+                <p class="tipArea__text">은행·저축은행·카드사·대부업체 등 금융기관의 총채무액을 입력해주세요.</p>
             </div>
         </div>
     </div>
