@@ -45,16 +45,18 @@
             <!-- //Skeleton Loading -->
             <ul class="noticeList">
                 <li class="item">
-                    <a href="#">
+                    <a href="http://www.naver.com">
                         <span class="data" data-aos="fade-left" data-aos-delay="200" data-aos-easing="ease-in-out">2022-08-01 12:00</span>
                         <strong class="title" data-aos="fade-left" data-aos-delay="400">KCB에서 신용조회가 이루어 졌습니다. 신용 조회시간은 16시 33분 입니다.</strong>
                     </a>
+                    <button type="button" class="btnDel layerOpen" aria-controls="slideLayer01">삭제</button>
                 </li>
                 <li class="item" data-aos-delay="500" data-aos="fade-up">
                     <a href="#">
                         <span class="data">2022-08-01 12:00</span>
                         <strong class="title">신용상담서비스 전문상담사의 답변이 등록되었습니다.<br>답변 등록시간은 22시 07분 입니다.</strong>
                     </a>
+                    <button type="button" class="btnDel layerOpen" aria-controls="slideLayer01">삭제</button>
                 </li>
                 <li class="item" data-aos-delay="700" data-aos="fade-up">
                     <a href="#">
@@ -62,16 +64,30 @@
                         <strong class="title">신용솔루션 서비스 상태가 ‘상담불가’ 상태로 변경되었습니다.</strong>
                         <div class="text">고객님과의 상담통화가 이루어지지 않아 서비스 상태가  ‘상담불가’ 상태로 변경 되었습니다.상담을 받으시려면 다시 상담예약을 신청해주시기 바랍니다.</div>
                     </a>
+                    <button type="button" class="btnDel layerOpen" aria-controls="slideLayer01">삭제</button>
                 </li>
             </ul>
         </div>
     </div>
 </div>
 
+<!-- 삭제화면 팝업 -->
+<div class="slideLayer" id="slideLayer01">
+    <div class="slideLayer__content">
+        <p class="txtCenter mgBottom16">삭제 하시겠습니까?</p>
+        <p class="txtCenter2">삭제 하시는 경우 데이터 복구가 불가능 합니다.</p>
+        <div class="btnWrap btnWrap-col2">
+            <button type="button" class="btn btn-d btnGray w78 layerClose"><span>취소</span></button>
+            <button type="button" class="btn btn-d"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<!-- //삭제화면 팝업 -->
 
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/lib/datepicker.js"></script>
 <script src="../../js/lib/aos.js"></script>
+<script src="../../js/lib/jquery.touch.min.js"></script>
 <script src="../../js/common.js"></script>
 <script>
     setTimeout(function(){
@@ -79,7 +95,19 @@
         $('.noticeList').fadeIn();
         AOS.init();
     },1500);
-
+    $(function(){
+        $(".item").swipe( {
+            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                if(direction === "left") {
+                    $(this).addClass('swipeLeft');
+                } else {
+                    $(this).removeClass('swipeLeft');
+                }
+            },
+            //threshold:0
+            //triggerOnTouchEnd:false,
+        });
+    });
 </script>
 </body>
 </html>

@@ -7108,6 +7108,7 @@ button.swiper-pagination-bullet {
 /* 상담내역 */
 .detailsList {
   padding: 24px 24px 0;
+  overflow: hidden;
 }
 .detailsList .countArea {
   padding: 0 0 12px;
@@ -7278,7 +7279,6 @@ button.swiper-pagination-bullet {
 }
 .detailsList.detailsList--notify .noticeList {
   display: none;
-  overflow: hidden;
 }
 .detailsList.detailsList--notify .noticeList .item {
   position: relative;
@@ -7288,6 +7288,7 @@ button.swiper-pagination-bullet {
   display: block;
   position: relative;
   padding: 24px 40px 24px 30px;
+  transition: 0.5s ease;
 }
 .detailsList.detailsList--notify .noticeList .item a:after {
   content: "";
@@ -7326,6 +7327,24 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   line-height: 22px;
   color: var(--brownishGrey-color);
+}
+.detailsList.detailsList--notify .noticeList .item .btnDel {
+  position: absolute;
+  right: -95px;
+  top: -1px;
+  width: 70px;
+  height: calc(100% + 2px);
+  background-color: #eb4d3d;
+  font-size: 14px;
+  line-height: 22px;
+  color: #fff;
+  transition: 0.5s ease;
+}
+.detailsList.detailsList--notify .noticeList .item.swipeLeft a {
+  transform: translate(-45px, 0);
+}
+.detailsList.detailsList--notify .noticeList .item.swipeLeft .btnDel {
+  transform: translate(-70px, 0);
 }
 
 @keyframes notifyAnimate {
@@ -7839,17 +7858,18 @@ button.swiper-pagination-bullet {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 16px 24px 56px;
-  border-top: 1px solid #e7e9ee;
+  padding: 16px 24px 40px;
+  border-top: 1px solid #f7f7f7;
+  box-shadow: 0px -6px 13px -3px rgba(0, 0, 0, 0.05);
   background-color: var(--white-color);
-  z-index: 2;
+  z-index: 5;
 }
 .reviewInput .reviewInput__textarea {
   display: flex;
   position: relative;
-  padding: 9px 16px;
+  padding: 10px 16px 8px;
   background-color: #efeff2;
-  border-radius: 18px;
+  border-radius: 19px;
   overflow: hidden;
 }
 .reviewInput .reviewInput__textarea textarea {
@@ -7860,8 +7880,11 @@ button.swiper-pagination-bullet {
   line-height: 22px;
 }
 .reviewInput .reviewInput__textarea .btnRegister {
+  position: relative;
+  right: -13px;
   width: 58px;
   color: #3971de;
+  line-height: 22px;
 }
 .reviewInput .reviewInput__textarea .btnRegister:disabled {
   color: var(--warmGrey-color2);
