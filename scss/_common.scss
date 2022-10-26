@@ -34,6 +34,9 @@ $border-line: #ededf0;
 .mgTop24 {
   margin-top: 24px !important;
 }
+.mgBottom8 {
+  margin-bottom: 8px !important;
+}
 .mgBottom12 {
   margin-bottom: 12px !important;
 }
@@ -75,6 +78,9 @@ $border-line: #ededf0;
   height: 10px;
   background-color: #eff0f3;
   border: 0;
+}
+.borTop {
+  border-top: 1px solid #e7e9ee;
 }
 
 .skipMenu {

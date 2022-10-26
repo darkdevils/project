@@ -18,20 +18,45 @@
     <div class="container">
         <div class="detailsList detailsList--notify">
             <div class="countArea">총<span class="number">3</span>건의 관심등록이 있습니다.</div>
-            <ul>
+            <!-- Skeleton Loading -->
+            <ul class="skeletonLoading">
+                <li class="item">
+                    <div class="skeletonWrap">
+                        <span class="data skeleton"></span>
+                        <strong class="skeleton"></strong>
+                        <strong class="skeleton"></strong>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="skeletonWrap">
+                        <span class="data skeleton"></span>
+                        <strong class="skeleton"></strong>
+                        <strong class="skeleton"></strong>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="skeletonWrap">
+                        <span class="data skeleton"></span>
+                        <strong class="skeleton"></strong>
+                        <strong class="skeleton"></strong>
+                    </div>
+                </li>
+            </ul>
+            <!-- //Skeleton Loading -->
+            <ul class="noticeList">
                 <li class="item">
                     <a href="#">
-                        <span class="data" data-aos="fade-left">2022-08-01 12:00</span>
-                        <strong class="title" data-aos="fade-left">KCB에서 신용조회가 이루어 졌습니다. 신용 조회시간은 16시 33분 입니다.</strong>
+                        <span class="data" data-aos="fade-left" data-aos-delay="200" data-aos-easing="ease-in-out">2022-08-01 12:00</span>
+                        <strong class="title" data-aos="fade-left" data-aos-delay="400">KCB에서 신용조회가 이루어 졌습니다. 신용 조회시간은 16시 33분 입니다.</strong>
                     </a>
                 </li>
-                <li class="item" data-aos-delay="250" data-aos="fade-up">
+                <li class="item" data-aos-delay="500" data-aos="fade-up">
                     <a href="#">
                         <span class="data">2022-08-01 12:00</span>
                         <strong class="title">신용상담서비스 전문상담사의 답변이 등록되었습니다.<br>답변 등록시간은 22시 07분 입니다.</strong>
                     </a>
                 </li>
-                <li class="item" data-aos-delay="450" data-aos="fade-up">
+                <li class="item" data-aos-delay="700" data-aos="fade-up">
                     <a href="#">
                         <span class="data">2022-08-01 12:00</span>
                         <strong class="title">신용솔루션 서비스 상태가 ‘상담불가’ 상태로 변경되었습니다.</strong>
@@ -49,7 +74,12 @@
 <script src="../../js/lib/aos.js"></script>
 <script src="../../js/common.js"></script>
 <script>
-    AOS.init();
+    setTimeout(function(){
+        $('.skeletonLoading').hide();
+        $('.noticeList').fadeIn();
+        AOS.init();
+    },1500);
+
 </script>
 </body>
 </html>

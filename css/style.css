@@ -3839,6 +3839,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   margin-top: 24px !important;
 }
 
+.mgBottom8 {
+  margin-bottom: 8px !important;
+}
+
 .mgBottom12 {
   margin-bottom: 12px !important;
 }
@@ -4258,6 +4262,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   height: 10px;
   background-color: #eff0f3;
   border: 0;
+}
+
+.borTop {
+  border-top: 1px solid #e7e9ee;
 }
 
 .skipMenu {
@@ -7268,16 +7276,20 @@ button.swiper-pagination-bullet {
 .detailsList.detailsList--rudBox .item + .item {
   margin-top: 16px;
 }
-.detailsList.detailsList--notify ul .item {
+.detailsList.detailsList--notify .noticeList {
+  display: none;
+  overflow: hidden;
+}
+.detailsList.detailsList--notify .noticeList .item {
   position: relative;
   border-bottom: 1px solid #e7e9ee;
 }
-.detailsList.detailsList--notify ul .item a {
-  position: relative;
+.detailsList.detailsList--notify .noticeList .item a {
   display: block;
+  position: relative;
   padding: 24px 40px 24px 30px;
 }
-.detailsList.detailsList--notify ul .item a:after {
+.detailsList.detailsList--notify .noticeList .item a:after {
   content: "";
   display: block;
   position: absolute;
@@ -7288,7 +7300,7 @@ button.swiper-pagination-bullet {
   height: 20px;
   animation: notifyAnimate 0.15s ease 4 Alternate;
 }
-.detailsList.detailsList--notify ul .item a:before {
+.detailsList.detailsList--notify .noticeList .item a:before {
   content: "";
   position: absolute;
   right: 0;
@@ -7297,16 +7309,23 @@ button.swiper-pagination-bullet {
   height: 20px;
   margin-top: -10px;
   background: url("../images/bg_arrow_right.svg") no-repeat;
+  opacity: 0;
 }
-.detailsList.detailsList--notify ul .item a .data {
+.detailsList.detailsList--notify .noticeList .item a .data {
   display: block;
   font-size: 14px;
   color: #888;
   line-height: 22px;
   margin-bottom: 8px;
 }
-.detailsList.detailsList--notify ul .item a .title {
+.detailsList.detailsList--notify .noticeList .item a .title {
   display: block;
+}
+.detailsList.detailsList--notify .noticeList .item a .text {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--brownishGrey-color);
 }
 
 @keyframes notifyAnimate {
@@ -8690,16 +8709,16 @@ button.swiper-pagination-bullet {
   margin-top: 8px;
 }
 
-.articleWrap--nice .padTop24 {
+.articleWrap--nice .padTop24, .articleWrap--kcb .padTop24 {
   padding-top: 24px !important;
 }
-.articleWrap--nice .inquiryChange {
+.articleWrap--nice .inquiryChange, .articleWrap--kcb .inquiryChange {
   display: flex;
   border: 1px solid #e5e5e5;
   border-radius: 12px;
   margin: 30px 0 16px;
 }
-.articleWrap--nice .inquiryChange a {
+.articleWrap--nice .inquiryChange a, .articleWrap--kcb .inquiryChange a {
   position: relative;
   display: flex;
   width: 50%;
@@ -8708,12 +8727,12 @@ button.swiper-pagination-bullet {
   flex-flow: column;
   justify-content: center;
 }
-.articleWrap--nice .inquiryChange a .title {
+.articleWrap--nice .inquiryChange a .title, .articleWrap--kcb .inquiryChange a .title {
   position: relative;
   font-size: 14px;
   color: var(--brownishGrey-color);
 }
-.articleWrap--nice .inquiryChange a .title:after {
+.articleWrap--nice .inquiryChange a .title:after, .articleWrap--kcb .inquiryChange a .title:after {
   content: "";
   display: block;
   position: absolute;
@@ -8724,13 +8743,13 @@ button.swiper-pagination-bullet {
   width: 20px;
   height: 20px;
 }
-.articleWrap--nice .inquiryChange a .num {
+.articleWrap--nice .inquiryChange a .num, .articleWrap--kcb .inquiryChange a .num {
   margin-top: 4px;
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
 }
-.articleWrap--nice .inquiryChange a + a:before {
+.articleWrap--nice .inquiryChange a + a:before, .articleWrap--kcb .inquiryChange a + a:before {
   content: "";
   position: absolute;
   left: 0;
@@ -8739,25 +8758,25 @@ button.swiper-pagination-bullet {
   height: 54px;
   background-color: #e5e5e5;
 }
-.articleWrap--nice .sText {
+.articleWrap--nice .sText, .articleWrap--kcb .sText {
   font-size: 14px;
   font-weight: 300;
   color: var(--font-color);
   line-height: 22px;
 }
-.articleWrap--nice article h2.title {
+.articleWrap--nice article h2.title, .articleWrap--kcb article h2.title {
   font-size: 20px;
   line-height: 28px;
 }
-.articleWrap--nice article .infoLink {
+.articleWrap--nice article .infoLink, .articleWrap--kcb article .infoLink {
   padding: 16px 0 0;
 }
-.articleWrap--nice article .infoLink a {
+.articleWrap--nice article .infoLink a, .articleWrap--kcb article .infoLink a {
   position: relative;
   padding: 24px 28px 24px 0;
   border-top: 1px solid #e7e9ee;
 }
-.articleWrap--nice article .infoLink a:after {
+.articleWrap--nice article .infoLink a:after, .articleWrap--kcb article .infoLink a:after {
   content: "";
   display: block;
   position: absolute;
@@ -8768,29 +8787,42 @@ button.swiper-pagination-bullet {
   width: 20px;
   height: 20px;
 }
-.articleWrap--nice article .infoLink a span:last-child {
+.articleWrap--nice article .infoLink a span:last-child, .articleWrap--kcb article .infoLink a span:last-child {
   font-weight: 300;
   letter-spacing: 0;
 }
-.articleWrap--nice article .infoLink a:first-child {
+.articleWrap--nice article .infoLink a:first-child, .articleWrap--kcb article .infoLink a:first-child {
   border: 0 none;
 }
-.articleWrap--nice article .infoLink a:last-child {
+.articleWrap--nice article .infoLink a:last-child, .articleWrap--kcb article .infoLink a:last-child {
   padding-bottom: 0;
 }
-.articleWrap--nice article .infoLink .grayBox {
+.articleWrap--nice article .infoLink .grayBox, .articleWrap--kcb article .infoLink .grayBox {
   margin: 0 0 24px;
 }
-.articleWrap--nice article .bText {
+.articleWrap--nice article .bText, .articleWrap--kcb article .bText {
   margin-bottom: 40px;
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
 }
-.articleWrap--nice article .bText span {
+.articleWrap--nice article .bText span, .articleWrap--kcb article .bText span {
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
+}
+
+.articleWrap--kcb .grayBox {
+  margin-top: 16px;
+}
+.articleWrap--kcb .grayBox margin .title {
+  color: #333;
+}
+.articleWrap--kcb .grayBox .blueCor {
+  font-weight: 500;
+}
+.articleWrap--kcb article .infoLink {
+  padding: 0;
 }
 
 /* 앱 초기 접근권한 설정 */
@@ -9348,6 +9380,50 @@ button.swiper-pagination-bullet {
   color: var(--font-color);
 }
 
+.skeletonWrap {
+  padding: 24px 40px 24px 30px;
+}
+
+.skeleton {
+  display: inline-block;
+  width: 100%;
+  height: 24px;
+  color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+  background-size: 400% 100%;
+  animation: skeleton-loading 8s ease-in-out infinite;
+  border-radius: 4px;
+  vertical-align: top;
+}
+.skeleton + .skeleton {
+  margin-top: 5px;
+}
+.skeleton.data {
+  position: relative;
+  height: 22px;
+  width: 40%;
+}
+.skeleton.data:after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+  background-size: 400% 100%;
+  animation: skeleton-loading 8s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
 /* 파일 첨부 */
 .attch {
   width: 100%;
