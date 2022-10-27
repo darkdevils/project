@@ -1769,8 +1769,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   display: block;
   color: var(--warmGrey-color2);
 }
-.radioType.radioType--box input[type=radio]:checked + label {
-  border-color: var(--primary-color);
+.radioType.radioType--box input[type=radio]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
 }
 .radioType.radioType--box input[type=radio]:checked + label > * {
   color: var(--primary-color);
@@ -6903,14 +6910,14 @@ button.swiper-pagination-bullet {
 }
 .companyList > ul .item {
   position: relative;
-  padding: 23px 24px;
+  padding: 24px;
   border: 1px solid #e5e5e5;
   border-radius: 18px;
 }
 .companyList > ul .item .textContent {
   display: flex;
   align-items: center;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 .companyList > ul .item .textContent .thumbnail {
   position: relative;
@@ -6944,11 +6951,12 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 .companyList > ul .item .textContent .title {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .companyList > ul .item .text {
   display: -webkit-box;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: #666;
   line-height: 22px;
   overflow: hidden;
@@ -6998,6 +7006,9 @@ button.swiper-pagination-bullet {
   border: 1px solid #bbb;
   font-size: 14px;
   color: var(--brownishGrey-color);
+}
+.companyList > ul .item .buttonRight {
+  text-align: right;
 }
 .companyList > ul .item + .item {
   margin-top: 16px;
@@ -7208,7 +7219,7 @@ button.swiper-pagination-bullet {
   letter-spacing: 0;
 }
 .detailsList.detailsList--activity ul .item .title {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 .detailsList.detailsList--activity ul .item .flexWrap .btnLike {
   margin-right: 20px;
@@ -7265,6 +7276,7 @@ button.swiper-pagination-bullet {
   width: 24px;
   height: 24px;
   background: url("../images/bg_bookmark_off_20.svg") no-repeat;
+  background-position: center;
 }
 .detailsList.detailsList--rudBox .item .justifyWrap .bookMark.on {
   background: url("../images/bg_bookmark_on_20.svg") no-repeat;
@@ -7943,6 +7955,12 @@ button.swiper-pagination-bullet {
 .boardWriting .textStyle {
   height: 302px;
 }
+.boardWriting .sText {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
+}
 
 /* 신용솔루션 - 상세 */
 .boardAnswer {
@@ -8172,6 +8190,9 @@ button.swiper-pagination-bullet {
 }
 .articleWrap article .finalResult ul li + li {
   margin-top: 8px;
+}
+.articleWrap article:last-of-type {
+  padding-bottom: 0;
 }
 
 /* 전체메뉴 */
@@ -9133,7 +9154,7 @@ button.swiper-pagination-bullet {
   top: 3px;
 }
 .listWrap li .btnLike span {
-  color: var(--brownishGrey-color);
+  color: var(--warmGrey-color2);
 }
 
 .fullVideo > * {
@@ -9282,7 +9303,7 @@ button.swiper-pagination-bullet {
   font-weight: 500;
 }
 .finalCalculator .finalCalculator__con .btnWrap {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .finalCalculator .finalCalculator__con .btnWrap button {
   display: block;
@@ -9722,6 +9743,7 @@ button.swiper-pagination-bullet {
 .titleArea .appInfo {
   height: 26px;
   line-height: 26px;
+  letter-spacing: 0;
   font-weight: 400;
   font-size: 14px;
   color: #666;

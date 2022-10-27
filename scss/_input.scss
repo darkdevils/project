@@ -293,7 +293,17 @@
       }
       &:checked {
         + label {
-          border-color: var(--primary-color);
+          &:after {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+          }
+
           > * {
             color: var(--primary-color);
           }

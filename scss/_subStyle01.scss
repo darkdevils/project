@@ -459,13 +459,13 @@
   > ul {
     .item {
       position: relative;
-      padding: 23px 24px;
+      padding: 24px;
       border: 1px solid #e5e5e5;
       border-radius: 18px;
       .textContent {
         display: flex;
         align-items: center;
-        margin-bottom: 13px;
+        margin-bottom: 8px;
         .thumbnail {
           position: relative;
           width: 48px;
@@ -492,12 +492,13 @@
           }
         }
         .title {
-          font-size: 18px;
+          font-size: 16px;
+          font-weight: 500;
         }
       }
       .text {
         display: -webkit-box;
-        margin-bottom: 15px;
+        margin-bottom: 16px;
         color: #666;
         line-height: 22px;
         overflow: hidden;
@@ -539,6 +540,9 @@
         border: 1px solid #bbb;
         font-size: 14px;
         color: var(--brownishGrey-color);
+      }
+      .buttonRight {
+        text-align: right;
       }
       + .item {
         margin-top: 16px;
@@ -741,7 +745,7 @@
           }
         }
         .title {
-          margin-bottom: 25px;
+          margin-bottom: 24px;
         }
         .flexWrap {
           .btnLike {
@@ -806,6 +810,7 @@
           width: 24px;
           height: 24px;
           @include imageUrl(bg_bookmark_off_20,svg);
+          background-position: center;
           &.on {
             @include imageUrl(bg_bookmark_on_20,svg);
           }
@@ -1519,6 +1524,12 @@
   .textStyle {
     height: 302px;
   }
+  .sText {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $Grey600;
+  }
 }
 
 /* 신용솔루션 - 상세 */
@@ -1753,6 +1764,9 @@
           }
         }
       }
+    }
+    &:last-of-type {
+      padding-bottom: 0;
     }
   }
 }
@@ -2718,7 +2732,7 @@
         top: 3px;
       }
       span {
-        color: var(--brownishGrey-color);
+        color: var(--warmGrey-color2);
       }
     }
   }
@@ -2855,7 +2869,7 @@
       font-weight: 500;
     }
     .btnWrap {
-      margin-top: 30px;
+      margin-top: 40px;
       button {
         display: block;
         width: 100%;
