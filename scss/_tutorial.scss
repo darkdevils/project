@@ -28,6 +28,15 @@
         font-weight: 300;
         line-height: 26px;
       }
+      .fixedBtm {
+        position: fixed;
+        left: 24px;
+        bottom: 40px;
+        width: calc(100% - 48px);
+        .btn {
+          width: 100%;
+        }
+      }
       &.slide01 {
         @include imageUrl(tutorial01,png);
         background-size: calc(100% - 96px) auto;
@@ -67,11 +76,53 @@
   }
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: auto;
-    top: 40px;
+    top: 30px;
   }
   .swiper-pagination-bullet-active {
     width: 24px;
     border-radius: 8px;
     background-color: var(--black-color);
+  }
+  .swiper-button-prev {
+    left: 24px;
+    top: auto;
+    bottom: 76px;
+    width: 52px;
+    @include svgImage(0,0,tutorial_button) {
+      width: 52px;
+      height: 20px;
+    }
+    &:before {
+      content: "이전";
+      position: absolute;
+      left: 15px;
+      bottom: -16px;
+      font-size: 12px;
+      color: #333;
+      line-height: 20px;
+    }
+  }
+  .swiper-button-next {
+    right: 24px;
+    top: auto;
+    bottom: 76px;
+    width: 52px;
+    @include svgImage(0,0,tutorial_button) {
+      width: 52px;
+      height: 20px;
+      transform: rotate(-180deg);
+    }
+    &:before {
+      content: "다음";
+      position: absolute;
+      left: 15px;
+      bottom: -16px;
+      font-size: 12px;
+      color: #333;
+      line-height: 20px;
+    }
+  }
+  .swiper-button-prev.swiper-button-disabled {
+    display: none;
   }
 }

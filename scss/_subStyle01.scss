@@ -836,35 +836,46 @@
         a {
           display: block;
           position: relative;
-          padding: 24px 40px 24px 30px;
+          padding: 24px 0 24px 30px;
           @include svgImage(0,25px,bg_notice2) {
             width: 20px;
             height: 20px;
             animation: notifyAnimate 0.15s ease 4 Alternate;
           }
-          &:before {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 20px;
-            height: 20px;
-            margin-top: -10px;
-            @include imageUrl(bg_arrow_right,svg);
-            opacity: 0;
+          .justifyWrap {
+            align-items: start;
+            margin-bottom: 8px;
+            .classTitle {
+              font-size: 14px;
+              line-height: 22px;
+              color: var(--warmGrey-color2);
+            }
           }
           .data {
             display: block;
             font-size: 14px;
             color: #888;
             line-height: 22px;
-            margin-bottom: 8px;
           }
           .title {
+            position: relative;
             display: block;
+            padding: 0 40px 0 0;
+            &:before {
+              content: "";
+              position: absolute;
+              right: 0;
+              top: 14px;
+              width: 20px;
+              height: 20px;
+              margin-top: -10px;
+              @include imageUrl(bg_arrow_right,svg);
+              opacity: 1;
+            }
           }
           .text {
             margin-top: 4px;
+            padding: 0 40px 0 0;
             font-size: 14px;
             line-height: 22px;
             color: var(--brownishGrey-color);
@@ -890,6 +901,18 @@
           }
           .btnDel {
             transform: translate(-70px, 0);
+          }
+        }
+        &.new {
+          &:before {
+            content: "";
+            position: absolute;
+            left: 18px;
+            top: 25px;
+            width: 3px;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #f00;
           }
         }
       }
@@ -1698,6 +1721,8 @@
         text-align: center;
         span {
           display: block;
+          font-size: 14px;
+          font-weight: 300;
           margin-bottom: 4px;
           line-height: 22px;
         }
@@ -1728,14 +1753,17 @@
       .attention {
         color: #b6901f;
         font-weight: 400;
+        text-decoration: underline;
       }
       .danger {
         color: #f26100;
         font-weight: 400;
+        text-decoration: underline;
       }
       .good {
         color: #70a301;
         font-weight: 400;
+        text-decoration: underline;
       }
       ul {
         border-top: 1px solid #e3e4e8;
@@ -1758,6 +1786,9 @@
           span {
             color: var(--brownishGrey-color);
             font-weight: 300;
+            &.attention,&.danger,&.good {
+              text-decoration: none;
+            }
           }
           + li {
             margin-top: 8px;
@@ -1868,6 +1899,17 @@
     color: var(--brownishGrey-color);
     animation: textAnimate2 0.7s ease 0.2s 1 both;
   }
+  .aniText04 {
+    position: fixed;
+    left: 24px;
+    bottom: 160px;
+    width: calc(100% - 48px);
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--font-color);
+    animation: textAnimate2 0.7s ease 2.0s 1 both;
+  }
   .memberImg01 {
     position: absolute;
     right: calc(0% - 79px);
@@ -1924,7 +1966,7 @@
     bottom: 40px;
     padding: 0 24px;
     .text {
-      margin-top: 30px;
+      margin-top: 20px;
       text-align: center;
       color: var(--brownishGrey-color);
     }
@@ -2164,10 +2206,29 @@
     color: var(--tree-green);
   }
 }
-
+@-webkit-keyframes textAnimate1 {
+  0% {
+    transform: translate(0, 25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 @keyframes textAnimate1 {
   0% {
     transform: translate(0, 25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes textAnimate2 {
+  0% {
+    transform: translate(0, 35px);
     opacity: 0;
   }
   100% {
@@ -2185,13 +2246,31 @@
     opacity: 1;
   }
 }
-
+@-webkit-keyframes animate {
+  0% {
+    transform: translate(296px, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+}
 @keyframes animate {
   0% {
     transform: translate(296px, 0) rotate(10deg);
   }
   100% {
     transform: translate(0, 0) rotate(10deg);
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    transform: translate(-240px,0) rotate(9deg);
+    right: calc(0% + 185px);
+  }
+  100% {
+    transform: translate(0,0) rotate(9deg);
+    right: calc(0% + 185px);
   }
 }
 @keyframes animate2 {
@@ -2204,12 +2283,30 @@
     right: calc(0% + 185px);
   }
 }
+
+@-webkit-keyframes animate3 {
+  0% {
+    transform: translate(0,300px) rotate(10deg);
+  }
+  100% {
+    transform: translate(0,0) rotate(10deg);
+  }
+}
 @keyframes animate3 {
   0% {
     transform: translate(0,300px) rotate(10deg);
   }
   100% {
     transform: translate(0,0) rotate(10deg);
+  }
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    transform: translate(0,300px) rotate(9deg);
+  }
+  100% {
+    transform: translate(0,0) rotate(9deg);
   }
 }
 @keyframes animate4 {
@@ -2220,7 +2317,16 @@
     transform: translate(0,0) rotate(9deg);
   }
 }
-
+@-webkit-keyframes tnAnimate {
+  0% {
+    opacity: 0;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
 @keyframes btnAnimate {
   0% {
     opacity: 0;
@@ -2342,7 +2448,7 @@
         position: relative;
         font-size: 14px;
         color: var(--brownishGrey-color);
-        @include svgImage(auto,3px,bg_arrow_right) {
+        @include svgImage(auto,2px,bg_arrow_right) {
           right: -22px;
           width: 20px;
           height: 20px;
@@ -2390,8 +2496,10 @@
           height: 20px;
         }
         span {
-          &:last-child {
+          &:first-child {
             font-weight: 300;
+          }
+          &:last-child {
             letter-spacing: 0;
           }
         }
@@ -2908,7 +3016,7 @@
     border-top: 1px solid #e7e9ee;
     border-bottom: 1px solid #e7e9ee;
     dt {
-      width: 75px;
+      width: 120px;
     }
   }
 }
@@ -3046,3 +3154,4 @@
     background-position: -200% 0;
   }
 }
+

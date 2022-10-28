@@ -61,6 +61,7 @@
           height: 120px;
           margin: 0 0 0 -36px;
           background-size: contain;
+          animation: question 1s ease 0.5s infinite both;
         }
       }
       &.complet {
@@ -91,6 +92,7 @@
       }
 
       &.creditScore {
+        padding: 40px 0;
         .creditScore__text {
           margin-bottom: 46px;
           strong {
@@ -118,15 +120,17 @@
             background-color: #e5e5e5;
           }
           > div {
+            width: 50%;
             * {
               display: block;
             }
             .name {
-              display: inline-block;
+              display: block;
               margin-bottom: 4px;
               font-weight: 500;
             }
             .percent {
+              display: inline-block;
               height: 24px;
               line-height: 24px;
               border-radius: 24px;
@@ -134,7 +138,7 @@
               font-size: 12px;
             }
             .score {
-              display: inline-block;
+              display: block;
               margin-top: 20px;
               font-size: 28px;
               line-height: 36px;
@@ -461,6 +465,15 @@
           }
         }
       }
+    }
+  }
+}
+
+@keyframes question {
+  @for $i from 0 to 100 {
+    #{$i * 2%} {
+      // do special stuff
+      transform: rotateY(($i * 7.2) + deg);
     }
   }
 }

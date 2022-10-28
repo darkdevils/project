@@ -191,6 +191,7 @@ textarea {
     font-size: 16px;
     letter-spacing: -0.5;
     color: var(--warmGrey-color);
+    font-family: "Noto Sans KR", sans-serif;
   }
 }
 caption {
@@ -217,9 +218,15 @@ h1, h2, h3, h4, h5, h6, strong {
 
 ::placeholder {
   position: relative;
-  color: var(--warmGrey-color);
+  text-align: left;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #757575;
+  font-weight: 300;
   z-index: 1;
 }
 :-ms-input-placeholder {
   color: var(--warmGrey-color);
+  font-family: "Noto Sans KR", sans-serif;
 }

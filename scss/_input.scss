@@ -27,6 +27,11 @@
     color: var(--black-color);
     &::placeholder {
       font-weight: 300;
+      font-family: "Noto Sans KR", sans-serif;
+      text-align: left;
+      font-size: 16px;
+      line-height: 24px;
+      color: #757575;
     }
     &:disabled {
       background-color: #f3f4f5;
@@ -46,6 +51,11 @@
       @include numberText;
       &::placeholder {
         text-align: left;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #757575;
+        font-weight: 300;
       }
       &:disabled {
         background-color: #f3f4f5;
@@ -75,6 +85,11 @@
       @include numberText;
       &::placeholder {
         text-align: left;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #757575;
+        font-weight: 300;
       }
       &:disabled {
         background-color: #f3f4f5;

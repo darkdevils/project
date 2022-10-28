@@ -40,6 +40,9 @@
             <div class="swiper-slide slide07">
                 <span class="title">자유게시판</span>
                 <p class="text">신용문제,<br>더 이상 혼자 고민하지 마세요.<br>고민을 나누며 함께 해결해보아요!</p>
+                <div class="fixedBtm">
+                    <a href="#" class="btn btn-d"><span>신용플러스 시작하기</span></a>
+                </div>
             </div>
         </div>
         <div class="swiper-button-next"></div>
@@ -66,6 +69,14 @@
             slideChange: function () {
                 const index_currentSlide = swiper.realIndex + 1;
                 $('.tutorial .numWrap .pageNum').text(index_currentSlide);
+
+                if(index_currentSlide == 1) {
+                    $('.swiper-button-prev').fadeOut();
+                } else if(index_currentSlide == 7) {
+                    $('.btnSkip,.swiper-button-prev,.swiper-button-next').fadeOut();
+                } else {
+                    $('.btnSkip,.swiper-button-prev,.swiper-button-next').fadeIn();
+                }
             }
         }
     });

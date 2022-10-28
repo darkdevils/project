@@ -113,7 +113,7 @@
             </div>
         </div>
         <!-- 주요 서비스 -->
-        <div class="keyServices">
+        <div class="keyServices" data-aos="fade-up">
             <p>내 폰에서 신용 진단하고<br>관리까지 편하게 하세요</p>
             <div class="boxWrap">
                 <h2 class="title">주요 서비스</h2>
@@ -130,7 +130,7 @@
         <!-- //주요 서비스 -->
 
         <!-- 신용교육 -->
-        <div class="videoWrap">
+        <div class="videoWrap" data-aos="fade-up">
             <h2 class="title">가장 도움이 많이 된<br>신용교육 영상을 소개할게요</h2>
             <div class="swiper videoSwiper">
                 <div class="numWrap blind">현재 선택된 <span class="pageNum">1</span>페이지/ 총<span class="totalNum"></span>페이지</div>
@@ -182,7 +182,7 @@
         <!-- //신용교육 -->
 
         <!-- 신용고민 -->
-        <div class="agonize">
+        <div class="agonize" data-aos="fade-up">
             <h2 class="title">함께 나누는 신용고민<br>이제는 힘들어하지 마세요</h2>
             <div class="item">
                 <strong class="title">신용플러스 아니면 정말 큰일날뻔요</strong>
@@ -208,11 +208,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
         <!-- //신용고민 -->
 
         <!--- Banner List -->
-        <div class="bannerList">
+        <div class="bannerList" data-aos="fade-up">
             <h2 class="title">혹시 이런<br>서비스를 찾고계셨나요?</h2>
             <div class="swiper bannerSwiper">
                 <div class="numWrap blind">현재 선택된 <span class="pageNum">1</span>페이지/ 총<span class="totalNum"></span>페이지</div>
@@ -261,7 +261,7 @@
     </div>
     <div class="btmMenu">
         <div class="btmMenu__list">
-            <a href="#" class="home">메인화면</a>
+            <a href="#" class="home active">메인화면</a>
             <a href="#" class="consultation">상담예약</a>
             <a href="#" class="credit">신용진단</a>
             <a href="#" class="community">커뮤니티</a>
@@ -272,8 +272,11 @@
 
 <script src="../../js/lib/jquery-3.6.0.min.js"></script>
 <script src="../../js/lib/swiper.js"></script>
+<script src="../../js/lib/aos.js"></script>
 <script src="../../js/common.js"></script>
 <script>
+    AOS.init();
+
     const swiper = new Swiper(".videoSwiper", {
         slidesPerView: 1.4,
         speed: 400,
