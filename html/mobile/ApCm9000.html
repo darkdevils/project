@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메인</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap mainWrap">
+    <div class="header">
+        <h1 class="blind">신용플러스 메인</h1>
+        <button type="button" class="btnAlarm"><span class="blind">알람</span></button>
+        <button type="button" class="btnMenu"><span class="blind">전체메뉴</span></button>
+    </div>
+    <div class="container">
+        <div class="itemWrap">
+            <!-- 예약완료일 경우 -->
+            <div class="mainItem complet">
+                <div class="complet__text">
+                    <strong class="blueCor">예약완료</strong>
+                    <p class="text">아래 예약정보를 확인해주세요</p>
+                </div>
+                <div class="complet__info">
+                    <div class="justifyWrap">
+                        <span class="title">상담분야</span>
+                        <span class="infoText">개인회생·파산</span>
+                    </div>
+                    <div class="justifyWrap">
+                        <span class="title">상담업체</span>
+                        <span class="infoText">신용회복위원회</span>
+                    </div>
+                    <div class="justifyWrap">
+                        <span class="title">상담일시</span>
+                        <span class="infoText">22-09-08 15:00~15:30</span>
+                    </div>
+                    <div class="justifyWrap">
+                        <span class="title">신청일</span>
+                        <span class="infoText">2022-09-05</span>
+                    </div>
+                </div>
+                <div class="btnWrap">
+                    <button type="button" class="btn btn-d btnBlue"><span>신용상담 취소하기</span></button>
+                </div>
+            </div>
+            <!-- //예약완료일 경우 -->
+
+            <!-- 상담완료일 경우 -->
+            <div class="mainItem complet">
+                <div class="complet__text">
+                    <strong class="blueCor">상담완료</strong>
+                    <p class="text">아래 예약정보를 확인해주세요</p>
+                </div>
+                <div class="complet__info">
+                    <div class="justifyWrap">
+                        <span class="title">상담분야</span>
+                        <span class="infoText">개인회생·파산</span>
+                    </div>
+                    <div class="justifyWrap">
+                        <span class="title">상담업체</span>
+                        <span class="infoText">신용회복위원회</span>
+                    </div>
+                    <div class="justifyWrap">
+                        <span class="title">상담일시</span>
+                        <span class="infoText">22-09-08 15:00~15:30</span>
+                    </div>
+                    <div class="justifyWrap">
+                        <span class="title">신청일</span>
+                        <span class="infoText">2022-09-05</span>
+                    </div>
+                </div>
+                <div class="btnWrap btnWrap-col2">
+                    <button type="button" class="btn btn-d btnBlue"><span>후기등록</span></button>
+                    <button type="button" class="btn btn-d"><span>설문등록</span></button>
+                </div>
+            </div>
+            <!-- //상담완료일 경우 -->
+
+            <div class="mainItem creditScore">
+                <div class="creditScore__text">
+                    <strong>신용점수는 아래와 같아요</strong>
+                    <span>22-09-29 08:00 기준</span>
+                </div>
+                <div class="justifyWrap">
+                    <div class="niceScore">
+                        <strong class="name">NICE</strong>
+                        <span class="percent">상위10%</span>
+                        <strong class="score">954점</strong>
+                    </div>
+                    <div class="kcbScore">
+                        <strong class="name">KCB</strong>
+                        <span class="percent">상위10%</span>
+                        <strong class="score">968점</strong>
+                    </div>
+                </div>
+                <div class="btnWrap">
+                    <button type="button" class="btn"><span>다시 조회하기</span></button>
+                </div>
+            </div>
+            <!--<div class="mainItem item01">
+                <strong class="title">별도 비용없이<br>무료로 상담해드려요!</strong>
+                <button type="button">신용상담 예약하기</button>
+            </div>
+            <div class="mainItem item02">
+                <strong class="title">신용점수가 궁금하다면<br>실시간으로 조회할 수 있어요!</strong>
+                <button type="button">내 신용점수 조회하기</button>
+            </div>-->
+        </div>
+        <!-- 주요 서비스 -->
+        <div class="keyServices">
+            <p>내 폰에서 신용 진단하고<br>관리까지 편하게 하세요</p>
+            <div class="boxWrap">
+                <h2 class="title">주요 서비스</h2>
+                <ul>
+                    <li><a href="#">상담예약</a></li>
+                    <li><a href="#">NICE 신용진단</a></li>
+                    <li><a href="#">KCB 신용진단</a></li>
+                    <li><a href="#">신쏙진단</a></li>
+                    <li><a href="#">전문가 Q&amp;A</a></li>
+                    <li><a href="#">신용올리기</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- //주요 서비스 -->
+
+        <!-- 신용교육 -->
+        <div class="videoWrap">
+            <h2 class="title">가장 도움이 많이 된<br>신용교육 영상을 소개할게요</h2>
+            <div class="swiper videoSwiper">
+                <div class="numWrap blind">현재 선택된 <span class="pageNum">1</span>페이지/ 총<span class="totalNum"></span>페이지</div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="videoImage"><img src="../../images/temp/video01.png" alt="개인채무조정 절차"></div>
+                        <span class="title">[정보안내] 개인채무조정 절차</span>
+                        <div class="flexWrap mgBottom0">
+                            <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">99</span></button>
+                            <span class="viewNum"><span>11.3만</span></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="videoImage"><img src="../../images/temp/video02.png" alt="수정조정제도 알아보기"></div>
+                        <span class="title">[정보안내] 수정조정제도 알아보기</span>
+                        <div class="flexWrap mgBottom0">
+                            <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">99</span></button>
+                            <span class="viewNum"><span>11.3만</span></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="videoImage"><img src="../../images/temp/video03.png" alt="소액 신용카드 사업 소개"></div>
+                        <span class="title">[정보안내] 소액 신용카드 사업 소개</span>
+                        <div class="flexWrap mgBottom0">
+                            <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">99</span></button>
+                            <span class="viewNum"><span>11.3만</span></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="videoImage"><img src="../../images/temp/video04.png" alt="개인파산 신청서류"></div>
+                        <span class="title">[정보안내] 개인파산 신청서류</span>
+                        <div class="flexWrap mgBottom0">
+                            <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">99</span></button>
+                            <span class="viewNum"><span>11.3만</span></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="videoImage"><img src="../../images/temp/video05.png" alt="심사역들의 수다"></div>
+                        <span class="title">[정보안내] 심사역들의 수다</span>
+                        <div class="flexWrap mgBottom0">
+                            <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">99</span></button>
+                            <span class="viewNum"><span>11.3만</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- //신용교육 -->
+
+        <!-- 신용고민 -->
+        <div class="agonize">
+            <h2 class="title">함께 나누는 신용고민<br>이제는 힘들어하지 마세요</h2>
+            <div class="item">
+                <strong class="title">신용플러스 아니면 정말 큰일날뻔요</strong>
+                <div class="text">지난주에 상담사님께 상담받고 모든 후련하게 모든고민이 풀려버린 상담자 입니다. 지난주에 상담사님께 상담받고 모든 후련하게 모든고민이 풀려버린 상담자 입니다.</div>
+                <div class="justifyWrap">
+                    <div class="flexWrap mgBottom0">
+                        <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">99</span></button>
+                    </div>
+                    <div class="nameData">
+                        <span class="name">홍*동</span><span class="date">2022-07-10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <strong class="title">도움을 받고 싶습니다</strong>
+                <div class="text">안녕하세요. 저는 2014년 파산면책을 받았습니다. 내년 7월에 신용정보 기록이 삭제</div>
+                <div class="justifyWrap">
+                    <div class="flexWrap mgBottom0">
+                        <button type="button" class="btnLike" onclick="common.btnToggle(this);"><span class="blind">좋아요</span><span class="number">99</span></button>
+                    </div>
+                    <div class="nameData">
+                        <span class="name">홍*동</span><span class="date">2022-07-10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //신용고민 -->
+
+        <!--- Banner List -->
+        <div class="bannerList">
+            <h2 class="title">혹시 이런<br>서비스를 찾고계셨나요?</h2>
+            <div class="swiper bannerSwiper">
+                <div class="numWrap blind">현재 선택된 <span class="pageNum">1</span>페이지/ 총<span class="totalNum"></span>페이지</div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <span class="title">맞춤채무조정</span>
+                            <strong class="text">나에게 맞는<br>채무조정</strong>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <span class="title">무료상담</span>
+                            <strong class="text">개인회생·<br>파산</strong>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <span class="title">금융정보포털</span>
+                            <strong class="text">금융감독원<br>파인</strong>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <span class="title">금리비교</span>
+                            <strong class="text">서민금융<br>맞춤대출</strong>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <span class="title">채권자변동조회</span>
+                            <strong class="text">본인신용정보<br>열람서비스</strong>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <span class="title">복지포털</span>
+                            <strong class="text">복지로</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="numWrap blind">현재 선택된 <span class="pageNum">1</span>페이지/ 총<span class="totalNum"></span>페이지</div>
+            </div>
+        </div>
+        <!--- //Banner List -->
+    </div>
+    <div class="btmMenu">
+        <div class="btmMenu__list">
+            <a href="#" class="home">메인화면</a>
+            <a href="#" class="consultation">상담예약</a>
+            <a href="#" class="credit">신용진단</a>
+            <a href="#" class="community">커뮤니티</a>
+            <a href="#" class="myinfo">나의정보</a>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/swiper.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    const swiper = new Swiper(".videoSwiper", {
+        slidesPerView: 1.4,
+        spaceBetween: 16,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        on: {
+            slideChange: function () {
+                const index_currentSlide = swiper.realIndex + 1;
+                $('.videoSwiper .numWrap .pageNum').text(index_currentSlide);
+            }
+        }
+    });
+    const videoTotalNum = $('.videoSwiper .swiper-slide').length;
+    $('.videoSwiper .totalNum').text(videoTotalNum);
+
+    // 배너 Swiper
+    const bannerNum = $('.bannerSwiper .swiper-slide').length;
+    $('.bannerSwiper .totalNum').text(bannerNum);
+    const swiper2 = new Swiper(".bannerSwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        pagination: {
+            el: ".swiper-pagination2",
+        },
+        on: {
+            slideChange: function () {
+                const index_currentSlide = swiper2.realIndex + 1;
+                $('.bannerSwiper .numWrap .pageNum').text(index_currentSlide);
+            }
+        }
+    });
+
+    //전체메뉴
+    $('.btmMenu__list a').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+</script>
+
+</body>
+</html>
