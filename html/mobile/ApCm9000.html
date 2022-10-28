@@ -16,6 +16,19 @@
     </div>
     <div class="container">
         <div class="itemWrap">
+            <div class="mainItem item01">
+                <strong class="title">별도 비용없이<br>무료로 상담해드려요!</strong>
+                <div class="btnWrap">
+                    <button type="button" class="btn"><span>신용상담 예약하기</span></button>
+                </div>
+            </div>
+            <div class="mainItem item02">
+                <strong class="title">신용점수가 궁금하다면<br>실시간으로 조회할 수 있어요!</strong>
+                <div class="btnWrap">
+                    <button type="button" class="btn"><span>내 신용점수 조회하기</span></button>
+                </div>
+            </div>
+
             <!-- 예약완료일 경우 -->
             <div class="mainItem complet">
                 <div class="complet__text">
@@ -98,14 +111,6 @@
                     <button type="button" class="btn"><span>다시 조회하기</span></button>
                 </div>
             </div>
-            <!--<div class="mainItem item01">
-                <strong class="title">별도 비용없이<br>무료로 상담해드려요!</strong>
-                <button type="button">신용상담 예약하기</button>
-            </div>
-            <div class="mainItem item02">
-                <strong class="title">신용점수가 궁금하다면<br>실시간으로 조회할 수 있어요!</strong>
-                <button type="button">내 신용점수 조회하기</button>
-            </div>-->
         </div>
         <!-- 주요 서비스 -->
         <div class="keyServices">
@@ -271,7 +276,9 @@
 <script>
     const swiper = new Swiper(".videoSwiper", {
         slidesPerView: 1.4,
+        speed: 400,
         spaceBetween: 16,
+        freeMode: true,
         pagination: {
             el: ".swiper-pagination",
         },
@@ -290,7 +297,9 @@
     $('.bannerSwiper .totalNum').text(bannerNum);
     const swiper2 = new Swiper(".bannerSwiper", {
         slidesPerView: 'auto',
+        speed: 400,
         spaceBetween: 16,
+        freeMode: true,
         pagination: {
             el: ".swiper-pagination2",
         },

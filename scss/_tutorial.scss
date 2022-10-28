@@ -1,0 +1,77 @@
+
+.tutorial {
+  height: 100vh;
+  background-color: #f0f5f7;
+  .btnSkip {
+    position: absolute;
+    right: 24px;
+    top: 32px;
+    color: #888;
+    font-weight: 300;
+  }
+  .swiper-wrapper {
+    height: calc(100vh - 98px);
+    padding: 98px 0 0;
+    .swiper-slide {
+      position: relative;
+      text-align: center;
+      .title {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        color: var(--primary-color);
+      }
+      .text {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+      }
+      &.slide01 {
+        @include imageUrl(tutorial01,png);
+        background-size: calc(100% - 96px) auto;
+        background-position: center bottom;
+      }
+      &.slide02 {
+        @include imageUrl(tutorial02,png);
+        background-size: calc(100% - 96px) auto;
+        background-position: center bottom;
+      }
+      &.slide03 {
+        @include imageUrl(tutorial03,png);
+        background-size: calc(100% - 96px) auto;
+        background-position: center bottom;
+      }
+      &.slide04 {
+        @include imageUrl(tutorial04,png);
+        background-size: calc(100% - 96px) auto;
+        background-position: center bottom;
+      }
+      &.slide05 {
+        @include imageUrl(tutorial05,png);
+        background-size: calc(100% - 96px) auto;
+        background-position: center bottom;
+      }
+      &.slide06 {
+        @include imageUrl(tutorial06,png);
+        background-size: calc(100% - 96px) auto;
+        background-position: center bottom;
+      }
+      &.slide07 {
+        @include imageUrl(tutorial07,png);
+        background-size: calc(100% - 96px) auto;
+        background-position: center bottom;
+      }
+    }
+  }
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: auto;
+    top: 40px;
+  }
+  .swiper-pagination-bullet-active {
+    width: 24px;
+    border-radius: 8px;
+    background-color: var(--black-color);
+  }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>튜토리얼</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="tutorial">
+    <button type="button" class="btnSkip">SKIP</button>
+    <div class="swiper">
+        <div class="numWrap blind">현재 선택된 <span class="pageNum">1</span>페이지/ 총<span class="totalNum"></span>페이지</div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide01">
+                <span class="title">신용상담</span>
+                <p class="text">원하는 일자와 시간에 상담 예약을 하면,<br>신용상담 전문가의<br>신용상담을 무료로 받을 수 있어요</p>
+            </div>
+            <div class="swiper-slide slide02">
+                <span class="title">신쏙진단</span>
+                <p class="text">신쏙진단으로 나의 신용을 진단받고<br>나에게 적합한 채무조정제도를<br>제안 받을 수 있어요</p>
+            </div>
+            <div class="swiper-slide slide03">
+                <span class="title">신용점수 조회</span>
+                <p class="text">내 신용점수가 궁금하세요?<br>NICE, KCB 신용점수를<br>무료로  조회해보세요</p>
+            </div>
+            <div class="swiper-slide slide04">
+                <span class="title">신용점수 올리기</span>
+                <p class="text">비 금융정보(국민연금, 건강보험, 국세청 등)<br>납부내역을 신용평가 회사에 제공하면<br>간단하게 신용점수를 올릴 수 있어요</p>
+            </div>
+            <div class="swiper-slide slide05">
+                <span class="title">전문가 Q&amp;A</span>
+                <p class="text">신용이나 채무, 금융지원 등에 관해<br>궁금하신 내용을 질문해주시면<br>신용상담 전문가가 답변해드려요</p>
+            </div>
+            <div class="swiper-slide slide06">
+                <span class="title">신용교육과 신용뉴스</span>
+                <p class="text">나에게 도움이 되는 신용관리 방법은?<br>신용에 관련한 교육자료와<br>신용뉴스를 보실 수 있어요</p>
+            </div>
+            <div class="swiper-slide slide07">
+                <span class="title">자유게시판</span>
+                <p class="text">신용문제,<br>더 이상 혼자 고민하지 마세요.<br>고민을 나누며 함께 해결해보아요!</p>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+<script src="../../js/lib/swiper.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    const swiper = new Swiper(".tutorial .swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        on: {
+            slideChange: function () {
+                const index_currentSlide = swiper.realIndex + 1;
+                $('.tutorial .numWrap .pageNum').text(index_currentSlide);
+            }
+        }
+    });
+    const videoTotalNum = $('.tutorial .swiper-slide').length;
+    $('.tutorial .totalNum').text(videoTotalNum);
+
+</script>
+
+</body>
+</html>

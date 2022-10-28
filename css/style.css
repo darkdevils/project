@@ -2867,6 +2867,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
 .popupGuide .text a {
   color: var(--primary-color);
   font-weight: 500;
+  letter-spacing: 0;
 }
 .popupGuide .sText {
   margin-top: 16px;
@@ -5020,7 +5021,7 @@ h2.h2_title {
 }
 .menuLayer .header .btnHome {
   position: absolute;
-  left: 0;
+  left: 6px;
   top: 0;
   width: 60px;
   height: 60px;
@@ -5914,6 +5915,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 46px;
 }
 .mainWrap .container .mainItem.complet .complet__text .blueCor {
+  display: inline-block;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 4px;
@@ -6108,7 +6110,7 @@ button.swiper-pagination-bullet {
 }
 .mainWrap .videoWrap h2.title {
   position: relative;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   padding: 0 24px;
   font-size: 20px;
   font-weight: 500;
@@ -6163,7 +6165,7 @@ button.swiper-pagination-bullet {
 }
 .mainWrap .agonize h2.title {
   position: relative;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
@@ -6229,7 +6231,7 @@ button.swiper-pagination-bullet {
 }
 .mainWrap .bannerList h2.title {
   position: relative;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   padding: 0 24px;
   font-size: 20px;
   font-weight: 500;
@@ -9297,25 +9299,25 @@ button.swiper-pagination-bullet {
   background-color: #f5f5f5;
   border-radius: 12px;
 }
-.errorWrap .roundBox .blType {
-  font-size: 14px;
-}
 .errorWrap .roundBox .blType li {
   line-height: 22px;
+  font-size: 14px;
 }
 .errorWrap .roundBox .blType li:after {
-  top: 10px;
+  top: 8px;
 }
 .errorWrap .roundBox .blType li + li {
   margin-top: 4px;
 }
 .errorWrap .sText {
   font-size: 14px;
+  font-weight: 300;
   line-height: 22px;
   color: var(--font-color);
 }
 .errorWrap .sText a {
   color: var(--primary-color);
+  letter-spacing: 0;
 }
 .errorWrap .inspection {
   padding: 24px 0;
@@ -9454,6 +9456,7 @@ button.swiper-pagination-bullet {
   padding: 0 24px;
 }
 .initialWrap .bText {
+  margin-bottom: 40px;
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
@@ -10524,6 +10527,83 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   color: #666;
   margin-top: 8px;
+}
+
+.tutorial {
+  height: 100vh;
+  background-color: #f0f5f7;
+}
+.tutorial .btnSkip {
+  position: absolute;
+  right: 24px;
+  top: 32px;
+  color: #888;
+  font-weight: 300;
+}
+.tutorial .swiper-wrapper {
+  height: calc(100vh - 98px);
+  padding: 98px 0 0;
+}
+.tutorial .swiper-wrapper .swiper-slide {
+  position: relative;
+  text-align: center;
+}
+.tutorial .swiper-wrapper .swiper-slide .title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--primary-color);
+}
+.tutorial .swiper-wrapper .swiper-slide .text {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+}
+.tutorial .swiper-wrapper .swiper-slide.slide01 {
+  background: url("../images/tutorial01.png") no-repeat;
+  background-size: calc(100% - 96px) auto;
+  background-position: center bottom;
+}
+.tutorial .swiper-wrapper .swiper-slide.slide02 {
+  background: url("../images/tutorial02.png") no-repeat;
+  background-size: calc(100% - 96px) auto;
+  background-position: center bottom;
+}
+.tutorial .swiper-wrapper .swiper-slide.slide03 {
+  background: url("../images/tutorial03.png") no-repeat;
+  background-size: calc(100% - 96px) auto;
+  background-position: center bottom;
+}
+.tutorial .swiper-wrapper .swiper-slide.slide04 {
+  background: url("../images/tutorial04.png") no-repeat;
+  background-size: calc(100% - 96px) auto;
+  background-position: center bottom;
+}
+.tutorial .swiper-wrapper .swiper-slide.slide05 {
+  background: url("../images/tutorial05.png") no-repeat;
+  background-size: calc(100% - 96px) auto;
+  background-position: center bottom;
+}
+.tutorial .swiper-wrapper .swiper-slide.slide06 {
+  background: url("../images/tutorial06.png") no-repeat;
+  background-size: calc(100% - 96px) auto;
+  background-position: center bottom;
+}
+.tutorial .swiper-wrapper .swiper-slide.slide07 {
+  background: url("../images/tutorial07.png") no-repeat;
+  background-size: calc(100% - 96px) auto;
+  background-position: center bottom;
+}
+.tutorial .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: auto;
+  top: 40px;
+}
+.tutorial .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 8px;
+  background-color: var(--black-color);
 }
 
 /*# sourceMappingURL=style.css.map */
