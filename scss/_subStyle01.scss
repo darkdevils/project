@@ -871,6 +871,7 @@
               margin-top: -10px;
               @include imageUrl(bg_arrow_right,svg);
               opacity: 1;
+              transition: 0.5s ease;
             }
           }
           .text {
@@ -896,6 +897,11 @@
 
         }
         &.swipeLeft {
+          .title {
+            &:before {
+              opacity: 0;
+            }
+          }
           a {
             transform: translate(-45px, 0);
           }
@@ -904,15 +910,17 @@
           }
         }
         &.new {
-          &:before {
-            content: "";
-            position: absolute;
-            left: 18px;
-            top: 25px;
-            width: 3px;
-            height: 3px;
-            border-radius: 3px;
-            background-color: #f00;
+          a {
+            &:before {
+              content: "";
+              position: absolute;
+              left: 18px;
+              top: 25px;
+              width: 3px;
+              height: 3px;
+              border-radius: 3px;
+              background-color: #f00;
+            }
           }
         }
       }

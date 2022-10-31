@@ -6154,7 +6154,7 @@ button.swiper-pagination-bullet {
   left: auto;
   top: auto;
   background: url("../images/bg_arrow_right3.svg") no-repeat;
-  right: 0;
+  right: 24px;
   bottom: 4px;
   width: 20px;
   height: 20px;
@@ -8397,6 +8397,7 @@ button.swiper-pagination-bullet {
   margin-top: -10px;
   background: url("../images/bg_arrow_right.svg") no-repeat;
   opacity: 1;
+  transition: 0.5s ease;
 }
 .detailsList.detailsList--notify .noticeList .item a .text {
   margin-top: 4px;
@@ -8417,13 +8418,16 @@ button.swiper-pagination-bullet {
   color: #fff;
   transition: 0.5s ease;
 }
+.detailsList.detailsList--notify .noticeList .item.swipeLeft .title:before {
+  opacity: 0;
+}
 .detailsList.detailsList--notify .noticeList .item.swipeLeft a {
   transform: translate(-45px, 0);
 }
 .detailsList.detailsList--notify .noticeList .item.swipeLeft .btnDel {
   transform: translate(-70px, 0);
 }
-.detailsList.detailsList--notify .noticeList .item.new:before {
+.detailsList.detailsList--notify .noticeList .item.new a:before {
   content: "";
   position: absolute;
   left: 18px;
